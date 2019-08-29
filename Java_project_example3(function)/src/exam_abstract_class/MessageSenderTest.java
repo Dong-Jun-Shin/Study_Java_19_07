@@ -1,7 +1,7 @@
 package exam_abstract_class;
 
 abstract class MessageSender {
-	protected String title;
+	private String title;
 	protected String senderName;
 
 	public MessageSender() {
@@ -62,7 +62,10 @@ class EMailSender extends MessageSender {
 
 	public void sendMessage(String receiver) {
 		System.out.println("------------------------------");
-		System.out.println("제목: " + title);
+		//상위 필드 private 사용 시, get으로 가져오기
+		System.out.println("제목: " + getTitle());
+		
+		//상위 필드 protected 사용 시, 상속받아 직접 접근
 		System.out.println("보내는 사람: " + senderName + " " + senderAddr);
 		System.out.println("받는 사람: " + receiver);
 		System.out.println("내용: " + emailBody);

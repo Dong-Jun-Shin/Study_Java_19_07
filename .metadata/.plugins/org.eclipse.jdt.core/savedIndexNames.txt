@@ -1,24 +1,6 @@
-INDEX VERSION 1.131+C:\JavaCoding\.metadata\.plugins\org.eclipse.jdt.core
-902850517.index
+INDEX VERSION 1.131+C:\JavaCoding\Study_Java_19_07\.metadata\.plugins\org.eclipse.jdt.core
 1585905459.index
-1952923100.index
-4134201341.index
-2207980120.index
-1319727586.index
-189280938.index
-3173154768.index
-1263365842.index
-2580755126.index
-805694982.index
-3435027904.index
-3812234843.index
-3117484287.index
-3177693399.index
-4025718911.index
-1552912501.index
-4191745719.index
-3988512010.index
-3299668621.index
 589364891.index
 994409700.index
-559748716.index
+3812234843.index
+2580755126.index
