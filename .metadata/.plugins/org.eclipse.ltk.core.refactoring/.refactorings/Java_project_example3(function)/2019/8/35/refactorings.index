@@ -26,3 +26,12 @@
 1566950533013	Move compilation units
 1566951682634	Rename package 'exam_ingeritance'
 1566967924340	Rename type 'Dvd'
+1567042518817	Delete element
+1567045345229	Delete element
+1567045628014	Rename field 'channel'
+1567046045993	Rename method 'printChannel'
+1567055586771	Move compilation units
+1567055598726	Move compilation unit
+1567055602759	Move compilation units
+1567055607846	Delete element
+1567064796934	Rename local variable 'j'

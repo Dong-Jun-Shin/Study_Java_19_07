@@ -48,4 +48,9 @@
 <fullyQualifiedTypeName name="java.lang.Override"/>
 <fullyQualifiedTypeName name="exam_class.Magazine"/>
 <fullyQualifiedTypeName name="java.lang.Character"/>
+<fullyQualifiedTypeName name="java.rmi.Remote"/>
+<fullyQualifiedTypeName name="exam_interface.Television"/>
+<fullyQualifiedTypeName name="exam_interface.RemoteControl"/>
+<fullyQualifiedTypeName name="exam_interface.SmartTelevision"/>
+<fullyQualifiedTypeName name="exam_interface_borrow.SeparateVolume"/>
 </qualifiedTypeNameHistroy>
