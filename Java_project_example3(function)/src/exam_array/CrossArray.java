@@ -1,8 +1,8 @@
-package exam_array;
+ï»¿package exam_array;
 
 /*
- * 8°³ÀÇ Á¤¼ö¸¦ a{2, 4, 6, 8, 10, 12, 14, 16}¿Í b{1, 1, 2, 3, 5, 8, 13, 21}¿¡ ÀÔ·ÂÇÑ ÈÄ
- * aÀÇ Ã¹¹øÂ° ÀÎµ¦½º¿¡¼­ ¸¶Áö¸· ÀÎµ¦½º·Î, bÀÇ ¸¶Áö¸· ÀÎµ¦½º¿¡¼­ Ã¹¹øÂ° ÀÎµ¦½º·Î Å©·Î½ºÇÏ¸é¼­ ÇÕÀ» ±¸ÇÏ¿© a¿¡ ´ëÀÔÇÑ ÈÄ Ãâ·ÂÇÏ½Ã¿À.
+ * 8ê°œì˜ ì •ìˆ˜ë¥¼ a{2, 4, 6, 8, 10, 12, 14, 16}ì™€ b{1, 1, 2, 3, 5, 8, 13, 21}ì— ìž…ë ¥í•œ í›„
+ * aì˜ ì²«ë²ˆì§¸ ì¸ë±ìŠ¤ì—ì„œ ë§ˆì§€ë§‰ ì¸ë±ìŠ¤ë¡œ, bì˜ ë§ˆì§€ë§‰ ì¸ë±ìŠ¤ì—ì„œ ì²«ë²ˆì§¸ ì¸ë±ìŠ¤ë¡œ í¬ë¡œìŠ¤í•˜ë©´ì„œ í•©ì„ êµ¬í•˜ì—¬ aì— ëŒ€ìž…í•œ í›„ ì¶œë ¥í•˜ì‹œì˜¤.
  */
 public class CrossArray {
 	public static void main(String[] args) {

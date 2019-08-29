@@ -1,4 +1,4 @@
-package exam_parent_constructor_call;
+﻿package exam_parent_constructor_call;
 
 public class EntryTest {
 	public static void main(String[] args) {

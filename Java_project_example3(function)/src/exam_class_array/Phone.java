@@ -1,4 +1,4 @@
-package exam_class_array;
+﻿package exam_class_array;
 
 public class Phone {
 	private String name;

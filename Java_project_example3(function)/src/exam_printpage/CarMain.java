@@ -1,4 +1,4 @@
-package exam_printpage;
+ï»¿package exam_printpage;
 
 class Car{
 	private String color;
@@ -23,7 +23,7 @@ class Car{
 
 	@Override
 	public String toString() {
-		return "[»ö»ó] " + color + "\t[»ı»ê¼ö·®] " + account + "\t";
+		return "[ìƒ‰ìƒ] " + color + "\t[ìƒì‚°ìˆ˜ëŸ‰] " + account + "\t";
 	}
 }
 
@@ -43,7 +43,7 @@ class Monata extends Car{
 
 	@Override
 	public String toString() {
-		String sData = "[¿ëµµ] "+ use + "\t[½Ã¸®Áî] " + series;
+		String sData = "[ìš©ë„] "+ use + "\t[ì‹œë¦¬ì¦ˆ] " + series;
 		return super.toString() + sData;
 	}
 }
@@ -51,13 +51,13 @@ class Monata extends Car{
 public class CarMain {
 	public static void main(String[] args) {
 		Monata[] monata = new Monata[4];
-		monata[0] = new Monata("Èò»ö", 5000, "NF", "½Â¿ë");
-		monata[1] = new Monata("Àº»ö", 7000, "Brilliant", "¾÷¹«");
-		monata[2] = new Monata("°¨È«»ö", 4000, "EF", "ÅÃ½Ã");
-		monata[3] = new Monata("°ËÁ¤»ö", 6000, "Hybrid", "½Â¿ë");
+		monata[0] = new Monata("í°ìƒ‰", 5000, "NF", "ìŠ¹ìš©");
+		monata[1] = new Monata("ì€ìƒ‰", 7000, "Brilliant", "ì—…ë¬´");
+		monata[2] = new Monata("ê°í™ìƒ‰", 4000, "EF", "íƒì‹œ");
+		monata[3] = new Monata("ê²€ì •ìƒ‰", 6000, "Hybrid", "ìŠ¹ìš©");
 		
 		
-		System.out.println("========================== Monata »ı»ê ½ÃÀÛ ============================");
+		System.out.println("========================== Monata ìƒì‚° ì‹œì‘ ============================");
 		for (int i = 0; i < monata.length; i++) {
 			System.out.println(monata[i].toString());
 		}

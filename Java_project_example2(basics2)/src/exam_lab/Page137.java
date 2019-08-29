@@ -1,4 +1,4 @@
-package exam_lab;
+ï»¿package exam_lab;
 
 import java.util.Scanner;
 
@@ -7,14 +7,14 @@ public class Page137 {
 		Scanner scan = new Scanner(System.in);
 		int i, num, sum = 0;
 
-		System.out.println("³­¼öÀÇ °³¼ö : ");
+		System.out.println("ë‚œìˆ˜ì˜ ê°œìˆ˜ : ");
 		num = scan.nextInt();
 
 		for (i = 0; i < num; i++) {
 			sum = sum + (int) ((Math.random() * 100) + 1);
 		}
 
-		System.out.println("\n³­¼ö " + num + "°³ÀÇ ÇÕÀº " + sum);
+		System.out.println("\në‚œìˆ˜ " + num + "ê°œì˜ í•©ì€ " + sum);
 		scan.close();
 	}
 }

@@ -1,4 +1,4 @@
-package exam_method;
+﻿package exam_method;
 
 public class CalculatorTest {
 	public static void main(String[] args) {

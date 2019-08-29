@@ -1,24 +1,24 @@
-package simplephoneinfo;
+ï»¿package simplephoneinfo;
 
 /*
- * ÀüÈ­¹øÈ£ °ü¸® ÇÁ·Î±×·¥ ±¸Çö ÇÁ·ÎÁ§Æ®
+ * ì „í™”ë²ˆí˜¸ ê´€ë¦¬ í”„ë¡œê·¸ë¨ êµ¬í˜„ í”„ë¡œì íŠ¸
  * Version 0.1
  * 
- * [Ãâ·Â °á°ú ¿¹½Ã]
- * name: ÀÓ¹Ì°æ
+ * [ì¶œë ¥ ê²°ê³¼ ì˜ˆì‹œ]
+ * name: ì„ë¯¸ê²½
  * phone: 010-2345-6573
  * birth: 1965.03.28
  * 
- * name: ±èÇö¼ö
+ * name: ê¹€í˜„ìˆ˜
  * phone: 011-6435-1249
  * 
  */
 public class PhoneBookVer01 {
 	public static void main(String[] args) {
-		//»ı¼ºÀÚ (¸Å°³º¯¼ö 3°³)
-		PhoneInfo pInfo1 = new PhoneInfo("ÀÓ¹Ì°æ","010-2345-6573","1965.03.28");
-		//»ı¼ºÀÚ (¸Å°³º¯¼ö 2°³)
-		PhoneInfo pInfo2 = new PhoneInfo("±èÇö¼ö","011-6435-1249");
+		//ìƒì„±ì (ë§¤ê°œë³€ìˆ˜ 3ê°œ)
+		PhoneInfo pInfo1 = new PhoneInfo("ì„ë¯¸ê²½","010-2345-6573","1965.03.28");
+		//ìƒì„±ì (ë§¤ê°œë³€ìˆ˜ 2ê°œ)
+		PhoneInfo pInfo2 = new PhoneInfo("ê¹€í˜„ìˆ˜","011-6435-1249");
 		//getter, setter
 		PhoneInfo pInfo3 = new PhoneInfo();
 		pInfo3.setName("Jane");

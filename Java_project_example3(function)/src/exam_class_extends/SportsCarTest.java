@@ -1,4 +1,4 @@
-package exam_class_extends;
+﻿package exam_class_extends;
 
 public class SportsCarTest{
 	public static void main(String[] args) {

@@ -1,17 +1,17 @@
-package exam_class;
+ï»¿package exam_class;
 
 /*
- * »ı¼ºÀÚ´Â ±âº» »ı¼ºÀÚ¿Í ¸ğµç ÇÊµå¸¦ ÃÊ±âÈ­ÇÏ´Â »ı¼ºÀÚ¸¦ ÀÛ¼ºÇÏ°í, ³ë·¡ÀÇ Á¤º¸¸¦ È­¸é¿¡ Ãâ·ÂÇÏ´Â
- * show() ¸Ş¼Òµåµµ ÀÛ¼ºÇÏ¶ó. °¢ÀÚ ¿øÇÏ´Â ³ë·¡·Î Song °´Ã¼¸¦ »ı¼ºÇÏ°í show()¸¦ ÀÌ¿ëÇÏ¿©
- * ÀÌ ³ë·¡ÀÇ Á¤º¸¸¦ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ¶ó.
+ * ìƒì„±ìëŠ” ê¸°ë³¸ ìƒì„±ìì™€ ëª¨ë“  í•„ë“œë¥¼ ì´ˆê¸°í™”í•˜ëŠ” ìƒì„±ìë¥¼ ì‘ì„±í•˜ê³ , ë…¸ë˜ì˜ ì •ë³´ë¥¼ í™”ë©´ì— ì¶œë ¥í•˜ëŠ”
+ * show() ë©”ì†Œë“œë„ ì‘ì„±í•˜ë¼. ê°ì ì›í•˜ëŠ” ë…¸ë˜ë¡œ Song ê°ì²´ë¥¼ ìƒì„±í•˜ê³  show()ë¥¼ ì´ìš©í•˜ì—¬
+ * ì´ ë…¸ë˜ì˜ ì •ë³´ë¥¼ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ë¼.
  * 
- * [Ãâ·Â °á°ú]
- * ³ë·¡ Á¦¸ñ : Dansing Queen
- * °¡¼ö : ABBA
- * ¾Ù¹ü : Arrival
- * ÀÛ°îÀÚ : Benny Andersson, Bjorn Ulaveus
- * ³âµµ : 1977
- * Æ®·¢ ¹øÈ£ : 2
+ * [ì¶œë ¥ ê²°ê³¼]
+ * ë…¸ë˜ ì œëª© : Dansing Queen
+ * ê°€ìˆ˜ : ABBA
+ * ì•¨ë²” : Arrival
+ * ì‘ê³¡ì : Benny Andersson, Bjorn Ulaveus
+ * ë…„ë„ : 1977
+ * íŠ¸ë™ ë²ˆí˜¸ : 2
  */
 public class Song {
 	private String title;
@@ -21,12 +21,12 @@ public class Song {
 	private int year;
 	private int track;
 	
-	//µğÆúÆ® »ı¼ºÀÚ
+	//ë””í´íŠ¸ ìƒì„±ì
 	public Song() {
 
 	}
 
-	//»ı¼ºÀÚ (¸Å°³º¯¼ö ÀüºÎ)
+	//ìƒì„±ì (ë§¤ê°œë³€ìˆ˜ ì „ë¶€)
 	public Song(String title, String artist, String album, String[] composer, int year, int track) {
 		this.title = title;
 		this.artist = artist;
@@ -65,7 +65,7 @@ public class Song {
 		return composer;
 	}
 
-	//¿©·¯¸íÀÌ µÉ ¼ö ÀÖ´Â ÀÛ°î°¡ ¹è¿­·Î ¹Ş±â
+	//ì—¬ëŸ¬ëª…ì´ ë  ìˆ˜ ìˆëŠ” ì‘ê³¡ê°€ ë°°ì—´ë¡œ ë°›ê¸°
 	public static String[] setComposer(String... composer) {
 		String[] temp = composer;
 
@@ -89,12 +89,12 @@ public class Song {
 	}
 
 
-	//¸Ş¼Òµå (º¸¿©ÁÖ±â)
+	//ë©”ì†Œë“œ (ë³´ì—¬ì£¼ê¸°)
 	public void show() {
-		System.out.printf("³ë·¡ Á¦¸ñ : %s\n", title);
-		System.out.printf("°¡¼ö : %s\n", artist);
-		System.out.printf("¾Ù¹ü : %s\n", album);
-		System.out.printf("ÀÛ°î°¡ : ");
+		System.out.printf("ë…¸ë˜ ì œëª© : %s\n", title);
+		System.out.printf("ê°€ìˆ˜ : %s\n", artist);
+		System.out.printf("ì•¨ë²” : %s\n", album);
+		System.out.printf("ì‘ê³¡ê°€ : ");
 		for (int i = 0; i < composer.length; i++) {
 			System.out.printf("%s", composer[i]);
 			if (i == composer.length - 1)
@@ -103,7 +103,7 @@ public class Song {
 				System.out.printf(", ");
 
 		}
-		System.out.printf("³âµµ : %d\n", year);
-		System.out.printf("Æ®·¢ ¹øÈ£ : %d\n", track);
+		System.out.printf("ë…„ë„ : %d\n", year);
+		System.out.printf("íŠ¸ë™ ë²ˆí˜¸ : %d\n", track);
 	}
 }

@@ -1,4 +1,4 @@
-package exam_lab;
+ï»¿package exam_lab;
 
 import java.time.LocalDateTime;
 
@@ -8,17 +8,17 @@ public class Page111 {
 		int time_hour = time.getHour();
 		
 		if(time_hour<24 && time_hour>=21) {
-			System.out.println("´ÊÀº ¹ãÀÌ¿¡¿ä. ¾ß½ÄÀ» µå¼¼¿ä.");
+			System.out.println("ëŠ¦ì€ ë°¤ì´ì—ìš”. ì•¼ì‹ì„ ë“œì„¸ìš”.");
 		}else if(time_hour>=18) {
-			System.out.println("Àú³áÀÌ¿¡¿ä. ½Ä»ç¸¦ ÇÏ¼¼¿ä.");
+			System.out.println("ì €ë…ì´ì—ìš”. ì‹ì‚¬ë¥¼ í•˜ì„¸ìš”.");
 		}else if(time_hour>=13) {
-			System.out.println("³ª¸¥ÇÑ ¿ÀÈÄ¿¡¿ä. ÀáÀ» ÀÚ¿ä.");
+			System.out.println("ë‚˜ë¥¸í•œ ì˜¤í›„ì—ìš”. ì ì„ ììš”.");
 		}else if(time_hour>=11) {
-			System.out.println("Á¡½ÉÀÌ¿¡¿ä. ½Ä»ç¸¦ ÇÏ¼¼¿ä.");
+			System.out.println("ì ì‹¬ì´ì—ìš”. ì‹ì‚¬ë¥¼ í•˜ì„¸ìš”.");
 		}else if(time_hour>=6) {
-			System.out.println("¾ÆÄ§ÀÌ¿¡¿ä. ½Ä»ç¸¦ ÇÏ¼¼¿ä.");
+			System.out.println("ì•„ì¹¨ì´ì—ìš”. ì‹ì‚¬ë¥¼ í•˜ì„¸ìš”.");
 		}else {
-			System.out.println("±íÀº ¹ãÀÔ´Ï´Ù. ÀáÀ» ÀÚ¼¼¿ä.");
+			System.out.println("ê¹Šì€ ë°¤ì…ë‹ˆë‹¤. ì ì„ ìì„¸ìš”.");
 		}
 	}
 }

@@ -1,7 +1,7 @@
-import java.util.Scanner;
+ï»¿import java.util.Scanner;
 import tool.VendingTool;
 
-//ÀÚÆÇ±â ¸¸µé±â
+//ìíŒê¸° ë§Œë“¤ê¸°
 public class VendingMachine {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
@@ -9,29 +9,29 @@ public class VendingMachine {
 		int balance;
 		int product_num;
 
-		// 1.¸ñ·ÏÀ» ¸¸µé¾î ³õ´Â´Ù.(24°³)
-		//Àç°í ÃÊ±âÈ­
+		// 1.ëª©ë¡ì„ ë§Œë“¤ì–´ ë†“ëŠ”ë‹¤.(24ê°œ)
+		//ì¬ê³  ì´ˆê¸°í™”
 		vending.setStock();
 
-		// 2.±İ¾×À» ³Ö¾î´Ş¶ó´Â ¾È³»¸¦ ÇÑ´Ù.
+		// 2.ê¸ˆì•¡ì„ ë„£ì–´ë‹¬ë¼ëŠ” ì•ˆë‚´ë¥¼ í•œë‹¤.
 		balance = vending.setBalance(scan);
 		
 		while (true) {
-			// »óÇ°¹øÈ£ ÀÔ·Â
+			// ìƒí’ˆë²ˆí˜¸ ì…ë ¥
 			vending.setActivation(balance);
 			vending.printList(balance);
 			product_num = scan.nextInt();
 
 			vending.cleaner();
 			
-			// ¸ğµå È®ÀÎ
+			// ëª¨ë“œ í™•ì¸
 			if (product_num == -100001) {
-				// 1.°ü¸®ÀÚ ¸ğµå(°ü¸®ÀÚÀÎÁö ¿©ºÎ´Â 100001À» ÀÔ·ÂÇÏ¸é Àç°í Ãß°¡ ¹× °ü¸®·Î ÁøÀÔ)
+				// 1.ê´€ë¦¬ì ëª¨ë“œ(ê´€ë¦¬ìì¸ì§€ ì—¬ë¶€ëŠ” 100001ì„ ì…ë ¥í•˜ë©´ ì¬ê³  ì¶”ê°€ ë° ê´€ë¦¬ë¡œ ì§„ì…)
 				while(true) {
 					System.out.println("-------------------------------------------");
-					System.out.println("\t\t°ü¸®ÀÚ ¸ğµå");
+					System.out.println("\t\tê´€ë¦¬ì ëª¨ë“œ");
 					System.out.println("-------------------------------------------");
-					System.out.println("|1.»óÇ°Ãß°¡ | 2.»óÇ°Á¦°Å | 3.»óÇ°Àç°íÃß°¡ | 4.»óÇ°Àç°íÁ¦°Å | 5.³¡³»±â");
+					System.out.println("|1.ìƒí’ˆì¶”ê°€ | 2.ìƒí’ˆì œê±° | 3.ìƒí’ˆì¬ê³ ì¶”ê°€ | 4.ìƒí’ˆì¬ê³ ì œê±° | 5.ëë‚´ê¸°");
 					int caseNum = scan.nextInt();
 					if(caseNum == 5) {
 						break;
@@ -40,12 +40,12 @@ public class VendingMachine {
 					}
 				}
 			} else if (product_num == 99) {
-				// 2.Á¾·áÇÏ¸é ÀÜ¾× È¯ºÒÇÏ°í ³¡³»±â(ÀÜ¾×À» ±İ¾×±Ç¿¡ µû¶ó ±¸ºĞÇØ¼­ È¯ºÒ)
+				// 2.ì¢…ë£Œí•˜ë©´ ì”ì•¡ í™˜ë¶ˆí•˜ê³  ëë‚´ê¸°(ì”ì•¡ì„ ê¸ˆì•¡ê¶Œì— ë”°ë¼ êµ¬ë¶„í•´ì„œ í™˜ë¶ˆ)
 				vending.refund(balance);
 				break;
 
 			} else if (product_num > 25) {
-				// 3.±İ¾×ÀÎÁö »óÇ°ÀÎÁö °Ë»ç, ¼±ÅÃÇÑ »óÇ°¹øÈ£ À¯È¿¼º°Ë»ç, Ãâ·Â, Ã³¸®
+				// 3.ê¸ˆì•¡ì¸ì§€ ìƒí’ˆì¸ì§€ ê²€ì‚¬, ì„ íƒí•œ ìƒí’ˆë²ˆí˜¸ ìœ íš¨ì„±ê²€ì‚¬, ì¶œë ¥, ì²˜ë¦¬
 				balance += product_num;
 
 			} else if (product_num > 0 && product_num < 25) {
@@ -56,22 +56,22 @@ public class VendingMachine {
 				int[][] qty = vending.getQty();
 				char[][] active = vending.getActivation();
 				
-				// 4.¼±ÅÃÇÑ »óÇ°ÀÇ Àç°í¸¦ È®ÀÎ ÈÄ, ÀÜ¾× È®ÀÎ ÈÄ, ±İ¾×À» Â÷°¨½ÃÅ°°í, »óÇ°À» Ãâ·Â
+				// 4.ì„ íƒí•œ ìƒí’ˆì˜ ì¬ê³ ë¥¼ í™•ì¸ í›„, ì”ì•¡ í™•ì¸ í›„, ê¸ˆì•¡ì„ ì°¨ê°ì‹œí‚¤ê³ , ìƒí’ˆì„ ì¶œë ¥
 				if (active[i][j] == 'O') {
 					if (qty[i][j] > 0) {
 						balance = vending.purchaseGoods(balance, i, j);
 						vending.printProduct(balance, i, j);
 					} else {
-						System.out.println("¢ºÀç°í°¡ ¾ø½À´Ï´Ù. °ü¸®ÀÚ¿¡°Ô ¹®ÀÇÇØÁÖ¼¼¿ä.");
+						System.out.println("â–¶ì¬ê³ ê°€ ì—†ìŠµë‹ˆë‹¤. ê´€ë¦¬ìì—ê²Œ ë¬¸ì˜í•´ì£¼ì„¸ìš”.");
 					}
 					
 				}else {
-					System.out.println("¢ºÀÜ¾×ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+					System.out.println("â–¶ì”ì•¡ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 					System.out.println();
 					System.out.println();
 				}
 			} else {
-				System.out.println("¢ºÁ¸ÀçÇÏ´Â »óÇ°¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				System.out.println("â–¶ì¡´ì¬í•˜ëŠ” ìƒí’ˆë²ˆí˜¸ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 				System.out.println();
 				System.out.println();
 			}

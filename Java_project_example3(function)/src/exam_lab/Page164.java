@@ -1,4 +1,4 @@
-package exam_lab;
+ï»¿package exam_lab;
 
 import java.util.Scanner;
 
@@ -25,35 +25,35 @@ public class Page164 {
 		outer: while (true) {
 			menu(remain);
 
-			System.out.print("\n¿øÇÏ½Ã´Â ÁÂ¼®¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä (Á¾·á´Â -1): ");
+			System.out.print("\nì›í•˜ì‹œëŠ” ì¢Œì„ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš” (ì¢…ë£ŒëŠ” -1): ");
 			input_seat = scan.nextInt();
 
 			if (input_seat > 0 && input_seat < remain.length+1) {
 				if (remain[input_seat - 1] == 1) {
-					System.out.println("ÀÌ¹Ì ¿¹¾àµÈ ÀÚ¸®ÀÔ´Ï´Ù. ´Ù¸¥ ÀÚ¸®¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.");
+					System.out.println("ì´ë¯¸ ì˜ˆì•½ëœ ìë¦¬ì…ë‹ˆë‹¤. ë‹¤ë¥¸ ìë¦¬ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.");
 					System.out.println();
 				} else {
 					remain[input_seat - 1] = 1;
-					System.out.println("¿¹¾àµÇ¾ú½À´Ï´Ù.");
+					System.out.println("ì˜ˆì•½ë˜ì—ˆìŠµë‹ˆë‹¤.");
 
 					System.out.println();
 					menu(remain);
 
-					System.out.print("\n°è¼Ó ¿¹¸ÅÇÏ½Ã°Ú½À´Ï±î? (y/n) ");
+					System.out.print("\nê³„ì† ì˜ˆë§¤í•˜ì‹œê² ìŠµë‹ˆê¹Œ? (y/n) ");
 					confirm = scan.next().charAt(0);
 
 					if (confirm == 'y') {
 						continue;
 					} else {
-						System.out.println("ÇÁ·Î±×·¥ Á¾·á.");
+						System.out.println("í”„ë¡œê·¸ë¨ ì¢…ë£Œ.");
 						break outer;
 					}
 				}
 			} else if (input_seat == -1) {
-				System.out.println("ÇÁ·Î±×·¥ Á¾·á.");
+				System.out.println("í”„ë¡œê·¸ë¨ ì¢…ë£Œ.");
 				break outer;
 			} else {
-				System.out.println("¼ıÀÚ¸¦ ¾Ë¸Â°Ô ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				System.out.println("ìˆ«ìë¥¼ ì•Œë§ê²Œ ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 			}
 		}
 		scan.close();

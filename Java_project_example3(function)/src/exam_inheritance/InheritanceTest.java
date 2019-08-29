@@ -1,4 +1,4 @@
-package exam_inheritance;
+ï»¿package exam_inheritance;
 
 public class InheritanceTest {
 	public static void main(String[] args) {
@@ -6,17 +6,17 @@ public class InheritanceTest {
 		Professor p = new Professor();
 		Student s = new Student();
 
-		e.setName("È«±æµ¿");
+		e.setName("í™ê¸¸ë™");
 		e.setAge(47);
-		e.setDept("¿µ¾÷ºÎ");
+		e.setDept("ì˜ì—…ë¶€");
 		
-		p.setName("±èÇª¸§");
+		p.setName("ê¹€í‘¸ë¦„");
 		p.setAge(52);
-		p.setSubject("ºòµ¥ÀÌÅÍ");
+		p.setSubject("ë¹…ë°ì´í„°");
 		
-		s.setName("±èÀ¯ºó");
+		s.setName("ê¹€ìœ ë¹ˆ");
 		s.setAge(20);
-		s.setMajor("ÄÄÇ»ÅÍ°úÇĞÇĞ°ú");
+		s.setMajor("ì»´í“¨í„°ê³¼í•™í•™ê³¼");
 		
 		System.out.println(e.toString() + e.getDept());
 		System.out.println(p.toString() + p.getSubject());

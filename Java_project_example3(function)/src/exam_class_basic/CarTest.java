@@ -1,5 +1,5 @@
-package exam_class_basic;
-//°°Àº ÆĞÅ°Áö ³»ÀÇ Å¬·¡½º´Â º°µµÀÇ ¿¬°á±¸¹® ¾øÀÌ »ç¿ëÇÒ ¼ö ÀÖ´Ù.
+ï»¿package exam_class_basic;
+//ê°™ì€ íŒ¨í‚¤ì§€ ë‚´ì˜ í´ë˜ìŠ¤ëŠ” ë³„ë„ì˜ ì—°ê²°êµ¬ë¬¸ ì—†ì´ ì‚¬ìš©í•  ìˆ˜ ìˆë‹¤.
 
 public class CarTest {
 		public static void main(String[] args) {

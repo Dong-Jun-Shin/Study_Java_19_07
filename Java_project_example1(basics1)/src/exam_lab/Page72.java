@@ -1,8 +1,8 @@
-package exam_lab;
+ï»¿package exam_lab;
 
 public class Page72 {
 	public static void main(String[] args) {
-		final double light; // velocity ¼Óµµ, ºü¸¥ ¼Óµµ
+		final double light; // velocity ì†ë„, ë¹ ë¥¸ ì†ë„
 		double distance;
 
 		light = 30e4;
@@ -11,6 +11,6 @@ public class Page72 {
 		distance = distance / light;
 		distance = distance / 60 / 60 / 24 / 365;
 		
-		System.out.printf("°É¸®´Â ½Ã°£Àº %.15f±¤³âÀÔ´Ï´Ù.\n", distance);
+		System.out.printf("ê±¸ë¦¬ëŠ” ì‹œê°„ì€ %.15fê´‘ë…„ì…ë‹ˆë‹¤.\n", distance);
 	}
 }

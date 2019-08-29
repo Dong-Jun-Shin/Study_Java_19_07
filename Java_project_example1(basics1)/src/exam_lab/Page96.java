@@ -1,4 +1,4 @@
-package exam_lab;
+ï»¿package exam_lab;
 
 import java.util.Scanner;
 
@@ -7,13 +7,13 @@ public class Page96 {
 		double radius, area, PI;
 		Scanner scan = new Scanner(System.in);
 
-		System.out.println("¹İÁö¸§ÀÇ ±æÀÌ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+		System.out.println("ë°˜ì§€ë¦„ì˜ ê¸¸ì´ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 		radius = scan.nextDouble();
 
 		PI = 3.14;
 		area = PI * radius * radius;
 
-		System.out.println("¿øÀÇ ¸éÀûÀº " + area);
+		System.out.println("ì›ì˜ ë©´ì ì€ " + area);
 		
 		scan.close();
 	}

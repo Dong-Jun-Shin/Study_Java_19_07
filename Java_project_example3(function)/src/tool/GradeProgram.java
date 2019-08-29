@@ -1,4 +1,4 @@
-package tool;
+﻿package tool;
 
 public class GradeProgram {
 	public static void sum(int[][] score, int[] total){

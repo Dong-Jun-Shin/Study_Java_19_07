@@ -1,4 +1,4 @@
-package exam_array_copy;
+﻿package exam_array_copy;
 
 public class ArrayCopyExample {
 	public static void main(String[] args) {

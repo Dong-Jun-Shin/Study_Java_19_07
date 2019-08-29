@@ -1,7 +1,7 @@
-package exam_float_double;
+ï»¿package exam_float_double;
 
 /**
- * ¼ø¼­µµ ¿¹Á¦ 3-3
+ * ìˆœì„œë„ ì˜ˆì œ 3-3
  */
 public class Ex_3_3 {
 	public static void main(String[] args) {
@@ -15,10 +15,10 @@ public class Ex_3_3 {
 		System.out.println("round : " + round);
 		System.out.println("area : " + area);
 		
-		//%2d -> Á¤¼ö
-		//%.2f -> .ÀÌÇÏ ÀÚ¸´¼ö float		
-		//%2c -> ¹®ÀÚÇü
-		//%s -> ¹®ÀÚ¿­
+		//%2d -> ì •ìˆ˜
+		//%.2f -> .ì´í•˜ ìë¦¿ìˆ˜ float		
+		//%2c -> ë¬¸ìí˜•
+		//%s -> ë¬¸ìì—´
 		
 		System.out.printf("round : %.2f\narea : %.2f\n", round, area);
 	}

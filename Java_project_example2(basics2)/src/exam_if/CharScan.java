@@ -1,4 +1,4 @@
-package exam_if;
+ï»¿package exam_if;
 
 import java.util.Scanner;
 
@@ -6,20 +6,20 @@ public class CharScan {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		
-		//charº¯¼ö¿¡ ºó °ª ³Ö±â.
-		//char ch = null; - ¾µ ¼ö ¾ø´Ù.
-		//char ch = ''; - ¾µ ¼ö ¾ø´Ù.
-		char ch = '\0'; // ¾Æ½ºÅ° ÄÚµå ½ÊÁø¼ö - : NUL(NULL)
+		//charë³€ìˆ˜ì— ë¹ˆ ê°’ ë„£ê¸°.
+		//char ch = null; - ì“¸ ìˆ˜ ì—†ë‹¤.
+		//char ch = ''; - ì“¸ ìˆ˜ ì—†ë‹¤.
+		char ch = '\0'; // ì•„ìŠ¤í‚¤ ì½”ë“œ ì‹­ì§„ìˆ˜ - : NUL(NULL)
 		
-		//Stringº¯¼ö¿¡ ºó °ª ³Ö±â.
-		//String str = null; - °¡´É
-		String str = ""; // - °¡´É
+		//Stringë³€ìˆ˜ì— ë¹ˆ ê°’ ë„£ê¸°.
+		//String str = null; - ê°€ëŠ¥
+		String str = ""; // - ê°€ëŠ¥
 		
-		System.out.println("ÇÑ¹®ÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
-		//charAt(index) - charÇüÅÂ·Î 'index'¹øÂ° ±ÛÀÚ¸¦ °¡Á®¿Â´Ù.
+		System.out.println("í•œë¬¸ìë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
+		//charAt(index) - charí˜•íƒœë¡œ 'index'ë²ˆì§¸ ê¸€ìë¥¼ ê°€ì ¸ì˜¨ë‹¤.
 		ch = scan.next().charAt(0);
 		
-		System.out.println(ch+"´Â ¹®ÀÚÀÔ´Ï´Ù. ^^");
+		System.out.println(ch+"ëŠ” ë¬¸ìì…ë‹ˆë‹¤. ^^");
 		scan.close();
 	}
 }

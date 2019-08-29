@@ -1,28 +1,28 @@
-package exam_lab;
+ï»¿package exam_lab;
 
 import tool.RockScissors;
 import java.util.Scanner;
 
-/*ÄÄÇ»ÅÍ¿Í ÇÏ´Â °¡À§¹ÙÀ§º¸ ¸¸µé±â
- * ½ÂºÎ ÆÇº°, °ÔÀÓÀº ¹İº¹(4 ÀÔ·Â½Ã Á¾·á)
+/*ì»´í“¨í„°ì™€ í•˜ëŠ” ê°€ìœ„ë°”ìœ„ë³´ ë§Œë“¤ê¸°
+ * ìŠ¹ë¶€ íŒë³„, ê²Œì„ì€ ë°˜ë³µ(4 ì…ë ¥ì‹œ ì¢…ë£Œ)
  */
 public class RockScissorsPaper {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		String[] list = { "°¡À§", "¹ÙÀ§", "º¸" };
+		String[] list = { "ê°€ìœ„", "ë°”ìœ„", "ë³´" };
 		int user = 0;
 	
 
 		outer: while (true) {
-			System.out.print("°¡À§(1), ¹ÙÀ§(2), º¸(3), ³¡³»±â(4) Áß ÇÏ³ª¸¦ ¼±ÅÃÇÏ¼¼¿ä>>");
+			System.out.print("ê°€ìœ„(1), ë°”ìœ„(2), ë³´(3), ëë‚´ê¸°(4) ì¤‘ í•˜ë‚˜ë¥¼ ì„ íƒí•˜ì„¸ìš”>>");
 			user = scan.nextInt();
 
 			int com = (int) ((Math.random() * 3) + 1);
 			
-			//Ã¹¹øÂ°. Switch·Î °æ¿ìÀÇ ¼ö·Î ±¸ºĞÇÑ °æ¿ì
+			//ì²«ë²ˆì§¸. Switchë¡œ ê²½ìš°ì˜ ìˆ˜ë¡œ êµ¬ë¶„í•œ ê²½ìš°
 			//RockScissors.competeSwitch(list, user, com);
 			
-			//µÎ¹øÂ°. If·Î °ª¿¡ µû¶ó ÆÇº°
+			//ë‘ë²ˆì§¸. Ifë¡œ ê°’ì— ë”°ë¼ íŒë³„
 			switch (user) {
 			case 1:
 				RockScissors.competeIf(list, user, com);
@@ -34,10 +34,10 @@ public class RockScissorsPaper {
 				RockScissors.competeIf(list, user, com);
 				break;
 			case 4:
-				System.out.println("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
+				System.out.println("í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 				break outer;
 			default:
-				System.out.println("¼ıÀÚ¸¦ Á¦´ë·Î ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				System.out.println("ìˆ«ìë¥¼ ì œëŒ€ë¡œ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 			}
 		}
 		scan.close();

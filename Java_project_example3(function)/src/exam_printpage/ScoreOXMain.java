@@ -1,8 +1,8 @@
-package exam_printpage;
+ï»¿package exam_printpage;
 
 public class ScoreOXMain {
 	public static void main(String[] args) {
-//		º¯¼ö ÇÒ´ç ÈÄ ´ëÀÔÇÏ´Â ¹æ¹ı (½ºÅÃ¿¡ º¯¼ö¸¦ ÇÒ´ç¹Ş¾Æ »ç¿ë)
+//		ë³€ìˆ˜ í• ë‹¹ í›„ ëŒ€ì…í•˜ëŠ” ë°©ë²• (ìŠ¤íƒì— ë³€ìˆ˜ë¥¼ í• ë‹¹ë°›ì•„ ì‚¬ìš©)
 //		int[] dap1 = {1,2,1,3,4};
 //		int[] dap2 = {1,1,1,1,1};
 //		int[] dap3 = {1,2,1,3,1};
@@ -10,39 +10,39 @@ public class ScoreOXMain {
 //		int[] dap5 = {1,4,2,5,4};
 //		
 //		ScoreOX[] sc = new ScoreOX[5];
-//		sc[0] = new ScoreOX(1, "È«±æµ¿", dap1);
-//		sc[1] = new ScoreOX(2, "±èÃ¶¼ö", dap2);
-//		sc[2] = new ScoreOX(3, "ÀÌÁøÈñ", dap3);
-//		sc[3] = new ScoreOX(4, "Á¶Çö¹Î", dap4);
-//		sc[4] = new ScoreOX(5, "ÃÖÇöÁ¤", dap5);
+//		sc[0] = new ScoreOX(1, "í™ê¸¸ë™", dap1);
+//		sc[1] = new ScoreOX(2, "ê¹€ì² ìˆ˜", dap2);
+//		sc[2] = new ScoreOX(3, "ì´ì§„í¬", dap3);
+//		sc[3] = new ScoreOX(4, "ì¡°í˜„ë¯¼", dap4);
+//		sc[4] = new ScoreOX(5, "ìµœí˜„ì •", dap5);
 		
-//		Å¬·¡½º ¹è¿­À» »ı¼ºÇÏ¸ç Èü¿¡¼­ ¹Ù·Î ´ëÀÔ (½ºÅÃ¿¡ º¯¼ö ÇÒ´çx)
+//		í´ë˜ìŠ¤ ë°°ì—´ì„ ìƒì„±í•˜ë©° í™ì—ì„œ ë°”ë¡œ ëŒ€ì… (ìŠ¤íƒì— ë³€ìˆ˜ í• ë‹¹x)
 		ScoreOX[] sc = {
-				new ScoreOX(1, "È«±æµ¿", new int[] {1,2,1,3,4}),
-				new ScoreOX(2, "±èÃ¶¼ö", new int[] {1,1,1,1,1}),
-				new ScoreOX(3, "ÀÌÁøÈñ", new int[] {1,2,1,3,1}),
-				new ScoreOX(4, "Á¶Çö¹Î", new int[] {1,1,1,3,1}),
-				new ScoreOX(5, "ÃÖÇöÁ¤", new int[] {1,4,2,5,4}),
+				new ScoreOX(1, "í™ê¸¸ë™", new int[] {1,2,1,3,4}),
+				new ScoreOX(2, "ê¹€ì² ìˆ˜", new int[] {1,1,1,1,1}),
+				new ScoreOX(3, "ì´ì§„í¬", new int[] {1,2,1,3,1}),
+				new ScoreOX(4, "ì¡°í˜„ë¯¼", new int[] {1,1,1,3,1}),
+				new ScoreOX(5, "ìµœí˜„ì •", new int[] {1,4,2,5,4}),
 		};
 		
 		
-		//ºñ±³ÇÏ±â
+		//ë¹„êµí•˜ê¸°
 		for (int i = 0; i < sc.length; i++) {
 			sc[i].compute();			
 		}
 		
-		//µî¼ö ±¸ÇÏ±â
+		//ë“±ìˆ˜ êµ¬í•˜ê¸°
 		ScoreOX.ranking(sc);
 		
-		//Ãâ·Â
+		//ì¶œë ¥
 		System.out.printf("\n");
-		System.out.printf(" * * ½ÃÇè°á°ú * * \n\n");
+		System.out.printf(" * * ì‹œí—˜ê²°ê³¼ * * \n\n");
 		System.out.printf("-------------------------------------------------------------------------\n");
-		System.out.printf("¹øÈ£\tÀÌ¸§\t1\t2\t3\t4\t5\tÁ¡¼ö\tµî¼ö\n");
+		System.out.printf("ë²ˆí˜¸\tì´ë¦„\t1\t2\t3\t4\t5\tì ìˆ˜\të“±ìˆ˜\n");
 		System.out.printf("-------------------------------------------------------------------------\n");
 		for (int i = 0; i < sc.length; i++) {
 			sc[i].display();
 		}
-		System.out.printf("\nÀüÃ¼ ¸ÂÀº °³¼ö = %2d", ScoreOX.tot);
+		System.out.printf("\nì „ì²´ ë§ì€ ê°œìˆ˜ = %2d", ScoreOX.tot);
 	}
 }

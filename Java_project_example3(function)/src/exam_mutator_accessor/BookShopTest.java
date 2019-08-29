@@ -1,19 +1,19 @@
-package exam_mutator_accessor;
+ï»¿package exam_mutator_accessor;
 
-/*Å¬·¡½º´Â Ã¥Á¦¸ñ(bname), ÀúÀÚ(author), Ã¥ °¡°İ(price)¸¦ ÇÊµå·Î °¡Áø´Ù.
- * °¢ °¢ ÇÊµå´Â ¼³Á¤ÀŞ¿Í Á¢±ÙÀÚ¸¦ »ı¼ºÇÑ´Ù.
- * ±×¸®°í ÇÊµå¿¡ °ªÀ» ´ëÀÔÇÏ±â À§ÇÑ ¸Ş¼­µåµµ »ı¼ºÇÑ´Ù.
+/*í´ë˜ìŠ¤ëŠ” ì±…ì œëª©(bname), ì €ì(author), ì±… ê°€ê²©(price)ë¥¼ í•„ë“œë¡œ ê°€ì§„ë‹¤.
+ * ê° ê° í•„ë“œëŠ” ì„¤ì •ì—ì™€ ì ‘ê·¼ìë¥¼ ìƒì„±í•œë‹¤.
+ * ê·¸ë¦¬ê³  í•„ë“œì— ê°’ì„ ëŒ€ì…í•˜ê¸° ìœ„í•œ ë©”ì„œë“œë„ ìƒì„±í•œë‹¤.
  * 
- * [Ãâ·Â°á°ú]
- * <<°ª ´ëÀÔ>>
- * Ã¥ÀÌ¸§ : Web/Servlet
- * ÀúÀÚ : Dominica
- * °¡°İ : 30000
+ * [ì¶œë ¥ê²°ê³¼]
+ * <<ê°’ ëŒ€ì…>>
+ * ì±…ì´ë¦„ : Web/Servlet
+ * ì €ì : Dominica
+ * ê°€ê²© : 30000
  * 
- * <<°ª º¯°æ ÈÄ Ãâ·Â>>
- * Ã¥ÀÌ¸§ : ÇÁ·Î±×·¡¹Ö ÀÌ·¸°Ô ½ÃÀÛÇÏ¼¼¿ä
- * ÀúÀÚ : È«±æµ¿
- * °¡°İ : 30000
+ * <<ê°’ ë³€ê²½ í›„ ì¶œë ¥>>
+ * ì±…ì´ë¦„ : í”„ë¡œê·¸ë˜ë° ì´ë ‡ê²Œ ì‹œì‘í•˜ì„¸ìš”
+ * ì €ì : í™ê¸¸ë™
+ * ê°€ê²© : 30000
  */
 public class BookShopTest {
 	public static void main(String[] args) {
@@ -22,14 +22,14 @@ public class BookShopTest {
 		book.setBname("Web/Servlet");
 		book.setAuthor("Dominica");
 		book.setPrice(30000);
-		System.out.println("<<°ª ´ëÀÔ>>");
+		System.out.println("<<ê°’ ëŒ€ì…>>");
 		System.out.println(book.toString());
 		System.out.println();
 
-		book.setBname("ÇÁ·Î±×·¡¹Ö ÀÌ·¸°Ô ½ÃÀÛÇÏ¼¼¿ä");
-		book.setAuthor("È«±æµ¿");
+		book.setBname("í”„ë¡œê·¸ë˜ë° ì´ë ‡ê²Œ ì‹œì‘í•˜ì„¸ìš”");
+		book.setAuthor("í™ê¸¸ë™");
 		book.setPrice(30000);
-		System.out.println("<<°ª º¯°æ ÈÄ Ãâ·Â>>");
+		System.out.println("<<ê°’ ë³€ê²½ í›„ ì¶œë ¥>>");
 		System.out.println(book.toString());
 		System.out.println();
 	}

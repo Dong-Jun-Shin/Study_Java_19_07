@@ -1,21 +1,21 @@
-package exam_operation;
-// Unary ´ÜÇ×
+ï»¿package exam_operation;
+// Unary ë‹¨í•­
 public class UnaryOperator {
 	public static void main(String[] args) {
-		// Áõ°¨ ¿¬»êÀÚ´Â Ã³¸®µÇ´Â ±× ¶§¸¦ ±âÁØÀ¸·Î Àü, ÈÄ¸¦ µûÁ® °è»êµÈ´Ù.		
+		// ì¦ê° ì—°ì‚°ìëŠ” ì²˜ë¦¬ë˜ëŠ” ê·¸ ë•Œë¥¼ ê¸°ì¤€ìœ¼ë¡œ ì „, í›„ë¥¼ ë”°ì ¸ ê³„ì‚°ëœë‹¤.		
 		int x = 1;
 		int y = 1;
 
-		System.out.println("º¯°æ Àü º¯¼ö°ª Ãâ·Â");
+		System.out.println("ë³€ê²½ ì „ ë³€ìˆ˜ê°’ ì¶œë ¥");
 		System.out.println("x = " + x + ", y = " + y);
 
-		System.out.println("Áõ°¡ ¿¬»êÀÚ ÈÄ º¯¼ö°ª Ãâ·Â");
+		System.out.println("ì¦ê°€ ì—°ì‚°ì í›„ ë³€ìˆ˜ê°’ ì¶œë ¥");
 		System.out.println("x = " + (++x) + ", y = " + (y++));
 
-		int nextx = ++x; //(x = x + 1) ´ëÀÔ Àü xÁõ°¡
-		int nexty = y++; //(x = x + 1) ´ëÀÔ ÈÄ yÁõ°¡
+		int nextx = ++x; //(x = x + 1) ëŒ€ì… ì „ xì¦ê°€
+		int nexty = y++; //(x = x + 1) ëŒ€ì… í›„ yì¦ê°€
 		
-		System.out.println("Áõ°¡ ¿¬»êÀÚ ÈÄ º¯¼ö°ª Ãâ·Â");
+		System.out.println("ì¦ê°€ ì—°ì‚°ì í›„ ë³€ìˆ˜ê°’ ì¶œë ¥");
 		System.out.println("x = " + x + ", y = " + y);
 		System.out.println("nextx = " + nextx + ", nexty = " + nexty);
 	

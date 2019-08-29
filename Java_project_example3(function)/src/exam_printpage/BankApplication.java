@@ -1,4 +1,4 @@
-package exam_printpage;
+ï»¿package exam_printpage;
 
 import java.util.Scanner;
 
@@ -15,7 +15,7 @@ public class BankApplication {
 			int selNum = scan.nextInt();
 			scan.nextLine();
 
-			//¸¶Áö¸· Çà¿¡ ´ëÇØ ½ÇÇà
+			//ë§ˆì§€ë§‰ í–‰ì— ëŒ€í•´ ì‹¤í–‰
 			switch (selNum) {
 			case 1:
 				person = person[person.length - 1].createAccount(scan, person);
@@ -33,11 +33,11 @@ public class BankApplication {
 				person[person.length - 1].withdraw(scan, person);
 				break;
 			case 6:
-				System.out.println("ÇÁ·Î±×·¥ Á¾·á");
+				System.out.println("í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
 				scan.close();
 				return;
 			default:
-				System.out.println("´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				System.out.println("ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 			}
 		}
 	}

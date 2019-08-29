@@ -1,4 +1,4 @@
-package tool;
+ï»¿package tool;
 
 public class examArray2D {
 	public static int[][] logic(int[][] arr, String sort) {
@@ -23,9 +23,9 @@ public class examArray2D {
 
 	public static void show(int[][] arr, String Change) {
 		if (Change.equals("before")) {
-			System.out.println("º¯°æ Àü");
+			System.out.println("ë³€ê²½ ì „");
 		} else {
-			System.out.println("º¯°æ ÈÄ");
+			System.out.println("ë³€ê²½ í›„");
 		}
 
 		System.out.println("---------------------------");
@@ -41,7 +41,7 @@ public class examArray2D {
 	public static int[][] arraySum(int[][] arr, String sort) {
 		switch (sort) {
 		case "rows":
-			// °¡·ÎÇÕ
+			// ê°€ë¡œí•©
 			for (int i = 0; i < arr.length - 1; i++) {
 				for (int j = 0; j < arr[i].length - 1; j++) {
 					arr[i][arr[i].length - 1] += arr[i][j];
@@ -49,7 +49,7 @@ public class examArray2D {
 			}
 			break;
 		case "columns":
-			// ¼¼·ÎÇÕ
+			// ì„¸ë¡œí•©
 			for (int i = 0; i < arr.length - 1; i++) {
 				for (int j = 0; j < arr[i].length - 1; j++) {
 					arr[arr.length - 1][j] += arr[i][j];
@@ -57,7 +57,7 @@ public class examArray2D {
 			}
 			break;
 		case "diagonal":
-			// ´ë°¢¼± ÇÕ
+			// ëŒ€ê°ì„  í•©
 			for (int i = 0; i < arr.length - 1; i++) {
 				for (int j = 0; j < arr[i].length - 1; j++) {
 					if (i == j) {

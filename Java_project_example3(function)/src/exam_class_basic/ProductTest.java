@@ -1,11 +1,11 @@
-package exam_class_basic;
+ï»¿package exam_class_basic;
 
 public class ProductTest {
 	public static void main(String[] args) {
 		Product p1 = new Product();
 		Product p2 = new Product();
 
-		p1.getData(1, "°¨ÀÚ", 30);
+		p1.getData(1, "ê°ì", 30);
 		System.out.println(p1.toString());
 
 		p1.stockPlus(10);
@@ -18,7 +18,7 @@ public class ProductTest {
 		System.out.println(p1.toString());
 		System.out.println("-------------------------");
 
-		p2.getData(2, "´ç±Ù", 10);
+		p2.getData(2, "ë‹¹ê·¼", 10);
 		System.out.println(p2.toString());
 
 		p2.stockPlus(3);
@@ -26,7 +26,7 @@ public class ProductTest {
 
 		p2.pStock = p2.stockMinus(100);
 		if(p2.pStock == 0) {
-			System.out.println("Àç°í·®º¸´Ù °¨¼Ò°¡ ´õ Å®´Ï´Ù.");	
+			System.out.println("ì¬ê³ ëŸ‰ë³´ë‹¤ ê°ì†Œê°€ ë” í½ë‹ˆë‹¤.");	
 		}
 		
 

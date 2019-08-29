@@ -1,21 +1,21 @@
-package exam_class_constructor;
+ï»¿package exam_class_constructor;
 
 public class CarConstructor {
 	private int speed;
 	private int gear;
 	private String color;
 	
-	//µğÆúÆ® »ı¼ºÀÚ
+	//ë””í´íŠ¸ ìƒì„±ì
 	public CarConstructor() {
 		/*
 		 * speed = 0;
 		 * gear = 1;
 		 * color = "red";
 		 */
-		this(0, 1, "red"); //»ı¼ºÀÚ¸¦ È£ÃâÇØ¼­ ¼³Á¤µÈ °ªÀ» ³Ö¾îÁØ´Ù.
+		this(0, 1, "red"); //ìƒì„±ìë¥¼ í˜¸ì¶œí•´ì„œ ì„¤ì •ëœ ê°’ì„ ë„£ì–´ì¤€ë‹¤.
 	}
 	
-	//»ı¼ºÀÚ,  È£Ãâ½Ã °ªÀ» ¹ŞÀ¸¸é ÇØ´ç »ı¼ºÀÚ¸¦ ÀÌ¿ëÇØ¼­ »ı¼ºÇØÁØ´Ù.
+	//ìƒì„±ì,  í˜¸ì¶œì‹œ ê°’ì„ ë°›ìœ¼ë©´ í•´ë‹¹ ìƒì„±ìë¥¼ ì´ìš©í•´ì„œ ìƒì„±í•´ì¤€ë‹¤.
 	public CarConstructor(int speed, int gear, String color) {
 		this.speed = speed;
 		this.gear = gear;
@@ -23,7 +23,7 @@ public class CarConstructor {
 	}
 	
 	public String toString() {
-		return "ÀÚµ¿Â÷ Á¤º¸ [¼Óµµ  = " + speed + ", ±â¾î = " + gear + ", »ö»ó = " + color + "]";
+		return "ìë™ì°¨ ì •ë³´ [ì†ë„  = " + speed + ", ê¸°ì–´ = " + gear + ", ìƒ‰ìƒ = " + color + "]";
 	}
 }
 

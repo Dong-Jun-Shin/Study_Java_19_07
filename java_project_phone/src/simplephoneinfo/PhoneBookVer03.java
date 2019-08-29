@@ -1,4 +1,4 @@
-package simplephoneinfo;
+ï»¿package simplephoneinfo;
 
 import java.util.Scanner;
 
@@ -9,7 +9,7 @@ public class PhoneBookVer03 {
 		int cnt = 0;
 		String selName = "";
 		
-		//user[0] = new PhoneInfo("È«±æµ¿", "123-1234", "2000³â 11¿ù 22ÀÏ");
+		//user[0] = new PhoneInfo("í™ê¸¸ë™", "123-1234", "2000ë…„ 11ì›” 22ì¼");
 		for (int i = 0; i < user.length; i++) {
 			user[i] = new PhoneInfo();
 		}
@@ -24,17 +24,17 @@ public class PhoneBookVer03 {
 				PhoneBookManager.insertData(scan, user[cnt++]);
 				break;
 			case 2:
-				System.out.print("µ¥ÀÌÅÍ °Ë»öÀ» ½ÃÀÛÇÕ´Ï´Ù.\nÀÌ¸§ : ");
+				System.out.print("ë°ì´í„° ê²€ìƒ‰ì„ ì‹œì‘í•©ë‹ˆë‹¤.\nì´ë¦„ : ");
 				selName = scan.nextLine();
 				PhoneBookManager.selectData(user, selName);
 				break;
 			case 3:
-				System.out.print("µ¥ÀÌÅÍ »èÁ¦¸¦ ½ÃÀÛÇÕ´Ï´Ù.\nÀÌ¸§ : ");
+				System.out.print("ë°ì´í„° ì‚­ì œë¥¼ ì‹œì‘í•©ë‹ˆë‹¤.\nì´ë¦„ : ");
 				selName = scan.nextLine();
 				PhoneBookManager.deleteData(user, selName);
 				break;
 			case 4:
-				System.out.println("ÇÁ·Î±×·¥ Á¾·á");
+				System.out.println("í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
 				scan.close();
 				return;
 			}

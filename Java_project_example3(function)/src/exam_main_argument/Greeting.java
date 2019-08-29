@@ -1,21 +1,21 @@
-package exam_main_argument;
+ï»¿package exam_main_argument;
 
 /*
- * ½ÇÇà¹æ¹ı
- * Run > Run Configurations¿¡¼­ µÎ¹øÂ° ÅÇ(Arguments)À» ¼±ÅÃÇÏ¿©
- * Program arguments¿¡ °ªÀ» ÀÔ·ÂÇÏ°í Run ¹öÆ°À» Å¬¸¯ÇÏ¸é µÈ´Ù.
+ * ì‹¤í–‰ë°©ë²•
+ * Run > Run Configurationsì—ì„œ ë‘ë²ˆì§¸ íƒ­(Arguments)ì„ ì„ íƒí•˜ì—¬
+ * Program argumentsì— ê°’ì„ ì…ë ¥í•˜ê³  Run ë²„íŠ¼ì„ í´ë¦­í•˜ë©´ ëœë‹¤.
  */
 public class Greeting {
 	public static void main(String[] args) {
-		System.out.print("¾È³çÇÏ¼¼¿ä. ");
-		System.out.print("ÀÚ¹Ù ¼ö¾÷ ½Ã°£¿¡ ");
-		System.out.println("¿¹Á¦ ÆÄÀÏÀÔ´Ï´Ù.");
+		System.out.print("ì•ˆë…•í•˜ì„¸ìš”. ");
+		System.out.print("ìë°” ìˆ˜ì—… ì‹œê°„ì— ");
+		System.out.println("ì˜ˆì œ íŒŒì¼ì…ë‹ˆë‹¤.");
 
 		if (args.length == 0) {
-			System.out.println("¾Æ¹«°Íµµ ÀÔ·ÂÇÏÁö ¾Ê¾Ò½À´Ï´Ù.");
+			System.out.println("ì•„ë¬´ê²ƒë„ ì…ë ¥í•˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
 		}
 		for (int i = 0; i < args.length; i++) {
-			System.out.println("³ªÀÇ ÀÌ¸§Àº " + args[i] + "ÀÔ´Ï´Ù.");
+			System.out.println("ë‚˜ì˜ ì´ë¦„ì€ " + args[i] + "ì…ë‹ˆë‹¤.");
 		}
 	}
 }

@@ -1,10 +1,10 @@
-package exam_class_extends;
+ï»¿package exam_class_extends;
 
 /*
- * Á÷¿ø(Employee)°ú ¸Å´ÏÀú(Manager)ÀÇ ¿¹¸¦ µé¾îº¸ÀÚ.
- * Á÷¿øÀº ÀÌ¸§(name), ÁÖ¼Ò(address), ÀüÈ­¹øÈ£(phoneNumber), ¿ù±Ş(salary) ÇÊµå°¡ ÇÊ¿äÇÏ°í
- * ¸Å´ÏÀú´Â ÀÌ¸§, ÁÖ¼Ò, ÀüÈ­¹øÈ£, ¿ù±Ş, º¸³Ê½º(bonus), °´Ã¼(job)À» ÇÊµå·Î °®´Â´Ù.
- * »ı¼ºÀÚ, ¼³Á¤ÀÚ, Á¢±ÙÀÚ¸¦ »ı¼ºÇÏ¿© º¸ÀÚ.
+ * ì§ì›(Employee)ê³¼ ë§¤ë‹ˆì €(Manager)ì˜ ì˜ˆë¥¼ ë“¤ì–´ë³´ì.
+ * ì§ì›ì€ ì´ë¦„(name), ì£¼ì†Œ(address), ì „í™”ë²ˆí˜¸(phoneNumber), ì›”ê¸‰(salary) í•„ë“œê°€ í•„ìš”í•˜ê³ 
+ * ë§¤ë‹ˆì €ëŠ” ì´ë¦„, ì£¼ì†Œ, ì „í™”ë²ˆí˜¸, ì›”ê¸‰, ë³´ë„ˆìŠ¤(bonus), ê°ì²´(job)ì„ í•„ë“œë¡œ ê°–ëŠ”ë‹¤.
+ * ìƒì„±ì, ì„¤ì •ì, ì ‘ê·¼ìë¥¼ ìƒì„±í•˜ì—¬ ë³´ì.
  */
 
 class Employee{
@@ -105,9 +105,9 @@ class Manager extends Employee{
 public class EmployeeTest {
 	public static void main(String[] args) {
 		Employee e1 = new Employee();
-		Employee e2 = new Employee("È«±æµ¿", "ÇÑ±¹", "010-1111-1111", 100);
+		Employee e2 = new Employee("í™ê¸¸ë™", "í•œêµ­", "010-1111-1111", 100);
 		Manager m1 = new Manager();
-		Manager m2 = new Manager("È«±æµ¿", "ÇÑ±¹", "010-1111-1111", 100, 20, "´ë¸®");
+		Manager m2 = new Manager("í™ê¸¸ë™", "í•œêµ­", "010-1111-1111", 100, 20, "ëŒ€ë¦¬");
 		
 		System.out.println(e1.toString());
 		System.out.println(e2.toString());
@@ -118,11 +118,11 @@ public class EmployeeTest {
 		
 		Employee[] e = new Employee[2];
 		e[0] = new Employee();
-		e[1] = new Employee("È«±æµ¿", "ÇÑ±¹", "010-1111-1111", 100);
+		e[1] = new Employee("í™ê¸¸ë™", "í•œêµ­", "010-1111-1111", 100);
 		
 		Manager[] m = new Manager[2];
 		m[0] = new Manager();
-		m[1] = new Manager("È«±æµ¿", "ÇÑ±¹", "010-1111-1111", 100, 20, "´ë¸®");
+		m[1] = new Manager("í™ê¸¸ë™", "í•œêµ­", "010-1111-1111", 100, 20, "ëŒ€ë¦¬");
 		
 		for (int i = 0; i < m.length; i++) {
 			System.out.println(e[i].toString());

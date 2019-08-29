@@ -1,7 +1,7 @@
-package exam_array_2Dimension;
+ï»¿package exam_array_2Dimension;
 
 /*
- * ÀÌÂ÷¿ø ¹è¿­À» ÀÌ¿ëÇØ¼­ ´ÙÀ½°ú °°ÀÌ Ãâ·ÂÇØº¸ÀÚ.
+ * ì´ì°¨ì› ë°°ì—´ì„ ì´ìš©í•´ì„œ ë‹¤ìŒê³¼ ê°™ì´ ì¶œë ¥í•´ë³´ì.
  * 1 0 0 0 1  (1.1) (1.5)
  * 0 1 0 1 0  (2.2) (2.4)
  * 0 0 1 0 0  (3.3)
@@ -12,7 +12,7 @@ public class ArrayInArrayXPrint {
 	public static void main(String[] args) {
 		int array[][] = new int[5][5];
 
-		//¼¼¹øÂ°
+		//ì„¸ë²ˆì§¸
 		for (int i = 0; i < array.length; i++) {
 			int r = array.length - 1;
 			for (int j = 0; j < array[i].length; j++) {
@@ -24,7 +24,7 @@ public class ArrayInArrayXPrint {
 		}
 		
 		/*
-		// Ã¹¹øÂ° µÎ¹øÂ°
+		// ì²«ë²ˆì§¸ ë‘ë²ˆì§¸
 		for (int i = 0; i < array.length; i++) {
 			for (int j = 0; j < array[i].length; j++) {
 				if (i == j || i == 4 - j) {
@@ -34,7 +34,7 @@ public class ArrayInArrayXPrint {
 		}
 
 
-		//Ã¹¹øÂ°
+		//ì²«ë²ˆì§¸
 		for (int i = 0; i < array.length; i++) {
 			for (int j = 0; j < array[i].length; j++) {
 				if (i == j) {
@@ -44,7 +44,7 @@ public class ArrayInArrayXPrint {
 			}
 		}
 
-		//µÎ¹øÂ°
+		//ë‘ë²ˆì§¸
 		for (int i = 0; i < array.length; i++) {
 			for (int j = 4 - i; j < array[i].length-i; j++) {
 				if (i == 2) {

@@ -1,9 +1,9 @@
-package exam_array;
+ï»¿package exam_array;
 
 import java.util.Scanner;
 
 /*
- * ÇĞ»ı ¼ö¸¦ ÀÔ·Â ¹Ş°í, ±× ¼ö ¸¸Å­ Á¡¼ö¸¦ ÀÔ·Â¹Ş¾Æ Æò±ÕÀ» ±¸ÇÏµµ·Ï ÇÁ·Î±×·¥À» ÀÛ¼º
+ * í•™ìƒ ìˆ˜ë¥¼ ì…ë ¥ ë°›ê³ , ê·¸ ìˆ˜ ë§Œí¼ ì ìˆ˜ë¥¼ ì…ë ¥ë°›ì•„ í‰ê· ì„ êµ¬í•˜ë„ë¡ í”„ë¡œê·¸ë¨ì„ ì‘ì„±
  */
 public class ScoreTest {
 	public static void main(String[] args) {
@@ -11,13 +11,13 @@ public class ScoreTest {
 		int s_num;
 		double avg = 0;
 
-		System.out.print("ÇĞ»ı ¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä. ");
+		System.out.print("í•™ìƒ ìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”. ");
 		s_num = scan.nextInt();
 
 		int[] score = new int[s_num];
 
 		for (int i = 0; i < s_num; i++) {
-			System.out.print((i + 1) + "¹øÂ° ÇĞ»ıÀÇ Á¡¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä. ");
+			System.out.print((i + 1) + "ë²ˆì§¸ í•™ìƒì˜ ì ìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”. ");
 			score[i] = scan.nextInt();
 			avg += score[i];
 		}
@@ -25,8 +25,8 @@ public class ScoreTest {
 		avg /= score.length;
 
 		System.out.println("---------------------");
-		System.out.println("ÇĞ»ı ¼ö : " + score.length);
-		System.out.printf("Æò±Õ : %.2f", avg);
+		System.out.println("í•™ìƒ ìˆ˜ : " + score.length);
+		System.out.printf("í‰ê·  : %.2f", avg);
 		
 		scan.close();
 	}

@@ -1,23 +1,23 @@
-package tool;
+ï»¿package tool;
 
 public class RockScissors {
 	public static void competeIf(String[] list, int user, int com) {
-		System.out.println("ÄÄÇ»ÅÍ´Â " + list[com - 1] + "¸¦ ³Â½À´Ï´Ù.");
+		System.out.println("ì»´í“¨í„°ëŠ” " + list[com - 1] + "ë¥¼ ëƒˆìŠµë‹ˆë‹¤.");
 		if (user == 3){
 			if (com == user) {
-				System.out.println("ºñ°å½À´Ï´Ù.");
+				System.out.println("ë¹„ê²¼ìŠµë‹ˆë‹¤.");
 			} else if (com == 1) {
-				System.out.println("Á³½À´Ï´Ù.");
+				System.out.println("ì¡ŒìŠµë‹ˆë‹¤.");
 			} else {
-				System.out.println("ÀÌ°å½À´Ï´Ù.");
+				System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤.");
 			}
 		} else {
 			if (com == user) {
-				System.out.println("ºñ°å½À´Ï´Ù.");
+				System.out.println("ë¹„ê²¼ìŠµë‹ˆë‹¤.");
 			} else if (com == user+1) {
-				System.out.println("Á³½À´Ï´Ù.");
+				System.out.println("ì¡ŒìŠµë‹ˆë‹¤.");
 			} else {
-				System.out.println("ÀÌ°å½À´Ï´Ù.");
+				System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤.");
 			}
 		}	
 	}
@@ -25,23 +25,23 @@ public class RockScissors {
 	public static void competeSwitch(String[] list, int user, int com){
 		int diff = 0;
 		
-		System.out.println("ÄÄÇ»ÅÍ´Â " + list[com - 1] + "¸¦ ³Â½À´Ï´Ù.");
+		System.out.println("ì»´í“¨í„°ëŠ” " + list[com - 1] + "ë¥¼ ëƒˆìŠµë‹ˆë‹¤.");
 		diff = user - com;
 		
 		switch(diff) {
 		case 0:
-			System.out.println("ºñ°å½À´Ï´Ù.");
+			System.out.println("ë¹„ê²¼ìŠµë‹ˆë‹¤.");
 			break;
-		case -1:	//»ç¿ëÀÚ °¡À§, ÄÄÇ»ÅÍ ¹ÙÀ§ or »ç¿ëÀÚ ¹ÙÀ§, ÄÄÇ»ÅÍ °¡À§
-		case 2:		//»ç¿ëÀÚ º¸, ÄÄÇ»ÅÍ °¡À§
-			System.out.println("Á³½À´Ï´Ù.");
+		case -1:	//ì‚¬ìš©ì ê°€ìœ„, ì»´í“¨í„° ë°”ìœ„ or ì‚¬ìš©ì ë°”ìœ„, ì»´í“¨í„° ê°€ìœ„
+		case 2:		//ì‚¬ìš©ì ë³´, ì»´í“¨í„° ê°€ìœ„
+			System.out.println("ì¡ŒìŠµë‹ˆë‹¤.");
 			break;
 		case 1:
 		case -2: 
-			System.out.println("ÀÌ°å½À´Ï´Ù.");
+			System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤.");
 			break;
 		default:
-			System.out.println("¼ıÀÚ¸¦ ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			System.out.println("ìˆ«ìë¥¼ ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 		}
 	}
 }

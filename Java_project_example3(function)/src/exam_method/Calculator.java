@@ -1,4 +1,4 @@
-package exam_method;
+ï»¿package exam_method;
 
 public class Calculator {
 	public int plus(int x, int y) {
@@ -23,7 +23,7 @@ public class Calculator {
 		double result = 0;
 
 		if (y == 0) {
-			System.out.println("0À¸·Î ³ª´­ ¼ö ¾ø½À´Ï´Ù.");
+			System.out.println("0ìœ¼ë¡œ ë‚˜ëˆŒ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 		} else {
 			result = (double) x / (double) y;
 		}

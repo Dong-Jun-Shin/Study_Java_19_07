@@ -1,4 +1,4 @@
-package exam_int;
+ï»¿package exam_int;
 
 public class Ex_3_5 {
 	public static void main(String[] args) {
@@ -13,8 +13,8 @@ public class Ex_3_5 {
 		System.out.println(x + ", " + y);
 
 		// f  -> format
-		// %d -> Decimal (10Áø¹ý)
-		// \  -> Escape sequency (¼ø¼­, ¿¬¼ÓµÈ »ç°Ç)
+		// %d -> Decimal (10ì§„ë²•)
+		// \  -> Escape sequency (ìˆœì„œ, ì—°ì†ëœ ì‚¬ê±´)
 		// \n -> New Line
 		System.out.printf("x = %d\ny = %d\n", x, y);
 	}

@@ -1,14 +1,14 @@
-package exam_class_relation;
+ï»¿package exam_class_relation;
 
 public class AlarmClockTest {
 	public static void main(String[] args) {
-		//±âº» »ı¼ºÀÚ
+		//ê¸°ë³¸ ìƒì„±ì
 		AlarmClock defaultAT = new AlarmClock();
 		System.out.println(defaultAT.toString());
 		
-		//¸Å°³º¯¼ö ÀÌ¿ë »ı¼ºÀÚ
-		Time a = new Time();			//Time ±âº» »ı¼ºÀÚ
-		Time t = new Time(17, 57, 17);	//¸Å°³º¯¼ö ÀÌ¿ë »ı¼ºÀÚ
+		//ë§¤ê°œë³€ìˆ˜ ì´ìš© ìƒì„±ì
+		Time a = new Time();			//Time ê¸°ë³¸ ìƒì„±ì
+		Time t = new Time(17, 57, 17);	//ë§¤ê°œë³€ìˆ˜ ì´ìš© ìƒì„±ì
 		
 		AlarmClock userAT = new AlarmClock(a, t);
 		System.out.println(userAT.toString());

@@ -1,13 +1,13 @@
-package exam_lab;
+ï»¿package exam_lab;
 
 import java.util.Scanner;
 
 public class PrintPage2 {
 	public static void menu() {
 		System.out.println("----------------------------");
-		System.out.println("1.¿¹±İ  | 2.Ãâ±İ  | 3.ÀÜ°í  | 4.Á¾·á");
+		System.out.println("1.ì˜ˆê¸ˆ  | 2.ì¶œê¸ˆ  | 3.ì”ê³   | 4.ì¢…ë£Œ");
 		System.out.println("----------------------------");
-		System.out.print("¼±ÅÃ> ");
+		System.out.print("ì„ íƒ> ");
 	}
 
 	public static void main(String[] args) {
@@ -16,8 +16,8 @@ public class PrintPage2 {
 		int sel_num;
 		
 		/*
-		 * byte, short, int, ¹®ÀÚ Á¤µµ±îÁö´Â switch¹®À» »ç¿ëÇÏÁö¸¸, 
-		 * ±× ÀÌ¿ÜÀÇ °ÍÀº Å©±â°¡ Ä¿¼­ if¹®À» »ç¿ëÇÑ´Ù.
+		 * byte, short, int, ë¬¸ì ì •ë„ê¹Œì§€ëŠ” switchë¬¸ì„ ì‚¬ìš©í•˜ì§€ë§Œ, 
+		 * ê·¸ ì´ì™¸ì˜ ê²ƒì€ í¬ê¸°ê°€ ì»¤ì„œ ifë¬¸ì„ ì‚¬ìš©í•œë‹¤.
 		 */
 		outer: while (true) {
 			menu();
@@ -25,34 +25,34 @@ public class PrintPage2 {
 
 			switch (sel_num) {
 			case 1:
-				System.out.print("¿¹±İ¾×> ");
+				System.out.print("ì˜ˆê¸ˆì•¡> ");
 				add = scan.nextInt();
 
 				if (add >= 0) {
 					account += add;
 				} else {
-					System.out.println("Ãâ±İÀÌ ¾Æ´Õ´Ï´Ù.");
+					System.out.println("ì¶œê¸ˆì´ ì•„ë‹™ë‹ˆë‹¤.");
 				}
 				break;
 			case 2:
-				System.out.print("Ãâ±İ¾×> ");
+				System.out.print("ì¶œê¸ˆì•¡> ");
 				sub = scan.nextInt();
 
 				if (account - sub >= 0) {
 					account -= sub;
 				} else {
-					System.out.println("ÀÜ°í ºÎÁ·!!");
+					System.out.println("ì”ê³  ë¶€ì¡±!!");
 				}
 				break;
 			case 3:
-				System.out.print("ÀÜ°í> " + account);
+				System.out.print("ì”ê³ > " + account);
 				break;
 
 			case 4:
-				System.out.println("ÇÁ·Î±×·¥ Á¾·á");
+				System.out.println("í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
 				break outer;
 			default:
-				System.out.println("´Ù½Ã ¸Ş´º ¼±ÅÃÇØ ÁÖ¼¼¿ä.");
+				System.out.println("ë‹¤ì‹œ ë©”ë‰´ ì„ íƒí•´ ì£¼ì„¸ìš”.");
 				break;
 			}
 			System.out.println();

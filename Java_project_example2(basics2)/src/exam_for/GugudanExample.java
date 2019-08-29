@@ -1,23 +1,23 @@
-package exam_for;
+ï»¿package exam_for;
 
 import java.util.Scanner;
 
-/* »ç¿ëÀÚ·ÎºÎÅÍ ¼ö¸¦ ÀÔ·Â¹Ş¾Æ
- * while¹®À» ÀÌ¿ëÇÑ ±¸±¸´Ü Ãâ·Â ÇÁ·Î±×·¥
+/* ì‚¬ìš©ìë¡œë¶€í„° ìˆ˜ë¥¼ ì…ë ¥ë°›ì•„
+ * whileë¬¸ì„ ì´ìš©í•œ êµ¬êµ¬ë‹¨ ì¶œë ¥ í”„ë¡œê·¸ë¨
  */
 public class GugudanExample {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int num, i = 1;
 
-		System.out.print("±¸±¸´Ü Áß¿¡¼­ Ãâ·ÂÇÏ°í ½ÍÀº ´ÜÀ» ÀÔ·ÂÇÏ½Ã¿À: ");
+		System.out.print("êµ¬êµ¬ë‹¨ ì¤‘ì—ì„œ ì¶œë ¥í•˜ê³  ì‹¶ì€ ë‹¨ì„ ì…ë ¥í•˜ì‹œì˜¤: ");
 		num = scan.nextInt();
 		if (num > 0 && num < 10) {
 			for (i = 1; i < 10; i++) {
 				System.out.println(num + "*" + i + " = " + (num * i));
 			}
 		} else {
-			System.out.println("±¸±¸´ÜÀº 1 ~ 9±îÁöÀÔ´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			System.out.println("êµ¬êµ¬ë‹¨ì€ 1 ~ 9ê¹Œì§€ì…ë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 			System.out.println("--------------------------------");
 		}
 		scan.close();

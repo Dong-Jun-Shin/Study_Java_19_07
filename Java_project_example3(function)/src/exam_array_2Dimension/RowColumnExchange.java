@@ -1,9 +1,9 @@
-package exam_array_2Dimension;
+ï»¿package exam_array_2Dimension;
 
 import tool.examArray2D;
 /*
- * 2Â÷¿ø(3X3) ¹è¿­¿¡ ³»¿ëÀ» ÀúÀåÇÏ¿© (1~9) Ãâ·ÂÇÏ°íÀÚ ÇÑ´Ù.
- * ±×¸®°í ±× Çà°ú ¿­ÀÇ À§Ä¡¸¦ ¹Ù²Ù¾î¼­ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
+ * 2ì°¨ì›(3X3) ë°°ì—´ì— ë‚´ìš©ì„ ì €ì¥í•˜ì—¬ (1~9) ì¶œë ¥í•˜ê³ ì í•œë‹¤.
+ * ê·¸ë¦¬ê³  ê·¸ í–‰ê³¼ ì—´ì˜ ìœ„ì¹˜ë¥¼ ë°”ê¾¸ì–´ì„œ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ì‹œì˜¤.
  */
 public class RowColumnExchange {
 	public static void main(String[] args) {

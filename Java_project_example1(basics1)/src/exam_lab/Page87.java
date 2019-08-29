@@ -1,4 +1,4 @@
-package exam_lab;
+ï»¿package exam_lab;
 
 import java.util.Scanner;
 
@@ -7,19 +7,19 @@ public class Page87 {
 		double b, c, root, sol1, sol2;
 		Scanner scan = new Scanner(System.in);
 
-		System.out.println("bÀÇ °ªÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä. (x*x + b*x + c)");
+		System.out.println("bì˜ ê°’ì„ ì…ë ¥í•´ì£¼ì„¸ìš”. (x*x + b*x + c)");
 		b = scan.nextDouble();
 
-		System.out.println("cÀÇ °ªÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä. (x*x + b*x + c)");
+		System.out.println("cì˜ ê°’ì„ ì…ë ¥í•´ì£¼ì„¸ìš”. (x*x + b*x + c)");
 		c = scan.nextDouble();
 
-		// Á¦°ö±Ù °è»ê
+		// ì œê³±ê·¼ ê³„ì‚°
 		root = Math.sqrt(b * b - 4 * c);
 		sol1 = (-b + root) / 2;
 		sol2 = (-b - root) / 2;
 
-		System.out.println("±ÙÀº " + sol1);
-		System.out.println("±ÙÀº " + sol2);
+		System.out.println("ê·¼ì€ " + sol1);
+		System.out.println("ê·¼ì€ " + sol2);
 		
 		scan.close();
 	}

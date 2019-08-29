@@ -1,23 +1,23 @@
-package simplephoneinfo;
+ï»¿package simplephoneinfo;
 
 import java.util.Scanner;
 
 public class PhoneBookVer02 {
 	public static void readData(Scanner scan) {
 		PhoneInfo info = new PhoneInfo();
-		System.out.print("ÀÌ¸§ : ");
+		System.out.print("ì´ë¦„ : ");
 		info.setName(scan.nextLine());
 
-		System.out.print("ÀüÈ­¹øÈ£ : ");
+		System.out.print("ì „í™”ë²ˆí˜¸ : ");
 		info.setPhoneNumber(scan.nextLine());
 
-		System.out.print("»ı³â¿ùÀÏ : ");
+		System.out.print("ìƒë…„ì›”ì¼ : ");
 		info.setBirthday(scan.nextLine());
-		//»ıÀÏÀ» ¹ŞÁö ¾ÊÀ» °æ¿ì¸¦ Á¤ÀÇ
+		//ìƒì¼ì„ ë°›ì§€ ì•Šì„ ê²½ìš°ë¥¼ ì •ì˜
 		if (info.getBirthday().equals(""))
 			info.setBirthday(null);
 
-		System.out.println("\nÀÔ·ÂµÈ Á¤º¸ Ãâ·Â...");
+		System.out.println("\nì…ë ¥ëœ ì •ë³´ ì¶œë ¥...");
 		info.showPhoneInfo();
 	}
 	
@@ -30,7 +30,7 @@ public class PhoneBookVer02 {
 		while(true) {
 			PhoneInfo.showFrame();
 			
-			//¸Ş´º¼±ÅÃ
+			//ë©”ë‰´ì„ íƒ
 			inputNum = scan.nextInt();
 			scan.nextLine();
 
@@ -40,12 +40,12 @@ public class PhoneBookVer02 {
 //				readData();
 				break;
 			case 2:
-				System.out.println("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
-				//¸Ş¼Òµå¸¦ °­Á¦ Á¾·á½ÃÅ´. -mainÀ» °­Á¦·Î Á¾·á
+				System.out.println("í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
+				//ë©”ì†Œë“œë¥¼ ê°•ì œ ì¢…ë£Œì‹œí‚´. -mainì„ ê°•ì œë¡œ ì¢…ë£Œ
 				return;
 //				break outer;
 			default:
-				System.out.println("1°ú 2 Áß¿¡ ¼±ÅÃÇØÁÖ¼¼¿ä.");
+				System.out.println("1ê³¼ 2 ì¤‘ì— ì„ íƒí•´ì£¼ì„¸ìš”.");
 			}
 		}
 	}

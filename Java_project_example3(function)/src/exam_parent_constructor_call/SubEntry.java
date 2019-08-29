@@ -1,12 +1,12 @@
-package exam_parent_constructor_call;
+ï»¿package exam_parent_constructor_call;
 
 public class SubEntry extends Entry {
 	public String definition;
 	public int year;
 
-	//»ı¼ºÀÚ
+	//ìƒì„±ì
 	public SubEntry(String word) {
-		super(word); // ½´ÆÛÅ¬·¡½ºÀÇ »ı¼ºÀÚ È£Ãâ
+		super(word); // ìŠˆí¼í´ë˜ìŠ¤ì˜ ìƒì„±ì í˜¸ì¶œ
 	}
 
 	public SubEntry(String word, String definition, int year) {
@@ -17,7 +17,7 @@ public class SubEntry extends Entry {
 
 	public void printView() {
 		super.writeView();
-		System.out.println("¿ø¾î : " + this.definition);
-		System.out.println("½Ã±â : " + year);
+		System.out.println("ì›ì–´ : " + this.definition);
+		System.out.println("ì‹œê¸° : " + year);
 	}
 }

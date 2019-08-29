@@ -1,4 +1,4 @@
-package exam_int;
+﻿package exam_int;
 
 public class LongExample {
 	public static void main(String[] args) {

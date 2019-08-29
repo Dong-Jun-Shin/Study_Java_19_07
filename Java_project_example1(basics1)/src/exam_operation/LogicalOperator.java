@@ -1,4 +1,4 @@
-package exam_operation;
+ï»¿package exam_operation;
 	
 public class LogicalOperator {
 	public static void main(String[] args) {
@@ -8,8 +8,8 @@ public class LogicalOperator {
 		System.out.println((x == 3) && (y == 7));
 		System.out.println((x == 3) || (y == 4));
 
-		//¾Õ Á¶°ÇÀº ¿ì¼± ½ÇÇà ÈÄ, Á¶°ÇÀ» ÆÇ´ÜÇÑ´Ù.
-		//¾Õ Á¶°ÇÀ¸·Î °á°ú µµÃâ ½Ã, µÚÀÇ Á¶°ÇÀº ½ÇÇàµÇÁö ¾Ê´Â´Ù. (ÀÌÁß if ¹æ½Ä)
+		//ì• ì¡°ê±´ì€ ìš°ì„  ì‹¤í–‰ í›„, ì¡°ê±´ì„ íŒë‹¨í•œë‹¤.
+		//ì• ì¡°ê±´ìœ¼ë¡œ ê²°ê³¼ ë„ì¶œ ì‹œ, ë’¤ì˜ ì¡°ê±´ì€ ì‹¤í–‰ë˜ì§€ ì•ŠëŠ”ë‹¤. (ì´ì¤‘ if ë°©ì‹)
 		//					False      Not Execute
 		//                 4 == 3
 		boolean result = (++x == 3) && (y++ == 7);
@@ -17,7 +17,7 @@ public class LogicalOperator {
 		System.out.println("x = " + x + ", y = " + y);
 		System.out.println("result = " + result);
 
-		//¾Õ Á¶°ÇÀ¸·Î °á°ú µµÃâ ½Ã, µÚÀÇ Á¶°ÇÀº ½ÇÇàµÇÁö ¾Ê´Â´Ù. (ÀÌÁß if ¹æ½Ä)
+		//ì• ì¡°ê±´ìœ¼ë¡œ ê²°ê³¼ ë„ì¶œ ì‹œ, ë’¤ì˜ ì¡°ê±´ì€ ì‹¤í–‰ë˜ì§€ ì•ŠëŠ”ë‹¤. (ì´ì¤‘ if ë°©ì‹)
 		//			True       Not Execute
 		//		   4 == 4
 		result = (x++ == 4) || (++y == 7);

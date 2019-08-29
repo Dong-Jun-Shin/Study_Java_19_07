@@ -1,4 +1,4 @@
-import java.time.LocalDateTime;
+ï»¿import java.time.LocalDateTime;
 
 public class Timer {
 	public static void main(String[] args) {
@@ -7,7 +7,7 @@ public class Timer {
 		int i = 1;
 		int second;
 		/*
-		 * // 1ÃÊ Å¸ÀÌ¸Ó LocalDateTime s = LocalDateTime.now(); while (t_s != 1) {
+		 * // 1ì´ˆ íƒ€ì´ë¨¸ LocalDateTime s = LocalDateTime.now(); while (t_s != 1) {
 		 * LocalDateTime ms = LocalDateTime.now(); t_s = s.getSecond(); t_e =
 		 * ms.getSecond();
 		 * 
@@ -16,38 +16,38 @@ public class Timer {
 		 * if (i == 1) { st = (int) System.nanoTime(); } } et = (int) System.nanoTime();
 		 * second = et - st;
 		 * 
-		 * System.out.println("1ÃÊ°¡ Áö³µ½À´Ï´Ù.");
+		 * System.out.println("1ì´ˆê°€ ì§€ë‚¬ìŠµë‹ˆë‹¤.");
 		 */
 		
-		// ½Ã°£ÃÊ Ãâ·Â
+		// ì‹œê°„ì´ˆ ì¶œë ¥
 		for (i = 0; i < 10000000; i++) {
-			// ½ÃÀÛ ½Ã°£
+			// ì‹œì‘ ì‹œê°„
 			LocalDateTime s = LocalDateTime.now();
-			//while (t_s != 1)·Î ¼³Á¤ÇÒ °æ¿ì, 
-			//(s¿Í msÀÇ Â÷)t_sÀÇ °ªÀº 0->1·Î ÇâÇÑ´Ù.
-			// ÀÌ ¶§, ¿ÀÂ÷¿¡ ÀÇÇØ¼­ 1ÀÌ»óÀÇ °ªÀ¸·Î Á¡Á¡ Ä¿Áö°Ô µÇ°í,
-			//2¸¦ ³Ñ°Ô µÇ¾î, ÃÊ°¡ Ãâ·ÂµÇÁö ¾Ê°í while¹®¿¡ °¤È÷°Ô µÈ´Ù.
-			//±×·¡¼­ (t_s == 0)·Î ¼³Á¤ÇØ¼­ Â÷°¡ 0ÀÌ¸é ¹İº¹ÇÏ°í, ±× ÀÌ¿Ü¸é
-			//³¡³»µµ·Ï ¸¸µç´Ù. ÀÌ °æ¿ì, ¿ÀÂ÷·Î Á¡Á¡ ´Ã¾îÁö´õ¶óµµ t_s´Â ´Ù½Ã ÀâÈ÷°Ô µÈ´Ù.
+			//while (t_s != 1)ë¡œ ì„¤ì •í•  ê²½ìš°, 
+			//(sì™€ msì˜ ì°¨)t_sì˜ ê°’ì€ 0->1ë¡œ í–¥í•œë‹¤.
+			// ì´ ë•Œ, ì˜¤ì°¨ì— ì˜í•´ì„œ 1ì´ìƒì˜ ê°’ìœ¼ë¡œ ì ì  ì»¤ì§€ê²Œ ë˜ê³ ,
+			//2ë¥¼ ë„˜ê²Œ ë˜ì–´, ì´ˆê°€ ì¶œë ¥ë˜ì§€ ì•Šê³  whileë¬¸ì— ê°‡íˆê²Œ ëœë‹¤.
+			//ê·¸ë˜ì„œ (t_s == 0)ë¡œ ì„¤ì •í•´ì„œ ì°¨ê°€ 0ì´ë©´ ë°˜ë³µí•˜ê³ , ê·¸ ì´ì™¸ë©´
+			//ëë‚´ë„ë¡ ë§Œë“ ë‹¤. ì´ ê²½ìš°, ì˜¤ì°¨ë¡œ ì ì  ëŠ˜ì–´ì§€ë”ë¼ë„ t_sëŠ” ë‹¤ì‹œ ì¡íˆê²Œ ëœë‹¤.
 			while (t_s == 0) {
-				// ÇöÀç ½Ã°£
+				// í˜„ì¬ ì‹œê°„
 				LocalDateTime ms = LocalDateTime.now();
-				// ÃÊ´ÜÀ§(byte)·Î º¯È¯
+				// ì´ˆë‹¨ìœ„(byte)ë¡œ ë³€í™˜
 				t_s = s.getSecond();
 				t_e = ms.getSecond();
 
-				// °æ°ú ½Ã°£(ÃÊ)
+				// ê²½ê³¼ ì‹œê°„(ì´ˆ)
 				t_s = t_e - t_s;
 
 				if (i == 100) {
 					st = (int) System.nanoTime();
 				}
 
-			} // ½Ã°£ÃÊ Â÷ÀÌ¸¦ ÃÊ±âÈ­, ¾ÈÇÒ °æ¿ì ¹İº¹ Á¶°Ç¹®ÀÌ °è¼Ó ÂüÀÎ »óÅÂ¿©¼­ ´Ù ³Ñ¾î°£´Ù.
+			} // ì‹œê°„ì´ˆ ì°¨ì´ë¥¼ ì´ˆê¸°í™”, ì•ˆí•  ê²½ìš° ë°˜ë³µ ì¡°ê±´ë¬¸ì´ ê³„ì† ì°¸ì¸ ìƒíƒœì—¬ì„œ ë‹¤ ë„˜ì–´ê°„ë‹¤.
 			t_s = 0;
 					
-			//½Ã°£À» Ãâ·Â
-			System.out.println((i + 1) + "ÃÊ");	
+			//ì‹œê°„ì„ ì¶œë ¥
+			System.out.println((i + 1) + "ì´ˆ");	
 			
 		}
 		et = (int) System.nanoTime();

@@ -1,4 +1,4 @@
-package exam_class_basic;
+Ôªøpackage exam_class_basic;
 
 public class MovieTest {
 	public static void main(String[] args) {
@@ -9,7 +9,7 @@ public class MovieTest {
 		first.set1();
 		second.set2();
 		myMovie.setUserData();
-//		myMovie.setData("Aladdin", 9.44, "∞°¿Ã ∏Æƒ°", 2019);
+//		myMovie.setData("Aladdin", 9.44, "Í∞ÄÏù¥ Î¶¨Ïπò", 2019);
 		
 		System.out.println(first.toString());
 		System.out.println(second.toString());

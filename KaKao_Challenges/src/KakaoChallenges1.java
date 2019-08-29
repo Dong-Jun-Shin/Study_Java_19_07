@@ -1,12 +1,12 @@
-/*
- * ¹®Á¦ ¼³¸í
-Á÷»ç°¢ÇüÀ» ¸¸µå´Â µ¥ ÇÊ¿äÇÑ 4°³ÀÇ Á¡ Áß 3°³ÀÇ ÁÂÇ¥°¡ ÁÖ¾îÁú ¶§, ³ª¸ÓÁö ÇÑ Á¡ÀÇ ÁÂÇ¥¸¦ ±¸ÇÏ·Á°í ÇÕ´Ï´Ù. Á¡ 3°³ÀÇ ÁÂÇ¥°¡ µé¾îÀÖ´Â ¹è¿­ v°¡ ¸Å°³º¯¼ö·Î ÁÖ¾îÁú ¶§, Á÷»ç°¢ÇüÀ» ¸¸µå´Â µ¥ ÇÊ¿äÇÑ ³ª¸ÓÁö ÇÑ Á¡ÀÇ ÁÂÇ¥¸¦ return ÇÏµµ·Ï solution ÇÔ¼ö¸¦ ¿Ï¼ºÇØÁÖ¼¼¿ä. ´Ü, Á÷»ç°¢ÇüÀÇ °¢ º¯Àº xÃà, yÃà¿¡ ÆòÇàÇÏ¸ç, ¹Ýµå½Ã Á÷»ç°¢ÇüÀ» ¸¸µé ¼ö ÀÖ´Â °æ¿ì¸¸ ÀÔ·ÂÀ¸·Î ÁÖ¾îÁý´Ï´Ù.
+ï»¿/*
+ * ë¬¸ì œ ì„¤ëª…
+ì§ì‚¬ê°í˜•ì„ ë§Œë“œëŠ” ë° í•„ìš”í•œ 4ê°œì˜ ì  ì¤‘ 3ê°œì˜ ì¢Œí‘œê°€ ì£¼ì–´ì§ˆ ë•Œ, ë‚˜ë¨¸ì§€ í•œ ì ì˜ ì¢Œí‘œë¥¼ êµ¬í•˜ë ¤ê³  í•©ë‹ˆë‹¤. ì  3ê°œì˜ ì¢Œí‘œê°€ ë“¤ì–´ìžˆëŠ” ë°°ì—´ vê°€ ë§¤ê°œë³€ìˆ˜ë¡œ ì£¼ì–´ì§ˆ ë•Œ, ì§ì‚¬ê°í˜•ì„ ë§Œë“œëŠ” ë° í•„ìš”í•œ ë‚˜ë¨¸ì§€ í•œ ì ì˜ ì¢Œí‘œë¥¼ return í•˜ë„ë¡ solution í•¨ìˆ˜ë¥¼ ì™„ì„±í•´ì£¼ì„¸ìš”. ë‹¨, ì§ì‚¬ê°í˜•ì˜ ê° ë³€ì€ xì¶•, yì¶•ì— í‰í–‰í•˜ë©°, ë°˜ë“œì‹œ ì§ì‚¬ê°í˜•ì„ ë§Œë“¤ ìˆ˜ ìžˆëŠ” ê²½ìš°ë§Œ ìž…ë ¥ìœ¼ë¡œ ì£¼ì–´ì§‘ë‹ˆë‹¤.
 
-Á¦ÇÑ»çÇ×
-v´Â ¼¼ Á¡ÀÇ ÁÂÇ¥°¡ µé¾îÀÖ´Â 2Â÷¿ø ¹è¿­ÀÔ´Ï´Ù.
-vÀÇ °¢ ¿ø¼Ò´Â Á¡ÀÇ ÁÂÇ¥¸¦ ³ªÅ¸³»¸ç, ÁÂÇ¥´Â [xÃà ÁÂÇ¥, yÃà ÁÂÇ¥] ¼øÀ¸·Î ÁÖ¾îÁý´Ï´Ù.
-ÁÂÇ¥°ªÀº 1 ÀÌ»ó 10¾ï ÀÌÇÏÀÇ ÀÚ¿¬¼öÀÔ´Ï´Ù.
-Á÷»ç°¢ÇüÀ» ¸¸µå´Â µ¥ ÇÊ¿äÇÑ ³ª¸ÓÁö ÇÑ Á¡ÀÇ ÁÂÇ¥¸¦ [xÃà ÁÂÇ¥, yÃà ÁÂÇ¥] ¼øÀ¸·Î ´ã¾Æ return ÇØÁÖ¼¼¿ä.
+ì œí•œì‚¬í•­
+vëŠ” ì„¸ ì ì˜ ì¢Œí‘œê°€ ë“¤ì–´ìžˆëŠ” 2ì°¨ì› ë°°ì—´ìž…ë‹ˆë‹¤.
+vì˜ ê° ì›ì†ŒëŠ” ì ì˜ ì¢Œí‘œë¥¼ ë‚˜íƒ€ë‚´ë©°, ì¢Œí‘œëŠ” [xì¶• ì¢Œí‘œ, yì¶• ì¢Œí‘œ] ìˆœìœ¼ë¡œ ì£¼ì–´ì§‘ë‹ˆë‹¤.
+ì¢Œí‘œê°’ì€ 1 ì´ìƒ 10ì–µ ì´í•˜ì˜ ìžì—°ìˆ˜ìž…ë‹ˆë‹¤.
+ì§ì‚¬ê°í˜•ì„ ë§Œë“œëŠ” ë° í•„ìš”í•œ ë‚˜ë¨¸ì§€ í•œ ì ì˜ ì¢Œí‘œë¥¼ [xì¶• ì¢Œí‘œ, yì¶• ì¢Œí‘œ] ìˆœìœ¼ë¡œ ë‹´ì•„ return í•´ì£¼ì„¸ìš”.
 
  */
 
@@ -16,8 +16,8 @@ class SolutionTest {
 		
 		int compareNum = 0;
 
-		// answer[0] = XÁÂÇ¥
-		//°°Àº ¹è¿­ÀÎµ¦½º¸¦ ºñ±³ÇÏ´Â°Ô ¾Æ´Ï¸é¼­ °°Àº °ªÀ» °¡Áø ÁÂÇ¥¸¦ compareNum¿¡ ´ã±â
+		// answer[0] = Xì¢Œí‘œ
+		//ê°™ì€ ë°°ì—´ì¸ë±ìŠ¤ë¥¼ ë¹„êµí•˜ëŠ”ê²Œ ì•„ë‹ˆë©´ì„œ ê°™ì€ ê°’ì„ ê°€ì§„ ì¢Œí‘œë¥¼ compareNumì— ë‹´ê¸°
 		for (int j = 0; j < v.length; j++) {
 			for (int i = 1; i < v.length; i++) {
 				if (v[j][0] == v[i][0] && i != j) {
@@ -27,14 +27,14 @@ class SolutionTest {
 			}
 		}
 
-		//°°À» °ªÀ» °¡Áø ÁÂÇ¥ ÀÌ¿ÜÀÇ °ªÀ» answer[0]¿¡ ´ëÀÔ
+		//ê°™ì„ ê°’ì„ ê°€ì§„ ì¢Œí‘œ ì´ì™¸ì˜ ê°’ì„ answer[0]ì— ëŒ€ìž…
 		for (int i = 0; i < v.length; i++) {
 			if (compareNum != v[i][0]) {
 				answer[0] = v[i][0];
 			}
 		}
 		
-		// answer[1] = YÁÂÇ¥
+		// answer[1] = Yì¢Œí‘œ
 		for (int j = 0; j < v.length; j++) {
 			for (int i = 1; i < v.length; i++) {
 

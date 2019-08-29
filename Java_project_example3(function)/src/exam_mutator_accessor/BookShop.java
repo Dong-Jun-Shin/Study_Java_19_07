@@ -1,4 +1,4 @@
-package exam_mutator_accessor;
+ï»¿package exam_mutator_accessor;
 
 public class BookShop {
 	
@@ -31,6 +31,6 @@ public class BookShop {
 	}
 	
 	public String toString() {
-		return String.format("Ã¥ÀÌ¸§ : %s\nÀúÀÚ : %s\n°¡°İ : %d", bname, author, price);
+		return String.format("ì±…ì´ë¦„ : %s\nì €ì : %s\nê°€ê²© : %d", bname, author, price);
 	}
 }

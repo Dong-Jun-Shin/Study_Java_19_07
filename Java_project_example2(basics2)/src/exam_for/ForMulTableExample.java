@@ -1,9 +1,9 @@
-package exam_for;
+ï»¿package exam_for;
 
-//2´ÜºÎÅÍ 9´Ü±îÁö Ãâ·Â
+//2ë‹¨ë¶€í„° 9ë‹¨ê¹Œì§€ ì¶œë ¥
 public class ForMulTableExample {
 	public static void main(String[] args) {
-		// ¼¼·Î Ãâ·Â
+		// ì„¸ë¡œ ì¶œë ¥
 		for (int i = 2; i < 10; i++) {
 			for (int j = 1; j < 10; j++) {
 				System.out.println(i + "*" + j + " = " + i * j);
@@ -11,7 +11,7 @@ public class ForMulTableExample {
 			System.out.println();
 		}
 
-		// °¡·Î Ãâ·Â
+		// ê°€ë¡œ ì¶œë ¥
 		for (int j = 1; j < 10; j++) {
 			for (int i = 2; i < 10; i++) {
 				System.out.printf("%d * %d = %2d  ", i, j, i * j);

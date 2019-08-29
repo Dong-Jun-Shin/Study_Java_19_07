@@ -1,4 +1,4 @@
-package exam_class_basic;
+ï»¿package exam_class_basic;
 
 public class AddressTest {
 	public static void main(String[] args) {
@@ -12,7 +12,7 @@ public class AddressTest {
 		System.out.println(String.format("%s %-20s %s \n", janeAdd.name, janeAdd.addr, janeAdd.tel));
 		
 		Address ae = new Address();
-		ae.getData("È«±æµ¿", "¼­¿ï½Ã °­³²±¸ ¼ö¼­µ¿ 77-23¹øÁö", "02-777-2452");
+		ae.getData("í™ê¸¸ë™", "ì„œìš¸ì‹œ ê°•ë‚¨êµ¬ ìˆ˜ì„œë™ 77-23ë²ˆì§€", "02-777-2452");
 		System.out.println(String.format("%s %-20s %s \n", ae.name, ae.addr, ae.tel));
 	}
 }

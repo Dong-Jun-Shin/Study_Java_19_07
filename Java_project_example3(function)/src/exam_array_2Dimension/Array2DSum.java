@@ -1,9 +1,9 @@
-package exam_array_2Dimension;
+ï»¿package exam_array_2Dimension;
 
 import tool.examArray2D;
 
 /*
- * ÀÌÂ÷¿ø ¹è¿­ÀÇ °¡·Î, ¼¼·Î, ´ë°¢¼±ÀÇ ÇÕ ±¸ÇÏ¿© Ãâ·ÂÇÏ½Ã¿À.
+ * ì´ì°¨ì› ë°°ì—´ì˜ ê°€ë¡œ, ì„¸ë¡œ, ëŒ€ê°ì„ ì˜ í•© êµ¬í•˜ì—¬ ì¶œë ¥í•˜ì‹œì˜¤.
  */
 public class Array2DSum {
 	public static void main(String[] args) {

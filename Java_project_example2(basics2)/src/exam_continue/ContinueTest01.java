@@ -1,4 +1,4 @@
-package exam_continue;
+ï»¿package exam_continue;
 
 public class ContinueTest01 {
 	public static void main(String[] args) {
@@ -10,7 +10,7 @@ public class ContinueTest01 {
 			}
 		}
 		System.out.println("-----------------");
-		//forÀÇ ¼ø¼­¸¦ ¹Ù²ã ±¸Çö
+		//forì˜ ìˆœì„œë¥¼ ë°”ê¿” êµ¬í˜„
 		for (int j = 0; j < 1; j++) {
 			for (int i = 0; i < 3; i++) {
 				System.out.println("i =" + i + " j =" + j);
@@ -18,7 +18,7 @@ public class ContinueTest01 {
 		}
 		System.out.println();
 		
-		//¶óº§°ú ÄÁÆ¼´º¸¦ ÀÌ¿ëÇÑ ±¸Çö
+		//ë¼ë²¨ê³¼ ì»¨í‹°ë‰´ë¥¼ ì´ìš©í•œ êµ¬í˜„
 		outer: for(int i = 0; i<3; i++) {
 			for(int j =0; j<3; j++) {
 				if(j==1)

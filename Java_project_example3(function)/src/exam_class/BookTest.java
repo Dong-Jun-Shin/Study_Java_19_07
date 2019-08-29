@@ -1,4 +1,4 @@
-package exam_class;
+ï»¿package exam_class;
 
 class Book {
 	private String title;
@@ -79,7 +79,7 @@ public class BookTest {
 	public static void main(String[] args) {
 		Magazine[] m = new Magazine[10];
 		for (int i = 0; i < m.length; i++) {
-			m[i] = new Magazine(Character.toString((char)(65 + i)), i*10, "ÀÛ°¡"+String.format("%d", i), String.format("2019³â 1¿ù %dÀÏ", i+1));
+			m[i] = new Magazine(Character.toString((char)(65 + i)), i*10, "ìž‘ê°€"+String.format("%d", i), String.format("2019ë…„ 1ì›” %dì¼", i+1));
 		}
 		for (int i = 0; i < m.length; i++) {
 			System.out.println(m[i].toString());

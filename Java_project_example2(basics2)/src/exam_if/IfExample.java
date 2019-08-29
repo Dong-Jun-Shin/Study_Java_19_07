@@ -1,30 +1,30 @@
-package exam_if;
+ï»¿package exam_if;
 
 import java.util.Scanner;
 
 public class IfExample {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Àı´ñ°ªÀ» ¾Ë·Áµå¸° ÈÄ Àı´ñ°ªÀÇ È¦Â¦ ¿©ºÎ¸¦ ¾Ë·Áµå¸³´Ï´Ù. ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+		System.out.println("ì ˆëŒ“ê°’ì„ ì•Œë ¤ë“œë¦° í›„ ì ˆëŒ“ê°’ì˜ í™€ì§ ì—¬ë¶€ë¥¼ ì•Œë ¤ë“œë¦½ë‹ˆë‹¤. ì…ë ¥í•´ì£¼ì„¸ìš”.");
 		int number = scan.nextInt();
 		
-		//Àı´ë°ª
-		System.out.println("\nÀÔ·ÂÇÑ ¼öÀÇ ÃÊ±â°ª : " + number);
+		//ì ˆëŒ€ê°’
+		System.out.println("\nì…ë ¥í•œ ìˆ˜ì˜ ì´ˆê¸°ê°’ : " + number);
 
-		System.out.println(number + "ÀÇ Àı´ë°ªÀº ");
+		System.out.println(number + "ì˜ ì ˆëŒ€ê°’ì€ ");
 
 		if (number < 0) {
 			number = -number;
 		}
-		System.out.println(number + "ÀÔ´Ï´Ù.");
+		System.out.println(number + "ì…ë‹ˆë‹¤.");
 
-		//È¦Â¦
-		System.out.println("\nÀÔ·ÂÇÑ ¼öÀÇ ÃÊ±â°ª : " + number);
+		//í™€ì§
+		System.out.println("\nì…ë ¥í•œ ìˆ˜ì˜ ì´ˆê¸°ê°’ : " + number);
 
 		if (number % 2 == 0) {
-			System.out.println("ÀÔ·ÂÇÑ " + number + "´Â Â¦¼öÀÔ´Ï´Ù.");
+			System.out.println("ì…ë ¥í•œ " + number + "ëŠ” ì§ìˆ˜ì…ë‹ˆë‹¤.");
 		}else {
-			System.out.println("ÀÔ·ÂÇÑ " + number + "´Â È¦¼öÀÔ´Ï´Ù.");
+			System.out.println("ì…ë ¥í•œ " + number + "ëŠ” í™€ìˆ˜ì…ë‹ˆë‹¤.");
 		}
 		
 		scan.close();

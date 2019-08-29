@@ -1,33 +1,33 @@
-package exam_class_array;
+ï»¿package exam_class_array;
 
 public class PhoneObjectArray {
 	public static void main(String[] args) {
-		System.out.println("==========°¢ °´Ã¼ ¼±¾ğ==========");
+		System.out.println("==========ê° ê°ì²´ ì„ ì–¸==========");
 		Phone p1, p2, p3;
-		p1 = new Phone("¾ÆÀÌÆù11", "¾ÖÇÃ");
-		p2 = new Phone("°¶·°½Ã S10", "»ï¼º");
+		p1 = new Phone("ì•„ì´í°11", "ì• í”Œ");
+		p2 = new Phone("ê°¤ëŸ­ì‹œ S10", "ì‚¼ì„±");
 		p3 = new Phone("G8", "LG");
 		
 		p1.printData();
 		p2.printData();
 		p3.printData();
 		System.out.println();
-				System.out.println("==========°´Ã¼ ¹è¿­ »ç¿ë==========");
+				System.out.println("==========ê°ì²´ ë°°ì—´ ì‚¬ìš©==========");
 		Phone[] p = new Phone[3];
-		String[] name = {"¾ÆÀÌÆù11", "°¶·°½Ã S10", "G8"};
-		String[] comp = {"¾ÖÇÃ", "»ï¼º", "LG"};
+		String[] name = {"ì•„ì´í°11", "ê°¤ëŸ­ì‹œ S10", "G8"};
+		String[] comp = {"ì• í”Œ", "ì‚¼ì„±", "LG"};
 		
-		//°ª ÀÔ·Â
+		//ê°’ ì…ë ¥
 		for (int i = 0; i < p.length; i++) {
 			p[i] = new Phone(name[i], comp[i]);
 		}
 		
-		//for ~ each¹®À» ÀÌ¿ëÇÑ Ãâ·Â
+		//for ~ eachë¬¸ì„ ì´ìš©í•œ ì¶œë ¥
 		for (Phone ph : p) {
 			ph.printData();
 		}
 		
-		//for¹®À» ÀÌ¿ëÇÑ Ãâ·Â
+		//forë¬¸ì„ ì´ìš©í•œ ì¶œë ¥
 		for (int i = 0; i < comp.length; i++) {
 			p[i].printData();
 		}

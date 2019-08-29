@@ -1,4 +1,4 @@
-package simplephoneinfo;
+ï»¿package simplephoneinfo;
 
 import java.util.Scanner;
 
@@ -6,20 +6,20 @@ public class PhoneBookManager{
 	private static int arrLeng = 1;
 	
 	public static void insertData(Scanner scan, PhoneInfo user) {
-		System.out.print("ÀÌ¸§ : ");
+		System.out.print("ì´ë¦„ : ");
 		user.setName(scan.nextLine());
 
-		System.out.print("ÀüÈ­¹øÈ£ : ");
+		System.out.print("ì „í™”ë²ˆí˜¸ : ");
 		user.setPhoneNumber(scan.nextLine());
 
-		System.out.print("»ı³â¿ùÀÏ : ");
+		System.out.print("ìƒë…„ì›”ì¼ : ");
 		user.setBirthday(scan.nextLine());
-		//»ıÀÏÀ» ¹ŞÁö ¾ÊÀ» °æ¿ì¸¦ Á¤ÀÇ
+		//ìƒì¼ì„ ë°›ì§€ ì•Šì„ ê²½ìš°ë¥¼ ì •ì˜
 		if (user.getBirthday().equals(""))
 			user.setBirthday(null);
 
-		System.out.println("µ¥ÀÌÅÍÀÇ ÀÔ·ÂÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
-//		System.out.println("\nÀÔ·ÂµÈ Á¤º¸ Ãâ·Â...");
+		System.out.println("ë°ì´í„°ì˜ ì…ë ¥ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
+//		System.out.println("\nì…ë ¥ëœ ì •ë³´ ì¶œë ¥...");
 //		user.showPhoneInfo();
 
 		arrLeng++;
@@ -31,47 +31,47 @@ public class PhoneBookManager{
 				break;
 			}else if(user[i].getName().equals(selName)) {
 				user[i].showPhoneInfo();		
-				System.out.println("µ¥ÀÌÅÍÀÇ °Ë»öÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+				System.out.println("ë°ì´í„°ì˜ ê²€ìƒ‰ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
 				return;
 			}
 		}
-		System.out.println("ÀÏÄ¡ÇÏ´Â µ¥ÀÌÅÍ°¡ ¾ø½À´Ï´Ù.");
+		System.out.println("ì¼ì¹˜í•˜ëŠ” ë°ì´í„°ê°€ ì—†ìŠµë‹ˆë‹¤.");
 	}
 	
 	public static PhoneInfo[] deleteData(PhoneInfo[] user, String selName) {
 		for (int i = 0; i < user.length; i++) {
-			//¹è¿­ÀÇ ³¡À» È®ÀÎ
+			//ë°°ì—´ì˜ ëì„ í™•ì¸
 			if(user[i].getName() == null) {
 				break;
 				
 			}else if(user[i].getName().equals(selName)) {
 				
-				//ÀÌ¸§ÀÌ °°À¸¸é »èÁ¦
+				//ì´ë¦„ì´ ê°™ìœ¼ë©´ ì‚­ì œ
 				user[i] = new PhoneInfo();
 				
-				//¹è¿­ Á¤·Ä
+				//ë°°ì—´ ì •ë ¬
 				user = sortArr(user);
 				
 				arrLeng--;
-				System.out.println("µ¥ÀÌÅÍÀÇ »èÁ¦°¡ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+				System.out.println("ë°ì´í„°ì˜ ì‚­ì œê°€ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
 				return user;
 			}
 		}
-		System.out.println("ÀÏÄ¡ÇÏ´Â µ¥ÀÌÅÍ°¡ ¾ø½À´Ï´Ù.");
+		System.out.println("ì¼ì¹˜í•˜ëŠ” ë°ì´í„°ê°€ ì—†ìŠµë‹ˆë‹¤.");
 		return user;
 	}
 	
 	public static PhoneInfo[] sortArr(PhoneInfo[] user) {
-		//¹è¿­Á¤¸®¸¦ À§ÇÑ ÀÓ½Ã °ø°£ ¼±¾ğ ¹× »ı¼º
+		//ë°°ì—´ì •ë¦¬ë¥¼ ìœ„í•œ ì„ì‹œ ê³µê°„ ì„ ì–¸ ë° ìƒì„±
 		PhoneInfo[] temp = new PhoneInfo[100];
 		
 		for (int i = 0; i < user.length; i++) {
 			temp[i] = new PhoneInfo();
 		}
 		
-		//Ä«¿îÆ®ÇØµĞ »ı¼ºµÈ ¸ñ·Ï¸¸Å­ °Ë»ö
+		//ì¹´ìš´íŠ¸í•´ë‘” ìƒì„±ëœ ëª©ë¡ë§Œí¼ ê²€ìƒ‰
 		for (int i = 0, k=0; i < arrLeng; i++) {
-			//»èÁ¦µÈ °÷À» ¸¸³ª¸é Áõ°¡ÇØ¼­ »ç¿ë
+			//ì‚­ì œëœ ê³³ì„ ë§Œë‚˜ë©´ ì¦ê°€í•´ì„œ ì‚¬ìš©
 			if(user[k] == null) {
 				k++;
 				

@@ -1,9 +1,9 @@
-package exam_array_2Dimension;
+ï»¿package exam_array_2Dimension;
 
 /*
- * ´ÙÀ½°ú °°Àº °ªÀ» ÃÊ±â°ªÀ¸·Î °®´Â {95, 86}, {83, 92, 96}, {78, 83, 93, 87, 88}
- * 2Â÷¿ø ¹è¿­ÀÌ Á¸ÀçÇÑ´Ù. (array)
- * ÀüÃ¼ Ç×¸ñÀÇ ÇÕ°ú Æò±Õ°ªÀ» Ãâ·ÂÇÏµµ·Ï ÇÁ·Î±×·¥À» ÀÛ¼ºÇØ ÁÖ¼¼¿ä.
+ * ë‹¤ìŒê³¼ ê°™ì€ ê°’ì„ ì´ˆê¸°ê°’ìœ¼ë¡œ ê°–ëŠ” {95, 86}, {83, 92, 96}, {78, 83, 93, 87, 88}
+ * 2ì°¨ì› ë°°ì—´ì´ ì¡´ì¬í•œë‹¤. (array)
+ * ì „ì²´ í•­ëª©ì˜ í•©ê³¼ í‰ê· ê°’ì„ ì¶œë ¥í•˜ë„ë¡ í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•´ ì£¼ì„¸ìš”.
  */
 public class TwoDimension {
 	public static void main(String[] args) {
@@ -19,8 +19,8 @@ public class TwoDimension {
 		}
 		avg = (double)total / cnt;
 
-		System.out.println("¹è¿­ÀÇ °³¼ö : " + cnt);
-		System.out.println(total + " <-ÇÕ°è | Æò±Õ -> " + avg);
+		System.out.println("ë°°ì—´ì˜ ê°œìˆ˜ : " + cnt);
+		System.out.println(total + " <-í•©ê³„ | í‰ê·  -> " + avg);
 
 	}
 }

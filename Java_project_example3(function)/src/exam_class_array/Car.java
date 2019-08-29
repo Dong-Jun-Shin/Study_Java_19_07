@@ -1,18 +1,18 @@
-package exam_class_array;
+ï»¿package exam_class_array;
 
 public class Car {
 	private int speed;
 	private int gear;
 	private String color;
 
-	//µğÆúÆ® »ı¼ºÀÚ·Î ÇÑ °ª ¼³Á¤
+	//ë””í´íŠ¸ ìƒì„±ìë¡œ í•œ ê°’ ì„¤ì •
 	public Car() {
 		speed = 80;
 		gear = 1;
 		color = "red";
 	}
 
-	//¸Ş¼Òµå¸¦ ÀÌ¿ëÇÑ °ª ¼³Á¤
+	//ë©”ì†Œë“œë¥¼ ì´ìš©í•œ ê°’ ì„¤ì •
 	//	public void carData(){
 	//		speed = 80;
 	//  	gear = 1;
@@ -23,6 +23,6 @@ public class Car {
 	}
 
 	public String toString() {
-		return "¼Óµµ: " + speed + " ±â¾î : " + gear + " »ö»ó: " + color;
+		return "ì†ë„: " + speed + " ê¸°ì–´ : " + gear + " ìƒ‰ìƒ: " + color;
 	}
 }

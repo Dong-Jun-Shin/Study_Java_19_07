@@ -1,10 +1,10 @@
-package exam_if;
+ï»¿package exam_if;
 
 import java.util.Scanner;
 
 /*
- * »ç¿ëÀÚ·Î ÇÏ¿©±İ ±¹¾îÁ¡¼ö¿Í ¼öÇĞÁ¡¼ö¸¦ ÀÔ·Â¹Ş¾Æ Æò±ÕÀ» ±¸ÇÏ°í,
- * Æò±ÕÀÌ 60Á¡ ÀÌ»óÀÌ¸é "ÇÕ°İ"À» Ãâ·ÂÇÏµµ·Ï ÇÁ·Î±×·¥À» ÀÛ¼ºÇØ ÁÖ¼¼¿ä.
+ * ì‚¬ìš©ìë¡œ í•˜ì—¬ê¸ˆ êµ­ì–´ì ìˆ˜ì™€ ìˆ˜í•™ì ìˆ˜ë¥¼ ì…ë ¥ë°›ì•„ í‰ê· ì„ êµ¬í•˜ê³ ,
+ * í‰ê· ì´ 60ì  ì´ìƒì´ë©´ "í•©ê²©"ì„ ì¶œë ¥í•˜ë„ë¡ í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•´ ì£¼ì„¸ìš”.
  */
 public class IfElseExample {
 	public static void main(String[] args) {
@@ -14,26 +14,26 @@ public class IfElseExample {
 		Scanner scan = new Scanner(System.in);
 
 		while (over) {
-			System.out.println("±¹¾î Á¡¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			System.out.println("êµ­ì–´ ì ìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 			l_score = scan.nextInt();
 
-			System.out.println("¼öÇĞ Á¡¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			System.out.println("ìˆ˜í•™ ì ìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 			m_score = scan.nextInt();
 
 			if (l_score <= 100 && l_score >= 0) {
 				if (m_score <= 100 && m_score >= 0) {
 					avg = (l_score + m_score) / 2;
 					if (avg >= 60) {
-						System.out.println("ÇÕ°İ");
+						System.out.println("í•©ê²©");
 					} else {
-						System.out.println("ºÒÇÕ°İ");
+						System.out.println("ë¶ˆí•©ê²©");
 					}
 					break;
 				}
 			}
-			System.out.println("ÀÔ·Â ¹üÀ§¸¦ ³Ñ¾ú½À´Ï´Ù.");
+			System.out.println("ì…ë ¥ ë²”ìœ„ë¥¼ ë„˜ì—ˆìŠµë‹ˆë‹¤.");
 			System.out.println("-------------------------------");
-			System.out.println("Á¡¼ö´Â 0 ~ 100 »çÀÌ·Î ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			System.out.println("ì ìˆ˜ëŠ” 0 ~ 100 ì‚¬ì´ë¡œ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 		}
 		scan.close();
 	}

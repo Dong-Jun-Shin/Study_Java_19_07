@@ -1,17 +1,17 @@
-package exam_character_string;
+ï»¿package exam_character_string;
 
 public class CharacterStringExample {
 	public static void main(String[] args) {
-		char c1 = 'A';		//¹®ÀÚ¸¦ Á÷Á¢ ÀúÀå (char)
-		char c2 = 65;		//½ÊÁø¼ö·Î ÀúÀå (int)
-		char c3 = 0x41;		//16Áø¼ö·Î ÀúÀå (int)
-		char c4 = '\u0041';	//16Áø¼ö·Î ÀúÀå (char)
+		char c1 = 'A';		//ë¬¸ìë¥¼ ì§ì ‘ ì €ì¥ (char)
+		char c2 = 65;		//ì‹­ì§„ìˆ˜ë¡œ ì €ì¥ (int)
+		char c3 = 0x41;		//16ì§„ìˆ˜ë¡œ ì €ì¥ (int)
+		char c4 = '\u0041';	//16ì§„ìˆ˜ë¡œ ì €ì¥ (char)
 	
-		char c5 = '°¡';		//¹®ÀÚ¸¦ Á÷Á¢ ÀúÀå (char)
-		char c6 = 44032;	//½ÊÁø¼ö·Î ÀúÀå (int)
-		char c7 = '\uac00';	//16Áø¼ö·Î ÀúÀå (char)
+		char c5 = 'ê°€';		//ë¬¸ìë¥¼ ì§ì ‘ ì €ì¥ (char)
+		char c6 = 44032;	//ì‹­ì§„ìˆ˜ë¡œ ì €ì¥ (int)
+		char c7 = '\uac00';	//16ì§„ìˆ˜ë¡œ ì €ì¥ (char)
 
-		int uniCode = c1;	//À¯´ÏÄÚµå ¾ò±â		
+		int uniCode = c1;	//ìœ ë‹ˆì½”ë“œ ì–»ê¸°		
 		
 		System.out.println(c1);
 		System.out.println(c2);

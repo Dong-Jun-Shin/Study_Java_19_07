@@ -1,10 +1,10 @@
-package exam_class_relation;
+ï»¿package exam_class_relation;
 
 public class Circle {
 	private int radius;
 	private Point center;
 
-	//»ı¼ºÀÚ
+	//ìƒì„±ì
 	public Circle() {
 		radius = 5;
 		center = new Point(10, 10);

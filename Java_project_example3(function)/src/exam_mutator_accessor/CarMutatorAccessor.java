@@ -1,12 +1,12 @@
-package exam_mutator_accessor;
+ï»¿package exam_mutator_accessor;
 
 public class CarMutatorAccessor {
-	// ÇÊµå Á¤ÀÇ
+	// í•„ë“œ ì •ì˜
 	private int speed;
 	private int gear;
 	private String color;
 	
-	// Á¢±ÙÀÚ, ¼³Á¤ÀÚ
+	// ì ‘ê·¼ì, ì„¤ì •ì
 	public int getSpeed() {
 		return speed;
 	}
@@ -19,7 +19,7 @@ public class CarMutatorAccessor {
 		}
 	}
 
-	// Á¢±ÙÀÚ, ¼³Á¤ÀÚ
+	// ì ‘ê·¼ì, ì„¤ì •ì
 	public int getGear() {
 		return gear;
 	}
@@ -32,7 +32,7 @@ public class CarMutatorAccessor {
 		}
 	}
 
-	// Á¢±ÙÀÚ, ¼³Á¤ÀÚ
+	// ì ‘ê·¼ì, ì„¤ì •ì
 	public String getColor() {
 		return color;
 	}
@@ -41,7 +41,7 @@ public class CarMutatorAccessor {
 		this.color = color;
 	}
 	
-	//¸Ş¼Òµå
+	//ë©”ì†Œë“œ
 	public void speedUp(int speed) {
 		this.speed += speed;
 	}
@@ -50,12 +50,12 @@ public class CarMutatorAccessor {
 		this.speed -= speed;
 	}
 
-	//Ãâ·Â µÎ°¡Áö (ÈÄÀÚ¸¦ ´õ ¸¹ÀÌ »ç¿ëÇÑ´Ù.)
+	//ì¶œë ¥ ë‘ê°€ì§€ (í›„ìë¥¼ ë” ë§ì´ ì‚¬ìš©í•œë‹¤.)
 	public void printData() {
-		System.out.println("¼Óµµ: " + speed + " ±â¾î: " + gear + " »ö»ó: " + color);
+		System.out.println("ì†ë„: " + speed + " ê¸°ì–´: " + gear + " ìƒ‰ìƒ: " + color);
 	}
 
 	public String toString() {
-		return "¼Óµµ: " + speed + " ±â¾î: " + gear + " »ö»ó: " + color;
+		return "ì†ë„: " + speed + " ê¸°ì–´: " + gear + " ìƒ‰ìƒ: " + color;
 	}
 }

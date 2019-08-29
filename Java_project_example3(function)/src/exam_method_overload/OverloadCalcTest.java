@@ -1,4 +1,4 @@
-package exam_method_overload;
+ï»¿package exam_method_overload;
 
 public class OverloadCalcTest {
 	public static void main(String[] args) {
@@ -8,7 +8,7 @@ public class OverloadCalcTest {
 		System.out.println(calc.plus(10, 20));
 		System.out.println();
 		
-		// 'f'»ý·«½Ã, ½Ç¼ö ±âº»ÇüÀÎ doubleÇüÀ¸·Î ·ÎµùµÈ´Ù.
+		// 'f'ìƒëžµì‹œ, ì‹¤ìˆ˜ ê¸°ë³¸í˜•ì¸ doubleí˜•ìœ¼ë¡œ ë¡œë”©ëœë‹¤.
 		System.out.println("float");
 		System.out.println(calc.plus(10.99f, 20.88f));
 		System.out.println();
@@ -17,16 +17,16 @@ public class OverloadCalcTest {
 		System.out.println(calc.plus(10.99, 20.88));
 		System.out.println();
 		
-		System.out.println("°¡º¯ ±æÀÌ ¸Å°³º¯¼ö");
+		System.out.println("ê°€ë³€ ê¸¸ì´ ë§¤ê°œë³€ìˆ˜");
 		System.out.println(calc.plus(10, 20, 10, 40, 30));
 		System.out.println();
 		
 		int[] v = {10, 20, 10, 40, 30};
-		System.out.println("½ÃÀÛÁÖ¼Ò¸¦ °®°í ÀÖ´Â ¹è¿­º¯¼ö -> ¸Å°³º¯¼ö");
+		System.out.println("ì‹œìž‘ì£¼ì†Œë¥¼ ê°–ê³  ìžˆëŠ” ë°°ì—´ë³€ìˆ˜ -> ë§¤ê°œë³€ìˆ˜");
 		System.out.println(calc.plus(v));
 		System.out.println();
 		
-		System.out.println("¹è¿­¼±¾ðÀ» ÇÏ°í ÁÖ¼Ò¸¦ -> ¸Å°³º¯¼ö");
+		System.out.println("ë°°ì—´ì„ ì–¸ì„ í•˜ê³  ì£¼ì†Œë¥¼ -> ë§¤ê°œë³€ìˆ˜");
 		System.out.println(calc.plus(new int[] {10, 20, 10, 40, 30}));
 		System.out.println();
 	}

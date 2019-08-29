@@ -1,4 +1,4 @@
-package exam_lab;
+ï»¿package exam_lab;
 
 import java.util.Scanner;
 
@@ -7,17 +7,17 @@ public class Page98 {
 		double w, h, area, perimeter;
 		Scanner scan = new Scanner(System.in);
 
-		System.out.print("»ç°¢ÇüÀÇ °¡·Î¸¦ ÀÔ·ÂÇÏ½Ã¿À : ");
+		System.out.print("ì‚¬ê°í˜•ì˜ ê°€ë¡œë¥¼ ì…ë ¥í•˜ì‹œì˜¤ : ");
 		w = scan.nextDouble();
 
-		System.out.print("»ç°¢ÇüÀÇ °¡·Î¸¦ ÀÔ·ÂÇÏ½Ã¿À : ");
+		System.out.print("ì‚¬ê°í˜•ì˜ ê°€ë¡œë¥¼ ì…ë ¥í•˜ì‹œì˜¤ : ");
 		h = scan.nextDouble();
 
 		area = w * h;
 		perimeter = 2 * (w + h);
 
-		System.out.println("»ç°¢ÇüÀÇ ³ĞÀÌ´Â " + area);
-		System.out.println("»ç°¢ÇüÀÇ µÑ·¹´Â " + perimeter);
+		System.out.println("ì‚¬ê°í˜•ì˜ ë„“ì´ëŠ” " + area);
+		System.out.println("ì‚¬ê°í˜•ì˜ ë‘˜ë ˆëŠ” " + perimeter);
 		
 		scan.close();
 	}

@@ -1,4 +1,4 @@
-package exam_parent_constructor_call;
+﻿package exam_parent_constructor_call;
 
 class SuperX {
 	private int x;

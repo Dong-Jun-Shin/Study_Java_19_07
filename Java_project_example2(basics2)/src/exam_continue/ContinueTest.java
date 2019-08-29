@@ -1,8 +1,8 @@
-package exam_continue;
+ï»¿package exam_continue;
 
 public class ContinueTest {
 	public static void main(String[] args) {
-		// 1~10±îÁö Áß È¦¼ö¸¦ Ãâ·Â
+		// 1~10ê¹Œì§€ ì¤‘ í™€ìˆ˜ë¥¼ ì¶œë ¥
 		int a = 0;
 		do {
 			a++;
@@ -13,7 +13,7 @@ public class ContinueTest {
 		} while (a < 10);
 		System.out.println();
 
-		// 1~10±îÁö Áß Â¦¼ö¸¦ Ãâ·Â
+		// 1~10ê¹Œì§€ ì¤‘ ì§ìˆ˜ë¥¼ ì¶œë ¥
 		for (int i = 1; i <= 10; i++) {
 			if (i % 2 != 0) {
 				continue;

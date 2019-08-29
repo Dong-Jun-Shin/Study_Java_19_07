@@ -1,8 +1,8 @@
-package exam_array;
+ï»¿package exam_array;
 
 public class ArrayTest0 {
 	public static void main(String[] args) {
-		//Çâ»óµÈ for¹®À¸·Î ÀÔ·Â¿¡ »ç¿ë½Ã ¿¹Á¦
+		//í–¥ìƒëœ forë¬¸ìœ¼ë¡œ ì…ë ¥ì— ì‚¬ìš©ì‹œ ì˜ˆì œ
 		int[] a  = {1, 2, 3, 4, 5, 6, 7, 8, 0};
 		int[] b  = new int[9];
 		
@@ -13,7 +13,7 @@ public class ArrayTest0 {
 		}
 		System.out.println();	
 		
-		//¿¹Á¦
+		//ì˜ˆì œ
 		int[] numbers = new int[3];
 		numbers[0]=10;
 		numbers[1]=20;

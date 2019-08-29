@@ -1,19 +1,19 @@
-package exam_array_2Dimension;
+ï»¿package exam_array_2Dimension;
 import tool.GradeProgram;
 /*
- * ¼ºÀû ÇÁ·Î±×·¥ ¸¸µé±â
- * - ÇĞ»ı¸í : name / Á¡¼ö : score / Æò±Õ : avg /
- * 	 ÇĞÁ¡: grade	/ Àç¼ö°­ : pass / ¼øÀ§ : rank
- * - ¼ö½ÄÀº ´ÙÀ½°ú °°´Ù
- * ÃÑÁ¡ = ±¹¾î + ¿µ¾î + ¼öÇĞ;
- * Æò±Õ = ÃÑÁ¡ / 3;
- * ÇĞÁ¡ = Æò±Õ 90ÀÌ»ó 'A' / 80ÀÌ»ó 'B' / 70ÀÌ»ó 'C' / 
- * 			60ÀÌ»ó 'D' / ³ª¸ÓÁö´Â 'F'
- * Àç¼ö°­ = Æò±Õ 60ÀÌ»óÀÌ¸é 'pass' / 60¹Ì¸¸ÀÌ¸é 'nopass' 
+ * ì„±ì  í”„ë¡œê·¸ë¨ ë§Œë“¤ê¸°
+ * - í•™ìƒëª… : name / ì ìˆ˜ : score / í‰ê·  : avg /
+ * 	 í•™ì : grade	/ ì¬ìˆ˜ê°• : pass / ìˆœìœ„ : rank
+ * - ìˆ˜ì‹ì€ ë‹¤ìŒê³¼ ê°™ë‹¤
+ * ì´ì  = êµ­ì–´ + ì˜ì–´ + ìˆ˜í•™;
+ * í‰ê·  = ì´ì  / 3;
+ * í•™ì  = í‰ê·  90ì´ìƒ 'A' / 80ì´ìƒ 'B' / 70ì´ìƒ 'C' / 
+ * 			60ì´ìƒ 'D' / ë‚˜ë¨¸ì§€ëŠ” 'F'
+ * ì¬ìˆ˜ê°• = í‰ê·  60ì´ìƒì´ë©´ 'pass' / 60ë¯¸ë§Œì´ë©´ 'nopass' 
  */
 public class GradeProgramming {
 	public static void main(String[] args) {
-		String[] name = {"È«±æµ¿", "±èÃ¶¼ö", "ÀÌ¼öÁø"};
+		String[] name = {"í™ê¸¸ë™", "ê¹€ì² ìˆ˜", "ì´ìˆ˜ì§„"};
 		String[] pass = new String[3];
 		int[][] score = { { 90, 75, 61 }, { 55, 56, 46 }, { 90, 90, 90 } };
 		int[] total = new int[3];
@@ -21,23 +21,23 @@ public class GradeProgramming {
 		char[] grade = new char[3];
 		int[] rank = new int[3];
 
-		// ÃÑÁ¡
+		// ì´ì 
 		GradeProgram.sum(score, total);
 
-		// Æò±Õ
+		// í‰ê· 
 		GradeProgram.average(avg, score, total);
 
-		// ÇĞÁ¡
+		// í•™ì 
 		GradeProgram.gradeProcess(avg, grade);
 
-		// Àç¼ö°­
+		// ì¬ìˆ˜ê°•
 		GradeProgram.passProcess(avg, pass);
 		
-		// ¸ğµÎ ºñ±³ÇØ¼­ Å« °³¼ö¸¸Å­ rankÀÇ ÀÚ¸®¸¦ ¹Ğ±â.
+		// ëª¨ë‘ ë¹„êµí•´ì„œ í° ê°œìˆ˜ë§Œí¼ rankì˜ ìë¦¬ë¥¼ ë°€ê¸°.
 		GradeProgram.rankProcess(avg, rank);
 
 		System.out.println("================================================================================");
-		System.out.println("¹øÈ£\tÀÌ¸§\t±¹¾î\t¿µ¾î\t¼öÇĞ\tÃÑÁ¡\tÆò±Õ\tÇĞÁ¡\tÀç¼ö°­\t¼øÀ§");
+		System.out.println("ë²ˆí˜¸\tì´ë¦„\têµ­ì–´\tì˜ì–´\tìˆ˜í•™\tì´ì \tí‰ê· \tí•™ì \tì¬ìˆ˜ê°•\tìˆœìœ„");
 		System.out.println("================================================================================");
 		for (int i = 0; i < name.length; i++) {
 			System.out.printf("%d\t%s\t ", i + 1, name[i]);

@@ -1,4 +1,4 @@
-package exam_class_basic;
+﻿package exam_class_basic;
 
 import java.util.Scanner;
 

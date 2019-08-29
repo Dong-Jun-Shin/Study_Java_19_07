@@ -1,4 +1,4 @@
-package exam_boolean;
+ï»¿package exam_boolean;
 
 public class BooleanExample {
 	public static void main(String[] args) {
@@ -11,5 +11,5 @@ public class BooleanExample {
 	}
 }
 /*
- * ¹ÙÀÌ¾î½º(bias) - Àü¾Ğ/Àü·ù¸¦ ÀÏÁ¤ÇÑ ·¹º§·Î Á¤ÇØÁÖ´Â °Í
+ * ë°”ì´ì–´ìŠ¤(bias) - ì „ì••/ì „ë¥˜ë¥¼ ì¼ì •í•œ ë ˆë²¨ë¡œ ì •í•´ì£¼ëŠ” ê²ƒ
  */

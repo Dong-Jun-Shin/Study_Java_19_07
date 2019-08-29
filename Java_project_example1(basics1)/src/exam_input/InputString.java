@@ -1,13 +1,13 @@
-package exam_input;
+ï»¿package exam_input;
 
 import java.util.Scanner;
 
 /*
- * °¢ÀÚÀÇ ÀÌ¸§, ³ªÀÌ, ÁÖ¼Ò¸¦ Ãâ·ÂÇÒ ¼ö ÀÖ·Ï ÀÛ¼ºÇØ ÁÖ¼¼¿ä.
+ * ê°ìì˜ ì´ë¦„, ë‚˜ì´, ì£¼ì†Œë¥¼ ì¶œë ¥í•  ìˆ˜ ìˆë¡ ì‘ì„±í•´ ì£¼ì„¸ìš”.
  * 
- * -------------Ãâ·Â¹®---------------
- * È«±æµ¿´Ô ¾È³çÇÏ¼¼¿ä! 50»ìÀÌ½Ã³×¿ä.
- * ÁÖ¼Ò´Â ¼­¿ï½Ã ¼ºµ¿±¸ ¹«ÇĞ·Î 2±æ
+ * -------------ì¶œë ¥ë¬¸---------------
+ * í™ê¸¸ë™ë‹˜ ì•ˆë…•í•˜ì„¸ìš”! 50ì‚´ì´ì‹œë„¤ìš”.
+ * ì£¼ì†ŒëŠ” ì„œìš¸ì‹œ ì„±ë™êµ¬ ë¬´í•™ë¡œ 2ê¸¸
  */
 public class InputString {
 	public static void main(String[] args) {
@@ -16,21 +16,21 @@ public class InputString {
 
 		Scanner scan = new Scanner(System.in);
 
-		System.out.println("ÀÌ¸§À» ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+		System.out.println("ì´ë¦„ì„ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 		name = scan.next();
 
-		System.out.println("³ªÀÌ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+		System.out.println("ë‚˜ì´ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 		age = scan.nextInt();
 		
-		//ÀÔ·ÂÇÏ¸é¼­ »ı±ä °³Çà¹®ÀÚ¸¦ ¾ø¾ÖÁØ´Ù.
+		//ì…ë ¥í•˜ë©´ì„œ ìƒê¸´ ê°œí–‰ë¬¸ìë¥¼ ì—†ì• ì¤€ë‹¤.
 		scan.nextLine();
 		
-		System.out.println("ÁÖ¼Ò¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+		System.out.println("ì£¼ì†Œë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 		address = scan.nextLine();
 	
 		System.out.println("-------------------------");
-		System.out.println(name + "´Ô ¾È³çÇÏ¼¼¿ä! " + age + "»ìÀÌ½Ã³×¿ä.");
-		System.out.println("ÁÖ¼Ò´Â " + address);
+		System.out.println(name + "ë‹˜ ì•ˆë…•í•˜ì„¸ìš”! " + age + "ì‚´ì´ì‹œë„¤ìš”.");
+		System.out.println("ì£¼ì†ŒëŠ” " + address);
 		
 		scan.close();
 	}

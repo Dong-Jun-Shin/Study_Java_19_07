@@ -1,4 +1,4 @@
-package exam_input;
+ï»¿package exam_input;
 
 import java.util.Scanner;
 
@@ -10,15 +10,15 @@ public class Add2 {
 		int y;
 		int sum;
 
-		System.out.println("Ã¹¹øÂ° ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ½Ã¿À: ");
+		System.out.println("ì²«ë²ˆì§¸ ìˆ«ìë¥¼ ì…ë ¥í•˜ì‹œì˜¤: ");
 		x = scan.nextInt();
 
-		System.out.println("µÎ¹øÂ° ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ½Ã¿À: ");
+		System.out.println("ë‘ë²ˆì§¸ ìˆ«ìë¥¼ ì…ë ¥í•˜ì‹œì˜¤: ");
 		y = scan.nextInt();
 
 		sum = x + y;
 
-		System.out.println("µÎ ¼öÀÇ ÇÕ : " + sum);
+		System.out.println("ë‘ ìˆ˜ì˜ í•© : " + sum);
 
 		scan.close();
 	}

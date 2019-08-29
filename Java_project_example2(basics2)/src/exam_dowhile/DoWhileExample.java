@@ -1,20 +1,20 @@
-package exam_dowhile;
+ï»¿package exam_dowhile;
 
 import java.util.Scanner;
 
 public class DoWhileExample {
 	public static void main(String[] args) {
 
-		// Á¶°Ç ºÒÃæºĞÀÌ´õ¶óµµ ÇÑ¹øÀº ½ÇÇà
+		// ì¡°ê±´ ë¶ˆì¶©ë¶„ì´ë”ë¼ë„ í•œë²ˆì€ ì‹¤í–‰
 		int num = 0;
 		do {
-			System.out.println("numÀÇ °ª: " + num);
+			System.out.println("numì˜ ê°’: " + num);
 			num++;
 		} while (num < 0);
 
 		System.out.println();
 
-		// 1¿¡¼­ºÎÅÍ 10±îÁö Ãâ·Â
+		// 1ì—ì„œë¶€í„° 10ê¹Œì§€ ì¶œë ¥
 		int i = 1;
 		do {
 			System.out.println(i + " ");
@@ -22,7 +22,7 @@ public class DoWhileExample {
 		} while (i <= 10);
 		System.out.println();
 
-		// 10¿¡¼­ºÎÅÍ 1±îÁö Ãâ·Â
+		// 10ì—ì„œë¶€í„° 1ê¹Œì§€ ì¶œë ¥
 		i = 10;
 		do {
 			System.out.println(i + " ");
@@ -30,7 +30,7 @@ public class DoWhileExample {
 		} while (i >= 1);
 		System.out.println();
 
-		// 1¿¡¼­ 100±îÁöÀÇ ÇÕÀ» Ãâ·ÂÇØÁÖ¼¼¿ä.(do ~ while¹®À» ÀÌ¿ëÇÏ¿©)
+		// 1ì—ì„œ 100ê¹Œì§€ì˜ í•©ì„ ì¶œë ¥í•´ì£¼ì„¸ìš”.(do ~ whileë¬¸ì„ ì´ìš©í•˜ì—¬)
 		int sum = 0;
 		i = 1;
 
@@ -41,9 +41,9 @@ public class DoWhileExample {
 		System.out.println(sum);
 		System.out.println();
 
-		// »ç¿ëÀÚ¿¡°Ô ¹®ÀÚ ¹× ¼ıÀÚ¸¦ ÀÔ·Â¹Ş¾Æ¼­ Ãâ·ÂÇÏ°íÀÚ ÇÑ´Ù. ÀÌ¶§ Á¾·á´Â q¸¦ ÀÔ·ÂÇÏ¸é µÈ´Ù.
-		System.out.println("\n¸Ş½ÃÁö¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
-		System.out.println("ÇÁ·Î±×·¥À» Á¾·áÇÏ·Á¸é q¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+		// ì‚¬ìš©ìì—ê²Œ ë¬¸ì ë° ìˆ«ìë¥¼ ì…ë ¥ë°›ì•„ì„œ ì¶œë ¥í•˜ê³ ì í•œë‹¤. ì´ë•Œ ì¢…ë£ŒëŠ” që¥¼ ì…ë ¥í•˜ë©´ ëœë‹¤.
+		System.out.println("\në©”ì‹œì§€ë¥¼ ì…ë ¥í•˜ì„¸ìš”");
+		System.out.println("í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•˜ë ¤ë©´ që¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 		Scanner scan = new Scanner(System.in);
 		String input_string;
 		
@@ -52,18 +52,18 @@ public class DoWhileExample {
 			input_string = scan.nextLine();
 			System.out.println(input_string);
 		} while (!input_string.equals("q")); 
-	      //StringÀº Å¬·¡½º¶ó¼­ ºñ±³½Ã '=='À» »ç¿ëÇÒ ¼ö ¾ø´Ù.
-		  //±×·¡¼­ StringÀº ºñ±³½Ã .equals("ºñ±³ÇÒ ¹®ÀÚ")·Î ½áÁØ´Ù.
+	      //Stringì€ í´ë˜ìŠ¤ë¼ì„œ ë¹„êµì‹œ '=='ì„ ì‚¬ìš©í•  ìˆ˜ ì—†ë‹¤.
+		  //ê·¸ë˜ì„œ Stringì€ ë¹„êµì‹œ .equals("ë¹„êµí•  ë¬¸ì")ë¡œ ì¨ì¤€ë‹¤.
 		scan.close();
 		
-		System.out.println("Á¾·áµÇ¾ú½À´Ï´Ù.");
+		System.out.println("ì¢…ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
 		System.out.println();
 		
 		
-	    //.equals()¿Í .contentEquals()ÀÇ Â÷ÀÌ--------------------------	
-		//  equals´Â (³»¿ëÀÌ °°ÀºÁö ¿©ºÎ && StringÀÎÁö ¾Æ´ÑÁö)¸¦ ÆÇ´ÜÇØ¼­ ¸¸Á·½Ã true.
-		//  contentEquals´Â (³»¿ëÀÌ °°ÀºÁö ¿©ºÎ)¸¦ ÆÇ´ÜÇØ¼­ ¸¸Á·½Ã true.
-		//	  -¾ÖÃÊ¿¡ String ÀÌ¿ÜÀÇ Å¸ÀÔÀ» ³ÖÀ» ¼ö ¾ø´Ù.
+	    //.equals()ì™€ .contentEquals()ì˜ ì°¨ì´--------------------------	
+		//  equalsëŠ” (ë‚´ìš©ì´ ê°™ì€ì§€ ì—¬ë¶€ && Stringì¸ì§€ ì•„ë‹Œì§€)ë¥¼ íŒë‹¨í•´ì„œ ë§Œì¡±ì‹œ true.
+		//  contentEqualsëŠ” (ë‚´ìš©ì´ ê°™ì€ì§€ ì—¬ë¶€)ë¥¼ íŒë‹¨í•´ì„œ ë§Œì¡±ì‹œ true.
+		//	  -ì• ì´ˆì— String ì´ì™¸ì˜ íƒ€ì…ì„ ë„£ì„ ìˆ˜ ì—†ë‹¤.
 		String compare = "q";
 		char compare_c = 'q';
 		System.out.println(input_string.equals(compare_c));

@@ -1,31 +1,31 @@
-package exam_array;
+ï»¿package exam_array;
 
 public class ArrayTest1 {
 	public static void main(String[] args) {
 		int[] numbers = new int[] { 10, 20, 30 };
 		// int[] numbers = {10,20,30};
 
-		// ¹è¿­ÀÇ °ª Ãâ·Â(1)
+		// ë°°ì—´ì˜ ê°’ ì¶œë ¥(1)
 		for (int i = 0; i < numbers.length; i++) {
 			System.out.println(numbers[i]);
 		}
 
-		// ¹è¿­ÀÇ °ª Ãâ·Â(2)
+		// ë°°ì—´ì˜ ê°’ ì¶œë ¥(2)
 		for (int num : numbers) {
 			System.out.println(num);
 		}
 
 		int[] array = new int[] { 10, 20, 30, 40, 50 };
-		System.out.println("arrayÀÇ ¿ä¼ÒÀÇ °³¼ö= " + array.length);
+		System.out.println("arrayì˜ ìš”ì†Œì˜ ê°œìˆ˜= " + array.length);
 
 		for (int i = 0; i < array.length; i++) {
 			System.out.printf("%5d", array[i]);
 		}
 		
-		// ¹è¿­À» ÀçÇÒ´ç ÈÄ Ãâ·Â
+		// ë°°ì—´ì„ ì¬í• ë‹¹ í›„ ì¶œë ¥
 		array = new int[] { 100, 200, 300 };
 		
-		System.out.println("\narÀÇ ÀçÇÒ´çµÈ ¿ä¼ÒÀÇ °³¼ö = " + array.length);
+		System.out.println("\narì˜ ì¬í• ë‹¹ëœ ìš”ì†Œì˜ ê°œìˆ˜ = " + array.length);
 		
 		for(int i = 0; i< array.length; i++) {
 			System.out.printf("%5d", array[i]);

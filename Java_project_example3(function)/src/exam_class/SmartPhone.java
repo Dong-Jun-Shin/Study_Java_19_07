@@ -1,4 +1,4 @@
-package exam_class;
+ï»¿package exam_class;
 
 public class SmartPhone {
 	private String maker;
@@ -6,7 +6,7 @@ public class SmartPhone {
 	private int price;
 	private int discountRate;
 
-	//»ı¼ºÀÚ
+	//ìƒì„±ì
 	public SmartPhone() {
 
 	}
@@ -56,15 +56,15 @@ public class SmartPhone {
 	}
 
 	public void show() {
-		//					Á¤È®ÇÑ °è»êÀ» À§ÇØ ½Ç¼ö,        ÇÒÀÎµÈ ÈÄ ±İ¾×À²,    ½ÊÀÚ¸® ¹Ì¸¸ ³»¸²
+		//					ì •í™•í•œ ê³„ì‚°ì„ ìœ„í•´ ì‹¤ìˆ˜,        í• ì¸ëœ í›„ ê¸ˆì•¡ìœ¨,    ì‹­ìë¦¬ ë¯¸ë§Œ ë‚´ë¦¼
 		int tempNum = (int) ((double) price / 100 * (100 - discountRate));
 
 		System.out.println(name + " [" + maker + "]");
 		System.out.printf("%s [%s]\n", name, maker);
-		System.out.printf("°¡°İ : %d\n", price);
+		System.out.printf("ê°€ê²© : %d\n", price);
 		
 		if (discountRate != 0) {
-			System.out.printf("ÇÒÀÎ°¡°İ(%d%%) : %d\n", discountRate, tempNum);
+			System.out.printf("í• ì¸ê°€ê²©(%d%%) : %d\n", discountRate, tempNum);
 		}
 		System.out.println("----------------------------");
 	}

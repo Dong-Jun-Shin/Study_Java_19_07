@@ -1,7 +1,7 @@
-package exam_super;
+ï»¿package exam_super;
 
 class ParentClass{
-	//ºÎ¸ğ¿Í ÀÚ½Ä¸¸ ¾µ ¼ö ÀÖ´Â Á¢±ÙÁ¦ÇÑÀÚ
+	//ë¶€ëª¨ì™€ ìì‹ë§Œ ì“¸ ìˆ˜ ìˆëŠ” ì ‘ê·¼ì œí•œì
 	protected int data; 	
 
 	public ParentClass() {
@@ -9,7 +9,7 @@ class ParentClass{
 	}
 	
 	public void print() {
-		System.out.println("½´ÆÛ Å¬·¡½ºÀÇ print() ¸Ş¼Òµå");
+		System.out.println("ìŠˆí¼ í´ë˜ìŠ¤ì˜ print() ë©”ì†Œë“œ");
 	}
 }
 
@@ -23,7 +23,7 @@ class ChildClass extends ParentClass{
 	@Override
 	public void print() {
 		super.print();
-		System.out.println("¼­ºê Å¬·¡½ºÀÇ print() ¸Ş¼Òµå");
+		System.out.println("ì„œë¸Œ í´ë˜ìŠ¤ì˜ print() ë©”ì†Œë“œ");
 		System.out.println("data : " + data);
 		System.out.println("this.data : " + this.data);
 		System.out.println("super.data : " + super.data);

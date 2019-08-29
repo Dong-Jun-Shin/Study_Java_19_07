@@ -1,19 +1,19 @@
-package exam_parent_constructor_call;
+ï»¿package exam_parent_constructor_call;
 
 public class Entry {
 	public String word;
 
 	public Entry() {
-		System.out.println("****¾à¾î »çÀü****");
+		System.out.println("****ì•½ì–´ ì‚¬ì „****");
 	}
 
 	public Entry(String word) {
 		
-		this(); //ÀÌ Å¬·¡½ºÀÇ »ı¼ºÀÚ¸¦ ÂüÁ¶
-		this.word = word; //ÀÌ Å¬·¡½º°¡ °¡Áø ¼Ó¼ºÀ» Á¢±Ù
+		this(); //ì´ í´ë˜ìŠ¤ì˜ ìƒì„±ìë¥¼ ì°¸ì¡°
+		this.word = word; //ì´ í´ë˜ìŠ¤ê°€ ê°€ì§„ ì†ì„±ì„ ì ‘ê·¼
 	}
 
 	public void writeView() {
-		System.out.println("¾à¾î : " + word);
+		System.out.println("ì•½ì–´ : " + word);
 	}
 }

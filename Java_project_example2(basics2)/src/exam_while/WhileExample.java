@@ -1,21 +1,21 @@
-package exam_while;
+ï»¿package exam_while;
 
 public class WhileExample {
 	public static void main(String[] args) {
 
-		// while¹®À» ÀÌ¿ëÇÑ 5¹ø Ãâ·Â°ú Áõ°¡¸¦ ¹İº¹ÇÏ±â
-		// 1¹øÂ° ¹æ¹ı (½Ä¿¡¼­ Á¶°ÇÀÌ Æ²¸± ¶§, ¸ØÃß±â)
+		// whileë¬¸ì„ ì´ìš©í•œ 5ë²ˆ ì¶œë ¥ê³¼ ì¦ê°€ë¥¼ ë°˜ë³µí•˜ê¸°
+		// 1ë²ˆì§¸ ë°©ë²• (ì‹ì—ì„œ ì¡°ê±´ì´ í‹€ë¦´ ë•Œ, ë©ˆì¶”ê¸°)
 		int i = 1;
-		System.out.println("Á¤¼ö");
+		System.out.println("ì •ìˆ˜");
 		while (i <= 5) {
 			System.out.println(i + " ");
 			i++;
 		}
 		System.out.println();
 
-		// 2¹øÂ° ¹æ¹ı (½Ä¿¡ true¸¦ ³Ö°í, break·Î ¸ØÃß±â)
+		// 2ë²ˆì§¸ ë°©ë²• (ì‹ì— trueë¥¼ ë„£ê³ , breakë¡œ ë©ˆì¶”ê¸°)
 		i = 1;
-		System.out.println("Á¤¼ö: ");
+		System.out.println("ì •ìˆ˜: ");
 		while (true) {
 			System.out.println(i + " ");
 			i++;
@@ -24,27 +24,27 @@ public class WhileExample {
 		}
 		System.out.println();
 
-		// 1ºÎÅÍ 100±îÁöÀÇ ÇÕ
+		// 1ë¶€í„° 100ê¹Œì§€ì˜ í•©
 		int num = 1, sum = 0;
 		while (num <= 100) {
 			sum += num;
 			num++;
 		}
-		System.out.println("1ºÎÅÍ 100±îÁöÀÇ ÇÕ = " + sum + "ÀÔ´Ï´Ù.");
+		System.out.println("1ë¶€í„° 100ê¹Œì§€ì˜ í•© = " + sum + "ì…ë‹ˆë‹¤.");
 		System.out.println();
 
-		// 10ºÎÅÍ 1±îÁöÀÇ Ãâ·Â
+		// 10ë¶€í„° 1ê¹Œì§€ì˜ ì¶œë ¥
 		num = 10;
 		sum = 0;
 
-		System.out.println("10ºÎÅÍ 1±îÁöÀÇ Ãâ·Â");
+		System.out.println("10ë¶€í„° 1ê¹Œì§€ì˜ ì¶œë ¥");
 		while (num > 0) {
 			System.out.println(num);
 			num--;
 		}
 		System.out.println();
 
-		// 1¿¡¼­ 100±îÁö ¼ö Áß¿¡¼­ Â¦¼öÀÇ ÇÕ°ú È¦¼öÀÇ ÇÕÀ» Ãâ·ÂÇÏ±â
+		// 1ì—ì„œ 100ê¹Œì§€ ìˆ˜ ì¤‘ì—ì„œ ì§ìˆ˜ì˜ í•©ê³¼ í™€ìˆ˜ì˜ í•©ì„ ì¶œë ¥í•˜ê¸°
 		num = 1;
 		int even = 0, odd = 0;
 
@@ -58,25 +58,25 @@ public class WhileExample {
 			}
 
 		}
-		System.out.println("1ºÎÅÍ 100±îÁöÀÇ È¦¼öÇÕ = " + odd + "ÀÔ´Ï´Ù.");
-		System.out.println("1ºÎÅÍ 100±îÁöÀÇ Â¦¼öÇÕ = " + even + "ÀÔ´Ï´Ù.");
+		System.out.println("1ë¶€í„° 100ê¹Œì§€ì˜ í™€ìˆ˜í•© = " + odd + "ì…ë‹ˆë‹¤.");
+		System.out.println("1ë¶€í„° 100ê¹Œì§€ì˜ ì§ìˆ˜í•© = " + even + "ì…ë‹ˆë‹¤.");
 		System.out.println();
 
 		
-		// 1ºÎÅÍ 30±îÁöÀÇ 7ÀÇ ¹è¼ö¸¦ Ãâ·Â, 7ÀÇ ¹è¼öÀÇ ÇÕ, 7ÀÇ ¹è¼öÀÇ °³¼ö¸¦ Ãâ·ÂÇÏ±â
+		// 1ë¶€í„° 30ê¹Œì§€ì˜ 7ì˜ ë°°ìˆ˜ë¥¼ ì¶œë ¥, 7ì˜ ë°°ìˆ˜ì˜ í•©, 7ì˜ ë°°ìˆ˜ì˜ ê°œìˆ˜ë¥¼ ì¶œë ¥í•˜ê¸°
 		int print = 1, cnt = 0;
 		sum = 0;
 
 		while (print < 31) {
 			if (print % 7 == 0) {
-				System.out.println("7ÀÇ " + (cnt+1) + "¹øÂ° ¼ö : " + print);
+				System.out.println("7ì˜ " + (cnt+1) + "ë²ˆì§¸ ìˆ˜ : " + print);
 				sum += print;
 				cnt++;
 			}
 			print++;
 		}
 		System.out.println("-------------------");
-		System.out.println("7ÀÇ ¹è¼öÀÇ ÇÕ : " + sum);
-		System.out.println("7ÀÇ ¹è¼öÀÇ °³¼ö : " + cnt);
+		System.out.println("7ì˜ ë°°ìˆ˜ì˜ í•© : " + sum);
+		System.out.println("7ì˜ ë°°ìˆ˜ì˜ ê°œìˆ˜ : " + cnt);
 	}
 }

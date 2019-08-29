@@ -1,4 +1,4 @@
-package exam_operation;
+ï»¿package exam_operation;
 
 public class ConditionalOperationExample {
 	public static void main(String[] args) {
@@ -8,14 +8,14 @@ public class ConditionalOperationExample {
 
 		int result = ((x > y) ? x : y);
 
-		System.out.print("µÎ ¼ö(100°ú 200) Áß¿¡¼­ ÃÖ´ë°ª : " + result);
+		System.out.print("ë‘ ìˆ˜(100ê³¼ 200) ì¤‘ì—ì„œ ìµœëŒ€ê°’ : " + result);
 
-		char even = 'Â¦';
-		char odd = 'È¦';
+		char even = 'ì§';
+		char odd = 'í™€';
 
 		result = ((result % 2 == 0) ? even : odd);
 		System.out.println(", (" + (char)result + ")");
 		
-		//TODO ±³¾È ºñ±³ÇÏ±â
+		//TODO êµì•ˆ ë¹„êµí•˜ê¸°
 	}
 }

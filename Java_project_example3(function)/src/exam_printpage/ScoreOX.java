@@ -1,14 +1,14 @@
-package exam_printpage;
+ï»¿package exam_printpage;
 
 public class ScoreOX {
-	private int no; //¹øÈ£
-	private String name; //ÀÌ¸§
-	private int[] dap; //ÀÔ·ÂÇÑ ´ä
-	private int cnt; //¸Â´Â °³¼ö
-	private int score; //Á¡¼ö
-	private int rank; //¼øÀ§
-	private char[] c_ox; // o,x ÀúÀåº¯¼ö
-	public static int tot; //ÀüÃ¼ ¸Â´Â Á¤´ä ¼ö
+	private int no; //ë²ˆí˜¸
+	private String name; //ì´ë¦„
+	private int[] dap; //ì…ë ¥í•œ ë‹µ
+	private int cnt; //ë§ëŠ” ê°œìˆ˜
+	private int score; //ì ìˆ˜
+	private int rank; //ìˆœìœ„
+	private char[] c_ox; // o,x ì €ì¥ë³€ìˆ˜
+	public static int tot; //ì „ì²´ ë§ëŠ” ì •ë‹µ ìˆ˜
 
 	public ScoreOX() {
 		this(0, null, null);

@@ -1,4 +1,4 @@
-package exam_class_relation;
+ï»¿package exam_class_relation;
 
 //import java.time.LocalTime;
 
@@ -11,19 +11,19 @@ public class TimeTest {
 //			System.out.println(t.toString());			
 //		}
 		
-		//Time °´Ã¼¸¦ »ı¼ºÇÏ°í ÃÊ±âÈ­ÇÑ´Ù.
+		//Time ê°ì²´ë¥¼ ìƒì„±í•˜ê³  ì´ˆê¸°í™”í•œë‹¤.
 		Time time = new Time();
-		System.out.println("±âº» »ı¼ºÀÚ È£Ãâ ÈÄ ½Ã°£: ");
+		System.out.println("ê¸°ë³¸ ìƒì„±ì í˜¸ì¶œ í›„ ì‹œê°„: ");
 		System.out.println(time.toString());
 		
-		//µÎ¹øÂ° »ı¼ºÀÚ È£Ãâ
+		//ë‘ë²ˆì§¸ ìƒì„±ì í˜¸ì¶œ
 		Time time2 = new Time(13, 27, 6);
-		System.out.println("µÎ¹øÂ° È£Ãâ ÈÄ ½Ã°£: ");
+		System.out.println("ë‘ë²ˆì§¸ í˜¸ì¶œ í›„ ì‹œê°„: ");
 		System.out.println(time2.toString());
 		
-		//¿Ã¹Ù¸£Áö ¾ÊÀº ½Ã°£À¸·Î ¼³Á¤ÇØº»´Ù.
+		//ì˜¬ë°”ë¥´ì§€ ì•Šì€ ì‹œê°„ìœ¼ë¡œ ì„¤ì •í•´ë³¸ë‹¤.
 		Time time3 = new Time(99, 66, 77);
-		System.out.println("¿Ã¹Ù¸£Áö ¾ÊÀº ½Ã°£ ¼³Á¤ ÈÄ ½Ã°£: ");
+		System.out.println("ì˜¬ë°”ë¥´ì§€ ì•Šì€ ì‹œê°„ ì„¤ì • í›„ ì‹œê°„: ");
 		System.out.println(time3.toString());
 	}
 }

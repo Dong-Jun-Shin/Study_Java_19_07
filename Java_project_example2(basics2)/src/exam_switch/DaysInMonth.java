@@ -1,4 +1,4 @@
-package exam_switch;
+ï»¿package exam_switch;
 
 import java.util.Scanner;
 
@@ -9,28 +9,28 @@ public class DaysInMonth {
 		int days = 0;
 
 		while (true) {
-			System.out.println("³âµµ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			System.out.println("ë…„ë„ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 			year = scan.nextInt();
 
 			if(year >= 0 ) {
 				break;
 			}
-			System.out.println("³âµµ¸¦ Á¦´ë·Î ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			System.out.println("ë…„ë„ë¥¼ ì œëŒ€ë¡œ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 			System.out.println("-----------------------");
 		}
 		
 		while(true) {
-			System.out.println("¿ùÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			System.out.println("ì›”ì„ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 			month = scan.nextInt();
 
 			if (month < 13 && month >= 0) {
 				break;
 			}
-			System.out.println("¿ùÀÌ Àß¸ø ÀÔ·ÂµÇ¾ú½À´Ï´Ù.");
+			System.out.println("ì›”ì´ ì˜ëª» ì…ë ¥ë˜ì—ˆìŠµë‹ˆë‹¤.");
 			System.out.println("-----------------------");
 		}
 
-		// break;°¡ ¾øÀ¸¸é ³Ñ¾î°¡´Â Æ¯¼ºÀ» ÀÌ¿ëÇØ¼­ ¿©·¯°³ÀÇ Á¶°ÇÀ» ÇÏ³ªÀÇ Ã³¸®·Î ÀÌ¾îÁØ´Ù.
+		// break;ê°€ ì—†ìœ¼ë©´ ë„˜ì–´ê°€ëŠ” íŠ¹ì„±ì„ ì´ìš©í•´ì„œ ì—¬ëŸ¬ê°œì˜ ì¡°ê±´ì„ í•˜ë‚˜ì˜ ì²˜ë¦¬ë¡œ ì´ì–´ì¤€ë‹¤.
 		switch (month) {
 		case 1:
 		case 3:
@@ -55,15 +55,15 @@ public class DaysInMonth {
 			}
 			break;
 		}
-		System.out.println("ÇØ´ç " + month + "¿ùÀÇ ÀÏ¼ö´Â " + days + "ÀÏ ÀÔ´Ï´Ù.");
+		System.out.println("í•´ë‹¹ " + month + "ì›”ì˜ ì¼ìˆ˜ëŠ” " + days + "ì¼ ì…ë‹ˆë‹¤.");
 		/*
 		 * if(month == 1 || month == 3 || month == 5 || month == 7 || month == 8 ||
 		 * month == 10 || month == 12) { days = 31; }else if(month == 4 || month == 6 ||
 		 * month == 9 || month == 11) { days = 30; }else if(month == 2){ days = 28; }
-		 * System.out.println("ÇØ´ç " + month + "¿ùÀÇ ÀÏ¼ö´Â " + days + "ÀÏ ÀÔ´Ï´Ù.");
+		 * System.out.println("í•´ë‹¹ " + month + "ì›”ì˜ ì¼ìˆ˜ëŠ” " + days + "ì¼ ì…ë‹ˆë‹¤.");
 		 */
 		System.out.println("");
-		System.out.println(month + "¿ù-------------------------");
+		System.out.println(month + "ì›”-------------------------");
 		for(int i = 0; i< days; i++) {
 			System.out.printf("%2d ", (i+1));
 			if((i+1)%7 == 0) {

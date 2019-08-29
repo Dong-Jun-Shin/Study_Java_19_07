@@ -1,4 +1,4 @@
-package exam_switch;
+ï»¿package exam_switch;
 
 import java.util.Scanner;
 
@@ -9,7 +9,7 @@ public class SwitchExample2 {
 		int n1, n2, total = 0;
 
 		while (true) {
-			System.out.println("¿¬»êÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä. ex) 4(Enter) +(Enter) 4(Enter)");
+			System.out.println("ì—°ì‚°ì„ ì…ë ¥í•´ì£¼ì„¸ìš”. ex) 4(Enter) +(Enter) 4(Enter)");
 			n1 = scan.nextInt();
 			oper = scan.next().charAt(0);
 			n2 = scan.nextInt();
@@ -17,7 +17,7 @@ public class SwitchExample2 {
 			if (oper == '+' || oper == '-' || oper == '*' || oper == '/' || oper == '%') {
 				break;
 			} else {
-				System.out.println("¿¬»êÀÚ¸¦ ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				System.out.println("ì—°ì‚°ìë¥¼ ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 			}
 		}
 
@@ -35,7 +35,7 @@ public class SwitchExample2 {
 			if (n2 != 0) {
 				total = n1 / n2;
 			} else {
-				System.out.println("0À¸·Î ³ª´­ ¼ö ¾ø½À´Ï´Ù.");
+				System.out.println("0ìœ¼ë¡œ ë‚˜ëˆŒ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 			}
 			break;
 		case '%':
@@ -43,7 +43,7 @@ public class SwitchExample2 {
 			break;
 		}
 
-		System.out.println("°á°ú : " + total);
+		System.out.println("ê²°ê³¼ : " + total);
 		scan.close();
 	}
 }

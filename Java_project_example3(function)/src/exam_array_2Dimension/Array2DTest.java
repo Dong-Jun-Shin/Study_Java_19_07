@@ -1,13 +1,13 @@
-package exam_array_2Dimension;
+ï»¿package exam_array_2Dimension;
 
 public class Array2DTest {
 	public static void main(String[] args) {
-		// 2Â÷¿ø ¹è¿­
+		// 2ì°¨ì› ë°°ì—´
 		int[][] arr1 = new int[2][3];
 
-		System.out.println("arr1.length = " + arr1.length); // arr1ÀÇ Çà °³¼ö
-		System.out.println("arr1.length[0] = " + arr1[0].length); // arr1ÀÇ 0ÇàÀÇ ¿­°³¼ö
-		System.out.println("arr1.length[1] = " + arr1[1].length); // arr1ÀÇ 1ÇàÀÇ ¿­°³¼ö
+		System.out.println("arr1.length = " + arr1.length); // arr1ì˜ í–‰ ê°œìˆ˜
+		System.out.println("arr1.length[0] = " + arr1[0].length); // arr1ì˜ 0í–‰ì˜ ì—´ê°œìˆ˜
+		System.out.println("arr1.length[1] = " + arr1[1].length); // arr1ì˜ 1í–‰ì˜ ì—´ê°œìˆ˜
 		System.out.println();
 
 		for (int i = 0; i < arr1.length; i++) {
@@ -18,7 +18,7 @@ public class Array2DTest {
 		}
 		System.out.println();
 
-		// 2Â÷¿ø ¹è¿­ - Çà¿¡ µû¸¥ ¿­À» °¢°¢ ¼³Á¤
+		// 2ì°¨ì› ë°°ì—´ - í–‰ì— ë”°ë¥¸ ì—´ì„ ê°ê° ì„¤ì •
 		int[][] arr3 = new int[2][];
 		arr3[0] = new int[2];
 		arr3[1] = new int[3];
@@ -31,7 +31,7 @@ public class Array2DTest {
 		}
 		System.out.println();
 
-		// 2Â÷¿ù ¹è¿­ - Çà¿¡ µû¸¥ ¿­À» °¢°¢ ¼³Á¤ ¹× ÃÊ±âÈ­
+		// 2ì°¨ì›” ë°°ì—´ - í–‰ì— ë”°ë¥¸ ì—´ì„ ê°ê° ì„¤ì • ë° ì´ˆê¸°í™”
 		int[][] myArrays = new int[3][];
 		myArrays[0] = new int[] { 1, 2, 3 };
 		myArrays[1] = new int[] { 5, 4, 3, 2, 1 };
@@ -44,7 +44,7 @@ public class Array2DTest {
 		}
 		System.out.println("\n");
 
-		//2Â÷¿ø ¹è¿­
+		//2ì°¨ì› ë°°ì—´
 		int[][] arr4 = {{95, 80},{92, 96, 80}};
 		for(int i =0; i<arr4.length; i++) {
 			for(int j=0; j<arr4[i].length; j++) {
@@ -54,7 +54,7 @@ public class Array2DTest {
 		System.out.println();
 		
 		
-		// ´ÙÂ÷¿ø ¹è¿­
+		// ë‹¤ì°¨ì› ë°°ì—´
 		int[][][][][][][][] my_arr = new int[1][2][3][4][5][6][7][8];
 		int num = 1;
 		
@@ -81,8 +81,8 @@ public class Array2DTest {
 		}
 		System.out.println();
 		
-		int result = 2; //¹è¿­ÀÇ ÇàÀÇ °³¼ö
-		// i½ÃÀÛ = ¿­ °³¼ö, i¹üÀ§ = Çà¿­À» Á¦¿ÜÇÑ ¹è¿­Â÷¿øÀÇ °³¼ö (¼øÂ÷ÀûÀ¸·Î ¹è¿­Â÷¿øÀÇ ¼ö°¡ ´Ã¾î³¯ ¶§)
+		int result = 2; //ë°°ì—´ì˜ í–‰ì˜ ê°œìˆ˜
+		// iì‹œì‘ = ì—´ ê°œìˆ˜, ië²”ìœ„ = í–‰ì—´ì„ ì œì™¸í•œ ë°°ì—´ì°¨ì›ì˜ ê°œìˆ˜ (ìˆœì°¨ì ìœ¼ë¡œ ë°°ì—´ì°¨ì›ì˜ ìˆ˜ê°€ ëŠ˜ì–´ë‚  ë•Œ)
 		for(int i=3; i<4; i++) {
 			result *= i;
 			System.out.print(result+ " ");

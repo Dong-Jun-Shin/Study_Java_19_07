@@ -1,4 +1,4 @@
-package exam_for;
+ï»¿package exam_for;
 
 import java.util.Scanner;
 
@@ -6,10 +6,10 @@ public class ForDivisorExample {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 
-		System.out.print("¾çÀÇ Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À: ");
+		System.out.print("ì–‘ì˜ ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤: ");
 		int num = scan.nextInt();
 
-		System.out.println(num + "ÀÇ ¾à¼ö´Â ´ÙÀ½°ú °°½À´Ï´Ù.");
+		System.out.println(num + "ì˜ ì•½ìˆ˜ëŠ” ë‹¤ìŒê³¼ ê°™ìŠµë‹ˆë‹¤.");
 		for (int i = 1; i <= num; i++) {
 			if (num % i == 0) {
 				System.out.print(i + " ");

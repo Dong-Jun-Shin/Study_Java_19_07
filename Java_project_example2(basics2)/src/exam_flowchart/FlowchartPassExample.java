@@ -1,11 +1,11 @@
-package exam_flowchart;
+ï»¿package exam_flowchart;
 
 import java.util.Scanner;
 
 public class FlowchartPassExample {
 	public static void main(String[] args) {
 		/*
-		 * //Ã¹¹øÂ° ¹æ¹ı Scanner scan = new Scanner(System.in); int i; int lesson1; int
+		 * //ì²«ë²ˆì§¸ ë°©ë²• Scanner scan = new Scanner(System.in); int i; int lesson1; int
 		 * lesson2;
 		 * 
 		 * String std_num1 = null, std_num2 = null, std_num3 = null; double avg = 0,
@@ -13,22 +13,22 @@ public class FlowchartPassExample {
 		 * null;
 		 * 
 		 * for (i = 0; i < 3; i++) { switch (i) { case 0:
-		 * System.out.print("ÇĞ¹øÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä."); std_num1 = scan.next(); case 1:
-		 * System.out.print("ÇĞ¹øÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä."); std_num2 = scan.next(); case 2:
-		 * System.out.print("ÇĞ¹øÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä."); std_num3 = scan.next(); }
-		 * System.out.print("°ú¸ñ1 ÀÔ·ÂÇØÁÖ¼¼¿ä."); lesson1 = scan.nextInt();
-		 * System.out.print("°ú¸ñ2À» ÀÔ·ÂÇØÁÖ¼¼¿ä."); lesson2 = scan.nextInt();
+		 * System.out.print("í•™ë²ˆì„ ì…ë ¥í•´ì£¼ì„¸ìš”."); std_num1 = scan.next(); case 1:
+		 * System.out.print("í•™ë²ˆì„ ì…ë ¥í•´ì£¼ì„¸ìš”."); std_num2 = scan.next(); case 2:
+		 * System.out.print("í•™ë²ˆì„ ì…ë ¥í•´ì£¼ì„¸ìš”."); std_num3 = scan.next(); }
+		 * System.out.print("ê³¼ëª©1 ì…ë ¥í•´ì£¼ì„¸ìš”."); lesson1 = scan.nextInt();
+		 * System.out.print("ê³¼ëª©2ì„ ì…ë ¥í•´ì£¼ì„¸ìš”."); lesson2 = scan.nextInt();
 		 * 
 		 * avg = (double) (lesson1 + lesson2) / 2;
 		 * 
 		 * switch (i) { case 0: avg1 = avg; if ((lesson1 >= 40 || lesson1 >= 40) && avg1
-		 * >= 60) { pass1 = "ÇÕ°İ"; } else { pass1 = "ºÒÇÕ°İ"; } case 1: avg2 = avg; if
-		 * ((lesson1 >= 40 || lesson1 >= 40) && avg2 >= 60) { pass2 = "ÇÕ°İ"; } else {
-		 * pass2 = "ºÒÇÕ°İ"; } case 2: avg3 = avg; if ((lesson1 >= 40 || lesson1 >= 40) &&
-		 * avg3 >= 60) { pass3 = "ÇÕ°İ"; } else { pass3 = "ºÒÇÕ°İ"; } } }
+		 * >= 60) { pass1 = "í•©ê²©"; } else { pass1 = "ë¶ˆí•©ê²©"; } case 1: avg2 = avg; if
+		 * ((lesson1 >= 40 || lesson1 >= 40) && avg2 >= 60) { pass2 = "í•©ê²©"; } else {
+		 * pass2 = "ë¶ˆí•©ê²©"; } case 2: avg3 = avg; if ((lesson1 >= 40 || lesson1 >= 40) &&
+		 * avg3 >= 60) { pass3 = "í•©ê²©"; } else { pass3 = "ë¶ˆí•©ê²©"; } } }
 		 * 
 		 * System.out.println("----------------");
-		 * System.out.println("ÇĞ¹ø        Æò±Õ      ÇÕ°İ¿©ºÎ");
+		 * System.out.println("í•™ë²ˆ        í‰ê·       í•©ê²©ì—¬ë¶€");
 		 * System.out.printf("%s %.2f   %s\n", std_num1, avg1, pass1);
 		 * System.out.printf("%s %.2f   %s\n", std_num2, avg2, pass2);
 		 * System.out.printf("%s %.2f   %s\n", std_num3, avg3, pass3);
@@ -36,7 +36,7 @@ public class FlowchartPassExample {
 		 * scan.close();
 		 */
 
-		// µÎ¹øÂ° ¹æ¹ı
+		// ë‘ë²ˆì§¸ ë°©ë²•
 		Scanner scan = new Scanner(System.in);
 
 		int lesson1;
@@ -48,26 +48,26 @@ public class FlowchartPassExample {
 		double avg = 0;
 
 		for (int i = 0; i < 3; i++) {
-			System.out.print("ÇĞ¹øÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			System.out.print("í•™ë²ˆì„ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 			std_num = scan.next();
-			System.out.print("°ú¸ñ1 ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			System.out.print("ê³¼ëª©1 ì…ë ¥í•´ì£¼ì„¸ìš”.");
 			lesson1 = scan.nextInt();
-			System.out.print("°ú¸ñ2À» ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			System.out.print("ê³¼ëª©2ì„ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 			lesson2 = scan.nextInt();
 
 			avg = (double) (lesson1 + lesson2) / 2;
 			if ((lesson1 >= 40 || lesson1 >= 40) && avg >= 60) {
-				pass = "ÇÕ°İ";
+				pass = "í•©ê²©";
 			} else {
-				pass = "ºÒÇÕ°İ";
+				pass = "ë¶ˆí•©ê²©";
 			}
 
-			// °á°ú¸¦ ¹®ÀÚ¿­·Î ¸ğµÎ ÀúÀåÇÏ´Â ¹æ¹ı
+			// ê²°ê³¼ë¥¼ ë¬¸ìì—´ë¡œ ëª¨ë‘ ì €ì¥í•˜ëŠ” ë°©ë²•
 			result += std_num + "\t" + avg + "\t" + pass + "\n";
 		}
 
 		System.out.println("---------------------");
-		System.out.println("ÇĞ¹ø\tÆò±Õ\tÇÕ°İ¿©ºÎ");
+		System.out.println("í•™ë²ˆ\tí‰ê· \tí•©ê²©ì—¬ë¶€");
 		System.out.printf("%s", result);
 
 		scan.close();

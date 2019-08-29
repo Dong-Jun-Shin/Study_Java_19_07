@@ -1,4 +1,4 @@
-package exam_class_static;
+﻿package exam_class_static;
 
 public class CarStaticMethodTest {
 	public static void main(String[] args) {

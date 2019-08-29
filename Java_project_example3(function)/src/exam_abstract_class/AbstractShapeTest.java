@@ -8,7 +8,7 @@ abstract class Shape {
 		this.y = y;
 	}
 
-	//Ãß»ó¸Ş¼Òµå(¸Ş¼ÒµåÀÇ ¼±¾ğºÎºĞ¸¸ Á¸ÀçÇÏ°í Á¤ÀÇ ºÎºĞÀ» °¡Áö°í ÀÖÁö ¾ÊÀº ¸Ş¼Òµå)
+	//ì¶”ìƒë©”ì†Œë“œ(ë©”ì†Œë“œì˜ ì„ ì–¸ë¶€ë¶„ë§Œ ì¡´ì¬í•˜ê³  ì •ì˜ ë¶€ë¶„ì„ ê°€ì§€ê³  ìˆì§€ ì•Šì€ ë©”ì†Œë“œ)
 	public abstract void draw();
 }
 
@@ -16,7 +16,7 @@ class Rectangle extends Shape {
 	int width, height;
 
 	public void draw() {
-		System.out.println("»ç°¢Çü ±×¸®±â ¸Ş¼Òµå");
+		System.out.println("ì‚¬ê°í˜• ê·¸ë¦¬ê¸° ë©”ì†Œë“œ");
 	}
 }
 
@@ -24,7 +24,7 @@ class Circle extends Shape {
 	int radius;
 
 	public void draw() {
-		System.out.println("¿ø ±×¸®±â ¸Ş¼Òµå");
+		System.out.println("ì› ê·¸ë¦¬ê¸° ë©”ì†Œë“œ");
 	}
 }
 
@@ -37,7 +37,7 @@ public class AbstractShapeTest {
 		r.y = 0;
 		r.move(0,0);
 		
-		System.out.println("abstract Å¬·¡½º ±¸Çö");
+		System.out.println("abstract í´ë˜ìŠ¤ êµ¬í˜„");
 		System.out.print("Shape-Rectangle : ");
 		r.draw();
 		System.out.print("Shape-Circle : ");

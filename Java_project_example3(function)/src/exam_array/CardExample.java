@@ -1,11 +1,11 @@
-package exam_array;
+ï»¿package exam_array;
 
 /*
- * Ä«µå¸¦ ·£´ıÇÏ°Ô ¼±ÅÃÇÏ¿© È­¸é¿¡ Ãâ·ÂÇÏ´Â ÄÚµå¸¦ ÀÛ¼ºÇØº¸ÀÚ.
- * {"Clubs","Diamonds", "Hearts", "Spades"}¿Í
- * {"2","3","4","5","6","7","8","9","10","Jack","Queen","King","Ace"}¸¦
- * °¡Áö°í ÀÖ´Â ¹®ÀÚ¿­ ¹è¿­À» »ı¼ºÇÏ°í À§ ³»¿ëÀ¸·ÎºÎÅÍ ·£´ıÇÏ°Ô ÇÏ³ªÀÇ Ä«µå¸¦ ¼±ÅÃÇÏ´Â ÄÚµå¸¦ ÀÛ¼ºÇÏ¶ó.
- * ½ÇÇà °á°ú : HeartsÀÇ Jack
+ * ì¹´ë“œë¥¼ ëœë¤í•˜ê²Œ ì„ íƒí•˜ì—¬ í™”ë©´ì— ì¶œë ¥í•˜ëŠ” ì½”ë“œë¥¼ ì‘ì„±í•´ë³´ì.
+ * {"Clubs","Diamonds", "Hearts", "Spades"}ì™€
+ * {"2","3","4","5","6","7","8","9","10","Jack","Queen","King","Ace"}ë¥¼
+ * ê°€ì§€ê³  ìˆëŠ” ë¬¸ìì—´ ë°°ì—´ì„ ìƒì„±í•˜ê³  ìœ„ ë‚´ìš©ìœ¼ë¡œë¶€í„° ëœë¤í•˜ê²Œ í•˜ë‚˜ì˜ ì¹´ë“œë¥¼ ì„ íƒí•˜ëŠ” ì½”ë“œë¥¼ ì‘ì„±í•˜ë¼.
+ * ì‹¤í–‰ ê²°ê³¼ : Heartsì˜ Jack
  */
 public class CardExample {
 	public static int randomNum(String[] array) {
@@ -23,7 +23,7 @@ public class CardExample {
 		String[] num = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"};
 		int random_num;
 		random_num = randomNum(form); 
-		System.out.print(form[random_num] + "ÀÇ ");
+		System.out.print(form[random_num] + "ì˜ ");
 
 		random_num = randomNum(num);
 		System.out.println(num[random_num]);

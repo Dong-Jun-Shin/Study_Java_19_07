@@ -1,17 +1,17 @@
-package exam_casting;
+ï»¿package exam_casting;
 
 public class CastingExample {
 	public static void main(String[] args) {
-		//¹®ÀÚÇüÀ¸·Î Ãâ·Â
+		//ë¬¸ìí˜•ìœ¼ë¡œ ì¶œë ¥
 		int intValue = 65;
 		System.out.println((char) intValue);
 
-		//¹üÀ§°¡ int·Î ÇÑÁ¤
+		//ë²”ìœ„ê°€ intë¡œ í•œì •
 		long longValue = 500L;
 		intValue = (int) longValue;
 		System.out.println(intValue);
 
-		//¼Ò¼öÁ¡ Àß·Á¼­ Ãâ·Â
+		//ì†Œìˆ˜ì  ì˜ë ¤ì„œ ì¶œë ¥
 		double doubleValue = 3.14;
 		intValue = (int) doubleValue;
 		System.out.println(intValue);
@@ -19,11 +19,11 @@ public class CastingExample {
 		int result;
 		double resultDouble;
 
-		// °á°ú´Â ½Ç¼öÁö¸¸, º¯¼ö°¡ int¶ó¼­ ¼Ò¼öÁ¡ Àß¸®°í Ãâ·Â
+		// ê²°ê³¼ëŠ” ì‹¤ìˆ˜ì§€ë§Œ, ë³€ìˆ˜ê°€ intë¼ì„œ ì†Œìˆ˜ì  ì˜ë¦¬ê³  ì¶œë ¥
 		result = 3 / 2;
 		System.out.println(result);
 
-		// °á°ú°¡ ½Ç¼öÀÌ°í, º¯¼öµµ ½Ç¼ö¶ó¼­ Ãâ·Â
+		// ê²°ê³¼ê°€ ì‹¤ìˆ˜ì´ê³ , ë³€ìˆ˜ë„ ì‹¤ìˆ˜ë¼ì„œ ì¶œë ¥
 		resultDouble = 3.0 / 2.0;
 		// resultDouble = (double)3/2;
 		System.out.println(resultDouble);

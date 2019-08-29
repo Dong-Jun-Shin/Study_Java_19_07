@@ -1,4 +1,4 @@
-package exam_class_static;
+ï»¿package exam_class_static;
 
 public class CarStaticMethod {
 	private int speed;
@@ -42,7 +42,7 @@ public class CarStaticMethod {
 	}
 	
 	public String toString() {
-		return "ÀÚµ¿Â÷ Á¤º¸ : " + numberOfCars + " ¼Óµµ: " + speed + " ±â¾î: " + gear + " »ö»ó: " + color;
+		return "ìë™ì°¨ ì •ë³´ : " + numberOfCars + " ì†ë„: " + speed + " ê¸°ì–´: " + gear + " ìƒ‰ìƒ: " + color;
 	}
 	
 }

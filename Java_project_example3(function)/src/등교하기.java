@@ -1,43 +1,43 @@
-class ÇĞ»ı{
-	public int µ· = (int)((Math.random()*50000)+1)/10*10;
-	public int »ı¸í = 100; 
+ï»¿class í•™ìƒ{
+	public int ëˆ = (int)((Math.random()*50000)+1)/10*10;
+	public int ìƒëª… = 100; 
 }
 
-class ¾ç¾ÆÄ¡{
-	private int µ·  = 0;
-	private int »ı¸í = 100;
-	public static int ¼±ÅÃ = 0;
+class ì–‘ì•„ì¹˜{
+	private int ëˆ  = 0;
+	private int ìƒëª… = 100;
+	public static int ì„ íƒ = 0;
 	
-	public static void ºÎ¸£±â() {
-		System.out.println("¾ß, ÀÌ¸®¿ÍºÁ");
+	public static void ë¶€ë¥´ê¸°() {
+		System.out.println("ì•¼, ì´ë¦¬ì™€ë´");
 	}
 	
-	public static void »æ¶â±â(ÇĞ»ı ÇĞ»ı) {
-		System.out.println("¾ó¸¶ ÀÖ³Ä");
-		System.out.println(ÇĞ»ı.µ· +"À» È®ÀÎÇß´Ù.");
+	public static void ì‚¥ëœ¯ê¸°(í•™ìƒ í•™ìƒ) {
+		System.out.println("ì–¼ë§ˆ ìˆëƒ");
+		System.out.println(í•™ìƒ.ëˆ +"ì„ í™•ì¸í–ˆë‹¤.");
 		
 		
 	}
 	
-	public static void Åä´ÚÀÌ±â() {
-		System.out.println("Åä´ÚÅä´Ú(+2)");
+	public static void í† ë‹¥ì´ê¸°() {
+		System.out.println("í† ë‹¥í† ë‹¥(+2)");
 	}
 	
-	public static void ¶§¸®±â(int ¶§¸±È½¼ö) {
-		for (int ¹İº¹È½¼ö = 0; ¹İº¹È½¼ö < ¶§¸±È½¼ö; ¹İº¹È½¼ö++) {
-			if(¹İº¹È½¼ö%3 == 0) {
-				System.out.print("¸·Å¸ Ä¡¸íÅ¸(-2)  ");
+	public static void ë•Œë¦¬ê¸°(int ë•Œë¦´íšŸìˆ˜) {
+		for (int ë°˜ë³µíšŸìˆ˜ = 0; ë°˜ë³µíšŸìˆ˜ < ë•Œë¦´íšŸìˆ˜; ë°˜ë³µíšŸìˆ˜++) {
+			if(ë°˜ë³µíšŸìˆ˜%3 == 0) {
+				System.out.print("ë§‰íƒ€ ì¹˜ëª…íƒ€(-2)  ");
 			}
-			System.out.println("ÆÜ(-1)  ");		
+			System.out.println("í½(-1)  ");		
 		}
 	}
 }
 
-public class µî±³ÇÏ±â{
+public class ë“±êµí•˜ê¸°{
 	public static void main(String[] args) {
 		
-		if(¾ç¾ÆÄ¡.¼±ÅÃ == 1) {
-			System.out.println("¶â±â ½ÃÀÛÇÑ´Ù.");
+		if(ì–‘ì•„ì¹˜.ì„ íƒ == 1) {
+			System.out.println("ëœ¯ê¸° ì‹œì‘í•œë‹¤.");
 			
 		}
 	}

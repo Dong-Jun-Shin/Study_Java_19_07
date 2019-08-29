@@ -1,35 +1,35 @@
-package exam_class_relation;
+ï»¿package exam_class_relation;
 
 public class Time {
 	private int hour; //0~23
 	private int minute; //0~59
 	private int second; //0~59
 
-	//Ã¹¹øÂ° »ý¼ºÀÚ
+	//ì²«ë²ˆì§¸ ìƒì„±ìž
 	public Time() {
 		this(0, 0, 0);
 	}
 
-	//µÎ¹øÂ° »ý¼ºÀÚ
+	//ë‘ë²ˆì§¸ ìƒì„±ìž
 	public Time(int h, int m, int s) {
 		setTime(h, m, s);
 	}
 
-	//½Ã°£ ¼³Á¤ ÇÔ¼ö
+	//ì‹œê°„ ì„¤ì • í•¨ìˆ˜
 	public void setTime(int h, int m, int s) {
-		hour = ((h >= 0 && h < 24) ? h : 0);	//½Ã°£ °ËÁõ
-		minute = ((m >= 0 && m < 60) ? m : 0);	//ºÐ °ËÁõ
-		second = ((s >= 0 && s < 60) ? s : 0);	//ÃÊ °ËÁõ
+		hour = ((h >= 0 && h < 24) ? h : 0);	//ì‹œê°„ ê²€ì¦
+		minute = ((m >= 0 && m < 60) ? m : 0);	//ë¶„ ê²€ì¦
+		second = ((s >= 0 && s < 60) ? s : 0);	//ì´ˆ ê²€ì¦
 	}
 	
-	//"½Ã:ºÐ:ÃÊ"ÀÇ Çü½ÄÀ¸·Î Ãâ·Â
+	//"ì‹œ:ë¶„:ì´ˆ"ì˜ í˜•ì‹ìœ¼ë¡œ ì¶œë ¥
 	public String toString() {
 
-//		Çü½Ä¿¡¼­ %:Çü½ÄÁöÁ¤ÀÚ, 
-//		0:Ã¤¿ì°íÀÚ ÇÏ´Â ¹®ÀÚ(0¸¸ °¡´É),
-//		2d:ÀÚ¸´¼ö¿Í Çü
+//		í˜•ì‹ì—ì„œ %:í˜•ì‹ì§€ì •ìž, 
+//		0:ì±„ìš°ê³ ìž í•˜ëŠ” ë¬¸ìž(0ë§Œ ê°€ëŠ¥),
+//		2d:ìžë¦¿ìˆ˜ì™€ í˜•
 		return String.format("%02d:%02d:%02d", hour, minute, second);
 	}
 }
 
-// CU 5000¿ø ÇÒÀÎ / 509129 2445 9799 / 8.30 / ³ª¶ó»ç¶û 6000ÀÌ»ó
+// CU 5000ì› í• ì¸ / 509129 2445 9799 / 8.30 / ë‚˜ë¼ì‚¬ëž‘ 6000ì´ìƒ

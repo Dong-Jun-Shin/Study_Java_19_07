@@ -1,4 +1,4 @@
-package exam_class_relation;
+Ôªøpackage exam_class_relation;
 
 class Dvd {
 	private String title;
@@ -38,7 +38,7 @@ class DvdShop {
 	}
 
 	public void printDvdList() {
-		System.out.println("=========== DVD ∏Ò∑œ ===========");
+		System.out.println("=========== DVD Î™©Î°ù ===========");
 		for (int i = 0; i < dvdList.length; i++) {
 			System.out.printf("%-6s\t%5d\n", dvdList[i].getTitle(), dvdList[i].getPrice());
 		}

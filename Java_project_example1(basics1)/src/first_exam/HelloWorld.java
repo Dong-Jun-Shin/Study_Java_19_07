@@ -1,8 +1,8 @@
-package first_exam;
+ï»¿package first_exam;
 
 public class HelloWorld {
 	public static void main(String[] args) {
-		System.out.println("ÀÚ¹Ù¸¦ Ã³À½ ½ÃÀÛÇÏÁö¸¸ ¿­½ÉÈ÷ ÇÏ°Ú½À´Ï´Ù.");
-		System.out.println("¿À´Ã ÇÏ·çµµ È­ÀÌÆÃÇÕ½Ã´Ù.");
+		System.out.println("ìë°”ë¥¼ ì²˜ìŒ ì‹œì‘í•˜ì§€ë§Œ ì—´ì‹¬íˆ í•˜ê² ìŠµë‹ˆë‹¤.");
+		System.out.println("ì˜¤ëŠ˜ í•˜ë£¨ë„ í™”ì´íŒ…í•©ì‹œë‹¤.");
 	}
 }

@@ -1,11 +1,11 @@
-package exam_continue;
+ï»¿package exam_continue;
 
 import java.util.Scanner;
 
 /*
- * ¹®ÀÚ¿­"no news is good news"¸¦ ´ë»óÀ¸·Î ¹İº¹ÇÏ¸ç ¹®ÀÚ 'n'ÀÌ ³ªÅ¸³ª´Â È½¼ö¸¦ Ä«¿îÆÃÇÑ´Ù. ¸¸¾à ÇöÀçÀÇ ¹®ÀÚ°¡ 'n'ÀÌ
- * ¾Æ´Ï¸é continue¹®¿¡ ÀÇÇÏ¿© ·çÇÁÀÇ ³ª¸ÓÁö ºÎºĞÀ» »ı·«ÇÏ°í ´ÙÀ½ ¹®ÀÚ¸¦ Ã³¸®ÇÑ´Ù. 
- * ¹®ÀÚÀÇ ±æÀÌ´Â length()·Î ±¸ÇÏ¸é µÈ´Ù.
+ * ë¬¸ìì—´"no news is good news"ë¥¼ ëŒ€ìƒìœ¼ë¡œ ë°˜ë³µí•˜ë©° ë¬¸ì 'n'ì´ ë‚˜íƒ€ë‚˜ëŠ” íšŸìˆ˜ë¥¼ ì¹´ìš´íŒ…í•œë‹¤. ë§Œì•½ í˜„ì¬ì˜ ë¬¸ìê°€ 'n'ì´
+ * ì•„ë‹ˆë©´ continueë¬¸ì— ì˜í•˜ì—¬ ë£¨í”„ì˜ ë‚˜ë¨¸ì§€ ë¶€ë¶„ì„ ìƒëµí•˜ê³  ë‹¤ìŒ ë¬¸ìë¥¼ ì²˜ë¦¬í•œë‹¤. 
+ * ë¬¸ìì˜ ê¸¸ì´ëŠ” length()ë¡œ êµ¬í•˜ë©´ ëœë‹¤.
  */
 public class ContinueExample {
 	public static void main(String[] args) {
@@ -13,7 +13,7 @@ public class ContinueExample {
 		String sentence = "no news is good news";
 		int cnt = 0;
 
-		System.out.println("Ã£À» ¹®ÀÚ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+		System.out.println("ì°¾ì„ ë¬¸ìë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 		char ch = scan.next().charAt(0);
 
 		for (int i = 0; i < sentence.length(); i++) {

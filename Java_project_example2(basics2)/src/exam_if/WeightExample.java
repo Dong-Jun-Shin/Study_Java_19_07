@@ -1,38 +1,38 @@
-package exam_if;
+ï»¿package exam_if;
 
 import java.util.Scanner;
 
 /*
- * »ç¿ëÀÚ·ÎºÎÅÍ Å°¸¦ ÀÔ·Â¹Ş¾Æ¼­ Ç¥ÁØ Ã¼ÁßÀ» °è»êÇÑ ÈÄ¿¡
- * »ç¿ëÀÚÀÇ Ã¼Áß°ú ºñ±³ÇÏ¿© ÀúÃ¼ÁßÀÎÁö, Ç¥ÁØÀÎÁö, °úÃ¼ÁßÀÎÁö¸¦ ÆÇ´ÜÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ¶ó.
- * Ç¥ÁØ Ã¼Áß °è»ê½ÄÀº ´ÙÀ½À» »ç¿ëÇÏ¶ó.
- * Ç¥ÁØÃ¼Áß = (Å° - 100) x 0.9
+ * ì‚¬ìš©ìë¡œë¶€í„° í‚¤ë¥¼ ì…ë ¥ë°›ì•„ì„œ í‘œì¤€ ì²´ì¤‘ì„ ê³„ì‚°í•œ í›„ì—
+ * ì‚¬ìš©ìì˜ ì²´ì¤‘ê³¼ ë¹„êµí•˜ì—¬ ì €ì²´ì¤‘ì¸ì§€, í‘œì¤€ì¸ì§€, ê³¼ì²´ì¤‘ì¸ì§€ë¥¼ íŒë‹¨í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ë¼.
+ * í‘œì¤€ ì²´ì¤‘ ê³„ì‚°ì‹ì€ ë‹¤ìŒì„ ì‚¬ìš©í•˜ë¼.
+ * í‘œì¤€ì²´ì¤‘ = (í‚¤ - 100) x 0.9
  * 
  * 
- * stature : »ç¶÷ÀÌ ¼¹À» ¶§ÀÇ ³ôÀÌ
- * height : ¹Ù´Ú, ¹ß ¹Ø¿¡¼­ Á¤»ó±îÁöÀÇ °Å¸®
+ * stature : ì‚¬ëŒì´ ì„°ì„ ë•Œì˜ ë†’ì´
+ * height : ë°”ë‹¥, ë°œ ë°‘ì—ì„œ ì •ìƒê¹Œì§€ì˜ ê±°ë¦¬
  */
 public class WeightExample {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		double u_height, u_weight, weight;
 		
-		System.out.println("Å°¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+		System.out.println("í‚¤ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 		u_height = scan.nextDouble();
 
-		System.out.println("Ã¼ÁßÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+		System.out.println("ì²´ì¤‘ì„ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 		u_weight = scan.nextDouble();
 
 		weight = (u_height - 100) * 0.9;
 
-		System.out.println("Ç¥ÁØÃ¼Áß = " + (int)weight);
+		System.out.println("í‘œì¤€ì²´ì¤‘ = " + (int)weight);
 		
 		if((int)u_weight == (int)weight) {
-			System.out.println("´ç½ÅÀº Ç¥ÁØÃ¼ÁßÀÔ´Ï´Ù.");
+			System.out.println("ë‹¹ì‹ ì€ í‘œì¤€ì²´ì¤‘ì…ë‹ˆë‹¤.");
 		}else if((int)u_weight > (int)weight) {
-			System.out.println("´ç½ÅÀº °úÃ¼ÁßÀÔ´Ï´Ù.");
+			System.out.println("ë‹¹ì‹ ì€ ê³¼ì²´ì¤‘ì…ë‹ˆë‹¤.");
 		}else {
-			System.out.println("´ç½ÅÀº ÀúÃ¼ÁßÀÔ´Ï´Ù.");
+			System.out.println("ë‹¹ì‹ ì€ ì €ì²´ì¤‘ì…ë‹ˆë‹¤.");
 		}
 		
 		scan.close();

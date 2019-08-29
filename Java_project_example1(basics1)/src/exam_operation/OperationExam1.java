@@ -1,32 +1,32 @@
-package exam_operation;
+ï»¿package exam_operation;
 
 import java.util.Scanner;
 
 /*
- * ´Ş°¿ 456°³¸¦ 12°³¾¿ ´ãÀ» ¼ö ÀÖ´Â »óÀÚÀÇ ¼ö¸¦ »ïÇ× ¿¬»êÀÚ¸¦ ÀÌ¿ëÇÏ¿©
- * ½ÇÇà°á°ú¿Í °°ÀÌ Ãâ·ÂÇÏµµ·Ï ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
+ * ë‹¬ê±€ 456ê°œë¥¼ 12ê°œì”© ë‹´ì„ ìˆ˜ ìˆëŠ” ìƒìì˜ ìˆ˜ë¥¼ ì‚¼í•­ ì—°ì‚°ìë¥¼ ì´ìš©í•˜ì—¬
+ * ì‹¤í–‰ê²°ê³¼ì™€ ê°™ì´ ì¶œë ¥í•˜ë„ë¡ í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ì‹œì˜¤.
  * 
- * [½ÇÇà°á°ú]
- * ´Ş°¿ 456°³¸¦ 12°³¾¿ ´ãÀ» ¼ö ÀÖ´Â »óÀÚÀÇ ¼ö´Â 00°³ÀÔ´Ï´Ù.
+ * [ì‹¤í–‰ê²°ê³¼]
+ * ë‹¬ê±€ 456ê°œë¥¼ 12ê°œì”© ë‹´ì„ ìˆ˜ ìˆëŠ” ìƒìì˜ ìˆ˜ëŠ” 00ê°œì…ë‹ˆë‹¤.
  */
 public class OperationExam1 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 
-		System.out.println("ÀüÃ¼ °è¶õ ¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä. ^^");
+		System.out.println("ì „ì²´ ê³„ë€ ìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”. ^^");
 		int egg = scan.nextInt();
 
-		System.out.println("ÇÑ »óÀÚ¿¡ ´ãÀ» °è¶õ ¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä. ^^");
+		System.out.println("í•œ ìƒìì— ë‹´ì„ ê³„ë€ ìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”. ^^");
 		int eggDiv = scan.nextInt();
 
 		int box;
 
 		box = egg / eggDiv;
 
-		// if¹® ´ë½Å Á¶°Ç¿¬»êÀÚ¸¦ ÀÌ¿ë
+		// ifë¬¸ ëŒ€ì‹  ì¡°ê±´ì—°ì‚°ìë¥¼ ì´ìš©
 		box = (box % eggDiv == 0 || box % eggDiv == 1) ? (box) : (box + 1);
 
-		System.out.println("´Ş°¿ " + egg + "°³¸¦ " + eggDiv + "°³¾¿ ´ãÀ» ¼ö ÀÖ´Â »óÀÚÀÇ ¼ö´Â " + box + "°³ÀÔ´Ï´Ù.");
+		System.out.println("ë‹¬ê±€ " + egg + "ê°œë¥¼ " + eggDiv + "ê°œì”© ë‹´ì„ ìˆ˜ ìˆëŠ” ìƒìì˜ ìˆ˜ëŠ” " + box + "ê°œì…ë‹ˆë‹¤.");
 		scan.close();
 	}
 }

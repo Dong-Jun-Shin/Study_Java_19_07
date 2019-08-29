@@ -1,28 +1,28 @@
-import java.util.Scanner;
+ï»¿import java.util.Scanner;
 
 public class PrimeNumber {
 	public static void main(String[] args) {
-		// ¼Ò¼ö ÆÇº°
+		// ì†Œìˆ˜ íŒë³„
 		Scanner scan = new Scanner(System.in);
 		int num;
 
 		// num = scan.nextInt();
-		// p^2 > ÇØ´ç Á¤¼ö±îÁö
+		// p^2 > í•´ë‹¹ ì •ìˆ˜ê¹Œì§€
 		
 		for (num = 1; num <= 100; num++) {
 			if (num < 10) {
 				if (num == 2 || num == 3 || num == 5  || num == 7) {
-					System.out.println(num + "= ¼Ò¼ö");
+					System.out.println(num + "= ì†Œìˆ˜");
 					System.out.println();
 				} else {
-					System.out.println(num + "= ¼Ò¼ö°¡ ¾Æ´Õ´Ï´Ù.");
+					System.out.println(num + "= ì†Œìˆ˜ê°€ ì•„ë‹™ë‹ˆë‹¤.");
 				}
 			}else {
 				if (!(num % 2 == 0 || num % 3 == 0 || num % 5 == 0 || num % 7 == 0)) {
-					System.out.println(num + "= ¼Ò¼ö");
+					System.out.println(num + "= ì†Œìˆ˜");
 					System.out.println();
 				} else {
-					System.out.println(num + "= ¼Ò¼ö°¡ ¾Æ´Õ´Ï´Ù.");
+					System.out.println(num + "= ì†Œìˆ˜ê°€ ì•„ë‹™ë‹ˆë‹¤.");
 				}
 			}
 		}

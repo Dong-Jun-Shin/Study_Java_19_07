@@ -1,19 +1,19 @@
-package exam_lab;
+ï»¿package exam_lab;
 
 import java.util.Scanner;
 
 /*
- * 2Â÷¿ø ¹è¿­(4x4)ÀÌ Á¸ÀçÇÑ´Ù. ±× ¹è¿­¿¡ ÀÓÀÇÀÇ ¼ö(1~9)¸¦ ÀÓÀÇÀÇ À§Ä¡¿¡ 8°³¸¦ ÀúÀåÇÏ°í
- * ³ª¸ÓÁö 8°³´Â 0À¸·Î ÀúÀåµÇµµ·Ï ¹è¿­À» Ã³¸®ÇÏ°í Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇØ º¸¼¼¿ä.
+ * 2ì°¨ì› ë°°ì—´(4x4)ì´ ì¡´ìž¬í•œë‹¤. ê·¸ ë°°ì—´ì— ìž„ì˜ì˜ ìˆ˜(1~9)ë¥¼ ìž„ì˜ì˜ ìœ„ì¹˜ì— 8ê°œë¥¼ ì €ìž¥í•˜ê³ 
+ * ë‚˜ë¨¸ì§€ 8ê°œëŠ” 0ìœ¼ë¡œ ì €ìž¥ë˜ë„ë¡ ë°°ì—´ì„ ì²˜ë¦¬í•˜ê³  ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•´ ë³´ì„¸ìš”.
  */
 public class RandomMatrix {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		System.out.print("¹è¿­ÀÇ Å©±â¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä>> ");
+		System.out.print("ë°°ì—´ì˜ í¬ê¸°ë¥¼ ìž…ë ¥í•´ì£¼ì„¸ìš”>> ");
 		int input = scan.nextInt();
 		int[][] mtx = new int[input][input];
 		
-		/* while¹® »ç¿ëÇÑ ¹æ¹ý
+		/* whileë¬¸ ì‚¬ìš©í•œ ë°©ë²•
 		 * 
 		 * while (num < 8){
 		 * 		int i = (int)((Math.random()*input));

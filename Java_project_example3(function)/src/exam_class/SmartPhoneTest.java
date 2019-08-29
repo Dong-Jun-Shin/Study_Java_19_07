@@ -1,24 +1,24 @@
-package exam_class;
+ï»¿package exam_class;
 
 public class SmartPhoneTest {
 	public static void main(String[] args) {
-		//»ı¼ºÀÚ (¸Å°³º¯¼ö 4°³)
+		//ìƒì„±ì (ë§¤ê°œë³€ìˆ˜ 4ê°œ)
 		
-		SmartPhone phone1 = new SmartPhone("»ï¼º", "°¶·°½Ã³ëÆ®9", 1094500);
-		System.out.println("============Á¦Ç°¸ñ·Ï===========");
+		SmartPhone phone1 = new SmartPhone("ì‚¼ì„±", "ê°¤ëŸ­ì‹œë…¸íŠ¸9", 1094500);
+		System.out.println("============ì œí’ˆëª©ë¡===========");
 		System.out.println("----------------------------");
 		phone1.show();
 		
-		//»ı¼ºÀÚ (¸Å°³º¯¼ö 3°³)
-		SmartPhone phone2 = new SmartPhone("¾ÖÇÃ", "¾ÆÀÌÆùXS", 1364000, 10);
+		//ìƒì„±ì (ë§¤ê°œë³€ìˆ˜ 3ê°œ)
+		SmartPhone phone2 = new SmartPhone("ì• í”Œ", "ì•„ì´í°XS", 1364000, 10);
 		phone2.show();
 		
 		//getter, setter
 		SmartPhone phone3 = new SmartPhone();
-		phone3.setMaker("»ï¼º");
+		phone3.setMaker("ì‚¼ì„±");
 		String maker = phone3.getMaker();
 
-		phone3.setNmae("°¶·°½ÃS8");
+		phone3.setNmae("ê°¤ëŸ­ì‹œS8");
 		String name = phone3.getName();
 		
 		phone3.setPrice(935000);
@@ -29,9 +29,9 @@ public class SmartPhoneTest {
 		
 		int tempNum = (int)((double)price/100 * (100-discountRate))/10*10;
 		System.out.printf("%s [%s]\n", name, maker);
-		System.out.printf("°¡°İ : %d\n", price);
+		System.out.printf("ê°€ê²© : %d\n", price);
 		if(discountRate != 0) {
-			System.out.printf("ÇÒÀÎ°¡°İ(%d%%) : %d\n", discountRate, tempNum);			
+			System.out.printf("í• ì¸ê°€ê²©(%d%%) : %d\n", discountRate, tempNum);			
 		}
 		System.out.println("----------------------------");		
 	}

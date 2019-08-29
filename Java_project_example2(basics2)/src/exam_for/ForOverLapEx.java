@@ -1,9 +1,9 @@
-package exam_for;
+ï»¿package exam_for;
 
 public class ForOverLapEx {
 	public static void main(String[] args) {
 
-		// 1 2 3 4 5 ÁÙ¹Ù²Þ ÇØ¼­ 5ÁÙ Ãâ·Â
+		// 1 2 3 4 5 ì¤„ë°”ê¿ˆ í•´ì„œ 5ì¤„ ì¶œë ¥
 		for (int i = 0; i < 5; i++) {
 			for (int j = 0; j < 5; j++) {
 				System.out.print((j + 1) + " ");
@@ -12,7 +12,7 @@ public class ForOverLapEx {
 		}
 		System.out.println("--------------------");
 
-		// ´ÙÀ½ ÁÙ °¥¼ö·Ï 1°³¾¿ »©±â
+		// ë‹¤ìŒ ì¤„ ê°ˆìˆ˜ë¡ 1ê°œì”© ë¹¼ê¸°
 		for (int i = 0; i < 5; i++) {
 			for (int j = 0; j < 5 - i; j++) {
 				System.out.print((j + 1) + " ");
@@ -29,7 +29,7 @@ public class ForOverLapEx {
 		}
 		System.out.println("--------------------");
 
-		// ´ÙÀ½ ÁÙ °¥¼ö·Ï 1°³¾¿ ´õÇÏ±â
+		// ë‹¤ìŒ ì¤„ ê°ˆìˆ˜ë¡ 1ê°œì”© ë”í•˜ê¸°
 		for (int i = 0; i < 5; i++) {
 			for (int j = 0; j <= i; j++) {
 				System.out.print((j + 1) + " ");
@@ -38,7 +38,7 @@ public class ForOverLapEx {
 		}
 		System.out.println("--------------------");
 
-		// ´ÙÀ½ ÁÙ·Î °¥¼ö·Ï ´ÙÀ½ ¼ýÀÚ¸¦ Ãß°¡ÇØ¼­ ÀÌµ¿
+		// ë‹¤ìŒ ì¤„ë¡œ ê°ˆìˆ˜ë¡ ë‹¤ìŒ ìˆ«ìžë¥¼ ì¶”ê°€í•´ì„œ ì´ë™
 		for (int i = 0; i < 5; i++) {
 			for (int j = 0; j < 5; j++) {
 				for (int k = 0; k < 5; k++) {

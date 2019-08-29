@@ -1,4 +1,4 @@
-package tool;
+ï»¿package tool;
 
 import java.util.Scanner;
 
@@ -8,11 +8,11 @@ public class VendingTool {
 	private int[][] qty = new int[product.length][product[0].length];
 	private char[][] activation = new char[product.length][product[0].length];
 
-	//Å¬·¡½º ³» ¸Ş¼Òµå
+	//í´ë˜ìŠ¤ ë‚´ ë©”ì†Œë“œ
 	//TODO  1st
-	//		(ÀÌ¸§, Àç°í) (ÆÄÀÏ ÀÔÃâ·ÂÀ¸·Î Àç°í°ü¸® ±â´É ±¸ÇöÇÏ±â)
+	//		(ì´ë¦„, ì¬ê³ ) (íŒŒì¼ ì…ì¶œë ¥ìœ¼ë¡œ ì¬ê³ ê´€ë¦¬ ê¸°ëŠ¥ êµ¬í˜„í•˜ê¸°)
 	public String[][] setProduct() {
-		String[][] object = { { "ÄÚÄ«Äİ¶ó(PET)", "ÄÚÄ«Äİ¶ó(PET)", "½ºÇÁ¶óÀÌÆ®(PET)", "È¯Å¸(¿À·»Áö)(PET)", "ÄÚÄ«Äİ¶ó(CAN)", "ÄÚÄ«Äİ¶ó(CAN)" }, { "¹Ì´Ö¸ŞÀÌµå(¸Á°í)(CAN)", "¹Ì´Ö¸ŞÀÌµå(¸Á°í)(CAN)", "¾Ï¹Ù»ç(PET)", "¾ÆÀÌ½ºÆ¼(º¹¼ş¾Æ)(PET)", "¸¶Å×Â÷(PET)", "»ı¼ö(PET)" }, { "ÆÄ¿ö¿¡ÀÌµå(ºí·ç)(PET)", "¹Ì´Ö¸ŞÀÌµå(¿À·»Áö)(PET)", "½ãÅ°½ºÆ®(¶óÀÓ)(PET)", "½ãÅ°½ºÆ®(ÀÚ¸ù)(PET)", "ÄÚÄÚÆÊ(ÄÚÄÚ³Ó)(CAN)", "ÄÚÄÚÆÊ(ÄÚÄÚ³Ó)(CAN)" }, { "½ÄÇı(CAN)", "½ÄÇı(CAN)", "´ÚÅÍÆäÆÛ(CAN)", "´ÚÅÍÆäÆÛ(CAN)", "·¹¸ó¿¡ÀÌµå(CAN)", "·¹¸ó¿¡ÀÌµå(CAN)" } };
+		String[][] object = { { "ì½”ì¹´ì½œë¼(PET)", "ì½”ì¹´ì½œë¼(PET)", "ìŠ¤í”„ë¼ì´íŠ¸(PET)", "í™˜íƒ€(ì˜¤ë Œì§€)(PET)", "ì½”ì¹´ì½œë¼(CAN)", "ì½”ì¹´ì½œë¼(CAN)" }, { "ë¯¸ë‹›ë©”ì´ë“œ(ë§ê³ )(CAN)", "ë¯¸ë‹›ë©”ì´ë“œ(ë§ê³ )(CAN)", "ì•”ë°”ì‚¬(PET)", "ì•„ì´ìŠ¤í‹°(ë³µìˆ­ì•„)(PET)", "ë§ˆí…Œì°¨(PET)", "ìƒìˆ˜(PET)" }, { "íŒŒì›Œì—ì´ë“œ(ë¸”ë£¨)(PET)", "ë¯¸ë‹›ë©”ì´ë“œ(ì˜¤ë Œì§€)(PET)", "ì¬í‚¤ìŠ¤íŠ¸(ë¼ì„)(PET)", "ì¬í‚¤ìŠ¤íŠ¸(ìëª½)(PET)", "ì½”ì½”íŒœ(ì½”ì½”ë„›)(CAN)", "ì½”ì½”íŒœ(ì½”ì½”ë„›)(CAN)" }, { "ì‹í˜œ(CAN)", "ì‹í˜œ(CAN)", "ë‹¥í„°í˜í¼(CAN)", "ë‹¥í„°í˜í¼(CAN)", "ë ˆëª¬ì—ì´ë“œ(CAN)", "ë ˆëª¬ì—ì´ë“œ(CAN)" } };
 
 		return object;
 	}
@@ -24,7 +24,7 @@ public class VendingTool {
 	}
 
 	public void setStock() {
-		//Àç°í ÃÊ±âÈ­
+		//ì¬ê³  ì´ˆê¸°í™”
 		for (int i = 0; i < qty.length; i++) {
 			for (int j = 0; j < qty[i].length; j++) {
 				qty[i][j] = 5;
@@ -53,7 +53,7 @@ public class VendingTool {
 
 	public void vendingList() {
 		for (int i = 0, num = 1; i < product.length; i++) {
-			//Á¦Ç°¸í Ãâ·Â
+			//ì œí’ˆëª… ì¶œë ¥
 			for (int j = 0; j < product[i].length; j++) {
 				if (product[i][j].length() < 10) {
 					System.out.printf("|%2d. %-9s\t\t", num++, product[i][j]);
@@ -63,13 +63,13 @@ public class VendingTool {
 			}
 			System.out.println();
 
-			//Á¦Ç°¸í Ãâ·Â
+			//ì œí’ˆëª… ì¶œë ¥
 			for (int j = 0; j < product[i].length; j++) {
 				System.out.printf("|%10d\t\t", price[i][j]);
 			}
 			System.out.println();
 
-			//±¸ÀÔ°¡´É¿©ºÎ Ãâ·Â
+			//êµ¬ì…ê°€ëŠ¥ì—¬ë¶€ ì¶œë ¥
 			for (int j = 0; j < product[i].length; j++) {
 				System.out.printf("|\t%-10s\t", activation[i][j]);
 			}
@@ -81,7 +81,7 @@ public class VendingTool {
 
 	public void vendingListAdmin() {
 		for (int i = 0, num = 1; i < product.length; i++) {
-			//Á¦Ç°¸í Ãâ·Â
+			//ì œí’ˆëª… ì¶œë ¥
 			for (int j = 0; j < product[i].length; j++) {
 				if (product[i][j].length() < 10) {
 					System.out.printf("|%2d. %-9s\t\t", num++, product[i][j]);
@@ -91,13 +91,13 @@ public class VendingTool {
 			}
 			System.out.println();
 
-			//Á¦Ç°¸í Ãâ·Â
+			//ì œí’ˆëª… ì¶œë ¥
 			for (int j = 0; j < product[i].length; j++) {
 				System.out.printf("|%10d\t\t", price[i][j]);
 			}
 			System.out.println();
 
-			//Àç°í Ãâ·Â
+			//ì¬ê³  ì¶œë ¥
 			for (int j = 0; j < product[i].length; j++) {
 				System.out.printf("|\t%10d\t", qty[i][j]);
 			}
@@ -120,7 +120,7 @@ public class VendingTool {
 			if (num > 0 && num < 25) {
 				break;
 			} else {
-				System.out.println("À¯È¿ÇÑ ÀÚ¸® ¹øÈ£¸¦ ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				System.out.println("ìœ íš¨í•œ ìë¦¬ ë²ˆí˜¸ë¥¼ ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 			}
 		}
 
@@ -128,10 +128,10 @@ public class VendingTool {
 	}
 
 	public void setData(Scanner scan, int i, int j) {
-		System.out.print("»óÇ°¸í : ");
+		System.out.print("ìƒí’ˆëª… : ");
 		product[i][j] = scan.nextLine();
 
-		System.out.print("°¡°İ : ");
+		System.out.print("ê°€ê²© : ");
 		while (true) {
 			price[i][j] = scan.nextInt();
 			scan.nextLine();
@@ -139,11 +139,11 @@ public class VendingTool {
 			if (price[i][j] >= 0) {
 				break;
 			}else {
-				System.out.println("°¡°İÀº À½¼ö·Î ÀÔ·ÂÇÒ ¼ö ¾ø½À´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				System.out.println("ê°€ê²©ì€ ìŒìˆ˜ë¡œ ì…ë ¥í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 			}
 		}
 
-		System.out.print("Àç°í : ");
+		System.out.print("ì¬ê³  : ");
 		while (true) {
 			qty[i][j] = scan.nextInt();
 			scan.nextLine();
@@ -151,7 +151,7 @@ public class VendingTool {
 			if (qty[i][j] >= 0) {
 				break;
 			}else {
-				System.out.println("Àç°í´Â À½¼ö·Î ÀÔ·ÂÇÒ ¼ö ¾ø½À´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				System.out.println("ì¬ê³ ëŠ” ìŒìˆ˜ë¡œ ì…ë ¥í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 			}
 		}
 	}
@@ -163,7 +163,7 @@ public class VendingTool {
 	}
 
 	public int addStock(Scanner scan, int i, int j) {
-		System.out.print("Ãß°¡ÇÒ Àç°í·® : ");
+		System.out.print("ì¶”ê°€í•  ì¬ê³ ëŸ‰ : ");
 		int num;
 		while (true) {
 			num = scan.nextInt();
@@ -172,7 +172,7 @@ public class VendingTool {
 			if (num > 0) {
 				break;
 			}else {
-				System.out.println("Ãß°¡ÇÒ °³¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				System.out.println("ì¶”ê°€í•  ê°œìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 			}
 		}
 		qty[i][j] += num;
@@ -181,7 +181,7 @@ public class VendingTool {
 	}
 
 	public int subStock(Scanner scan, int i, int j) {
-		System.out.print("°¨¼ÒÇÒ Àç°í·® : ");
+		System.out.print("ê°ì†Œí•  ì¬ê³ ëŸ‰ : ");
 		int num = 0;
 		if (qty[i][j] > 0) {
 			while (true) {
@@ -191,19 +191,19 @@ public class VendingTool {
 				if (num > 0) {
 					break;
 				}else {
-					System.out.println("»¬ °³¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+					System.out.println("ëº„ ê°œìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 				}
 			}
 			qty[i][j] -= num;
 		} else {
-			System.out.println("»¬ Àç°í°¡ ¾ø½À´Ï´Ù.");
+			System.out.println("ëº„ ì¬ê³ ê°€ ì—†ìŠµë‹ˆë‹¤.");
 		}
 
 		return num;
 	}
 
 	private void productAdd(Scanner scan) {
-		String guide = "»óÇ°À» Ãß°¡ÇÒ ÀÚ¸®¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä>>";
+		String guide = "ìƒí’ˆì„ ì¶”ê°€í•  ìë¦¬ë²ˆí˜¸ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”>>";
 
 		int num = selProduct(scan, guide);
 		int[] index = index(num);
@@ -211,19 +211,19 @@ public class VendingTool {
 		int j = index[1];
 
 		if (product[i][j] == "") {
-			System.out.println("»óÇ°¸í, °¡°İ, Àç°í¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä>>");
+			System.out.println("ìƒí’ˆëª…, ê°€ê²©, ì¬ê³ ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”>>");
 			setData(scan, i, j);
 			cleaner();
-			System.out.printf("¢º %sÀÌ(°¡) Ãß°¡µÇ¾ú½À´Ï´Ù.\n", product[i][j]);
+			System.out.printf("â–¶ %sì´(ê°€) ì¶”ê°€ë˜ì—ˆìŠµë‹ˆë‹¤.\n", product[i][j]);
 		} else {
 			cleaner();
-			System.out.println("¢ºÇØ´ç ÀÚ¸®¿¡ ´Ù¸¥ »óÇ°ÀÌ ÀÖ½À´Ï´Ù.");
+			System.out.println("â–¶í•´ë‹¹ ìë¦¬ì— ë‹¤ë¥¸ ìƒí’ˆì´ ìˆìŠµë‹ˆë‹¤.");
 
 		}
 	}
 
 	private void productRemove(Scanner scan) {
-		String guide = "»óÇ°À» »èÁ¦ÇÒ ÀÚ¸®¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä>>";
+		String guide = "ìƒí’ˆì„ ì‚­ì œí•  ìë¦¬ë²ˆí˜¸ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”>>";
 
 		int num = selProduct(scan, guide);
 		int[] index = index(num);
@@ -233,11 +233,11 @@ public class VendingTool {
 		guide = product[i][j];
 		delData(i, j);
 		cleaner();
-		System.out.printf("¢º %sÀÌ(°¡) »èÁ¦µÇ¾ú½À´Ï´Ù.\n", guide);
+		System.out.printf("â–¶ %sì´(ê°€) ì‚­ì œë˜ì—ˆìŠµë‹ˆë‹¤.\n", guide);
 	}
 
 	private void stockAdd(Scanner scan) {
-		String guide = "Àç°í¸¦ Ãß°¡ÇÒ »óÇ°ÀÇ ÀÚ¸®¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä>>";
+		String guide = "ì¬ê³ ë¥¼ ì¶”ê°€í•  ìƒí’ˆì˜ ìë¦¬ë²ˆí˜¸ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”>>";
 
 		int num = selProduct(scan, guide);
 		int[] index = index(num);
@@ -246,12 +246,12 @@ public class VendingTool {
 
 		num = addStock(scan, i, j);
 		cleaner();
-		System.out.printf("¢º%d(°³)°¡ Áõ°¡Çß½À´Ï´Ù.\n", num);
-		System.out.printf(" %sÀÇ ³²Àº Àç°í´Â %d(°³)ÀÔ´Ï´Ù.\n", product[i][j], qty[i][j]);
+		System.out.printf("â–¶%d(ê°œ)ê°€ ì¦ê°€í–ˆìŠµë‹ˆë‹¤.\n", num);
+		System.out.printf(" %sì˜ ë‚¨ì€ ì¬ê³ ëŠ” %d(ê°œ)ì…ë‹ˆë‹¤.\n", product[i][j], qty[i][j]);
 	}
 
 	private void stockSub(Scanner scan) {
-		String guide = "Àç°í¸¦ »¬ »óÇ°ÀÇ ÀÚ¸®¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä>>";
+		String guide = "ì¬ê³ ë¥¼ ëº„ ìƒí’ˆì˜ ìë¦¬ë²ˆí˜¸ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”>>";
 
 		int num = selProduct(scan, guide);
 		int[] index = index(num);
@@ -260,11 +260,11 @@ public class VendingTool {
 
 		num = subStock(scan, i, j);
 		cleaner();
-		System.out.printf("¢º%d(°³)°¡ °¨¼ÒÇß½À´Ï´Ù.\n", num);
-		System.out.printf("¢º %sÀÇ ³²Àº Àç°í´Â %d(°³)ÀÔ´Ï´Ù.\n", product[i][j], qty[i][j]);
+		System.out.printf("â–¶%d(ê°œ)ê°€ ê°ì†Œí–ˆìŠµë‹ˆë‹¤.\n", num);
+		System.out.printf("â–¶ %sì˜ ë‚¨ì€ ì¬ê³ ëŠ” %d(ê°œ)ì…ë‹ˆë‹¤.\n", product[i][j], qty[i][j]);
 	}
 
-	//Å¬·¡½º ¿Ü ¸Ş¼Òµå
+	//í´ë˜ìŠ¤ ì™¸ ë©”ì†Œë“œ
 
 	public int[][] getQty() {
 		return qty;
@@ -276,7 +276,7 @@ public class VendingTool {
 
 	public int setBalance(Scanner scan) {
 		int balance;
-		System.out.print("¢º±İ¾×À» ³Ö¾îÁÖ¼¼¿ä. ");
+		System.out.print("â–¶ê¸ˆì•¡ì„ ë„£ì–´ì£¼ì„¸ìš”. ");
 		balance = scan.nextInt();
 
 		return balance;
@@ -284,12 +284,12 @@ public class VendingTool {
 
 	public void printList(int balance) {
 		System.out.println("-------------------------------------------");
-		System.out.println("¢º»óÇ°¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä. (ÅõÀÔµÈ ±İ¾× : " + balance + "¿ø)");
+		System.out.println("â–¶ìƒí’ˆë²ˆí˜¸ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”. (íˆ¬ì…ëœ ê¸ˆì•¡ : " + balance + "ì›)");
 		System.out.println("-------------------------------------------");
 		vendingList();
 		System.out.println("-------------------------------------------");
-		System.out.println("(±İ¾×À» Ãß°¡ ÅõÀÔÇÏ½Ã·Á¸é ±İ¾×À» ÀÔ·ÂÇÏ¼¼¿ä. (100¿ø ´ÜÀ§)");
-		System.out.println("(ÀÜ¾×À» È¯ºÒÇÏ°í Á¾·áÇÏ·Á¸é '99'¸¦ ´­·¯ÁÖ¼¼¿ä.)");
+		System.out.println("(ê¸ˆì•¡ì„ ì¶”ê°€ íˆ¬ì…í•˜ì‹œë ¤ë©´ ê¸ˆì•¡ì„ ì…ë ¥í•˜ì„¸ìš”. (100ì› ë‹¨ìœ„)");
+		System.out.println("(ì”ì•¡ì„ í™˜ë¶ˆí•˜ê³  ì¢…ë£Œí•˜ë ¤ë©´ '99'ë¥¼ ëˆŒëŸ¬ì£¼ì„¸ìš”.)");
 	}
 
 	public void cleaner() {
@@ -299,22 +299,22 @@ public class VendingTool {
 	}
 
 	public void adminMode(Scanner scan, int caseNum) {
-		//°¢ °ü¸®ÀÚ ±â´É
+		//ê° ê´€ë¦¬ì ê¸°ëŠ¥
 		switch (caseNum) {
 		case 1:
-			//»óÇ° Ãß°¡			
+			//ìƒí’ˆ ì¶”ê°€			
 			productAdd(scan);
 			break;
 		case 2:
-			//»óÇ°Á¦°Å
+			//ìƒí’ˆì œê±°
 			productRemove(scan);
 			break;
 		case 3:
-			//»óÇ° Àç°í Ãß°¡
+			//ìƒí’ˆ ì¬ê³  ì¶”ê°€
 			stockAdd(scan);
 			break;
 		case 4:
-			//»óÇ° Àç°í Á¦°Å
+			//ìƒí’ˆ ì¬ê³  ì œê±°
 			stockSub(scan);
 			break;
 		}
@@ -323,16 +323,16 @@ public class VendingTool {
 	public void refund(int balance) {
 		this.cleaner();
 		System.out.println("-------------------------------------------");
-		System.out.println("¢ºÀÜ¾× :" + balance + "¿øÀÌ ¹İÈ¯µÆ½À´Ï´Ù.");
-		System.out.println("-------(±İ¾×º° ¹İÈ¯ °³¼ö)-------");
-		System.out.printf("50000¿ø : %dÀå\n", balance / 50000);
-		System.out.printf("10000¿ø : %dÀå\n", (balance % 50000) / 10000);
-		System.out.printf(" 5000¿ø : %dÀå\n", (balance % 10000) / 5000);
-		System.out.printf(" 1000¿ø : %dÀå\n", (balance % 5000) / 1000);
-		System.out.printf("  500¿ø : %d°³\n", (balance % 1000) / 500);
-		System.out.printf("  100¿ø : %d°³\n", (balance % 500) / 100);
-		System.out.printf("   50¿ø : %d°³\n", (balance % 100) / 50);
-		System.out.printf("   10¿ø : %d°³\n", (balance % 50) / 10);
+		System.out.println("â–¶ì”ì•¡ :" + balance + "ì›ì´ ë°˜í™˜ëìŠµë‹ˆë‹¤.");
+		System.out.println("-------(ê¸ˆì•¡ë³„ ë°˜í™˜ ê°œìˆ˜)-------");
+		System.out.printf("50000ì› : %dì¥\n", balance / 50000);
+		System.out.printf("10000ì› : %dì¥\n", (balance % 50000) / 10000);
+		System.out.printf(" 5000ì› : %dì¥\n", (balance % 10000) / 5000);
+		System.out.printf(" 1000ì› : %dì¥\n", (balance % 5000) / 1000);
+		System.out.printf("  500ì› : %dê°œ\n", (balance % 1000) / 500);
+		System.out.printf("  100ì› : %dê°œ\n", (balance % 500) / 100);
+		System.out.printf("   50ì› : %dê°œ\n", (balance % 100) / 50);
+		System.out.printf("   10ì› : %dê°œ\n", (balance % 50) / 10);
 	}
 
 	public int[] index(int product_num) {
@@ -352,10 +352,10 @@ public class VendingTool {
 
 	public void printProduct(int balance, int i, int j) {
 		System.out.println("-------------------------------------------");
-		System.out.println("»óÇ°¸í : " + product[i][j] + "\n°¡°İ : " + price[i][j] + "¿ø, Àç°í : " + qty[i][j]);
+		System.out.println("ìƒí’ˆëª… : " + product[i][j] + "\nê°€ê²© : " + price[i][j] + "ì›, ì¬ê³  : " + qty[i][j]);
 		System.out.println("-------------------------------------------");
-		System.out.println(product[i][j] + "ÀÌ(°¡) ³ª¿Ô½À´Ï´Ù.");
-		System.out.println("ÀÜ¾× : " + balance);
+		System.out.println(product[i][j] + "ì´(ê°€) ë‚˜ì™”ìŠµë‹ˆë‹¤.");
+		System.out.println("ì”ì•¡ : " + balance);
 		System.out.println();
 	}
 }

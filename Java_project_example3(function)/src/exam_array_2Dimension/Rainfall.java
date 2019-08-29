@@ -1,26 +1,26 @@
-package exam_array_2Dimension;
+ï»¿package exam_array_2Dimension;
 
 import java.util.Scanner;
 
 public class Rainfall {
 	public static void main(String[] args) {
-		final int YEARS = 3; // 3³â
-		final int QUARTERS = 5; // 4ºĞ±â + ÃÑÇÕ
+		final int YEARS = 3; // 3ë…„
+		final int QUARTERS = 5; // 4ë¶„ê¸° + ì´í•©
 
-		// 2Â÷¿ø ¹è¿­ ¼±¾ğ ³âµµ ºĞ±â
+		// 2ì°¨ì› ë°°ì—´ ì„ ì–¸ ë…„ë„ ë¶„ê¸°
 		double[][] rain = new double[YEARS][QUARTERS];
 		Scanner scan = new Scanner(System.in);
 
 		for (int y = 0; y < YEARS; y++) {
-			// -1ÀÎ ÀÌÀ¯´Â ÃÑÇÕÀ» À§ÇÑ Çà¸¶´Ù ³¡¿­À» ºñ¿ö ³õÀº °Í
+			// -1ì¸ ì´ìœ ëŠ” ì´í•©ì„ ìœ„í•œ í–‰ë§ˆë‹¤ ëì—´ì„ ë¹„ì›Œ ë†“ì€ ê²ƒ
 			for (int q = 0; q < QUARTERS - 1; q++) {
-				System.out.print((y + 1) + "³âÂ÷ " + (q + 1) + "ºĞ±â °­¼ö·®: ");
+				System.out.print((y + 1) + "ë…„ì°¨ " + (q + 1) + "ë¶„ê¸° ê°•ìˆ˜ëŸ‰: ");
 				rain[y][q] = scan.nextDouble();
 
 			}
 		}
 
-		//ÇàÀÇ ³¡ ¿­À» ÃÑÇÕ °è»êÇØ¼­ ³Ö´Â °ø°£À¸·Î È°¿ë
+		//í–‰ì˜ ë ì—´ì„ ì´í•© ê³„ì‚°í•´ì„œ ë„£ëŠ” ê³µê°„ìœ¼ë¡œ í™œìš©
 		for (int y = 0; y < YEARS; y++) {
 			for (int q = 0; q < QUARTERS - 1; q++) {
 				rain[y][QUARTERS - 1] += rain[y][q];
@@ -29,8 +29,8 @@ public class Rainfall {
 		
 		System.out.println("----------------------------");
 		for (int y = 0; y < YEARS; y++) {
-			System.out.println((y+1) + "³âµµ\t1ºĞ±â\t2ºĞ±â\t3ºĞ±â\t4ºĞ±â\tÃÑÇÕ");
-			System.out.print("°­¼ö·® |");
+			System.out.println((y+1) + "ë…„ë„\t1ë¶„ê¸°\t2ë¶„ê¸°\t3ë¶„ê¸°\t4ë¶„ê¸°\tì´í•©");
+			System.out.print("ê°•ìˆ˜ëŸ‰ |");
 			for (int q = 0; q < QUARTERS; q++) {
 				System.out.printf("\t%.1f", rain[y][q]);
 				System.out.print(" |");

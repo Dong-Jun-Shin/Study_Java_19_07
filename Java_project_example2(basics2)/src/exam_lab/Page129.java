@@ -1,4 +1,4 @@
-package exam_lab;
+ï»¿package exam_lab;
 
 import java.util.Scanner;
 
@@ -8,13 +8,13 @@ public class Page129 {
 		int n1, n2;
 		int greatest_common_divisor = 0;
 
-		System.out.println("µÎ ¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À(Å« ¼ö, ÀÛÀº ¼ö): ");
+		System.out.println("ë‘ ìˆ˜ë¥¼ ìž…ë ¥í•˜ì‹œì˜¤(í° ìˆ˜, ìž‘ì€ ìˆ˜): ");
 		System.out.println("ex) 4(Enter) 8(Enter)");
 		n1 = scan.nextInt();
 		n2 = scan.nextInt();
 
 		System.out.println("--------------------------------------------");
-		System.out.println("ÀÔ·ÂÇÑ µÎ°³ÀÇ Á¤¼ö: " + n1 + " " + n2);
+		System.out.println("ìž…ë ¥í•œ ë‘ê°œì˜ ì •ìˆ˜: " + n1 + " " + n2);
 		while (true) {
 			if (n2 != 0) {
 				if (n1 > n2) {
@@ -30,7 +30,7 @@ public class Page129 {
 				break;
 			}
 		}
-		System.out.println("ÃÖ´ë °ø¾à¼ö´Â " + greatest_common_divisor);
+		System.out.println("ìµœëŒ€ ê³µì•½ìˆ˜ëŠ” " + greatest_common_divisor);
 		scan.close();
 	}
 }

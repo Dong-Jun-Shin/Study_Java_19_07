@@ -1,4 +1,4 @@
-package exam_lab;
+ï»¿package exam_lab;
 
 import java.util.Scanner;
 
@@ -9,30 +9,30 @@ public class PrintPage1_2 {
 		char eng_grade;
 		String eval = "";
 
-		//ÀÔ·Â
+		//ì…ë ¥
 		Scanner scan = new Scanner(System.in);
 		
-		System.out.println("Áß°£°í»ç Á¡¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+		System.out.println("ì¤‘ê°„ê³ ì‚¬ ì ìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 		m_score = scan.nextInt();
 
-		System.out.println("±â¸»°í»ç Á¡¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+		System.out.println("ê¸°ë§ê³ ì‚¬ ì ìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 		f_score = scan.nextInt();
 
-		System.out.println("·¹Æ÷Æ® Á¡¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+		System.out.println("ë ˆí¬íŠ¸ ì ìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 		r_score = scan.nextInt();
 
-		System.out.println("Ãâ¼® Á¡¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+		System.out.println("ì¶œì„ ì ìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 		c_score = scan.nextInt();
 
-		//Ã³¸®
+		//ì²˜ë¦¬
 		avg = ((m_score + f_score) / 2) * 0.6;
 		report = r_score * 0.2;
 		check = c_score * 0.2;
 
-		//¼ºÀû
+		//ì„±ì 
 		grade = avg + report + check;
 
-		//ÇĞÁ¡
+		//í•™ì 
 		if (grade >= 90) {
 			eng_grade = 'A';
 		} else if (grade >= 80) {
@@ -45,7 +45,7 @@ public class PrintPage1_2 {
 			eng_grade = 'F';
 		}
 
-		//Æò°¡
+		//í‰ê°€
 		switch (eng_grade) {
 		case 'A':
 		case 'B':
@@ -60,15 +60,15 @@ public class PrintPage1_2 {
 			break;
 		}
 
-		//Ãâ·Â
-		System.out.println("------ °á°úÀÔ´Ï´Ù ------");
-		System.out.println("Áß°£°í»ç : " + m_score);
-		System.out.println("±â¸»°í»ç : " + f_score);
-		System.out.println("·¹Æ÷Æ® : " + r_score);
-		System.out.println("Ãâ¼®Á¡¼ö : " + c_score);
-		System.out.printf("¼ºÀû : %.2f\n", grade);
-		System.out.println("ÇĞÁ¡ : " + eng_grade);
-		System.out.println("Æò°¡ : " + eval);
+		//ì¶œë ¥
+		System.out.println("------ ê²°ê³¼ì…ë‹ˆë‹¤ ------");
+		System.out.println("ì¤‘ê°„ê³ ì‚¬ : " + m_score);
+		System.out.println("ê¸°ë§ê³ ì‚¬ : " + f_score);
+		System.out.println("ë ˆí¬íŠ¸ : " + r_score);
+		System.out.println("ì¶œì„ì ìˆ˜ : " + c_score);
+		System.out.printf("ì„±ì  : %.2f\n", grade);
+		System.out.println("í•™ì  : " + eng_grade);
+		System.out.println("í‰ê°€ : " + eval);
 		
 		scan.close();
 	}

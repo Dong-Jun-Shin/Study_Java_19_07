@@ -1,22 +1,22 @@
-package exam_class_relation;
+ï»¿package exam_class_relation;
 
 public class CircleTest {
 	public static void main(String[] args) {
 
-		//±âº» »ı¼ºÀÚ
+		//ê¸°ë³¸ ìƒì„±ì
 		Circle c1 = new Circle();
-		System.out.println("±âº»: \t\t" + c1.toString());
+		System.out.println("ê¸°ë³¸: \t\t" + c1.toString());
 		
-		//¸Å°³º¯¼ö int rÁ¦°ø
+		//ë§¤ê°œë³€ìˆ˜ int rì œê³µ
 		Circle c2 = new Circle(5);
 		System.out.println("r: \t\t" + c2.toString());
 		
-		//¸Å°³º¯¼ö int rÁ¦°ø, Point pÁ¦°ø
+		//ë§¤ê°œë³€ìˆ˜ int rì œê³µ, Point pì œê³µ
 		Point p = new Point(10, 10);
 		Circle c3 = new Circle(5, p);
 		System.out.println("r, p: \t\t" + c3.toString());
 		
-		//¸Å°³º¯¼ö int rÁ¦°ø, int xÁ¦°ø, int yÁ¦°ø
+		//ë§¤ê°œë³€ìˆ˜ int rì œê³µ, int xì œê³µ, int yì œê³µ
 		Circle c4 = new Circle(5, 10, 10);
 		System.out.println("r, x, y: \t" + c4.toString());
 	}

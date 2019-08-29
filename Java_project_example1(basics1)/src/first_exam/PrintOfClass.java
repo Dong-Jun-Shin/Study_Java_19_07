@@ -1,33 +1,33 @@
-package first_exam;
+ï»¿package first_exam;
 
 /**
- * P.47 ¿¹Á¦(µµÀü)
- * Class È°¿ë
+ * P.47 ì˜ˆì œ(ë„ì „)
+ * Class í™œìš©
  */
 
 public class PrintOfClass {
 	public static void main(String[] args) {
-		My.name("½Åµ¿ÁØ");
-		My.add("´ëÇÑ¹Î±¹ »ê ¼Ó");
+		My.name("ì‹ ë™ì¤€");
+		My.add("ëŒ€í•œë¯¼êµ­ ì‚° ì†");
 		My.phone("010-1234-1234");
-		My.work("¹«Á÷");
+		My.work("ë¬´ì§");
 	}
 }
 
 class My {
 	public static void name(String n) {
-		System.out.println("ÀÌ¸§Àº " + n + "ÀÌ°í¿ä..");
+		System.out.println("ì´ë¦„ì€ " + n + "ì´ê³ ìš”..");
 	}
 
 	public static void add(String n) {
-		System.out.println("ÁÖ¼Ò´Â " + n + "ÀÌ°í¿ä..");
+		System.out.println("ì£¼ì†ŒëŠ” " + n + "ì´ê³ ìš”..");
 	}
 
 	public static void phone(String n) {
-		System.out.println("¹øÈ£´Â " + n + "ÀÌ°í¿ä..");
+		System.out.println("ë²ˆí˜¸ëŠ” " + n + "ì´ê³ ìš”..");
 	}
 
 	public static void work(String n) {
-		System.out.println("Á÷ÀåÀº " + n + "ÀÔ´Ï´Ù.");
+		System.out.println("ì§ì¥ì€ " + n + "ì…ë‹ˆë‹¤.");
 	}
 }

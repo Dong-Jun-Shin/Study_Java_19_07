@@ -1,15 +1,15 @@
-package exam_class;
+ï»¿package exam_class;
 
 public class SongTest {
 	public static void main(String[] args) {
-//	static ¸Ş¼Òµå È°¿ë ¹è¿­ ´ëÀÔ
+//	static ë©”ì†Œë“œ í™œìš© ë°°ì—´ ëŒ€ì…
 //		Song song = new Song("Dansing Queen", "ABBA", "Arrival", 
 //				Song.setComposer("Benny Andersson", "Bjorn Ulvaeus"),
 //				1977, 2);
 //	
 //		song.show();
 
-//	new¸¦ È°¿ëÇÑ ¹è¿­¼±¾ğÀ» ´ëÀÔ
+//	newë¥¼ í™œìš©í•œ ë°°ì—´ì„ ì–¸ì„ ëŒ€ì…
 		Song song = new Song("Dansing Queen", "ABBA", "Arrival", 
 				new String[] {"Benny Andersson", "Bjorn Ulvaeus"},
 				1977, 2);
@@ -17,7 +17,7 @@ public class SongTest {
 		song.show();
 		
 		
-//	¹è¿­À» ¼±¾ğÇÑ ÈÄ, ¹è¿­À» ´ëÀÔ
+//	ë°°ì—´ì„ ì„ ì–¸í•œ í›„, ë°°ì—´ì„ ëŒ€ì…
 //		String[] composer ={"Benny Andersson", "Bjorn Ulvaeus"};
 //		Song song = new Song("Dansing Queen", "ABBA", "Arrival", 
 //				composer,	1977, 2);

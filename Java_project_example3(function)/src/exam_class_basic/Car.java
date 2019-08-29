@@ -1,6 +1,6 @@
-package exam_class_basic;
+ï»¿package exam_class_basic;
 
-//publicÀº ¼±ÅÃ°¡´É, »ç¿ë½Ã ÆÄÀÏ¸í°ú µ¿ÀÏÇÏ°Ô ÀÛ¼ºÇØ¾ß ÇÑ´Ù.
+//publicì€ ì„ íƒê°€ëŠ¥, ì‚¬ìš©ì‹œ íŒŒì¼ëª…ê³¼ ë™ì¼í•˜ê²Œ ì‘ì„±í•´ì•¼ í•œë‹¤.
 public class Car {
 	public int speed;
 	public int gear;
@@ -20,12 +20,12 @@ public class Car {
 		speed -= s;
 	}
 
-	//Ãâ·Â µÎ°¡Áö (ÈÄÀÚ¸¦ ´õ ¸¹ÀÌ »ç¿ëÇÑ´Ù.)
+	//ì¶œë ¥ ë‘ê°€ì§€ (í›„ìë¥¼ ë” ë§ì´ ì‚¬ìš©í•œë‹¤.)
 	public void printData() {
-		System.out.println("¼Óµµ: " + speed + " ±â¾î: " + gear + " »ö»ó: " + color);
+		System.out.println("ì†ë„: " + speed + " ê¸°ì–´: " + gear + " ìƒ‰ìƒ: " + color);
 	}
 
 	public String toString() {
-		return "¼Óµµ: " + speed + " ±â¾î: " + gear + " »ö»ó: " + color;
+		return "ì†ë„: " + speed + " ê¸°ì–´: " + gear + " ìƒ‰ìƒ: " + color;
 	}
 }

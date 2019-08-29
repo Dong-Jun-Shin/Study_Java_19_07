@@ -1,9 +1,9 @@
-package exam_class_relation;
+ï»¿package exam_class_relation;
 
-// "Time"°ú "AlarmClock"ÀÇ ÁıÇÕ °ü°è
+// "Time"ê³¼ "AlarmClock"ì˜ ì§‘í•© ê´€ê³„
 public class AlarmClock {
-	private Time currentTime; //Time °´Ã¼ ÂüÁ¶ º¯¼ö
-	private Time alarmTime; //Time °´Ã¼ ÂüÁ¶ º¯¼ö
+	private Time currentTime; //Time ê°ì²´ ì°¸ì¡° ë³€ìˆ˜
+	private Time alarmTime; //Time ê°ì²´ ì°¸ì¡° ë³€ìˆ˜
 
 	public AlarmClock() {
 		alarmTime = new Time(5, 30, 0);

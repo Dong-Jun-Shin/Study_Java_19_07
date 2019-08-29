@@ -1,17 +1,17 @@
-package exam_inheritance;
+ï»¿package exam_inheritance;
 
 public class animal {
 	public static void main(String[] args) {
-		cat ³É = new cat();
-		dog ¸Û = new dog();
+		cat ëƒ¥ = new cat();
+		dog ë© = new dog();
 		
-		³É.¼Â¹ß°¹¼ö(4);
-		³É.¿î´Ù();
-		System.out.println(³É.°Ù¹ß°¹¼ö());
+		ëƒ¥.ì…‹ë°œê°¯ìˆ˜(4);
+		ëƒ¥.ìš´ë‹¤();
+		System.out.println(ëƒ¥.ê²Ÿë°œê°¯ìˆ˜());
 		
-		¸Û.¼Â¹ß°¹¼ö(5);
-		¸Û.¿î´Ù();
-		System.out.println(¸Û.°Ù¹ß°¹¼ö());
+		ë©.ì…‹ë°œê°¯ìˆ˜(5);
+		ë©.ìš´ë‹¤();
+		System.out.println(ë©.ê²Ÿë°œê°¯ìˆ˜());
 		
 	}
 }

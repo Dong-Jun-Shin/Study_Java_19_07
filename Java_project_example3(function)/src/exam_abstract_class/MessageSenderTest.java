@@ -62,13 +62,13 @@ class EMailSender extends MessageSender {
 
 	public void sendMessage(String receiver) {
 		System.out.println("------------------------------");
-		//»óÀ§ ÇÊµå private »ç¿ë ½Ã, getÀ¸·Î °¡Á®¿À±â
-		System.out.println("Á¦¸ñ: " + getTitle());
+		//ìƒìœ„ í•„ë“œ private ì‚¬ìš© ì‹œ, getìœ¼ë¡œ ê°€ì ¸ì˜¤ê¸°
+		System.out.println("ì œëª©: " + getTitle());
 		
-		//»óÀ§ ÇÊµå protected »ç¿ë ½Ã, »ó¼Ó¹Ş¾Æ Á÷Á¢ Á¢±Ù
-		System.out.println("º¸³»´Â »ç¶÷: " + senderName + " " + senderAddr);
-		System.out.println("¹Ş´Â »ç¶÷: " + receiver);
-		System.out.println("³»¿ë: " + emailBody);
+		//ìƒìœ„ í•„ë“œ protected ì‚¬ìš© ì‹œ, ìƒì†ë°›ì•„ ì§ì ‘ ì ‘ê·¼
+		System.out.println("ë³´ë‚´ëŠ” ì‚¬ëŒ: " + senderName + " " + senderAddr);
+		System.out.println("ë°›ëŠ” ì‚¬ëŒ: " + receiver);
+		System.out.println("ë‚´ìš©: " + emailBody);
 	}
 }
 
@@ -103,18 +103,18 @@ class SMSSender extends MessageSender {
 
 	public void sendMessage(String receiver) {
 		System.out.println("------------------------------");
-		System.out.println("Á¦¸ñ: " + getTitle());
-		System.out.println("º¸³»´Â »ç¶÷: " + senderName);
-		System.out.println("ÀüÈ­¹øÈ£: " + returnPhoneNo);
-		System.out.println("¹Ş´Â »ç¶÷: " + receiver);
-		System.out.println("³»¿ë: " + message);
+		System.out.println("ì œëª©: " + getTitle());
+		System.out.println("ë³´ë‚´ëŠ” ì‚¬ëŒ: " + senderName);
+		System.out.println("ì „í™”ë²ˆí˜¸: " + returnPhoneNo);
+		System.out.println("ë°›ëŠ” ì‚¬ëŒ: " + receiver);
+		System.out.println("ë‚´ìš©: " + message);
 	}
 }
 
 public class MessageSenderTest {
 	public static void main(String[] args) {
-		EMailSender e = new EMailSender("»ıÀÏÀ» ÃàÇÏÇÕ´Ï´Ù.", "°í°´¼¾ÅÍ", "admin@dukeeshop.co.kr", "10% ÇÒÀÎÄíÆùÀÌ ¹ßÇàµÇ¾ú½À´Ï´Ù.");
-		SMSSender s = new SMSSender("»ıÀÏÀ» ÃàÇÏÇÕ´Ï´Ù.", "°í°´¼¾ÅÍ", "010-000-0000", "10% ÇÒÀÎÄíÆùÀÌ ¹ßÇàµÇ¾ú½À´Ï´Ù.");
+		EMailSender e = new EMailSender("ìƒì¼ì„ ì¶•í•˜í•©ë‹ˆë‹¤.", "ê³ ê°ì„¼í„°", "admin@dukeeshop.co.kr", "10% í• ì¸ì¿ í°ì´ ë°œí–‰ë˜ì—ˆìŠµë‹ˆë‹¤.");
+		SMSSender s = new SMSSender("ìƒì¼ì„ ì¶•í•˜í•©ë‹ˆë‹¤.", "ê³ ê°ì„¼í„°", "010-000-0000", "10% í• ì¸ì¿ í°ì´ ë°œí–‰ë˜ì—ˆìŠµë‹ˆë‹¤.");
 		
 		e.sendMessage("javaone@naver.com");
 		s.sendMessage("02-000-0000");		

@@ -1,17 +1,17 @@
-package exam_lab;
+ï»¿package exam_lab;
 
 import java.util.Scanner;
 
 /*
- * 3, 6, 9 °ÔÀÓÀ» ±¸ÇöÇØ¶ó.
- * switch¹®°ú cnt¸¦ È°¿ëÇØ¼­ ±¸Çö
+ * 3, 6, 9 ê²Œì„ì„ êµ¬í˜„í•´ë¼.
+ * switchë¬¸ê³¼ cntë¥¼ í™œìš©í•´ì„œ êµ¬í˜„
  */
 public class PrintPage1_1 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int n, oper, cnt = 0;
 		
-		System.out.print("1~99 »çÀÌÀÇ Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À>> ");
+		System.out.print("1~99 ì‚¬ì´ì˜ ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤>> ");
 		n = scan.nextInt();
 
 		if (n < 100 && n >= 0) {
@@ -24,15 +24,15 @@ public class PrintPage1_1 {
 				cnt++;
 			}
 		} else {
-			System.out.println("°ªÀÇ ¹üÀ§¸¦ ÃÊ°úÇÏ¿´½À´Ï´Ù.");
+			System.out.println("ê°’ì˜ ë²”ìœ„ë¥¼ ì´ˆê³¼í•˜ì˜€ìŠµë‹ˆë‹¤.");
 		}
 
 		switch (cnt) {
 		case 1:
-			System.out.println("¹Ú¼öÂ¦");
+			System.out.println("ë°•ìˆ˜ì§");
 			break;
 		case 2:
-			System.out.println("¹Ú¼öÂ¦Â¦");
+			System.out.println("ë°•ìˆ˜ì§ì§");
 		}
 		scan.close();
 	}

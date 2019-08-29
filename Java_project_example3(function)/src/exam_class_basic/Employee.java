@@ -1,4 +1,4 @@
-package exam_class_basic;
+ï»¿package exam_class_basic;
 
 import java.util.Scanner;
 
@@ -8,14 +8,14 @@ public class Employee {
 	public int salary;
 	
 	public void getData(Scanner scan) {
-		System.out.println("Á÷¿ø1 Á¤º¸¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä>>");
-		System.out.print("ÀÌ¸§ : ");
+		System.out.println("ì§ì›1 ì •ë³´ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”>>");
+		System.out.print("ì´ë¦„ : ");
 		name = scan.nextLine();
 		
-		System.out.print("¹øÈ£ : ");
+		System.out.print("ë²ˆí˜¸ : ");
 		phoneNumber = scan.nextLine();
 		
-		System.out.print("±Ş¿© : ");
+		System.out.print("ê¸‰ì—¬ : ");
 		salary = scan.nextInt();
 		scan.nextLine();
 		
@@ -23,6 +23,6 @@ public class Employee {
 	}
 	
 	public String toString() {
-		return String.format("Á÷¿øÁ¤º¸[»ç¿ø¸í: %-3s,\t ÀüÈ­¹øÈ£ = %-10s,\t ±Ş¿© = %5d]", name, phoneNumber, salary);
+		return String.format("ì§ì›ì •ë³´[ì‚¬ì›ëª…: %-3s,\t ì „í™”ë²ˆí˜¸ = %-10s,\t ê¸‰ì—¬ = %5d]", name, phoneNumber, salary);
 	}
 }

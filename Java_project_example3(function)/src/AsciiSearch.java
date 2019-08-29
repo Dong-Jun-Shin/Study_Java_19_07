@@ -1,4 +1,4 @@
-import java.util.Scanner;
+ï»¿import java.util.Scanner;
 
 public class AsciiSearch {
 	public static void main(String[] args) {
@@ -6,21 +6,21 @@ public class AsciiSearch {
 		String str = "";
 		char ch;
 
-		System.out.println("ÀÔ·ÂÇÏ½Ã¸é ASCII·Î º¯È¯ÇØµå¸³´Ï´Ù.");
-		System.out.println("(Á¾·á´Â \"Quit\"¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.)");
+		System.out.println("ì…ë ¥í•˜ì‹œë©´ ASCIIë¡œ ë³€í™˜í•´ë“œë¦½ë‹ˆë‹¤.");
+		System.out.println("(ì¢…ë£ŒëŠ” \"Quit\"ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.)");
 		
 		while (true) {
 			if (!str.equals("Quit")) {
-				System.out.println("ÇÑÀÚ¸® ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				System.out.println("í•œìë¦¬ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 				str = scan.next();
 				ch = str.charAt(0);
 				
 				if(!str.equals("Quit")) {
-					System.out.println(ch + "ÀÇ ASCII = " + (int) ch);
+					System.out.println(ch + "ì˜ ASCII = " + (int) ch);
 					System.out.println("-------------------------------");
 				}
 			} else {
-				System.out.println("Á¾·áµÇ¾ú½À´Ï´Ù.");
+				System.out.println("ì¢…ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
 				break;
 			}
 		}

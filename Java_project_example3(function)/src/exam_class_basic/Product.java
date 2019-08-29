@@ -1,4 +1,4 @@
-package exam_class_basic;
+ï»¿package exam_class_basic;
 
 public class Product {
 	public int pNum;
@@ -25,6 +25,6 @@ public class Product {
 	}
 
 	public String toString() {
-		return "»óÇ°¹øÈ£ : " + pNum + "\t»óÇ°¸í : " + pName + "\tÀç°í¼ö·® : " + pStock;
+		return "ìƒí’ˆë²ˆí˜¸ : " + pNum + "\tìƒí’ˆëª… : " + pName + "\tì¬ê³ ìˆ˜ëŸ‰ : " + pStock;
 	}
 }

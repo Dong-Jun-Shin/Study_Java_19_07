@@ -1,9 +1,9 @@
-package exam_float_double;
+ï»¿package exam_float_double;
 
 public class FloatDoubleExample {
 	public static void main(String[] args) {
 		// int var = 3.14;		
-		//º¯¼ö - int, ¸®ÅÍ·² - double
+		//ë³€ìˆ˜ - int, ë¦¬í„°ëŸ´ - double
 
 		double var2 = 3.14;
 		float var3 = 3.14F;
@@ -11,7 +11,7 @@ public class FloatDoubleExample {
 		System.out.println("var2: " + var2);
 		System.out.println("var3: " + var3);
 
-		// e(Áö¼ö Ç¥±â) »ç¿ëÇÏ±â
+		// e(ì§€ìˆ˜ í‘œê¸°) ì‚¬ìš©í•˜ê¸°
 		int var4 = 3000000;	// 3000000
 		double var5 = 3e6;	// 3000000.0
 		float var6 = 3e6F;	// 3000000.0

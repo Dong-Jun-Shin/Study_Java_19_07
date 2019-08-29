@@ -1,10 +1,10 @@
-package exam_class_constructor;
+ï»¿package exam_class_constructor;
 
 public class Fruit {
 	private String fname;
 	private int price;
 
-	//getter, setter¸¦ ÀÌ¿ëÇÑ ¼³Á¤
+	//getter, setterë¥¼ ì´ìš©í•œ ì„¤ì •
 	public void setFname(String fname) {
 		this.fname = fname;
 	}
@@ -22,7 +22,7 @@ public class Fruit {
 	}
 
 	
-	//µğÆúÆ® »ı¼ºÀÚ¿Í »ı¼ºÀÚ
+	//ë””í´íŠ¸ ìƒì„±ìì™€ ìƒì„±ì
 	public Fruit() {
 		this("", 0);
 	}
@@ -40,7 +40,7 @@ public class Fruit {
 		this.price = price;
 	}
 
-	//¿¬»êÀ» À§ÇÑ ¸Ş¼Òµå
+	//ì—°ì‚°ì„ ìœ„í•œ ë©”ì†Œë“œ
 	public int total(int total) {
 		total += price;
 
@@ -52,9 +52,9 @@ public class Fruit {
 	}
 
 	
-	//Ãâ·ÂÀ» À§ÇÑ ¸Ş¼Òµå
+	//ì¶œë ¥ì„ ìœ„í•œ ë©”ì†Œë“œ
 	public static void printFrontFrame() {
-		System.out.println("============== °úÀÏ±¸ÀÔ ¸ñ·Ï =============");
+		System.out.println("============== ê³¼ì¼êµ¬ì… ëª©ë¡ =============");
 	}
 
 	public static void printBackFrame() {
@@ -62,8 +62,8 @@ public class Fruit {
 	}
 
 	public static void printFrame(int total, double dcPrice) {
-		System.out.println("ÃÑ±İ¾× : " + total + "¿ø");
-		System.out.println("ÇÒÀÎ ÈÄ °áÁ¦ ±İ¾× : " + (int)dcPrice + "¿ø");
+		System.out.println("ì´ê¸ˆì•¡ : " + total + "ì›");
+		System.out.println("í• ì¸ í›„ ê²°ì œ ê¸ˆì•¡ : " + (int)dcPrice + "ì›");
 	}
 	
 	public static double dcOper(int total, double dcPrice) {

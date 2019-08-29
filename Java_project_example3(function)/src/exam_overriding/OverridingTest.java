@@ -1,4 +1,4 @@
-package exam_overriding;
+ï»¿package exam_overriding;
 
 class EmployeeOverriding {
 	protected String name;
@@ -38,12 +38,12 @@ class ManagerOverriding extends EmployeeOverriding{
 }
 public class OverridingTest {
 	public static void main(String[] args) {
-		EmployeeOverriding e = new EmployeeOverriding("±èÃ¶¼ö", 50);
+		EmployeeOverriding e = new EmployeeOverriding("ê¹€ì² ìˆ˜", 50);
 		System.out.println(e.getDetails());
 		e.display();
 		System.out.println();
 		
-		ManagerOverriding m = new ManagerOverriding("¾Æ¹«°³", 100, "¿µ¾÷");
+		ManagerOverriding m = new ManagerOverriding("ì•„ë¬´ê°œ", 100, "ì˜ì—…");
 		System.out.println(m.getDetails());
 		m.display();
 	}

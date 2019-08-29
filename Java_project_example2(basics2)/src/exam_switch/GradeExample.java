@@ -1,4 +1,4 @@
-package exam_switch;
+ï»¿package exam_switch;
 
 import java.util.Scanner;
 
@@ -8,31 +8,31 @@ public class GradeExample {
 		int jumsu = 0, number;
 		char hakjum;
 		
-		/* while¹®°ú Á¶°ÇÀ» ÀÌ¿ë
+		/* whileë¬¸ê³¼ ì¡°ê±´ì„ ì´ìš©
 			while (jumsu < 0 || jumsu > 100) {
-				System.out.println("Á¡¼ö´Â 0~100»çÀÌ·Î ÀÔ·ÂÇØ ÁÖ¼¼¿ä.");
+				System.out.println("ì ìˆ˜ëŠ” 0~100ì‚¬ì´ë¡œ ì…ë ¥í•´ ì£¼ì„¸ìš”.");
 				jumsu = scan.nextInt();
 			}
 		 */
 		
-		/* do~while¹®À» »ç¿ë
+		/* do~whileë¬¸ì„ ì‚¬ìš©
 			do {
-				System.out.println("Á¡¼ö´Â 0~100»çÀÌ·Î ÀÔ·ÂÇØ ÁÖ¼¼¿ä.");
+				System.out.println("ì ìˆ˜ëŠ” 0~100ì‚¬ì´ë¡œ ì…ë ¥í•´ ì£¼ì„¸ìš”.");
 				jumsu = scan.nextInt();
 			} while (jumsu < 0 || jumsu > 100);
 		*/
 		
-		//while, if, break »ç¿ë
+		//while, if, break ì‚¬ìš©
 		while (true) {
-			System.out.println("Á¡¼ö´Â 0~100»çÀÌ·Î ÀÔ·ÂÇØ ÁÖ¼¼¿ä.");
+			System.out.println("ì ìˆ˜ëŠ” 0~100ì‚¬ì´ë¡œ ì…ë ¥í•´ ì£¼ì„¸ìš”.");
 			jumsu = scan.nextInt();
 
 			System.out.println();
-			System.out.println("jumsuÀÇ ÃÊ±â°ª : " + jumsu);
+			System.out.println("jumsuì˜ ì´ˆê¸°ê°’ : " + jumsu);
 
 			if (jumsu < 0 || jumsu > 100) {
-				System.out.println("Á¡¼öÀÇ ¹üÀ§¸¦ ¹ş¾î³µ½À´Ï´Ù.");
-				System.out.println("´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				System.out.println("ì ìˆ˜ì˜ ë²”ìœ„ë¥¼ ë²—ì–´ë‚¬ìŠµë‹ˆë‹¤.");
+				System.out.println("ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 				System.out.println("----------------------");
 			} else {
 				break;
@@ -57,7 +57,7 @@ public class GradeExample {
 		default:
 			hakjum = 'F';
 		}
-		System.out.println("´ç½ÅÀÇ ÇĞÁ¡Àº " + hakjum);
+		System.out.println("ë‹¹ì‹ ì˜ í•™ì ì€ " + hakjum);
 		scan.close();
 	}
 }

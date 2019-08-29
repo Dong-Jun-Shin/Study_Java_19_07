@@ -1,13 +1,13 @@
-public class Temp {
+ï»¿public class Temp {
 	public static void main(String[] args) {
-		System.out.println("¤»¤»¤»¤»¤»¤»¤»¤»¤»¤»¤»¤»");
-		System.out.println("¤»¤»¤»¤»¤»¤»¤»¤»¤»¤»¤»¤»");
-		System.out.println("	         ¤»¤»¤»");
-		System.out.println("¤»¤»¤»¤»¤»¤»¤»¤»¤»¤»¤»¤»");
-		System.out.println("¤»¤»¤»¤»¤»¤»¤»¤»¤»¤»¤»¤»");
-		System.out.println("	         ¤»¤»¤»");
-		System.out.println("	         ¤»¤»¤»");
-		System.out.println("	         ¤»¤»¤»");
+		System.out.println("ã…‹ã…‹ã…‹ã…‹ã…‹ã…‹ã…‹ã…‹ã…‹ã…‹ã…‹ã…‹");
+		System.out.println("ã…‹ã…‹ã…‹ã…‹ã…‹ã…‹ã…‹ã…‹ã…‹ã…‹ã…‹ã…‹");
+		System.out.println("	         ã…‹ã…‹ã…‹");
+		System.out.println("ã…‹ã…‹ã…‹ã…‹ã…‹ã…‹ã…‹ã…‹ã…‹ã…‹ã…‹ã…‹");
+		System.out.println("ã…‹ã…‹ã…‹ã…‹ã…‹ã…‹ã…‹ã…‹ã…‹ã…‹ã…‹ã…‹");
+		System.out.println("	         ã…‹ã…‹ã…‹");
+		System.out.println("	         ã…‹ã…‹ã…‹");
+		System.out.println("	         ã…‹ã…‹ã…‹");
 		System.out.println("---------------------------");
 
 		
@@ -103,7 +103,7 @@ public class Temp {
 			}
 		}
 		
-		//Ãâ·Â
+		//ì¶œë ¥
 		for(i=0; i<array; i++) {
 			for(j=0; j<array; j++) {
 				System.out.printf("%3d", map[i][j]);		

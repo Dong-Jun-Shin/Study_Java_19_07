@@ -1,17 +1,17 @@
-package first_exam;
+ï»¿package first_exam;
 
 /**
- * º¯¼ö ¼±¾ğ µÎ¼öÀÇ ÇÕÀ» ±¸ÇÏ´Â ÇÁ·Î±×·¥.
+ * ë³€ìˆ˜ ì„ ì–¸ ë‘ìˆ˜ì˜ í•©ì„ êµ¬í•˜ëŠ” í”„ë¡œê·¸ë¨.
  */
 
 public class Add {
 	public static void main(String[] args) {
-		int x, y, temp; // Ã¹¹øÂ° Á¤¼ö¸¦ ÀúÀåÇÒ º¯¼ö
+		int x, y, temp; // ì²«ë²ˆì§¸ ì •ìˆ˜ë¥¼ ì €ì¥í•  ë³€ìˆ˜
 
 		x = 5;
 		y = 3;
 
-		System.out.println("¹Ù²Ù±â Àü");
+		System.out.println("ë°”ê¾¸ê¸° ì „");
 		System.out.println("x = " + x);
 		System.out.println("y = " + y);
 
@@ -19,7 +19,7 @@ public class Add {
 		x = y;
 		y = temp;
 
-		System.out.println("¹Ù²Ù±â ÈÄ");
+		System.out.println("ë°”ê¾¸ê¸° í›„");
 		System.out.println("x = " + x);
 		System.out.println("y = " + y);
 	}

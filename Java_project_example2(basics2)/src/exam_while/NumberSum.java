@@ -1,9 +1,9 @@
-package exam_while;
+ï»¿package exam_while;
 
 import java.util.Scanner;
 
 /*
- * »ç¿ëÀÚ·ÎºÎÅÍ 5°³ÀÇ Á¤¼ö¸¦ ÀĞ¾î¼­ ÇÕ°ú Æò±Õ°ªÀ» °è»êÇÏ¿© Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ¶ó.
+ * ì‚¬ìš©ìë¡œë¶€í„° 5ê°œì˜ ì •ìˆ˜ë¥¼ ì½ì–´ì„œ í•©ê³¼ í‰ê· ê°’ì„ ê³„ì‚°í•˜ì—¬ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ë¼.
  */
 public class NumberSum {
 	public static void main(String[] args) {
@@ -13,23 +13,23 @@ public class NumberSum {
 		float avg = 0;
 		int num_amount;
 		
-		System.out.println("¸î°¡ÁöÀÇ ¼ö¸¦ ´õÇÏ°Ú½À´Ï±î? ");
+		System.out.println("ëª‡ê°€ì§€ì˜ ìˆ˜ë¥¼ ë”í•˜ê² ìŠµë‹ˆê¹Œ? ");
 		num_amount = scan.nextInt();
 		System.out.println("--------------------");
 		
 		for(i = 0; i < num_amount; i++) {
-			System.out.println((i+1) + "¹øÂ° ¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä. ");
+			System.out.println((i+1) + "ë²ˆì§¸ ìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”. ");
 			n = scan.nextInt();
 			sum = sum + n;
 			System.out.println("--------------------");
 		}
-		//°è»ê ½Ã, int·Î °è»êÇÏ°í double·Î ¹Ù²î¸é ¼Ò¼öÁ¡ ÀÌÇÏ´Â Àß¸°´Ù.
+		//ê³„ì‚° ì‹œ, intë¡œ ê³„ì‚°í•˜ê³  doubleë¡œ ë°”ë€Œë©´ ì†Œìˆ˜ì  ì´í•˜ëŠ” ì˜ë¦°ë‹¤.
 		avg = (float)sum / i;
 		
-		System.out.printf("%d¹øÂ° ¼ö±îÁöÀÇ ÇÕ: %d, Æò±Õ: %.2f", i, sum, avg);
+		System.out.printf("%dë²ˆì§¸ ìˆ˜ê¹Œì§€ì˜ í•©: %d, í‰ê· : %.2f", i, sum, avg);
 		/*
-		System.out.println(i+"¹øÂ° ¼ö±îÁöÀÇ ÇÕ : "+ sum);
-		System.out.println(i+"¹øÂ° ¼ö±îÁöÀÇ Æò±Õ : "+ avg);
+		System.out.println(i+"ë²ˆì§¸ ìˆ˜ê¹Œì§€ì˜ í•© : "+ sum);
+		System.out.println(i+"ë²ˆì§¸ ìˆ˜ê¹Œì§€ì˜ í‰ê·  : "+ avg);
 		*/
 		
 		scan.close();

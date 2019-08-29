@@ -1,7 +1,7 @@
-package exam_for;
+ï»¿package exam_for;
 
 /*
- * 1+3+5+7+...+X¿¡¼­ ÇÕÀÌ ÃÖÃÊ·Î 500À» ³ÑÀº ‹šÀÇ X°ª°ú X°¡ ¸î ¹øÂ° ¼öÀÎ°¡¸¦ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼º
+ * 1+3+5+7+...+Xì—ì„œ í•©ì´ ìµœì´ˆë¡œ 500ì„ ë„˜ì€ ë–„ì˜ Xê°’ê³¼ Xê°€ ëª‡ ë²ˆì§¸ ìˆ˜ì¸ê°€ë¥¼ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±
  */
 public class ForExample2 {
 	public static void main(String[] args) {
@@ -14,8 +14,8 @@ public class ForExample2 {
 			cnt++;
 		}
 
-		System.out.println("500À» ³ÑÀ» ¶§±îÁöÀÇ ÇÕ: " + sum);
-		System.out.println("500À» ³ÑÀ» ¶§ÀÇ X°ª : " + i);
-		System.out.println("X´Â " + cnt + "¹øÂ°");
+		System.out.println("500ì„ ë„˜ì„ ë•Œê¹Œì§€ì˜ í•©: " + sum);
+		System.out.println("500ì„ ë„˜ì„ ë•Œì˜ Xê°’ : " + i);
+		System.out.println("XëŠ” " + cnt + "ë²ˆì§¸");
 	}
 }

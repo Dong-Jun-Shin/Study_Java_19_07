@@ -1,14 +1,14 @@
-package first_exam;
+ï»¿package first_exam;
 
 /**
- * P.47 ¿¹Á¦(µµÀü)
+ * P.47 ì˜ˆì œ(ë„ì „)
  */
 
 public class Print {
 	public static void main(String[] args) {
-		System.out.println("ÀÌ¸§ = " + "È«±æµ¿");
-		System.out.println("ÁÖ¼Ò = " + "´ëÇÑ¹Î±¹ »ê ¼Ó");
-		System.out.println("ÀüÈ­¹øÈ£ = " + "010-1234-1234");
-		System.out.println("Á÷Àå = " + "¹«Á÷");
+		System.out.println("ì´ë¦„ = " + "í™ê¸¸ë™");
+		System.out.println("ì£¼ì†Œ = " + "ëŒ€í•œë¯¼êµ­ ì‚° ì†");
+		System.out.println("ì „í™”ë²ˆí˜¸ = " + "010-1234-1234");
+		System.out.println("ì§ì¥ = " + "ë¬´ì§");
 	}
 }

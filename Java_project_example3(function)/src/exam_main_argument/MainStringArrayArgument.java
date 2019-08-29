@@ -1,10 +1,10 @@
-package exam_main_argument;
+ï»¿package exam_main_argument;
 
 public class MainStringArrayArgument {
 	public static void main(String[] args) {
 		if (args.length != 2) {
-			System.out.println("ÇöÀç ÇÁ·Î±×·¥À» ½ÇÇàÇÏ±â À§ÇØ¼­´Â ¹İµå½Ã ½ÇÇà ½Ã");
-			System.out.println("µÎ °³ÀÇ ¼ıÀÚ¸¦ ÀÔ·ÂÇØ ÁÖ¾î¾ß ÇÕ´Ï´Ù.");
+			System.out.println("í˜„ì¬ í”„ë¡œê·¸ë¨ì„ ì‹¤í–‰í•˜ê¸° ìœ„í•´ì„œëŠ” ë°˜ë“œì‹œ ì‹¤í–‰ ì‹œ");
+			System.out.println("ë‘ ê°œì˜ ìˆ«ìë¥¼ ì…ë ¥í•´ ì£¼ì–´ì•¼ í•©ë‹ˆë‹¤.");
 			System.exit(1);
 		}
 

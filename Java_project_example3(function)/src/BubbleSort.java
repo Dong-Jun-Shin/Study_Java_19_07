@@ -1,8 +1,8 @@
-public class BubbleSort {
+ï»¿public class BubbleSort {
 	public static void main(String[] args) {
 		// Bubble Sort
-		// ¾Õ°ú µÚ¸¦ ºñ±³ÇØ¼­ ÀÚ¸®¹Ù²Ù¸ç ³¡±îÁö ÁøÇàÀ» ¹İº¹
-		// 66¹ø ¹İº¹ (
+		// ì•ê³¼ ë’¤ë¥¼ ë¹„êµí•´ì„œ ìë¦¬ë°”ê¾¸ë©° ëê¹Œì§€ ì§„í–‰ì„ ë°˜ë³µ
+		// 66ë²ˆ ë°˜ë³µ (
 
 		int a[] = { 1, 7, 5, 2, 3, 9, 20, 4, 13, 8, 15, 6, 0, 33, 29, 50, 17, 3, 1 };
 		int temp;

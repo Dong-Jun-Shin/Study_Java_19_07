@@ -1,4 +1,4 @@
-package exam_printpage;
+ï»¿package exam_printpage;
 
 import java.util.Scanner;
 
@@ -8,7 +8,7 @@ public class Account {
 	private int balance;
 	private static int pCount;
 
-	// »ı¼ºÀÚ
+	// ìƒì„±ì
 	public Account() {
 		this(null, null, 0);
 	}
@@ -53,9 +53,9 @@ public class Account {
 		return pCount;
 	}
 
-	// ±â´É ¸Ş¼Òµå
+	// ê¸°ëŠ¥ ë©”ì†Œë“œ
 	public Account[] createAccount(Scanner scan, Account[] person) {
-		menuFrame("°èÁÂ»ı¼º");
+		menuFrame("ê³„ì¢Œìƒì„±");
 
 		inputAno(scan);
 		inputOwner(scan);
@@ -63,77 +63,77 @@ public class Account {
 
 		person = addArray(person);
 
-		System.out.println("°á°ú: °èÁÂ°¡ »ı¼ºµÇ¾ú½À´Ï´Ù.");
+		System.out.println("ê²°ê³¼: ê³„ì¢Œê°€ ìƒì„±ë˜ì—ˆìŠµë‹ˆë‹¤.");
 
 		return person;
 	}
 
 	public Account[] removeAccount(Scanner scan, Account[] person) {
-		menuFrame("°èÁÂ»èÁ¦");
+		menuFrame("ê³„ì¢Œì‚­ì œ");
 
-		System.out.print("»èÁ¦ÇÒ °èÁÂÀÇ ¼ø¹øÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä>>");
+		System.out.print("ì‚­ì œí•  ê³„ì¢Œì˜ ìˆœë²ˆì„ ì…ë ¥í•´ì£¼ì„¸ìš”>>");
 		int num = scan.nextInt();
 		scan.nextLine();
 
 		if (person.length > 1) {
 			if (num < person.length) {
-				System.out.println("°á°ú: " + person[num - 1].owner + "´ÔÀÇ °èÁÂ°¡ »èÁ¦µÇ¾ú½À´Ï´Ù.");
+				System.out.println("ê²°ê³¼: " + person[num - 1].owner + "ë‹˜ì˜ ê³„ì¢Œê°€ ì‚­ì œë˜ì—ˆìŠµë‹ˆë‹¤.");
 
 				person = removeArray(person, num);
 			} else {
-				System.out.printf("\n°èÁÂ´Â %d¹øÂ°±îÁö ÀÖ½À´Ï´Ù.\n´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.\n", person.length - 1);
+				System.out.printf("\nê³„ì¢ŒëŠ” %dë²ˆì§¸ê¹Œì§€ ìˆìŠµë‹ˆë‹¤.\në‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”.\n", person.length - 1);
 			}
 		} else {
-			System.out.println("°èÁÂ¸ñ·ÏÀÌ ºñ¾îÀÖ½À´Ï´Ù.");
+			System.out.println("ê³„ì¢Œëª©ë¡ì´ ë¹„ì–´ìˆìŠµë‹ˆë‹¤.");
 		}
 
 		return person;
 	}
 
 	public void accountList(Account[] person) {
-		menuFrame("°èÁÂ¸ñ·Ï");
+		menuFrame("ê³„ì¢Œëª©ë¡");
 		for (int i = 0; i < person.length - 1; i++) {
 			System.out.printf("%20s\t%4s\t%7d\n", person[i].ano, person[i].owner, person[i].balance);
 		}
 	}
 
 	public void deposit(Scanner scan, Account[] person) {
-		menuFrame("¿¹±İ");
+		menuFrame("ì˜ˆê¸ˆ");
 		int indexNum = selAno(scan, person);
 
 		if (indexNum != -1) {
 			person[indexNum].balance += person[indexNum].addBal(scan);
 
-			System.out.println("°á°ú: ¿¹±İÀÌ µÇ¾ú½À´Ï´Ù.");
+			System.out.println("ê²°ê³¼: ì˜ˆê¸ˆì´ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 		} else {
-			System.out.println("ÀÔ·ÂÇØÁÖ½Å °èÁÂ°¡ ¾ø½À´Ï´Ù.");
+			System.out.println("ì…ë ¥í•´ì£¼ì‹  ê³„ì¢Œê°€ ì—†ìŠµë‹ˆë‹¤.");
 		}
 	}
 
 	public void withdraw(Scanner scan, Account[] person) {
-		menuFrame("Ãâ±İ");
+		menuFrame("ì¶œê¸ˆ");
 		int indexNum = selAno(scan, person);
 
 		if (indexNum != -1) {
 			int temp = person[indexNum].subBal(scan);
 			if (person[indexNum].balance > temp) {
 				person[indexNum].balance -= temp;
-				System.out.println("°á°ú: Ãâ±İÀÌ µÇ¾ú½À´Ï´Ù.");
+				System.out.println("ê²°ê³¼: ì¶œê¸ˆì´ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 			} else {
-				System.out.println("°á°ú: °èÁÂ¿¡ ÀÜ¾×ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+				System.out.println("ê²°ê³¼: ê³„ì¢Œì— ì”ì•¡ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 			}
 		} else {
-			System.out.println("ÀÔ·ÂÇØÁÖ½Å °èÁÂ°¡ ¾ø½À´Ï´Ù.");
+			System.out.println("ì…ë ¥í•´ì£¼ì‹  ê³„ì¢Œê°€ ì—†ìŠµë‹ˆë‹¤.");
 		}
 
 	}
 
-	// Ãâ·Â ¸Ş¼Òµå
+	// ì¶œë ¥ ë©”ì†Œë“œ
 	public static void showFrame() {
 		System.out.println("-------------------------------------------------");
-		System.out.println("1.°èÁÂ»ı¼º | 2.°èÁÂ»èÁ¦ | 3.°èÁÂ¸ñ·Ï | 4.¿¹±İ | 5.Ãâ±İ | 6.Á¾·á");
+		System.out.println("1.ê³„ì¢Œìƒì„± | 2.ê³„ì¢Œì‚­ì œ | 3.ê³„ì¢Œëª©ë¡ | 4.ì˜ˆê¸ˆ | 5.ì¶œê¸ˆ | 6.ì¢…ë£Œ");
 		System.out.println("-------------------------------------------------");
-		System.out.print("¼±ÅÃ>");
+		System.out.print("ì„ íƒ>");
 	}
 
 	public static void menuFrame(String menu) {
@@ -142,16 +142,16 @@ public class Account {
 		System.out.println("------------");
 	}
 
-	// ÀÔ·Â ¸Ş¼Òµå
+	// ì…ë ¥ ë©”ì†Œë“œ
 	public String inputAno(Scanner scan) {
-		System.out.print("°èÁÂ¹øÈ£: ");
+		System.out.print("ê³„ì¢Œë²ˆí˜¸: ");
 		ano = scan.nextLine();
 
 		return ano;
 	}
 
 	public String inputOwner(Scanner scan) {
-		System.out.print("°èÁÂÁÖ: ");
+		System.out.print("ê³„ì¢Œì£¼: ");
 		owner = scan.nextLine();
 
 		return owner;
@@ -159,15 +159,15 @@ public class Account {
 
 	public int inputBal(Scanner scan) {
 		while (true) {
-			System.out.print("ÃÊ±âÀÔ±İ¾×: ");
+			System.out.print("ì´ˆê¸°ì…ê¸ˆì•¡: ");
 			balance = scan.nextInt();
 			scan.nextLine();
 
 			if (balance >= 0) {
 				break;
 			}
-			System.out.println("°³¼³½Ã, ÃÖ¼Ò ½ÃÀÛ±İ¾×Àº 1000¿øÀÔ´Ï´Ù.");
-			System.out.println("1000¿ø ÀÌ»ó ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			System.out.println("ê°œì„¤ì‹œ, ìµœì†Œ ì‹œì‘ê¸ˆì•¡ì€ 1000ì›ì…ë‹ˆë‹¤.");
+			System.out.println("1000ì› ì´ìƒ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 		}
 
 		return balance;
@@ -176,14 +176,14 @@ public class Account {
 	public int addBal(Scanner scan) {
 		int addBal;
 		while (true) {
-			System.out.print("¿¹±İ¾×: ");
+			System.out.print("ì˜ˆê¸ˆì•¡: ");
 			addBal = scan.nextInt();
 			scan.nextLine();
 
 			if (balance >= 0 && addBal > 0) {
 				break;
 			}
-			System.out.println("¼ıÀÚ¸¦ Á¤¼ö·Î ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			System.out.println("ìˆ«ìë¥¼ ì •ìˆ˜ë¡œ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 		}
 
 		return addBal;
@@ -192,28 +192,28 @@ public class Account {
 	public int subBal(Scanner scan) {
 		int subBal;
 		while (true) {
-			System.out.print("Ãâ±İ¾×: ");
+			System.out.print("ì¶œê¸ˆì•¡: ");
 			subBal = scan.nextInt();
 			scan.nextLine();
 
 			if (balance >= 0 && subBal > 0) {
 				break;
 			}
-			System.out.println("¼ıÀÚ¸¦ Á¤¼ö·Î ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			System.out.println("ìˆ«ìë¥¼ ì •ìˆ˜ë¡œ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 		}
 
 		return subBal;
 	}
 
-	// ºÎ°¡ ¸Ş¼Òµå
+	// ë¶€ê°€ ë©”ì†Œë“œ
 	public Account[] addArray(Account[] person) {
-		//»õ·Î ¹ŞÀ» ¹è¿­ ÃÊ±âÈ­
+		//ìƒˆë¡œ ë°›ì„ ë°°ì—´ ì´ˆê¸°í™”
 		Account[] temp = new Account[person.length + 1];
 		for (int i = 0; i < temp.length; i++) {
 			temp[i] = new Account();
 		}
 
-		//»õ·Î ¹ŞÀº ¹è¿­¿¡ ´ëÀÔ
+		//ìƒˆë¡œ ë°›ì€ ë°°ì—´ì— ëŒ€ì…
 		for (int i = 0; i < temp.length - 1; i++) {
 			temp[i] = person[i];
 		}
@@ -222,13 +222,13 @@ public class Account {
 	}
 
 	public Account[] removeArray(Account[] person, int selArray) {
-		//»õ·Î ¹ŞÀ» ¹è¿­ ÃÊ±âÈ­
+		//ìƒˆë¡œ ë°›ì„ ë°°ì—´ ì´ˆê¸°í™”
 		Account[] temp = new Account[person.length - 1];
 		for (int i = 0; i < temp.length; i++) {
 			temp[i] = new Account();
 		}
 
-		//ÇØ´ç °ª »èÁ¦ÇÏ±â
+		//í•´ë‹¹ ê°’ ì‚­ì œí•˜ê¸°
 		for (int i = 0; i < temp.length; i++) {
 			if (i == selArray - 1) {
 				continue;
@@ -236,7 +236,7 @@ public class Account {
 			temp[i] = person[i];
 		}
 
-		//°ø¹é ¶¯°Ü¼­ ÁÙ ¸ÂÃß±â
+		//ê³µë°± ë•¡ê²¨ì„œ ì¤„ ë§ì¶”ê¸°
 		for (int i = 0, j = 0; j < temp.length; i++, j++) {
 			if (temp[i].ano == null) {
 				temp[i] = person[++j];
@@ -252,7 +252,7 @@ public class Account {
 	}
 
 	public int selAno(Scanner scan, Account[] person) {
-		System.out.print("°èÁÂ¹øÈ£: ");
+		System.out.print("ê³„ì¢Œë²ˆí˜¸: ");
 		String index = scan.nextLine();
 
 		int indexNum = -1;

@@ -1,4 +1,4 @@
-package exam_class_constructor;
+ï»¿package exam_class_constructor;
 
 public class FruitEx {
 	private String[] fname;
@@ -14,7 +14,7 @@ public class FruitEx {
 		this.price = price;
 	}
 
-	//¿¬»êÀ» À§ÇÑ ¸Ş¼Òµå
+	//ì—°ì‚°ì„ ìœ„í•œ ë©”ì†Œë“œ
 	public int total(int total) {
 		for (int i = 0; i < price.length; i++) {
 			total += price[i];
@@ -35,9 +35,9 @@ public class FruitEx {
 		return str;
 	}
 
-	//Ãâ·ÂÀ» À§ÇÑ ¸Ş¼Òµå
+	//ì¶œë ¥ì„ ìœ„í•œ ë©”ì†Œë“œ
 	public static void printFrontFrame() {
-		System.out.println("============== °úÀÏ±¸ÀÔ ¸ñ·Ï =============");
+		System.out.println("============== ê³¼ì¼êµ¬ì… ëª©ë¡ =============");
 	}
 
 	public static void printBackFrame() {
@@ -45,7 +45,7 @@ public class FruitEx {
 	}
 
 	public static void printFrame(int total, double dcPrice) {
-		System.out.println("ÃÑ±İ¾× : " + total + "¿ø");
-		System.out.println("ÇÒÀÎ ÈÄ °áÁ¦ ±İ¾× : " + (int) dcPrice + "¿ø");
+		System.out.println("ì´ê¸ˆì•¡ : " + total + "ì›");
+		System.out.println("í• ì¸ í›„ ê²°ì œ ê¸ˆì•¡ : " + (int) dcPrice + "ì›");
 	}
 }

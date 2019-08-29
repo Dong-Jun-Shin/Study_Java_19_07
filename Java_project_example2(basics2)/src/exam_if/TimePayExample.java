@@ -1,4 +1,4 @@
-package exam_if;
+ï»¿package exam_if;
 
 import java.util.Scanner;
 
@@ -10,20 +10,20 @@ public class TimePayExample {
 		int pay;
 
 		while (true) {
-			System.out.print("»ç¿ø¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä. ");
+			System.out.print("ì‚¬ì›ë²ˆí˜¸ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”. ");
 			u_num = scan.next();
 
-			System.out.print("±Ù¹«½Ã°£À» ÀÔ·ÂÇØÁÖ¼¼¿ä. ");
+			System.out.print("ê·¼ë¬´ì‹œê°„ì„ ì…ë ¥í•´ì£¼ì„¸ìš”. ");
 			u_work_time = scan.nextInt();
 
-			System.out.print("½Ã°£´ç ±İ¾×À» ÀÔ·ÂÇØÁÖ¼¼¿ä. ");
+			System.out.print("ì‹œê°„ë‹¹ ê¸ˆì•¡ì„ ì…ë ¥í•´ì£¼ì„¸ìš”. ");
 			u_hour_pay = scan.nextInt();
 			System.out.println("----------------------------");
 
 			if (u_work_time >= 0) {
 				break;
 			} else {
-				System.out.println("½Ã°£À» ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä. (0ÀÌ»ó)");
+				System.out.println("ì‹œê°„ì„ ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”. (0ì´ìƒ)");
 				System.out.println("\n----------------------------");
 			}
 		}
@@ -33,7 +33,7 @@ public class TimePayExample {
 			pay = pay + (u_work_time - 40) * (int)(u_hour_pay * 0.5);
 			
 		}
-		System.out.println("»ç¿ø¹øÈ£ : " + u_num + "\n±Ş¿© : " + pay);
+		System.out.println("ì‚¬ì›ë²ˆí˜¸ : " + u_num + "\nê¸‰ì—¬ : " + pay);
 		
 		scan.close();
 	}

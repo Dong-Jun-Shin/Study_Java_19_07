@@ -1,4 +1,4 @@
-package exam_lab;
+ï»¿package exam_lab;
 
 import java.util.Scanner;
 
@@ -9,14 +9,14 @@ public class Page109 {
 		char hakjum;
 		boolean over = true;
 		
-		System.out.println("ÇĞÁ¡À» ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+		System.out.println("í•™ì ì„ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 		
 		while (over) {
 			
 			int jumsu = scan.nextInt();
 			
 			System.out.println();
-			System.out.println("jumsuÀÇ ÃÊ±â°ª : " + jumsu);
+			System.out.println("jumsuì˜ ì´ˆê¸°ê°’ : " + jumsu);
 			if (jumsu < 100 && jumsu > 0) {
 				if (jumsu >= 90) {
 					hakjum = 'A';
@@ -29,12 +29,12 @@ public class Page109 {
 				} else {
 					hakjum = 'F';
 				}
-				System.out.println("Á¡¼ö = " + jumsu + " ÇĞÁ¡ = " + hakjum);
+				System.out.println("ì ìˆ˜ = " + jumsu + " í•™ì  = " + hakjum);
 				over = false;
 			}else {
 				System.out.println();
 				System.out.println("-----------------------------");
-				System.out.println("Á¡¼ö´Â 0 ~ 100 »çÀÌ·Î ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				System.out.println("ì ìˆ˜ëŠ” 0 ~ 100 ì‚¬ì´ë¡œ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 			}
 		}
 

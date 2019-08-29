@@ -1,23 +1,23 @@
-package exam_dowhile;
+ï»¿package exam_dowhile;
 
 /*
- * do ~ while¹®À» ÀÌ¿ëÇÏ¿© 'a'ºÎÅÍ 'z'±îÁö Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
+ * do ~ whileë¬¸ì„ ì´ìš©í•˜ì—¬ 'a'ë¶€í„° 'z'ê¹Œì§€ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ì‹œì˜¤.
  */
 public class DoWhileExample2 {
 	public static void main(String[] args) {
-		// charÀ» ÀÌ¿ëÇØ¼­ Ãâ·Â
+		// charì„ ì´ìš©í•´ì„œ ì¶œë ¥
 		// a: 97, z: 122
 		char ch = 97;
 
 		do {
 			System.out.print(ch + " ");
 			ch++; 
-			//ch = ch + 1; ÀÛ¼º½Ã, char = int ÇüÀÌ¶ó¼­ Çüº¯È¯ÀÌ ÇÊ¿ä
+			//ch = ch + 1; ì‘ì„±ì‹œ, char = int í˜•ì´ë¼ì„œ í˜•ë³€í™˜ì´ í•„ìš”
 			//ch = (char)ch + 1;
 			
 		} while (ch <= 122);
 		
-		/* ¾Æ½ºÅ°ÄÚµå °ªÀÌ ¾Æ´Ñ ¹®ÀÚ·Î ÀÛ¼ºÇÏ±â
+		/* ì•„ìŠ¤í‚¤ì½”ë“œ ê°’ì´ ì•„ë‹Œ ë¬¸ìë¡œ ì‘ì„±í•˜ê¸°
 			char ch = 'a';
 	
 			do {

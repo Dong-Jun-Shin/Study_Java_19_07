@@ -1,4 +1,4 @@
-package exam_for;
+ï»¿package exam_for;
 
 public class RandomExample {
 	public static void main(String[] args) {
@@ -13,6 +13,6 @@ public class RandomExample {
 			}
 			System.out.println();
 		}
-		System.out.println("³­¼öÀÇ ÇÕ:" + r_sum);
+		System.out.println("ë‚œìˆ˜ì˜ í•©:" + r_sum);
 	}
 }

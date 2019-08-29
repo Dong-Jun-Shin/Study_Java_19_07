@@ -1,4 +1,4 @@
-package exam_array;
+﻿package exam_array;
 
 public class TwoArray {
 	public static void main(String[] args) {

@@ -1,7 +1,7 @@
-package exam_array;
+ï»¿package exam_array;
 
 /*
- * ¾ËÆÄºª ¼Ò¹®ÀÚ¸¦ ¹®ÀÚÇü ¹è¿­¿¡ ´ëÀÔÇÏ¿© Ãâ·ÂÇÏµµ·Ï ÇÁ·Î±×·¥À» ÀÛ¼ºÇØ ÁÖ¼¼¿ä.
+ * ì•ŒíŒŒë²³ ì†Œë¬¸ìë¥¼ ë¬¸ìí˜• ë°°ì—´ì— ëŒ€ì…í•˜ì—¬ ì¶œë ¥í•˜ë„ë¡ í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•´ ì£¼ì„¸ìš”.
  */
 public class CharArrayExample {
 	public static void main(String[] args) {

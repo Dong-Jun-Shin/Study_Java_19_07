@@ -1,7 +1,7 @@
-package exam_array;
+ï»¿package exam_array;
 
 /*
- * ´ÙÀ½ÀÇ Á¤¼ö Áß¿¡ °¡Àå Å«°ª, °¡Àå ÀÛÀº °ªÀ» Ãâ·ÂÇØÁÖ¼¼¿ä.
+ * ë‹¤ìŒì˜ ì •ìˆ˜ ì¤‘ì— ê°€ì¥ í°ê°’, ê°€ì¥ ì‘ì€ ê°’ì„ ì¶œë ¥í•´ì£¼ì„¸ìš”.
  */
 public class MaxMinExample {
 	public static void main(String[] args) {

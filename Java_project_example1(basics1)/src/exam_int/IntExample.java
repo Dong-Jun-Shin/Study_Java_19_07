@@ -1,6 +1,6 @@
-package exam_int;
+ï»¿package exam_int;
 /**
- * ¼ø¼­µµ ¿¹Á¦ 3-1
+ * ìˆœì„œë„ ì˜ˆì œ 3-1
  */
 public class IntExample {
 	public static void main(String[] args) {

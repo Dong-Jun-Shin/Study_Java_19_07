@@ -1,20 +1,20 @@
-package exam_class;
+ï»¿package exam_class;
 
 
 
 public class PlaneTest {
 	public static void main(String[] args) {
-		//µğÆúÆ® »ı¼ºÀÚ
+		//ë””í´íŠ¸ ìƒì„±ì
 		Plane plane0 = new Plane();
 		System.out.println(plane0.toString());
 		
 		
-		//»ı¼ºÀÚ (¸Å°³º¯¼ö 3°³)
-		Plane plane1 = new Plane("¿¡¾î¹ö½º", "A380", 500);
+		//ìƒì„±ì (ë§¤ê°œë³€ìˆ˜ 3ê°œ)
+		Plane plane1 = new Plane("ì—ì–´ë²„ìŠ¤", "A380", 500);
 		System.out.println(plane1.toString());
 		
 		
-		//»ı¼ºÀÚ (¸Å°³º¯¼ö 2°³)
+		//ìƒì„±ì (ë§¤ê°œë³€ìˆ˜ 2ê°œ)
 		Plane plane2 = new Plane("BOEING","B737");
 		System.out.println(plane2.toString());
 		
@@ -32,9 +32,9 @@ public class PlaneTest {
 		plane3.setPersonNum(150);
 		personNum = plane3.getPersonNUm();
 		
-		System.out.printf("Ç×°øÁ¤º¸[Á¦ÀÛ»ç : %s\t, ¸ğµ¨ : %s\t, ÃÖ´ë ½Â°´¼ö : %3d]", ProductComp, model, personNum);
+		System.out.printf("í•­ê³µì •ë³´[ì œì‘ì‚¬ : %s\t, ëª¨ë¸ : %s\t, ìµœëŒ€ ìŠ¹ê°ìˆ˜ : %3d]", ProductComp, model, personNum);
 		System.out.println("\n");
-		System.out.println("»ı¼ºµÈ Ç×°ø±â ¼ö: " + Plane.getPlanes());
+		System.out.println("ìƒì„±ëœ í•­ê³µê¸° ìˆ˜: " + Plane.getPlanes());
 		
 		
 	}

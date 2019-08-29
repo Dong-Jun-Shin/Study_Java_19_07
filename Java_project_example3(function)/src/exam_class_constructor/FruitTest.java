@@ -1,4 +1,4 @@
-package exam_class_constructor;
+﻿package exam_class_constructor;
 
 public class FruitTest {
 	public static void main(String[] args) {

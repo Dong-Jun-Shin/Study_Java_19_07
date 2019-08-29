@@ -1,10 +1,10 @@
-package exam_mutator_accessor;
+ï»¿package exam_mutator_accessor;
 
 public class CarMutatorAccessorTest {
 	public static void main(String[] args) {
 		CarMutatorAccessor myCar = new CarMutatorAccessor();
 
-		//¼³Á¤ÀÚ ¸Ş¼Òµå È£Ãâ
+		//ì„¤ì •ì ë©”ì†Œë“œ í˜¸ì¶œ
 		myCar.setColor("red");
 		//myCar.color = "red";
 		
@@ -13,14 +13,14 @@ public class CarMutatorAccessorTest {
 
 		//myCar.setSpeed(-80);
 
-		//Á¢±ÙÀÚ ¸Ş¼Òµå È£Ãâ
-		System.out.println("========= Á¢±ÙÀÚ ¸Ş¼Òµå È£Ãâ·Î ÇÊµå Ãâ·Â ========");
-		System.out.println("ÇöÀç ÀÚµ¿Â÷ÀÇ »ö»ó : " + myCar.getColor());
-		System.out.println("ÇöÀç ÀÚµ¿Â÷ÀÇ ¼Óµµ : " + myCar.getSpeed());
-		System.out.println("ÇöÀç ÀÚµ¿Â÷ÀÇ ±â¾î : " + myCar.getGear());
+		//ì ‘ê·¼ì ë©”ì†Œë“œ í˜¸ì¶œ
+		System.out.println("========= ì ‘ê·¼ì ë©”ì†Œë“œ í˜¸ì¶œë¡œ í•„ë“œ ì¶œë ¥ ========");
+		System.out.println("í˜„ì¬ ìë™ì°¨ì˜ ìƒ‰ìƒ : " + myCar.getColor());
+		System.out.println("í˜„ì¬ ìë™ì°¨ì˜ ì†ë„ : " + myCar.getSpeed());
+		System.out.println("í˜„ì¬ ìë™ì°¨ì˜ ê¸°ì–´ : " + myCar.getGear());
 		System.out.println();
 		
-		System.out.println("======== toString() ¸Ş¼Òµå·Î ÀüÃ¼ ÇÊµå Ãâ·Â =======");
+		System.out.println("======== toString() ë©”ì†Œë“œë¡œ ì „ì²´ í•„ë“œ ì¶œë ¥ =======");
 		System.out.println(myCar.toString());
 	}
 }

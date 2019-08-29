@@ -1,4 +1,4 @@
-package exam_byte;
+ï»¿package exam_byte;
 
 public class ByteExample {
 	public static void main(String[] args) {
@@ -7,7 +7,7 @@ public class ByteExample {
 		byte var3 = 0;
 		byte var4 = 30;
 		byte var5 = 127;
-		// byte var6 = 128; //¹üÀ§ ÃÊ°ú(-128 ~ 127)
+		// byte var6 = 128; //ë²”ìœ„ ì´ˆê³¼(-128 ~ 127)
 
 		System.out.println("var1=" + var1);
 		System.out.println("var2=" + var2);
@@ -18,9 +18,9 @@ public class ByteExample {
 		byte num6 = 20 % 6;
 		System.out.println(num6);
 
-		// byte var7 = 63*4; //¹üÀ§ ÃÊ°ú(-128 ~ 127)
+		// byte var7 = 63*4; //ë²”ìœ„ ì´ˆê³¼(-128 ~ 127)
 
-		int num8 = var3 * var4; // byte*byte = intÇü¿¡ ´ã´Â´Ù.
+		int num8 = var3 * var4; // byte*byte = intí˜•ì— ë‹´ëŠ”ë‹¤.
 		System.out.println(num8);
 	}
 }

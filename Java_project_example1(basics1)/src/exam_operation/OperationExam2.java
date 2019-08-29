@@ -1,23 +1,23 @@
-package exam_operation;
+ï»¿package exam_operation;
 
 import java.util.Scanner;
 
 /*
- * °æºñ 45763¿øÀ» º¯¼ö¿¡ ´ëÀÔÇÑ ´ÙÀ½ »ê¼ú ¿¬»êÀÚ¸¦ ÀÌ¿ëÇÏ¿© ½ÇÇà °á°ú¿Í °°ÀÌ Ãâ·ÂÇÏµµ·Ï ÄÚµå¸¦ ÀÛ¼ºÇÏ½Ã¿À.
- * ½ÇÇà°á°ú
- * 		45763¿øÀº
- * 			500¿ø : 00°³
- * 			100¿ø : 0°³
- * 			 50¿ø : 0°Ô
- * 			 10¿ø : 0°³
- * 			  1¿ø : 0°³ÀÔ´Ï´Ù.
+ * ê²½ë¹„ 45763ì›ì„ ë³€ìˆ˜ì— ëŒ€ì…í•œ ë‹¤ìŒ ì‚°ìˆ  ì—°ì‚°ìë¥¼ ì´ìš©í•˜ì—¬ ì‹¤í–‰ ê²°ê³¼ì™€ ê°™ì´ ì¶œë ¥í•˜ë„ë¡ ì½”ë“œë¥¼ ì‘ì„±í•˜ì‹œì˜¤.
+ * ì‹¤í–‰ê²°ê³¼
+ * 		45763ì›ì€
+ * 			500ì› : 00ê°œ
+ * 			100ì› : 0ê°œ
+ * 			 50ì› : 0ê²Œ
+ * 			 10ì› : 0ê°œ
+ * 			  1ì› : 0ê°œì…ë‹ˆë‹¤.
  */
 public class OperationExam2 {
 	public static void main(String[] args) {
 		int c50000, c10000, c5000, c1000,c500, c100, c50, c10, c1;
 		int money;
 
-		System.out.println("±İ¾×À» ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+		System.out.println("ê¸ˆì•¡ì„ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 		Scanner scan = new Scanner(System.in);
 		money = scan.nextInt();
 		
@@ -31,15 +31,15 @@ public class OperationExam2 {
 		c10 = money % 50 / 10;
 		c1 = money % 10;
 
-		System.out.println("50000¿ø : " + c50000);
-		System.out.println("10000¿ø : " + c10000);
-		System.out.println("5000¿ø : " + c5000);
-		System.out.println("1000¿ø : " + c1000);
-		System.out.println("500¿ø : " + c500);
-		System.out.println("100¿ø : " + c100);
-		System.out.println("50¿ø : " + c50);
-		System.out.println("10¿ø : " + c10);
-		System.out.println("1¿ø : " + c1);
+		System.out.println("50000ì› : " + c50000);
+		System.out.println("10000ì› : " + c10000);
+		System.out.println("5000ì› : " + c5000);
+		System.out.println("1000ì› : " + c1000);
+		System.out.println("500ì› : " + c500);
+		System.out.println("100ì› : " + c100);
+		System.out.println("50ì› : " + c50);
+		System.out.println("10ì› : " + c10);
+		System.out.println("1ì› : " + c1);
 		
 		scan.close();
 	}

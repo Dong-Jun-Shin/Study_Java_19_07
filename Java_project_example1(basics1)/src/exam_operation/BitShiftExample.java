@@ -1,4 +1,4 @@
-package exam_operation;
+ï»¿package exam_operation;
 
 public class BitShiftExample {
 	public static void main(String[] args) {
@@ -6,21 +6,21 @@ public class BitShiftExample {
 		System.out.println("<< 3");
 		System.out.println(toBinaryString(1 << 3));
 
-		System.out.println("1 << 3 ½ÊÁø¼ö Ãâ·Â: " + (1 << 3));
+		System.out.println("1 << 3 ì‹­ì§„ìˆ˜ ì¶œë ¥: " + (1 << 3));
 		System.out.println();
 
 		System.out.println(toBinaryString(-8));
 		System.out.println(">> 3");
 		System.out.println(toBinaryString(-8 >> 3));
 
-		System.out.println("-8 << 3 ½ÊÁø¼ö Ãâ·Â: " + (-8 << 3));
+		System.out.println("-8 << 3 ì‹­ì§„ìˆ˜ ì¶œë ¥: " + (-8 << 3));
 		System.out.println();
 
 		System.out.println(toBinaryString(-8));
 		System.out.println(">>> 3");
 		System.out.println(toBinaryString(-8 >>> 3));
 
-		System.out.println("-8 >>> 3 ½ÊÁø¼ö Ãâ·Â: " + (-8 >>> 3));
+		System.out.println("-8 >>> 3 ì‹­ì§„ìˆ˜ ì¶œë ¥: " + (-8 >>> 3));
 		System.out.println();
 	}
 
@@ -29,9 +29,9 @@ public class BitShiftExample {
 		int showBitSpace = 32;
 
 		if (str.length() <= 20) {
-			// 4byte = 32(bit)ÀÚ¸®ÀÇ 2Áø¼ö Ç¥ÇöÀ» À§ÇØ Á¶°Ç ¼³Á¤
-			// 8ÀÚ¸®¾¿ ²÷¾î¼­ Ãâ·Â, ¶ç¾î¾²±â(3ÀÚ¸® Æ÷ÇÔ) + 32ÀÚ¸® = 0~33(34°³)
-			// ¸Ç ¾ÕÀÚ¸® ¶ç¾î¾²±â »©°í Ãâ·Â
+			// 4byte = 32(bit)ìžë¦¬ì˜ 2ì§„ìˆ˜ í‘œí˜„ì„ ìœ„í•´ ì¡°ê±´ ì„¤ì •
+			// 8ìžë¦¬ì”© ëŠì–´ì„œ ì¶œë ¥, ë„ì–´ì“°ê¸°(3ìžë¦¬ í¬í•¨) + 32ìžë¦¬ = 0~33(34ê°œ)
+			// ë§¨ ì•žìžë¦¬ ë„ì–´ì“°ê¸° ë¹¼ê³  ì¶œë ¥
 			for (int i = 0; i < showBitSpace / 8; i++) {
 				while (str.length() < showBitSpace + (showBitSpace / 8 - 2)) {
 					str = "0" + str;
@@ -43,7 +43,7 @@ public class BitShiftExample {
 			}
 			str = str.substring(1);
 		} else {
-			// -n¸¦ ShiftÇÏ¸é 32ÀÚ¸®°¡ Ã¤¿öÁø Ã¤·Î Ãâ·ÂÇÑ´Ù.
+			// -në¥¼ Shiftí•˜ë©´ 32ìžë¦¬ê°€ ì±„ì›Œì§„ ì±„ë¡œ ì¶œë ¥í•œë‹¤.
 			for (int i = 0; i < 3; i++) {
 				str = str.substring(0, 8 + 9 * i) + " " + str.substring(8 + 9 * i, str.length());
 			}

@@ -1,4 +1,4 @@
-package exam_class_array;
+ï»¿package exam_class_array;
 
 public class CarObjectArray {
 	public static void main(String[] args) {
@@ -28,7 +28,7 @@ public class CarObjectArray {
 		}
 
 		for (int i = 0; i < cars.length; i++) {
-			System.out.println("ÀÚµ¿Â÷(" + (i + 1) + ") " + cars[i].toString());
+			System.out.println("ìžë™ì°¨(" + (i + 1) + ") " + cars[i].toString());
 		}
 	}
 }

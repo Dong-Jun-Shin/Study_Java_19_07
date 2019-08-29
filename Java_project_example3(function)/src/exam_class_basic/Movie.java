@@ -1,15 +1,15 @@
-package exam_class_basic;
+ï»¿package exam_class_basic;
 
 import java.util.Scanner;
 
 /*
- * ¿µÈ­ Movie Å¬·¡½º¸¦ Á¤ÀÇÇÑ´Ù.
- * Movie Å¬·¡½º´Â ¿µÈ­Á¦¸ñ(movieTitle), ÆòÁ¡(movieGrade), °¨µ¶(movieDirector),
- * ¹ßÇ¥¿¬µµ(announcementYear) ÇÊµå¸¦ °¡Áø´Ù. ¿µÈ­ÀÇ ¸ğµç Á¤º¸¸¦ Ãâ·ÂÇÑ´Ù.
+ * ì˜í™” Movie í´ë˜ìŠ¤ë¥¼ ì •ì˜í•œë‹¤.
+ * Movie í´ë˜ìŠ¤ëŠ” ì˜í™”ì œëª©(movieTitle), í‰ì (movieGrade), ê°ë…(movieDirector),
+ * ë°œí‘œì—°ë„(announcementYear) í•„ë“œë¥¼ ê°€ì§„ë‹¤. ì˜í™”ì˜ ëª¨ë“  ì •ë³´ë¥¼ ì¶œë ¥í•œë‹¤.
  * 
- * [¿ä±¸»çÇ×]
- * 1. 2°³ÀÇ ¿µÈ­ Á¤º¸¸¦ ÇÊµå¿¡ Á÷Á¢ ´ëÀÔÇÏ¿© ÇÊµå°ªÀ» Ãâ·ÂÇÑ´Ù.
- * 2. 1°³ÀÇ ¿µÈ­ Á¤º¸´Â »ç¿ëÀÚ·Î ÇÏ¿©±İ ¿µÈ­ Á¤º¸¸¦ ÀÔ·Â¹Ş¾Æ¼­ Ãâ·ÂÇÑ´Ù.
+ * [ìš”êµ¬ì‚¬í•­]
+ * 1. 2ê°œì˜ ì˜í™” ì •ë³´ë¥¼ í•„ë“œì— ì§ì ‘ ëŒ€ì…í•˜ì—¬ í•„ë“œê°’ì„ ì¶œë ¥í•œë‹¤.
+ * 2. 1ê°œì˜ ì˜í™” ì •ë³´ëŠ” ì‚¬ìš©ìë¡œ í•˜ì—¬ê¸ˆ ì˜í™” ì •ë³´ë¥¼ ì…ë ¥ë°›ì•„ì„œ ì¶œë ¥í•œë‹¤.
  */
 public class Movie {
 	public String movieTitle;
@@ -18,16 +18,16 @@ public class Movie {
 	public int announcementYear;
 
 	public void set1() {
-		movieTitle = "ºĞ³ëÀÇ ÁúÁÖ: È©½º&¼î";
+		movieTitle = "ë¶„ë…¸ì˜ ì§ˆì£¼: í™‰ìŠ¤&ì‡¼";
 		movieGrade = 9.11;
-		movieDirector = "µ¥ÀÌºø ·¹ÀÌÄ¡";
+		movieDirector = "ë°ì´ë¹— ë ˆì´ì¹˜";
 		announcementYear = 2019;
 	}
 
 	public void set2() {
-		movieTitle = "ºÀ¿Àµ¿ ÀüÅõ";
+		movieTitle = "ë´‰ì˜¤ë™ ì „íˆ¬";
 		movieGrade = 9.20;
-		movieDirector = "¿ø½Å¿¬";
+		movieDirector = "ì›ì‹ ì—°";
 		announcementYear = 2019;
 	}
 
@@ -41,17 +41,17 @@ public class Movie {
 	public void setUserData() {
 		Scanner scan = new Scanner(System.in);
 	
-		System.out.print("¿µÈ­ Á¦¸ñ : ");
+		System.out.print("ì˜í™” ì œëª© : ");
 		movieTitle = scan.nextLine();
 		
-		System.out.print("¿µÈ­ ÆòÁ¡ : ");
+		System.out.print("ì˜í™” í‰ì  : ");
 		movieGrade = scan.nextDouble();
 		scan.nextLine();
 		
-		System.out.print("¿µÈ­ °¨µ¶ : ");
+		System.out.print("ì˜í™” ê°ë… : ");
 		movieDirector = scan.nextLine();
 		
-		System.out.print("¹ßÇ¥ ¿¬µµ : ");
+		System.out.print("ë°œí‘œ ì—°ë„ : ");
 		announcementYear = scan.nextInt();
 		scan.nextLine();
 		
@@ -63,10 +63,10 @@ public class Movie {
 	public String toString() {
 		String temp = "";
 		for (int i = 0; i < (int)movieGrade / 2; i++) {
-			temp += "¡Ú";
+			temp += "â˜…";
 			if (i == (int)movieGrade / 2 - 1) {
 				for (int j = 0; j < 5 - (int)movieGrade / 2; j++) {
-					temp += "¡Ù";
+					temp += "â˜†";
 				}
 			}
 		}

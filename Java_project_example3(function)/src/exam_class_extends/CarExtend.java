@@ -1,4 +1,4 @@
-package exam_class_extends;
+ï»¿package exam_class_extends;
 
 public class CarExtend {
 	public int speed;
@@ -20,9 +20,9 @@ public class CarExtend {
 		speed -= increment;
 	}
 
-	//final ¸Ş¼Òµå
+	//final ë©”ì†Œë“œ
 	public final void stop() {
-		System.out.println("Â÷¸¦ ¸ØÃã");
+		System.out.println("ì°¨ë¥¼ ë©ˆì¶¤");
 		speed = 0;
 	}
 	
@@ -39,9 +39,9 @@ class SportsCar extends CarExtend{
 		this.turbo = turbo;
 	}
 
-//	Á¾´Ü¸Ş¼Òµå¸¦ ÀçÁ¤ÀÇ ÇÒ ¼ö ¾ø´Ù.
+//	ì¢…ë‹¨ë©”ì†Œë“œë¥¼ ì¬ì •ì˜ í•  ìˆ˜ ì—†ë‹¤.
 //	public void stop() {
-//		System.out.println("³ª´Â Á¾´Ü¸Ş¼Òµå¸¦ ÀçÁ¤ÀÇÇÏ°Ú´Ù!!");
+//		System.out.println("ë‚˜ëŠ” ì¢…ë‹¨ë©”ì†Œë“œë¥¼ ì¬ì •ì˜í•˜ê² ë‹¤!!");
 //	}
 	
 	@Override

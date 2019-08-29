@@ -1,9 +1,9 @@
-package exam_break;
+ï»¿package exam_break;
 
 import java.util.Scanner;
 
-/*»ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ Á¡¼öÀÇ ÃÑÁ¡, Æò±ÕÀ» ³»´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
- * ´Ü Á¾·á´Â - ~ 100 »çÀÌ°¡ ¾Æ´Ñ °ª ÀÔ·ÂÇÏ¸é µÈ´Ù.
+/*ì‚¬ìš©ìžê°€ ìž…ë ¥í•œ ì ìˆ˜ì˜ ì´ì , í‰ê· ì„ ë‚´ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
+ * ë‹¨ ì¢…ë£ŒëŠ” - ~ 100 ì‚¬ì´ê°€ ì•„ë‹Œ ê°’ ìž…ë ¥í•˜ë©´ ëœë‹¤.
  */
 public class BreakExample {
 	public static void main(String[] args) {
@@ -12,7 +12,7 @@ public class BreakExample {
 		double  total = 0;
 
 		while (true) {
-			System.out.println((cnt + 1) + "¹øÂ° Á¡¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			System.out.println((cnt + 1) + "ë²ˆì§¸ ì ìˆ˜ë¥¼ ìž…ë ¥í•´ì£¼ì„¸ìš”.");
 			u_score = scan.nextInt();
 			
 			if(u_score>100 || u_score<0) {
@@ -22,10 +22,10 @@ public class BreakExample {
 			cnt++;
 			
 		}
-		System.out.printf("ÃÑÁ¡: %d", (int)total);
+		System.out.printf("ì´ì : %d", (int)total);
 		
 		total = total / cnt;
-		System.out.printf(", Æò±Õ: %.2f", total);
+		System.out.printf(", í‰ê· : %.2f", total);
 				
 		scan.close();
 	}

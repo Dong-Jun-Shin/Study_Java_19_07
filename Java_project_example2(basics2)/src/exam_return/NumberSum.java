@@ -1,8 +1,8 @@
-package exam_return;
+ï»¿package exam_return;
 import java.util.Scanner;
 
-//º¯¼ö 2°³¸¦ ¼±¾ğ ÈÄ, ÇÕ Ãâ·Â
-// »ç¿ëÀÚ·Î ÇÏ¿©±İ 2°³ÀÇ ¼ö¸¦ ÀÔ·Â ¹Ş¾Æ¼­, ÇÕ Ãâ·Â
+//ë³€ìˆ˜ 2ê°œë¥¼ ì„ ì–¸ í›„, í•© ì¶œë ¥
+// ì‚¬ìš©ìë¡œ í•˜ì—¬ê¸ˆ 2ê°œì˜ ìˆ˜ë¥¼ ì…ë ¥ ë°›ì•„ì„œ, í•© ì¶œë ¥
 public class NumberSum {
 	public static void main(String[] args) {
 		
@@ -11,13 +11,13 @@ public class NumberSum {
 		int n1 = 7;
 		int n2 = 12;
 
-		result = "Ã¹¹øÂ° ÇÕ:" + add(n1, n2) + "\n";
+		result = "ì²«ë²ˆì§¸ í•©:" + add(n1, n2) + "\n";
 
-		System.out.print("2°³ÀÇ ¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+		System.out.print("2ê°œì˜ ìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 		n1 = scan.nextInt();
 		n2 = scan.nextInt();
 
-		result += "µÎ¹øÂ° ÇÕ:" + add(n1, n2);
+		result += "ë‘ë²ˆì§¸ í•©:" + add(n1, n2);
 
 		System.out.println(result);
 		System.out.println();

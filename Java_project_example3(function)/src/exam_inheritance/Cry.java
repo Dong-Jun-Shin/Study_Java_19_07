@@ -1,31 +1,31 @@
-package exam_inheritance;
+ï»¿package exam_inheritance;
 
-//»ó¼ÓÇÏ´Â ½´ÆÛÅ¬·¡½º
+//ìƒì†í•˜ëŠ” ìŠˆí¼í´ë˜ìŠ¤
 public class Cry {
-	private int ¹ß°¹¼ö;
+	private int ë°œê°¯ìˆ˜;
 
-	public void ¼Â¹ß°¹¼ö(int ¹ß) {
-		¹ß°¹¼ö = ¹ß;
+	public void ì…‹ë°œê°¯ìˆ˜(int ë°œ) {
+		ë°œê°¯ìˆ˜ = ë°œ;
 	}
 
-	public int °Ù¹ß°¹¼ö() {
-		return ¹ß°¹¼ö;
+	public int ê²Ÿë°œê°¯ìˆ˜() {
+		return ë°œê°¯ìˆ˜;
 	}
 
-	public void ¿î´Ù() {
-		System.out.println("³ª´Â ¿î´Ù. ÀÌ·¸°Ô");
+	public void ìš´ë‹¤() {
+		System.out.println("ë‚˜ëŠ” ìš´ë‹¤. ì´ë ‡ê²Œ");
 	}
 }
 
-//»ó¼Ó¹ŞÀº ¼­ºêÅ¬·¡½º
+//ìƒì†ë°›ì€ ì„œë¸Œí´ë˜ìŠ¤
 class cat extends Cry {
-	public void ¿î´Ù() {
+	public void ìš´ë‹¤() {
 		System.out.println("mumu~");
 	}
 }
 
 class dog extends Cry {
-	public void ¿î´Ù() {
+	public void ìš´ë‹¤() {
 		System.out.println("walwal~");
 	}
 }
