@@ -1,7 +1,0 @@
-package exam_class;
-
-public class BankApplication {
-	public static void main(String[] args) {
-		
-	}
-}

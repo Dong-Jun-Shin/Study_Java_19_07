@@ -1,9 +1,0 @@
-package exam_class_relation;
-
-public class AlarmClockTest {
-	public static void main(String[] args) {
-		AlarmClock at = new AlarmClock();
-		
-		System.out.println(at.toString());
-	}
-}

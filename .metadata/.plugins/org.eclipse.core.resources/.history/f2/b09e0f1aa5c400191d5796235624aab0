@@ -1,9 +1,0 @@
-package exam_class;
-
-public class SmartPhoneTest {
-	public static void main(String[] args) {
-		SmartPhone phone = new SmartPhone("ªÔº∫", "∞∂∑∞Ω√≥Î∆Æ9", 1094500);
-		SmartPhone phone = new SmartPhone("ªÔº∫", "∞∂∑∞Ω√≥Î∆Æ9", 1094500, 10);
-		SmartPhone phone = new SmartPhone("ªÔº∫", "∞∂∑∞Ω√≥Î∆Æ9", 1094500);
-	}
-}

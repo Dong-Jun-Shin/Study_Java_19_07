@@ -1,7 +1,0 @@
-package exam_class;
-
-public class SongTest {
-	public static void main(String[] args) {
-		
-	}
-}

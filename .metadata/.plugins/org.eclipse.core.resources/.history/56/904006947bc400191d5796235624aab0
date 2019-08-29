@@ -1,6 +1,0 @@
-package exam_class;
-
-public class Song {
-	private String title;
-	
-}

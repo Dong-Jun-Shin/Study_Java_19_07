@@ -1,9 +1,0 @@
-package exam_printpage;
-
-public class animal {
-	public static void main(String[] args) {
-		Account a = new Account();
-		a.setAno("aaa");
-		a.getAno();
-	}
-}

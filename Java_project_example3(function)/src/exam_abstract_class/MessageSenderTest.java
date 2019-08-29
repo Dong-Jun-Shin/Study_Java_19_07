@@ -103,7 +103,7 @@ class SMSSender extends MessageSender {
 
 	public void sendMessage(String receiver) {
 		System.out.println("------------------------------");
-		System.out.println("제목: " + title);
+		System.out.println("제목: " + getTitle());
 		System.out.println("보내는 사람: " + senderName);
 		System.out.println("전화번호: " + returnPhoneNo);
 		System.out.println("받는 사람: " + receiver);

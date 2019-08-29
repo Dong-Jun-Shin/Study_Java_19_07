@@ -1,8 +1,0 @@
-package simplephoneinfo;
-
-public class PhoneBookVer02 {
-	public static void main(String[] args) {
-		PhoneInfo pInfo = new pInfo();
-		
-	}
-}

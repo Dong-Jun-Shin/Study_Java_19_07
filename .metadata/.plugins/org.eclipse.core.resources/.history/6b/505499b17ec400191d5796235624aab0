@@ -1,9 +1,0 @@
-package exam_class;
-
-public class SongTest {
-	public static void main(String[] args) {
-		Song song = new Song("Dansing Queen", "ABBA", "Arrival", Song.setComposer("Benny Andersson", "Bjorn Ulvaeus", "けけけ", "ばば", "220"), 1977, 2);
-	
-		song.show();
-	}
-}
