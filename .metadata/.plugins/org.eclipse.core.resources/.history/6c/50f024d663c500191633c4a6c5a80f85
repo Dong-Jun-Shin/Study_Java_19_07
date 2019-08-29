@@ -1,0 +1,14 @@
+package exam_class;
+
+import java.util.Scanner;
+
+public class EmpMainTest {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		EmpMain p1 = new EmpMain();
+		EmpMain p2 = new EmpMain();
+		EmpMain p3 = new EmpMain();
+		
+		
+	}
+}

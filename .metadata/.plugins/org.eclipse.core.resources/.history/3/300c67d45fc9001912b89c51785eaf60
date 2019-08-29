@@ -1,0 +1,85 @@
+package exam_abstract_class;
+
+abstract class MessageSender {
+	protected String title;
+	protected String senderName;
+	
+	public MessageSender() {
+	}
+	
+	public MessageSender(String title, String senderName) {
+		this.title = title;
+		this.senderName = senderName;
+	}
+
+	
+
+	public abstract void sendMessage();
+}
+
+class EMailSender extends MessageSender {
+	private String senderAddr;
+	private String emailBody;
+
+	public EMailSender() {
+	}
+	
+	public EMailSender(String title, String senderName, String senderAddr, String emailBody) {
+		super(title, senderName);
+		this.senderAddr = senderAddr;
+		this.emailBody = emailBody;
+	}
+
+	protected final String getSenderAddr() {
+		return senderAddr;
+	}
+
+	protected final void setSenderAddr(String senderAddr) {
+		this.senderAddr = senderAddr;
+	}
+
+	protected final String getEmailBody() {
+		return emailBody;
+	}
+
+	protected final void setEmailBody(String emailBody) {
+		this.emailBody = emailBody;
+	}
+
+	public void sendMessage() {
+		System.out.println("------------------------------");
+		System.out.println("Á¦¸ñ: " + title);
+		System.out.println("------------------------------");
+	}
+}
+
+class SMSSender extends MessageSender {
+	private String returnPhoneNo;
+	private String message;
+
+	protected final String getReturnPhoneNo() {
+		return returnPhoneNo;
+	}
+
+s	protected final void setReturnPhoneNo(String returnPhoneNo) {
+		this.returnPhoneNo = returnPhoneNo;
+	}
+
+	protected final String getMessage() {
+		return message;
+	}
+
+	protected final void setMessage(String message) {
+		this.message = message;
+	}
+
+	public void sendMessage() {
+		
+	}
+}
+
+public class MessageSenderTest {
+	public static void main(String[] args) {
+
+	}
+}

@@ -1,0 +1,24 @@
+package exam_abstract_class;
+
+abstract class MessageSender{
+	protected String title;
+	protected String senderName;
+	
+	protected void sendMessage() {
+		
+	}
+}
+
+class EMailSender extends MessageSender{
+	
+}
+
+class SMSSender extends MessageSender{
+	
+}
+
+public class MessageSenderTest {
+	public static void main(String[] args) {
+		
+	}
+}

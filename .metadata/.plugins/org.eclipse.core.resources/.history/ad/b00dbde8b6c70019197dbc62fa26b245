@@ -1,0 +1,12 @@
+package exam_class_relation;
+
+public class Point {
+	private int x;
+	private int y;
+	
+	//»ý¼ºÀÚ
+	public Point(int a, int b) {
+		x=a;
+		y=b;
+	}
+}

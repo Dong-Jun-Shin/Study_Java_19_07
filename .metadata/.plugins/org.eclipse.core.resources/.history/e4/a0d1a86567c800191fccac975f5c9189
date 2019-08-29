@@ -1,0 +1,29 @@
+package exam_printpage;
+
+public class Cry {
+	private int 발갯수;
+
+	public void 셋발갯수(int 발) {
+		발갯수 = 발;
+	}
+
+	public int 겟발갯수() {
+		return 발갯수;
+	}
+
+	public void 운다() {
+		System.out.println("나는 운다. 이렇게");
+	}
+}
+
+class cat extends Cry {
+	public void 고양이_운다() {
+		System.out.println("mumu~");
+	}
+}
+
+class dog extends Cry {
+	public void cryDog() {
+		System.out.println("walwal~");
+	}
+}

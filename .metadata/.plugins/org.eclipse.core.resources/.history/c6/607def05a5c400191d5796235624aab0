@@ -1,0 +1,7 @@
+package exam_class;
+
+public class SmartPhoneTest {
+	public static void main(String[] args) {
+		
+	}
+}

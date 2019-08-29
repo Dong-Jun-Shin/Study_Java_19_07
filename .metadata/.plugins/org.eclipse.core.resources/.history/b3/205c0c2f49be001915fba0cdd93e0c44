@@ -1,0 +1,5 @@
+package tool;
+
+public class GradeProgram {
+	public static int total
+}

@@ -1,0 +1,17 @@
+package exam_class;
+
+class Book{
+	private String title;
+	private int page;
+	private String author;
+}
+
+class Magazine extends Book{
+	
+}
+
+public class BookTest {
+	public static void main(String[] args) {
+		
+	}
+}

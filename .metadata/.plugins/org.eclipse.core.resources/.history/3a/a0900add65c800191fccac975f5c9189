@@ -1,0 +1,29 @@
+package exam_printpage;
+
+public class cry {
+	private int ¹ß°¹¼ö;
+	
+	public void ¼Â¹ß°¹¼ö(int ¹ß) {
+		this.¹ß°¹¼ö = ¹ß;
+	}
+	
+	public int °Ù¹ß°¹¼ö() {
+		return ¹ß°¹¼ö
+	}
+	
+	public void cry() {
+		System.out.println("³ª´Â ¿î´Ù. ÀÌ·¸°Ô");
+	}
+}
+
+class cat extends cry{
+	public void cryCat() {
+		System.out.println("mumu~");
+	}
+}
+
+class dog extends cry{
+	public void cryDog() {
+		System.out.println("walwal~");
+	}
+}

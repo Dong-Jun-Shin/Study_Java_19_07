@@ -1,0 +1,14 @@
+package exam_class_relation;
+
+public class Circle {
+	private Point p1;
+	private Point p2;
+	
+	public Circle() {
+		this(p1, p2);
+	}
+	
+	public Circle(Point p1, Point p2) {
+		
+	}
+}

@@ -1,0 +1,26 @@
+package exam_class;
+
+import java.util.Scanner;
+
+public class BankApplication {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		Account[] person = new Account[5];
+
+		Account.showFrame();
+		int selNum = scan.nextInt();
+		
+		switch(selNum) {
+		case 1:
+			break;
+		case 2:
+			break;
+		case 3:
+			break;
+		case 4:
+			break;
+		case 5:
+			break;
+		}
+	}
+}

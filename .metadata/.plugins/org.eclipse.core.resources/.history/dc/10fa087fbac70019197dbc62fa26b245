@@ -1,0 +1,26 @@
+package exam_class_relation;
+
+public class Circle {
+	private int radius;;
+	private Point center;
+
+	//»ý¼ºÀÚ
+	public Circle() {
+		radius = 0;
+		center = new Point(0, 5);
+	}
+
+	public Circle(int r) {
+		radius = r;
+		center = new Point(5, 0);
+	}
+
+	public Circle(Point p, int r) {
+		radius = r;
+		center = p;
+	}
+	public String toString() {
+		return "Circle return : radius=" + radius + ", center=" + center;
+	}
+
+}

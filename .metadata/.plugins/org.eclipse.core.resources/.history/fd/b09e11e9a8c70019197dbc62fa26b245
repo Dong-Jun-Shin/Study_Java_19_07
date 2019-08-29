@@ -1,0 +1,11 @@
+package exam_class_relation;
+
+import java.time.LocalDate;
+
+public class TimeTest {
+	public static void main(String[] args) {
+		Time t = new Time(LocalDate.now());
+		
+		System.out.println(t.toString());
+	}
+}

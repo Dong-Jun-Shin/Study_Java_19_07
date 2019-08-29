@@ -1,0 +1,16 @@
+package exam_class_extends;
+
+public class SportsCar extends CarExtend{
+	public boolean turbo;
+
+	public void setTurbo(boolean turbo) {
+		this.turbo = turbo;
+	}
+
+	@Override
+	public String toString() {
+		return "SportsCar [turbo=" + turbo + ", speed=" + speed + ", gear=" + gear + "]";
+	}
+	
+	
+}

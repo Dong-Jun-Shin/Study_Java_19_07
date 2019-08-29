@@ -1,0 +1,50 @@
+package exam_printpage;
+
+public class ScoreOX {
+	private int no;
+	private String name;
+	private int[] dap;
+	private int cnt;
+	private int score;
+	private int rank;
+	private char[] c_ox;
+	public static int tot;
+
+	public ScoreOX() {
+		this(0, null, null);
+	}
+
+	public ScoreOX(int no, String name, int[] dap) {
+		this.no = no;
+		this.name = name;
+		this.dap = dap;
+		this.c_ox = new char[5];
+	}
+
+	public void compute() {
+		int[] answer = { 1, 1, 1, 1, 1 };
+
+		for (int i = 0; i < answer.length; i++) {
+			if (dap[i] == answer[i]) {
+				this.c_ox[i] = 'O';
+				cnt += 1;
+			} else {
+				this.c_ox[i] = 'X';
+			}
+		}
+
+		score = cnt * 20;
+		tot += cnt;
+	}
+
+	public void display() {
+		System.out.printf("%2d\t%3s\t%1s\t%1s\t%1s\t%1s\t%1s\t%3d\t%2d\n", no, name, c_ox[0], c_ox[1], c_ox[2], c_ox[3], c_ox[4], score, rank);
+
+	}
+
+	public static void ranking(ScoreOX[] sc) {
+		for (int i = 0; i < sc.length-1; i++) {
+			sc[i].score >
+		}
+	}
+}

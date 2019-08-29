@@ -1,0 +1,42 @@
+package exam_super;
+
+class ParentClass{
+	protected int data;
+	
+	public ParentClass() {
+		data=100;
+	}
+	
+	public void print() {
+		System.out.println("슈퍼 클래스의 print() 메소드");
+	}
+}
+
+class ChildClass extends ParentClass{
+	protected int data;
+	
+	public ChildClass() {
+		data = 200;
+	}
+	
+	@Override
+	public void print() {
+		super.print();
+		System.out.println("서브 클래스의 print() 메소드");
+		System.out.println("data : " + data);
+		System.out.println("this.data : " + this.data);
+		System.out.println("super.data : " + super.data);
+	}
+	
+	public void sprint() {
+		
+	}
+	
+}
+
+public class ChildClassTest {
+	public static void main(String[] args) {
+		ChildClass obj = new ChildClass();
+		obj.print();
+	}
+}

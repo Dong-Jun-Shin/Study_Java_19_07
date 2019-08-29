@@ -1,0 +1,12 @@
+package exam_class;
+
+public class BankApplication {
+	public static void main(String[] args) {
+		Account[] person = new Account[5];
+		int selNum = 0;
+		
+		switch(selNum) {
+		
+		}
+	}
+}

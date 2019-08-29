@@ -1,0 +1,33 @@
+package exam_class_static;
+
+public class CarStaticMethodTest {
+	public static void main(String[] args) {
+		CarStaticMethod car1 = new CarStaticMethod(10, 1, "Red");
+		CarStaticMethod car2 = new CarStaticMethod(20, 2, "Red");
+		CarStaticMethod car3 = new CarStaticMethod(30, 3, "Red");
+		CarStaticMethod car4 = new CarStaticMethod(40, 4, "Red");
+		CarStaticMethod car5 = new CarStaticMethod(50, 5, "Red");
+		CarStaticMethod car6 = new CarStaticMethod(60, 6, "Red");
+		CarStaticMethod car7 = new CarStaticMethod(70, 7, "Red");
+		CarStaticMethod car8 = new CarStaticMethod(80, 8, "Red");
+		CarStaticMethod car9 = new CarStaticMethod(90, 9, "Red");
+		CarStaticMethod car10 = new CarStaticMethod(100, 10, "Red");
+		CarStaticMethod car11 = new CarStaticMethod(110, 11, "Red");
+		CarStaticMethod car12 = new CarStaticMethod(120, 12, "Red");
+		CarStaticMethod car13 = new CarStaticMethod(130, 13, "Red");
+		CarStaticMethod car14 = new CarStaticMethod(140, 14, "Red");
+		CarStaticMethod car15 = new CarStaticMethod(150, 15, "Red");
+		CarStaticMethod car16 = new CarStaticMethod(160, 16, "Red");
+		CarStaticMethod car17 = new CarStaticMethod(170, 17, "Red");
+		CarStaticMethod car18 = new CarStaticMethod(180, 18, "Red");
+		CarStaticMethod car19 = new CarStaticMethod(190, 19, "Red");
+		CarStaticMethod car20 = new CarStaticMethod(200, 20, "Red");
+		CarStaticMethod car21 = new CarStaticMethod(210, 21, "Red");
+		CarStaticMethod car22 = new CarStaticMethod(220, 22, "Red");
+		CarStaticMethod car23 = new CarStaticMethod(230, 23, "Red");
+		CarStaticMethod car24 = new CarStaticMethod(240, 24, "Red");
+		CarStaticMethod car25 = new CarStaticMethod(250, 25, "Red");
+		CarStaticMethod car26 = new CarStaticMethod(260, 26, "Red");
+		CarStaticMethod car27 = new CarStaticMethod(270, 27, "Red");
+	}
+}

@@ -1,0 +1,37 @@
+package exam_printpage;
+
+class Car{
+	private String color;
+	private int account;
+	
+	public Car() {
+		
+	}
+	
+	public Car(String color, int account) {
+		this.color = color;
+		this.account = account;
+	}
+
+	public String getColor() {
+		return color;
+	}
+
+	public int getAccount() {
+		return account;
+	}
+
+	@Override
+	public String toString() {
+		return "Car [color=" + color + ", account=" + account + "]";
+	}
+}
+
+class Monata extends Car{
+	private String series;
+	private String use;
+}
+
+public class CarMain {
+
+}

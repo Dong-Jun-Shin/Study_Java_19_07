@@ -1,0 +1,18 @@
+package exam_class;
+
+public class SmartPhoneTest {
+	public static void main(String[] args) {
+		SmartPhone phone1 = new SmartPhone("ªÔº∫", "∞∂∑∞Ω√≥Î∆Æ9", 1094500);
+		SmartPhone phone2 = new SmartPhone("æ÷«√", "æ∆¿Ã∆˘XS", 1364000, 10);
+		SmartPhone phone3 = new SmartPhone();
+		phone3.setMaker("ªÔº∫");
+		phone3.setNmae("∞∂∑∞Ω√S8");
+		phone3.setPrice(3500);
+		phone3.setDiscountRate(35);
+		
+		phone1.show();
+		phone2.show();
+		phone3.show();
+		
+	}
+}

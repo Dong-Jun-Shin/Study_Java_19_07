@@ -1,0 +1,19 @@
+package exam_abstract_class;
+
+abstract class MessageSender{
+	
+}
+
+class EMailSender extends MessageSender{
+	
+}
+
+class SMSSender extends MessageSender{
+	
+}
+
+public class MessageSenderTest {
+	public static void main(String[] args) {
+		
+	}
+}

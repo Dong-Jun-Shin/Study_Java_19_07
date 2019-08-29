@@ -1,0 +1,15 @@
+package exam_printpage;
+
+public class cry {
+	public void cry() {
+		System.out.println("나는 운다. 이렇게");
+	}
+}
+
+class cat extends cry{
+	
+}
+
+class dog extends cry{
+	
+}

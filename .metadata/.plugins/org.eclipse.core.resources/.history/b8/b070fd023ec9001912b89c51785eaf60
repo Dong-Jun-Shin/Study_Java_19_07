@@ -1,0 +1,36 @@
+package exam_class;
+
+class Book{
+	private String title;
+	private int page;
+	private String author;
+	
+	public final String getTitle() {
+		return title;
+	}
+	public final void setTitle(String title) {
+		this.title = title;
+	}
+	public final int getPage() {
+		return page;
+	}
+	public final void setPage(int page) {
+		this.page = page;
+	}
+	public final String getAuthor() {
+		return author;
+	}
+	public final void setAuthor(String author) {
+		this.author = author;
+	}
+}
+
+class Magazine extends Book{
+	
+}
+
+public class BookTest {
+	public static void main(String[] args) {
+		
+	}
+}

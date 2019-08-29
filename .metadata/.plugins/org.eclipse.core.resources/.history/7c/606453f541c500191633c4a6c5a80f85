@@ -1,0 +1,19 @@
+package exam_class_static;
+
+public class CarStaticMethod {
+	private int speed;
+	private int gear;
+	private String color;
+	private static int numberOfCars = 0;
+	
+	public CarStaticMethod(int s, int g, String c) {
+		speed = s;
+		gear = g;
+		color = c;
+		++numberOfCars;
+	}
+	
+	public static int getNumberOfCars() {
+		return numberOfCars;
+	}
+}

@@ -1,0 +1,9 @@
+package exam_abstract_class;
+
+
+
+public class MessageSenderTest {
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,16 @@
+package exam_class_relation;
+
+public class AlarmClockTest {
+	public static void main(String[] args) {
+		//기본 생성자
+		AlarmClock dat = new AlarmClock();
+		System.out.println(default_at.toString());
+		
+		//매개변수 이용 생성자
+		Time a = new Time(15, 35, 13);
+		Time t = new Time(17, 57, 17);
+		
+		AlarmClock uat = new AlarmClock(a, t);
+		System.out.println(uat.toString());
+	}
+}

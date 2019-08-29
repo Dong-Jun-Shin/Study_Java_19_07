@@ -1,0 +1,17 @@
+package exam_parent_constructor_call;
+
+class SuperX{
+	private int x;
+	public SuperX() {
+		x=100;
+		System.out.println("x = " + x);
+	}
+}
+
+class SubY extends SuperX{
+	
+}
+
+public class Constructor {
+
+}

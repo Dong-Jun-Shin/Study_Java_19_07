@@ -1,0 +1,22 @@
+package exam_overriding;
+
+class EmployeeOverriding {
+	protected String name;
+	private int salary;
+
+	public EmployeeOverriding(String name, int salary) {
+		this.namename = name;
+		this.salary = salary;
+	}
+
+	public String getDetails() {
+		return "Name : " + name + "\n"+"Salary : "+salary;
+	}
+	
+}
+
+public class OverridingTest {
+	public static void main(String[] args) {
+
+	}
+}

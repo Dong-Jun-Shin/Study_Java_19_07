@@ -1,0 +1,13 @@
+package exam_class_relation;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+public class TimeTest {
+	public static void main(String[] args) {
+		LocalTime tok = LocalTime.now();
+		Time t = new Time(tok.getHour(),tok.getMinute(),tok.getSecond());
+		
+		System.out.println(t.toString());
+	}
+}

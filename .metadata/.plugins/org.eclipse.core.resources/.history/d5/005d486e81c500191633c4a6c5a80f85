@@ -1,0 +1,149 @@
+package exam_class;
+
+import java.util.Scanner;
+
+public class Account {
+	private String ano;
+	private String owner;
+	private int balance;
+	private static int pCount;
+	
+	//생성자
+	public Account() {
+		this(null, null, 0);
+	}
+
+	public String getOwner() {
+		return owner;
+	}
+
+	public Account(String ano, String owner, int balance) {
+		this.ano = ano;
+		this.owner = owner;
+		this.balance = balance;
+		++pCount;
+	}
+	
+	//getter, setter
+	public String getAno() {
+		return ano;
+	}
+	
+	public void setAno(String ano) {
+		this.ano = ano;
+	}
+	
+	public String owner() {
+		return owner;
+	}
+	
+	public void setOwner(String owner) {
+		this.owner = owner;
+	}
+	
+	public int getBalance() {
+		return balance;
+	}
+	
+	public void setBalance(int balance) {
+		this.balance = balance;
+	}
+
+	public static int getpCount() {
+		return pCount;
+	}
+
+	//기능 메소드
+	public Account createAccount(Scanner scan, Account[] person) {
+		menuFrame("계좌생성");
+		inputAno(scan);
+		inputOwner(scan);
+		inputBal(scan);
+		
+		Account[] temp = new Account[person.length+1];
+		for (int i = 0; i < temp.length; i++) {
+			temp[i] = new Account();
+		}
+		for (int i = 0; i < temp.length; i++) {
+			temp[i] = person[i];
+		}
+		
+		System.out.println("계좌가 생성되었습니다.");
+		
+		return temp;
+	}
+	
+	public void accountList(Account[] person) {
+		menuFrame("계좌목록");
+		for (int i = 0; i < person.length; i++) {
+			System.out.printf("%20s\t%4s\t%7d\n", ano, owner, balance);
+		}
+	}
+	
+	public void deposit(Scanner scan) {
+		menuFrame("예금");
+		inputAno(scan);
+		balance += inputBal(scan);
+	
+		System.out.println("예금이 성공되었습니다.");
+	}
+	
+	public void withdraw(Scanner scan) {
+		menuFrame("출금");
+		inputAno(scan);
+		
+		int temp = inputBal(scan);
+		if(balance > temp) {
+			balance -= temp;			
+			System.out.println("출금이 성공되었습니다.");
+		}else {
+			System.out.println("계좌에 잔액이 부족합니다.");
+		}
+		
+	}
+	
+	//출력 메소드
+	public static void showFrame() {
+		System.out.println("-----------------------------------------");
+		System.out.println("1.계좌생성 | 2.계좌목록 | 3.예금 | 4.출금 | 5.종료");
+		System.out.println("-----------------------------------------");
+		System.out.print("선택>");
+	}
+	
+	public void menuFrame(String menu) {
+		System.out.println("------------");
+		System.out.println(menu);
+		System.out.println("------------");
+	}
+	
+	//입력 메소드
+	public String inputAno(Scanner scan) {
+		System.out.println("계좌번호: ");
+		ano = scan.nextLine();
+		
+		return ano;
+	}
+	
+	public String inputOwner(Scanner scan) {
+		System.out.println("계좌주: ");
+		owner = scan.nextLine();
+		
+		return owner;
+	}
+	
+	public int inputBal(Scanner scan) {
+		while(true) {
+			System.out.println("초기입금액: ");
+			balance = scan.nextInt();
+			scan.nextLine();
+			
+			if(balance >= 0) {
+				break;
+			}
+			System.out.println("개설시, 최소 시작금액은 1000원입니다.");
+			System.out.println("1000원 이상 입력해주세요.");
+		}
+		
+		return balance;
+	}
+}

@@ -1,0 +1,61 @@
+package exam_class_static;
+
+public class CarStaticMethodTest {
+	public static void main(String[] args) {
+		CarStaticMethod car1 = new CarStaticMethod(10, 1, "Red1");
+		CarStaticMethod car2 = new CarStaticMethod(20, 2, "Red2");
+		CarStaticMethod car3 = new CarStaticMethod(30, 3, "Red3");
+		CarStaticMethod car4 = new CarStaticMethod(40, 4, "Red4");
+		CarStaticMethod car5 = new CarStaticMethod(50, 5, "Red5");
+		CarStaticMethod car6 = new CarStaticMethod(60, 6, "Red6");
+		CarStaticMethod car7 = new CarStaticMethod(70, 7, "Red7");
+		CarStaticMethod car8 = new CarStaticMethod(80, 8, "Red8");
+		CarStaticMethod car9 = new CarStaticMethod(90, 9, "Red9");
+		CarStaticMethod car10 = new CarStaticMethod(100, 10, "Red10");
+		CarStaticMethod car11 = new CarStaticMethod(110, 11, "Red11");
+		CarStaticMethod car12 = new CarStaticMethod(120, 12, "Red12");
+		CarStaticMethod car13 = new CarStaticMethod(130, 13, "Red13");
+		CarStaticMethod car14 = new CarStaticMethod(140, 14, "Red14");
+		CarStaticMethod car15 = new CarStaticMethod(150, 15, "Red15");
+		CarStaticMethod car16 = new CarStaticMethod(160, 16, "Red16");
+		CarStaticMethod car17 = new CarStaticMethod(170, 17, "Red17");
+		CarStaticMethod car18 = new CarStaticMethod(180, 18, "Red18");
+		CarStaticMethod car19 = new CarStaticMethod(190, 19, "Red19");
+		CarStaticMethod car20 = new CarStaticMethod(200, 20, "Red20");
+		CarStaticMethod car21 = new CarStaticMethod(210, 21, "Red21");
+		CarStaticMethod car22 = new CarStaticMethod(220, 22, "Red22");
+		CarStaticMethod car23 = new CarStaticMethod(230, 23, "Red23");
+		CarStaticMethod car24 = new CarStaticMethod(240, 24, "Red24");
+		CarStaticMethod car25 = new CarStaticMethod(250, 25, "Red25");
+		CarStaticMethod car26 = new CarStaticMethod(260, 26, "Red26");
+		CarStaticMethod car27 = new CarStaticMethod(270, 27, "Red27");
+		
+		System.out.println(car1.toString());
+		System.out.println(car2.toString());
+		System.out.println(car3.toString());
+		System.out.println(car4.toString());
+		System.out.println(car5.toString());
+		System.out.println(car6.toString());
+		System.out.println(car7.toString());
+		System.out.println(car8.toString());
+		System.out.println(car9.toString());
+		System.out.println(car10.toString());
+		System.out.println(car11.toString());
+		System.out.println(car12.toString());
+		System.out.println(car13.toString());
+		System.out.println(car14.toString());
+		System.out.println(car15.toString());
+		System.out.println(car16.toString());
+		System.out.println(car17.toString());
+		System.out.println(car18.toString());
+		System.out.println(car19.toString());
+		System.out.println(car20.toString());
+		System.out.println(car21.toString());
+		System.out.println(car22.toString());
+		System.out.println(car23.toString());
+		System.out.println(car24.toString());
+		System.out.println(car25.toString());
+		System.out.println(car26.toString());
+		System.out.println(car27.toString());
+	}
+}

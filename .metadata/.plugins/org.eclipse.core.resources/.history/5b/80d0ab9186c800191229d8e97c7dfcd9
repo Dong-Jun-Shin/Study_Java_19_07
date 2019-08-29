@@ -1,0 +1,38 @@
+class SolutionTest {
+	public int[] solution(int[][] v) {
+		int[] answer = new int[2];
+		int[] x = new int[3];
+		int[] y = new int[3];
+
+		//x[] = 1, 3, 3
+		//y[] = 4, 4, 10
+		for (int i = 0; i < v.length; i++) {
+			x[i] = v[i][0];
+		}
+
+		for (int i = 0; i < v.length; i++) {
+			y[i] = v[i][1];
+		}
+
+		
+
+		System.out.println(answer[0] + ", " + answer[1]);
+
+		return answer;
+	}
+}
+
+public class Solution {
+	public static void main(String[] args) {
+		int[][] v1 = { { 1, 4 }, { 3, 4 }, { 3, 10 } };
+		int[][] v2 = { { 1, 1 }, { 2, 2 }, { 1, 2 } };
+		SolutionTest a = new SolutionTest();
+
+		a.solution(v1);
+		a.solution(v2);
+
+	}
+}
+
+//1. [1, 10]
+//2. [2, 1]

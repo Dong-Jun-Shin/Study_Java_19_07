@@ -1,0 +1,6 @@
+package exam_class_relation;
+
+public class Circle {
+	private Point p1;
+	private Point p2;
+}

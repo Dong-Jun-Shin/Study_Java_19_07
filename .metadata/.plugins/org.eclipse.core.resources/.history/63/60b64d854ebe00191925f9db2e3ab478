@@ -1,0 +1,106 @@
+package exam_array_2Dimension;
+
+/*
+ * 성적 프로그램 만들기
+ * - 학생명 : name / 점수 : score / 평균 : avg /
+ * 	 학점: grade	/ 재수강 : pass / 순위 : rank
+ * - 수식은 다음과 같다
+ * 총점 = 국어 + 영어 + 수학;
+ * 평균 = 총점 / 3;
+ * 학점 = 평균 90이상 'A' / 80이상 'B' / 70이상 'C' / 
+ * 			60이상 'D' / 나머지는 'F'
+ * 재수강 = 평균 60이상이면 'pass' / 60미만이면 'nopass' 
+ */
+public class GradeProgramming {
+	public static void main(String[] args) {
+		String[] name = new String[3];
+		String[] pass = new String[3];
+		int[][] score = { { 90, 75, 61 }, { 55, 56, 46 }, { 90, 90, 90 } };
+		int[] total = new int[3];
+		double[] avg = new double[3];
+		char[] grade = new char[3];
+		int[] rank = new int[3];
+
+		// 총점
+		for (int i = 0; i < score.length; i++) {
+			for (int j = 0; j < score[i].length; j++) {
+				total[i] += score[i][j];
+			}
+		}
+
+		// 평균
+		for (int i = 0; i < avg.length; i++) {
+			avg[i] = (double) total[i] / score[i].length;
+		}
+
+		// 학점
+		for (int i = 0; i < avg.length; i++) {
+			if (avg[i] >= 90) {
+				grade[i] = 'A';
+			} else if (avg[i] >= 80) {
+				grade[i] = 'B';
+			} else if (avg[i] >= 70) {
+				grade[i] = 'C';
+			} else if (avg[i] >= 60) {
+				grade[i] = 'D';
+			} else {
+				grade[i] = 'F';
+			}
+		}
+
+		// 재수강
+		for (int i = 0; i < avg.length; i++) {
+			if (avg[i] >= 60) {
+				pass[i] = "pass";
+			} else {
+				pass[i] = "nopass";
+			}
+		}
+		/*
+		// 순위(정렬 알고리즘)
+		double[] rankProcess = new double[avg.length];
+		double temp;
+		System.arraycopy(avg, 0, rankProcess, 0, avg.length);
+
+		for (int a = 0; a < avg.length - 1; a++) {
+			for (int i = 0; i < avg.length - 1; i++) {
+				if (rankProcess[i] < rankProcess[i + 1]) {
+					temp = rankProcess[i];
+					rankProcess[i] = rankProcess[i + 1];
+					rankProcess[i + 1] = temp;
+				}
+			}
+		}
+
+		for (int i = 0; i < avg.length; i++) {
+			for (int j = 0; j < avg.length; j++) {
+				if (rankProcess[i] == avg[j]) {
+					rank[j] = i + 1;
+				}
+			}
+			System.out.println(rankProcess[i]);
+		}
+		*/
+		
+		// 모두 비교해서 큰 개수만큼 rank의 자리를 밀기.
+		for(int i = 0; i < avg.length; i++) {
+			for(int j = 0 ; j < avg.length; j++) {
+				rank[i] +=1;
+				if(avg[i] < avg[j]) {
+					++rank[i];
+				}
+			}
+		}
+
+		System.out.println("================================================================================");
+		System.out.println("번호\t이름\t국어\t영어\t수학\t총점\t평균\t학점\t재수강\t순위");
+		System.out.println("================================================================================");
+		for (int i = 0; i < name.length; i++) {
+			System.out.printf("%d\t%s\t ", i + 1, name[i]);
+			for (int j = 0; j < score[i].length; j++) {
+				System.out.printf("%d\t", score[i][j]);
+			}
+			System.out.printf("%d\t%.2f\t%s\t%s\t%d\t\n", total[i], avg[i], grade[i], pass[i], rank[i]);
+		}
+	}
+}

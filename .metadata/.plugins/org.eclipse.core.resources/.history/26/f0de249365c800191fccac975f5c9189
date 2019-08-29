@@ -1,0 +1,8 @@
+package exam_printpage;
+
+public class animal {
+	public static void main(String[] args) {
+		cat ³É = new cat();
+		dog ¸Û = new dog();
+	}
+}

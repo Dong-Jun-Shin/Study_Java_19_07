@@ -1,0 +1,15 @@
+package simplephoneinfo;
+
+public class PhoneBookVer03 {
+	public static void main(String[] args) {
+		PhoneInfo[] user = new PhoneInfo[100];
+		for (int i = 0; i < user.length; i++) {
+			user[i] = new PhoneInfo();
+		}
+		
+		while(true) {
+			PhoneInfo.showFrame();
+			
+		}
+	}
+}

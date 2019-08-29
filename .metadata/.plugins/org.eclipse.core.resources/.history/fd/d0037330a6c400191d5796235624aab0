@@ -1,0 +1,20 @@
+package exam_class;
+
+public class SmartPhoneTest {
+	public static void main(String[] args) {
+		//생성자 (매개변수 3개)
+		SmartPhone phone1 = new SmartPhone("삼성", "갤럭시노트9", 1094500);
+		//생성자 (매개변수 2개)
+		SmartPhone phone2 = new SmartPhone("애플", "아이폰XS", 1364000, 10);
+		
+		SmartPhone phone3 = new SmartPhone();
+		phone3.setMaker("삼성");
+		phone3.setNmae("갤럭시S8");
+		phone3.setPrice(935000);
+		phone3.setDiscountRate(35);
+		
+		phone1.show();
+		phone2.show();
+		phone3.show();
+	}
+}

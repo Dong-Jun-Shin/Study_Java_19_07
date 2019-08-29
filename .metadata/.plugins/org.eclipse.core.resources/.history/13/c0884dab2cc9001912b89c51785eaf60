@@ -1,0 +1,33 @@
+package exam_overriding;
+
+class EmployeeOverriding {
+	protected String name;
+	private int salary;
+
+	public EmployeeOverriding(String name, int salary) {
+		this.name= name;
+		this.salary = salary;
+	}
+
+	public String getDetails() {
+		return "Name : " + name + "\n" + "Salary : " + salary;
+	}
+
+	public void display() {
+		System.out.println("I'm is Employee");
+	}
+}
+
+class ManagerOverriding extends EmployeeOverriding{
+	private String department;
+	
+	public ManagerOverriding(String name, int salary, String department) {
+		super(name, salary);
+		this.department = department;
+	}
+}
+public class OverridingTest {
+	public static void main(String[] args) {
+
+	}
+}

@@ -1,0 +1,29 @@
+package simplephoneinfo;
+
+import java.util.Scanner;
+
+public class PhoneBookVer02 {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		PhoneInfo pInfo = new PhoneInfo();
+		int inputNum;
+
+		outer: while (true) {
+			pInfo.showFrame();
+			
+			//메뉴선택
+			inputNum = scan.nextInt();
+			scan.nextLine();
+
+			switch (inputNum) {
+			case 1:
+				pInfo.inputData(scan);
+				break;
+			case 2:
+				break outer;
+			default:
+				System.out.println("1과 2 중에 선택해주세요.");
+			}
+		}
+	}
+}
