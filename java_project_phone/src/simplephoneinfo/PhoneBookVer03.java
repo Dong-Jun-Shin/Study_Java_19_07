@@ -1,4 +1,4 @@
-﻿package simplephoneinfo;
+package simplephoneinfo;
 
 import java.util.Scanner;
 

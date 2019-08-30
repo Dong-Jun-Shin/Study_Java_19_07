@@ -1,4 +1,4 @@
-﻿package simplephoneinfo;
+package simplephoneinfo;
 
 import java.util.Scanner;
 
@@ -17,7 +17,7 @@ public class PhoneBookManager{
 		//생일을 받지 않을 경우를 정의
 		if (user.getBirthday().equals(""))
 			user.setBirthday(null);
-
+		
 		System.out.println("데이터의 입력이 완료되었습니다.");
 //		System.out.println("\n입력된 정보 출력...");
 //		user.showPhoneInfo();
