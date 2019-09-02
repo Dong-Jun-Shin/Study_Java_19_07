@@ -53,4 +53,6 @@
 <fullyQualifiedTypeName name="exam_interface.RemoteControl"/>
 <fullyQualifiedTypeName name="exam_interface.SmartTelevision"/>
 <fullyQualifiedTypeName name="exam_interface_borrow.SeparateVolume"/>
+<fullyQualifiedTypeName name="exam_interface_TV.SmartTelevision"/>
+<fullyQualifiedTypeName name="exam_polymorphism.ParentTest"/>
 </qualifiedTypeNameHistroy>

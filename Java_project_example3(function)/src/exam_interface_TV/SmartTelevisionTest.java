@@ -9,5 +9,14 @@ public class SmartTelevisionTest {
 		
 		st.setMute(true);
 		st.setMute(false);
+		
+//		--------------------------------------------------------
+		Searchable sc = new SmartTelevision();
+		sc.search(url);
+		
+		RemoteControl rc = new SmartTelevision();
+		rc.setMute(true);
+		rc.setMute(false);
+		
 	}
 }

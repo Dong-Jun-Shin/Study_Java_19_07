@@ -20,5 +20,17 @@ public class TelevisionTest {
 		System.out.println(tv.toString());
 		
 		tv.turnOff();
+		System.out.println("");
+		
+//		--------------------------------------------------------
+		RemoteControl rc = new Television();
+		rc.turnOn();
+		
+		rc = new Radio("표준FM (MHz)", 95.9);
+		rc.turnOn();
+		
+		rc = new SmartTelevision();
+		rc.turnOn();
+		
 	}
 }

@@ -4,6 +4,15 @@ public class Radio implements RemoteControl{
 	private double radioFrequency;
 	private int volume;
 	
+	public Radio() {
+		
+	}
+	
+	public Radio(String radio, double radioFrequency) {
+		this.radioFrequency = radioFrequency;
+		this.volume = 0;
+	}
+	
 	@Override
 	public void turnOn() {
 		System.out.println("라디오의 전원이 켜졌습니다.");
