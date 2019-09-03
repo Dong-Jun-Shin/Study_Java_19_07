@@ -1,4 +1,4 @@
-﻿package exam_overriding;
+package exam_overriding;
 
 class EmployeeOverriding {
 	protected String name;
@@ -36,6 +36,7 @@ class ManagerOverriding extends EmployeeOverriding{
 		System.out.println("I'm Manager");
 	}
 }
+
 public class OverridingTest {
 	public static void main(String[] args) {
 		EmployeeOverriding e = new EmployeeOverriding("김철수", 50);
