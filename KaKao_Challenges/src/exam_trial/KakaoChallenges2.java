@@ -1,4 +1,5 @@
-﻿import java.util.Scanner;
+﻿package exam_trial;
+import java.util.Scanner;
 
 public class KakaoChallenges2 {
     public static void main(String[] args) {

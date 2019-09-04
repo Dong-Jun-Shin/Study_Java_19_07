@@ -1,4 +1,4 @@
-﻿package exam_printpage;
+package exam_printpage;
 
 import java.util.Scanner;
 

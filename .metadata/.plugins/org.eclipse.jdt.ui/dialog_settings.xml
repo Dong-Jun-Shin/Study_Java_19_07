@@ -42,7 +42,7 @@
 		<item key="org.eclipse.jdt.internal.ui.typehierarchy.HierarchyInformationControlDIALOG_USE_PERSISTED_LOCATION" value="false"/>
 	</section>
 	<section name="SourceActionDialog.methods">
-		<item key="VisibilityModifier" value="4"/>
+		<item key="VisibilityModifier" value="1"/>
 		<item key="FinalModifier" value="true"/>
 		<item key="SynchronizedModifier" value="false"/>
 		<item key="Comments" value="false"/>
