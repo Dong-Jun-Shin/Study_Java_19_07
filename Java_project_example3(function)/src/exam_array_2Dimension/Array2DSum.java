@@ -1,6 +1,5 @@
 ﻿package exam_array_2Dimension;
 
-import tool.examArray2D;
 
 /*
  * 이차원 배열의 가로, 세로, 대각선의 합 구하여 출력하시오.

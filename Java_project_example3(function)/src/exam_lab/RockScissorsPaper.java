@@ -1,6 +1,5 @@
 ﻿package exam_lab;
 
-import tool.RockScissors;
 import java.util.Scanner;
 
 /*컴퓨터와 하는 가위바위보 만들기

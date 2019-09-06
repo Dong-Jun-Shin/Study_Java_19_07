@@ -1,4 +1,4 @@
-﻿package exam_character_string;
+package exam_character_string;
 
 public class CharacterStringExample {
 	public static void main(String[] args) {

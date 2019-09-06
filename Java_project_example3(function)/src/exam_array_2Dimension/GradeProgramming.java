@@ -1,5 +1,6 @@
 ﻿package exam_array_2Dimension;
-import tool.GradeProgram;
+
+
 /*
  * 성적 프로그램 만들기
  * - 학생명 : name / 점수 : score / 평균 : avg /
