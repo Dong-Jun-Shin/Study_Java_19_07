@@ -1,4 +1,4 @@
-package exam_CallCenter;
+package exam_callcenter;
 
 import java.util.Scanner;
 
