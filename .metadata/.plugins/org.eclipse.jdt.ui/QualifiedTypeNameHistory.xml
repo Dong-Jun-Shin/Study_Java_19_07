@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="exam_mutator_accessor.CarMutatorAccessorTest"/>
-<fullyQualifiedTypeName name="exam_mutator_accessor.BookShop"/>
-<fullyQualifiedTypeName name="exam_method.Calculator"/>
-<fullyQualifiedTypeName name="java.lang.Exception"/>
-<fullyQualifiedTypeName name="exam_method_overload.OverloadCalc"/>
-<fullyQualifiedTypeName name="exam_class_constructor.CarConstructor"/>
 <fullyQualifiedTypeName name="exam_class_constructor.Fruit"/>
 <fullyQualifiedTypeName name="simplephoneinfo.PhoneBookVer01"/>
 <fullyQualifiedTypeName name="exam_class.SmartPhone"/>
@@ -31,7 +25,6 @@
 <fullyQualifiedTypeName name="exam_overriding.EmployeeOverriding"/>
 <fullyQualifiedTypeName name="exam_overriding.ManagerOverriding"/>
 <fullyQualifiedTypeName name="exam_class.Magazine"/>
-<fullyQualifiedTypeName name="java.lang.Character"/>
 <fullyQualifiedTypeName name="java.rmi.Remote"/>
 <fullyQualifiedTypeName name="exam_interface.Television"/>
 <fullyQualifiedTypeName name="exam_interface.RemoteControl"/>
@@ -56,8 +49,15 @@
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
 <fullyQualifiedTypeName name="java.time.LocalDate"/>
-<fullyQualifiedTypeName name="java.util.Calendar"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.util.StringTokenizer"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Member"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="exam_api_date.DateExample"/>
+<fullyQualifiedTypeName name="javax.xml.crypto.Data"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="java.util.Calendar"/>
+<fullyQualifiedTypeName name="java.text.DecimalFormat"/>
+<fullyQualifiedTypeName name="java.lang.Character"/>
 </qualifiedTypeNameHistroy>
