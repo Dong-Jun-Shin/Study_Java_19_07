@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class ByteToStringExample {
 	public static void main(String[] args) {
 		//getBytes(), 문자열을 바이트배열로 리턴받는다. (String)"a" -> (byte)97
-		String s = "ABCD";
+		String s = "가나다라";
 		byte[] a = s.getBytes();
 		for (int i = 0; i < a.length; i++) {
 			System.out.println(a[i]);

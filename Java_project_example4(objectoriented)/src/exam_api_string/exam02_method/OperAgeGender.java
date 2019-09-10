@@ -6,15 +6,23 @@ package exam_api_string.exam02_method;
  */
 
 import java.time.LocalDateTime;
+//import java.util.Calendar;
 
 class Oper {
 	private static LocalDateTime now = LocalDateTime.now();
-
+	
+	//현재 날짜 & 시간을 가져 오는 클래스
+	//Calendar now = Calendar.getInstance();
+	//year = now.get(Calendar.YEAR);
+	//year = now.get(Calendar.MONTH)+1;
+	//year = now.get(Calendar.DAY_OF_MONTH);
+	
+	
 	public static String getGender(String ssn) {
 		String judge = ssn.substring(9, 10);
 		String gender = "구분 불가";
 
-		//성별 구분 (1900년대와 2000년대의 경우 구분
+		//성별 구분 (1900년대와 2000년대의 경우 구분)
 		if (judge.equals("1") || judge.equals("3")) {
 			gender = "남";
 		} else if (judge.equals("2") || judge.equals("4")) {
@@ -24,20 +32,6 @@ class Oper {
 		return gender;
 	}
 
-	public static String filterAge(String ssn) {
-		String s = "";
-		int n = getAge(ssn);
-		
-		// 입력이 잘못 되었을때
-		if(n == 0) {
-			s = "입력 오류";
-		}else{
-			s = String.valueOf(n);
-		}
-		
-		return s;
-	}
-	
 	private static int getAge(String ssn) {
 		String judge = ssn.substring(9, 10);
 		int year = 0;
@@ -57,19 +51,33 @@ class Oper {
 		return age;
 	}
 
+	public static String filterAge(String ssn) {
+		String s = "";
+		int n = getAge(ssn);
+		
+		// 입력이 잘못 되었을때
+		if(n == 0) {
+			s = "입력 오류";
+		}else{
+			s = String.valueOf(n);
+		}
+		
+		return s;
+	}
+	
 	public static String getTrueAge(String ssn) {
 		//나이 구하기 (기본 만 나이(-1))
 		int age = getAge(ssn) - 1;
 		String sYear = "";
-
+		
 		//월 구하기
 		int month = now.getMonthValue();
 		int mAge = Integer.parseInt(ssn.substring(2, 4));
-
+		
 		//일 구하기
 		int day = now.getDayOfMonth();
 		int dAge = Integer.parseInt(ssn.substring(4, 6));
-
+		
 		//나이가 잘못 입력되지 않고, 생일이 안 지났으면(-1)
 		if (age != -1) {
 			if (mAge > month) {
@@ -84,6 +92,7 @@ class Oper {
 		
 		return sYear;
 	}
+
 }
 
 public class OperAgeGender {
@@ -92,6 +101,5 @@ public class OperAgeGender {
 
 		System.out.printf("나이(만): %s(%s)\n", Oper.filterAge(ssn), Oper.getTrueAge(ssn));
 		System.out.println("성별 : " + Oper.getGender(ssn));
-
 	}
 }

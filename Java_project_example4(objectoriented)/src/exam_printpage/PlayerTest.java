@@ -1,4 +1,4 @@
-package exam_pritpage;
+package exam_printpage;
 
 class Player {
 	private PlayerLevel level;

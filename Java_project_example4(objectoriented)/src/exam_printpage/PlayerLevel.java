@@ -1,4 +1,4 @@
-package exam_pritpage;
+package exam_printpage;
 
 public abstract class PlayerLevel{
 	public abstract void run();
