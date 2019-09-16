@@ -1,4 +1,4 @@
-﻿package exam_array;
+package exam_array;
 
 public class ArrayTest0 {
 	public static void main(String[] args) {

@@ -23,7 +23,7 @@ public class QueryString {
 		str = str.replace("=", "\t");
 		StringTokenizer strTk = new StringTokenizer(str, "&");
 		
-		int i = 0;
+		
 		while(strTk.hasMoreTokens()) {
 			String strTemp = strTk.nextToken();
 			System.out.println(strTemp);

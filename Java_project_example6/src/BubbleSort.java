@@ -1,4 +1,4 @@
-﻿public class BubbleSort {
+public class BubbleSort {
 	public static void main(String[] args) {
 		// Bubble Sort
 		// 앞과 뒤를 비교해서 자리바꾸며 끝까지 진행을 반복

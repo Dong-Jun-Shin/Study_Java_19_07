@@ -1,4 +1,4 @@
-﻿public class UndefinedSort {
+public class UndefinedSort {
 	public static void main(String[] args) {
 		// 가장 뒤의 값과 비교해서 점점 앞으로 와서 정렬
 		// 25번 반복 (정렬이 끝난 수에 대한 검사를 줄임.)
@@ -24,4 +24,3 @@
 		
 	}
 }
-
