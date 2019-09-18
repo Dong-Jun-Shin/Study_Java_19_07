@@ -2,7 +2,7 @@ package simplephoneinfo;
 
 import java.util.Scanner;
 
-public class PhoneBookManager{
+public class PhoneBookManager3{
 	private static int arrLeng = 1;
 	
 	public static void insertData(Scanner scan, PhoneInfo user) {

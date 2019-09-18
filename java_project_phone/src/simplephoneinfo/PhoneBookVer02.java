@@ -36,7 +36,7 @@ public class PhoneBookVer02 {
 
 			switch (inputNum) {
 			case 1:
-				PhoneBookManager.insertData(scan, pInfo);
+			PhoneBookManager3.insertData(scan, pInfo);
 //				readData();
 				break;
 			case 2:

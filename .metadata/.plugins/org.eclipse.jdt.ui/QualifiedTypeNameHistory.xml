@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.lang.Process"/>
-<fullyQualifiedTypeName name="exam_ingeritance.Professor"/>
 <fullyQualifiedTypeName name="exam_ingeritance.Student"/>
 <fullyQualifiedTypeName name="exam_class_extends.SportsCar"/>
 <fullyQualifiedTypeName name="exam_class_extends.CompanyMan"/>
@@ -22,7 +20,6 @@
 <fullyQualifiedTypeName name="exam_abstract_class.AICar"/>
 <fullyQualifiedTypeName name="phoneinfoproject.PhoneInfo"/>
 <fullyQualifiedTypeName name="phoneinfoproject.PhoneUnivInfo"/>
-<fullyQualifiedTypeName name="phoneinfoproject.PhoneBookManager"/>
 <fullyQualifiedTypeName name="exam_inner_class.A.B"/>
 <fullyQualifiedTypeName name="exam_inner_class.OverMemberO.OverMemberI"/>
 <fullyQualifiedTypeName name="exam_inner_class.StaticMemberO"/>
@@ -49,8 +46,6 @@
 <fullyQualifiedTypeName name="java.lang.NegativeArraySizeException"/>
 <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
 <fullyQualifiedTypeName name="java.lang.ClassCastException"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
-<fullyQualifiedTypeName name="java.util.InputMismatchException"/>
 <fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
 <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
 <fullyQualifiedTypeName name="java.io.File"/>
@@ -60,4 +55,9 @@
 <fullyQualifiedTypeName name="java.lang.Byte"/>
 <fullyQualifiedTypeName name="exam_user_define_exception.DivideByZeroException"/>
 <fullyQualifiedTypeName name="exam_user_define_exception.NegativeBalanceException"/>
+<fullyQualifiedTypeName name="exam_user_define_exception.NegativeNumberException"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.util.InputMismatchException"/>
+<fullyQualifiedTypeName name="exam_try_with_resources.FileInputStream"/>
+<fullyQualifiedTypeName name="phoneinfoproject.PhoneBookManager"/>
 </qualifiedTypeNameHistroy>

@@ -3,12 +3,15 @@ package phoneinfoproject;
 import simplephoneinfo.MenuViewer;
 import java.util.Scanner;
 
-public class PhoneBookVer04 implements PhoneBookFrame{
+public class PhoneBookVer05{
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		PhoneInfo[] pBook = new PhoneInfo[100];
 		String selName;
 		int selNum;
+		
+		//싱글톤
+		PhoneBookManager3 manage = PhoneBookManager3.getInstance();
 
 		while (true) {
 			//메뉴선택
@@ -23,8 +26,8 @@ public class PhoneBookVer04 implements PhoneBookFrame{
 				selNum = scan.nextInt();
 				scan.nextLine();
 
-				int cnt = PhoneBookManager2.getArrLeng();
-				pBook[cnt] = PhoneBookManager2.insertData(selNum, scan, pBook[cnt]);
+				int cnt = manage.getArrLeng();
+				pBook[cnt] = manage.insertData(selNum, scan, pBook[cnt]);
 
 				break;
 			case PhoneBookFrame.SELECT_DATA:
@@ -32,7 +35,7 @@ public class PhoneBookVer04 implements PhoneBookFrame{
 				MenuViewer.showSelectFrame();
 				selName = scan.nextLine();
 
-				PhoneBookManager2.selectData(pBook, selName);
+				manage.selectData(pBook, selName);
 
 				break;
 			case PhoneBookFrame.DELETE_DATA:
@@ -40,14 +43,14 @@ public class PhoneBookVer04 implements PhoneBookFrame{
 				MenuViewer.showDeleteFrame();
 				selName = scan.nextLine();
 
-				pBook = PhoneBookManager2.deleteData(pBook, selName);
+				pBook = manage.deleteData(pBook, selName);
 
 				break;
 			case PhoneBookFrame.VIEW_LIST:
 				//전체 조회
 				System.out.println("-----------------------------------------");
 				System.out.println("이름\t번호\t전공\t학년\t회사");
-				PhoneBookManager2.viewList(pBook);
+				manage.viewList(pBook);
 				System.out.println("-----------------------------------------");
 				break;
 			case 5:

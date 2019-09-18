@@ -2,24 +2,31 @@ package phoneinfoproject;
 
 import java.util.Scanner;
 
-public class PhoneBookManager {
+public class PhoneBookManager2 implements PhoneInsertFrame{
 	private static int arrLeng = 0;
 
+	private PhoneBookManager2() {
+	}
+	
+	public static final PhoneBookManager2 getInstance() {
+		return new PhoneBookManager2();
+	}
+	
 	public static final int getArrLeng() {
 		return arrLeng;
 	}
 
 	public static PhoneInfo insertData(int selNum, Scanner scan, PhoneInfo pBook) {
 		switch (selNum) {
-		case 1:
-			pBook = PhoneBookManager.dftInsData(scan);
+		case PhoneInsertFrame.DEFAULT_DATA:
+			pBook = PhoneBookManager2.dftInsData(scan);
 //			pBook = PhoneBookManager.dftInsData(scan, pBook);
 			break;
-		case 2:
-			pBook = PhoneBookManager.univInsData(scan, pBook);
+		case PhoneInsertFrame.UNIVERSITY_DATA:
+			pBook = PhoneBookManager2.univInsData(scan, pBook);
 			break;
-		case 3:
-			pBook = PhoneBookManager.compInsData(scan, pBook);
+		case PhoneInsertFrame.COMPANY_DATA:
+			pBook = PhoneBookManager2.compInsData(scan, pBook);
 			break;
 		}
 		

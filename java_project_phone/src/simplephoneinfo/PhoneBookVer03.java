@@ -21,17 +21,17 @@ public class PhoneBookVer03 {
 			
 			switch(selNum) {
 			case 1:
-				PhoneBookManager.insertData(scan, user[cnt++]);
+				PhoneBookManager3.insertData(scan, user[cnt++]);
 				break;
 			case 2:
 				System.out.print("데이터 검색을 시작합니다.\n이름 : ");
 				selName = scan.nextLine();
-				PhoneBookManager.selectData(user, selName);
+				PhoneBookManager3.selectData(user, selName);
 				break;
 			case 3:
 				System.out.print("데이터 삭제를 시작합니다.\n이름 : ");
 				selName = scan.nextLine();
-				PhoneBookManager.deleteData(user, selName);
+				PhoneBookManager3.deleteData(user, selName);
 				break;
 			case 4:
 				System.out.println("프로그램 종료");
