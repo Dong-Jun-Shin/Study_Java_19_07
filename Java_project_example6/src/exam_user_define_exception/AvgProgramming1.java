@@ -25,8 +25,6 @@ public class AvgProgramming1 {
 		}catch(Exception et) {
 			System.out.println("예외 발생.");
 		}
-		
-		
 	}
 	
 	public static int sum() throws NegativeNumberException2{

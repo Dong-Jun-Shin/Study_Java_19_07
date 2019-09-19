@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="exam_ingeritance.Student"/>
-<fullyQualifiedTypeName name="exam_class_extends.SportsCar"/>
-<fullyQualifiedTypeName name="exam_class_extends.CompanyMan"/>
-<fullyQualifiedTypeName name="exam_class_extends.Manager"/>
-<fullyQualifiedTypeName name="simplephoneinfo.PhoneInfo"/>
 <fullyQualifiedTypeName name="simplephoneinfo.PhoneBookManager"/>
 <fullyQualifiedTypeName name="exam_overriding.EmployeeOverriding"/>
 <fullyQualifiedTypeName name="exam_overriding.ManagerOverriding"/>
@@ -60,4 +55,9 @@
 <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
 <fullyQualifiedTypeName name="exam_try_with_resources.FileInputStream"/>
 <fullyQualifiedTypeName name="phoneinfoproject.PhoneBookManager"/>
+<fullyQualifiedTypeName name="exam_none_generic_type.Box"/>
+<fullyQualifiedTypeName name="javax.swing.Box"/>
+<fullyQualifiedTypeName name="java.applet.Applet"/>
+<fullyQualifiedTypeName name="exam_none_generic_type.AppleTest"/>
+<fullyQualifiedTypeName name="exam_none_generic_type.Apple"/>
 </qualifiedTypeNameHistroy>
