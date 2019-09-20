@@ -18,6 +18,6 @@ public class ProductExample {
 		product3.setKind(new SmartPhone("애플", "IOS"));
 		product3.setModel("아이폰 6S");
 		System.out.print(product3.toString() + " " + product3.getKind().toString());
-//		
+
 	}
 }

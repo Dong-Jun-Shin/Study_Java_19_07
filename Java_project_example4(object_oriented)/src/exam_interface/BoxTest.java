@@ -10,37 +10,47 @@ interface Comparable{
 
 //자바에서 기본으로 제공하는 인터페이스 Comparable
 
-@SuppressWarnings("rawtypes")
-class Box implements Comparable{
+class Box implements Comparable<Box> {
 	private double volume;
-	
+
 	public Box(double volume) {
 		this.volume = volume;
 	}
-	
+
 	@Override
-	//매개변수를 받으면서   Object(=Box) -> (Box)Object = Box
-    //                   업캐스팅			다운캐스팅
-	public int compareTo(Object obj) {
-		Box other = (Box) obj;
-		if(this.volume < other.volume)
+	public int compareTo(Box other) {
+	//	//불필요한 형변환을 안해도 된다.
+	//	Box other = (Box) obj;
+		if (this.volume < other.volume)
 			return -1;
-		else if(this.volume > other.volume) 
+		else if (this.volume > other.volume)
 			return 1;
-		else return 0;
+		return 0;
 	}
+
+	//	@Override
+	//	//매개변수를 받으면서   Object(=Box) -> (Box)Object = Box
+	//    //                   업캐스팅			다운캐스팅
+	//	public int compareTo(Object obj) {
+	//		//불필요한 형변환을 안해도 된다.
+	//		Box other = (Box) obj;
+	//		if(this.volume < other.volume)
+	//			return -1;
+	//		else if(this.volume > other.volume) 
+	//			return 1;
+	//		else return 0;
+	//	}
+
 }
 
 public class BoxTest {
 	public static void main(String[] args) {
 		Box b1 = new Box(100.4);
 		Box b2 = new Box(85.0);
-		
-		if(b1.compareTo(b2) > 0)
+
+		if (b1.compareTo(b2) > 0)
 			System.out.println("b1이 b2보다 더 크다");
 		else
 			System.out.println("b1이 b2와 같거나 작다");
 	}
 }
-
-

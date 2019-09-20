@@ -46,6 +46,7 @@ public class BoxTest {
 		double data = box4.get();
 		System.out.println(data);
 		
+		@SuppressWarnings("unused")
 		Box<String> box5 = new Box<String>();
 //		box5.set(new Integer(5));
 	}
