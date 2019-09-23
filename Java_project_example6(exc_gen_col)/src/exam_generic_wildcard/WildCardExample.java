@@ -112,14 +112,14 @@ public class WildCardExample {
 		registerCourse(highstudentCourse);
 		System.out.println();
 		
-		//<? super 하위 클래스(Worker)> 자신과 하위만 올 수 있다.
+		//<? extends 상위 클래스(Student)> 자신과 하위만 올 수 있다. (상위 제한)
 //		registerCourseStudent(personCourse);
 //		registerCourseStudent(workerCourse);
 		registerCourseStudent(studentCourse);		//자신
 		registerCourseStudent(highstudentCourse);	//하위
 		System.out.println();
 		
-		//<? extends 상위 클래스(Student)> 자신과 상위만 올 수 있다.
+		//<? super 하위 클래스(Worker)> 자신과 상위만 올 수 있다. (하위 제한)
 		registerCourseWorker(personCourse);		//상위
 		registerCourseWorker(workerCourse);		//자신
 //		registerCourseWorker(studentCourse);
