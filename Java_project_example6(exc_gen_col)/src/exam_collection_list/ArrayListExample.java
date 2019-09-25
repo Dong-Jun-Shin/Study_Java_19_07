@@ -26,19 +26,38 @@ import java.util.Scanner;
 public class ArrayListExample {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		ArrayList<Double> list = new ArrayList<Double>();
+		ArrayList<Double> list = new ArrayList<Double>(); //wrapper
 		double dnum = 0.0; 
 
 		for (int i = 0; i < 10; i++) {
-			System.out.print("심사위원의 점수를 입력해주세요.");
-			list.add(scan.nextDouble());			
+			System.out.print("(" + (i+1) + "번째)심사위원의 점수: ");
+			double dTemp = scan.nextDouble();
+			if(dTemp <= 0 || dTemp > 10) {
+				i--;
+				continue;
+			}
+//			list.add(new Double(dTemp));
+			list.add(dTemp);			
 		}
 
-		for (Double double1 : list) {
-			dnum += double1.doubleValue();
+		//1번째 방법(if로 필터해서 더하기)
+		for (int i = 0; i < 10; i++) {
+			if(list.get(i) != Collections.max(list) && list.get(i) != Collections.min(list)) {
+			dnum += list.get(i);
+			}
 		}
 		
-		dnum = dnum - Collections.max(list) - Collections.min(list);
+		//2번째 방법(for)(다 더하고 빼기)
+//		for (int i = 0; i < list.size(); i++) {
+//			dnum += list.get(i);
+//		}
+//		dnum = dnum - Collections.max(list) - Collections.min(list);
+
+		//3번째 방법(for~each)(다 더하고 빼기)
+//		for (Double double1 : list) {
+//			dnum += double1.doubleValue();
+//		}
+//		dnum = dnum - Collections.max(list) - Collections.min(list);
 		
 		System.out.println("-------------------------------");
 		System.out.println("총합 : " + dnum);

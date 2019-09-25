@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="exam_interface.SmartTelevision"/>
-<fullyQualifiedTypeName name="exam_interface_borrow.SeparateVolume"/>
-<fullyQualifiedTypeName name="exam_interface_TV.SmartTelevision"/>
-<fullyQualifiedTypeName name="exam_polymorphism.ParentTest"/>
-<fullyQualifiedTypeName name="exam_abstract_class.ManualCar"/>
-<fullyQualifiedTypeName name="exam_abstract_class.AICar"/>
-<fullyQualifiedTypeName name="phoneinfoproject.PhoneInfo"/>
-<fullyQualifiedTypeName name="phoneinfoproject.PhoneUnivInfo"/>
-<fullyQualifiedTypeName name="exam_inner_class.A.B"/>
 <fullyQualifiedTypeName name="exam_inner_class.OverMemberO.OverMemberI"/>
 <fullyQualifiedTypeName name="exam_inner_class.StaticMemberO"/>
 <fullyQualifiedTypeName name="exam_inner_class.StaticMemberO.StaticMemberSI"/>
@@ -19,7 +10,6 @@
 <fullyQualifiedTypeName name="exam_inner_interface.Button.OnClickListener"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
-<fullyQualifiedTypeName name="java.lang.reflect.Member"/>
 <fullyQualifiedTypeName name="exam_api_date.DateExample"/>
 <fullyQualifiedTypeName name="javax.xml.crypto.Data"/>
 <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
@@ -58,6 +48,16 @@
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
-<fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="java.util.Vector"/>
+<fullyQualifiedTypeName name="java.util.LinkedHashSet"/>
+<fullyQualifiedTypeName name="java.util.TreeSet"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.security.Key"/>
+<fullyQualifiedTypeName name="exam_api_object.exam02_hashcode.Key"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Member"/>
+<fullyQualifiedTypeName name="exam_api_object.exam02_hashcode.Member"/>
+<fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
 </qualifiedTypeNameHistroy>
