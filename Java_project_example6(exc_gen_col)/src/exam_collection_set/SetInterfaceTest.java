@@ -5,6 +5,7 @@ import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.TreeSet;
 
+@SuppressWarnings("unused")
 public class SetInterfaceTest {
 	public static void main(String[] args) {
 		HashSet<String> set = new HashSet<String>();

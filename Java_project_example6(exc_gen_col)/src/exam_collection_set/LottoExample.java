@@ -1,7 +1,9 @@
 package exam_collection_set;
 
-import java.util.HashSet;
 import java.util.Set;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.TreeSet;
 
 /*
  * 로또 번호를 생성하는 프로그램을 작성하여 보자.
@@ -13,9 +15,12 @@ import java.util.Set;
  * [출력결과]
  * Lotto 번호 [17, 18, 5, 23, 25, 43]
  */
+@SuppressWarnings("unused")
 public class LottoExample {
 	public static void main(String[] args) {
-		Set<Integer> num = new HashSet<Integer>();
+		Set<Integer> num = new HashSet<Integer>(); //비정렬, 비순차
+//		Set<Integer> num = new LinkedHashSet<Integer>(); //비정렬, 순차
+//		Set<Integer> num = new TreeSet<Integer>(); //정렬, 순차
 
 		for (int i = 0; i < 6; i++) {
 			int lnum = (int)(Math.random()*45 + 1);
@@ -25,7 +30,9 @@ public class LottoExample {
 			}
 			num.add(lnum);
 		}
-		
-		
+				
+		for (Integer integer : num) {
+			System.out.print(integer + "\t");
+		}
 	}
 }
