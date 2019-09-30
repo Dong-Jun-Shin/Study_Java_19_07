@@ -31,5 +31,3 @@ public class Time {
 		return String.format("%02d:%02d:%02d", hour, minute, second);
 	}
 }
-
-// CU 5000원 할인 / 509129 2445 9799 / 8.30 / 나라사랑 6000이상
