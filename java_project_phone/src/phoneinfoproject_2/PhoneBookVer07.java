@@ -7,7 +7,7 @@ import java.util.Set;
 import simplephoneinfo_1.MenuViewer;
 
 public class PhoneBookVer07{
-	public static void main(String[] args) {
+	public static void main(String[] args) throws MenuChoiceException {
 		Scanner scan = new Scanner(System.in);
 		Set<PhoneInfo> pBook = new HashSet<PhoneInfo>();
 		String selName;
@@ -46,7 +46,7 @@ public class PhoneBookVer07{
 				MenuViewer.showDeleteFrame();
 				selName = scan.nextLine();
 
-				pBook = manage.deleteData(pBook, selName);
+				manage.deleteData(pBook, selName);
 
 				break;
 			case MENU_SELECT.VIEW_LIST:

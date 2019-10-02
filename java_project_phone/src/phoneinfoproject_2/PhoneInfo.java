@@ -105,4 +105,23 @@ public class PhoneInfo {
 			System.out.println("company:" + ((PhoneCompanyInfo)pBook).getCompany());
 		}
 	}
+	
+	@Override
+	public int hashCode() {
+		//String타입의 name으로 중복되지 않게 기준 설정
+		return name.hashCode();
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		//hashCode를 토대로 이름이 같은지 비교한다.
+		if(obj instanceof PhoneInfo) {
+			PhoneInfo cmp = (PhoneInfo)obj;
+			//String에 정의된 compareTo로, 같으면 0을 반환
+			if(name.compareTo(cmp.name)==0) {
+				return true;
+			}
+		}
+		return false;
+	}
 }
