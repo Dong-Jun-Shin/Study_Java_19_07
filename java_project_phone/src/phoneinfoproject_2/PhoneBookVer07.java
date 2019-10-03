@@ -28,8 +28,7 @@ public class PhoneBookVer07{
 				MenuViewer.showInsertFrame();
 				selNum = scan.nextInt();
 				scan.nextLine();
-
-				int cnt = manage.getArrLeng();
+				
 				manage.insertData(selNum, scan, pBook);
 
 				break;

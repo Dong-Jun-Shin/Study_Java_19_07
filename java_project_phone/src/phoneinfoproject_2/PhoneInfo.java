@@ -104,6 +104,7 @@ public class PhoneInfo {
 		if(pBook instanceof PhoneCompanyInfo) {
 			System.out.println("company:" + ((PhoneCompanyInfo)pBook).getCompany());
 		}
+		System.out.println();
 	}
 	
 	@Override

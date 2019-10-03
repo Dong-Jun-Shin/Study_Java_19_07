@@ -7,7 +7,6 @@ import java.util.Set;
 import phoneinfoproject_2.PhoneBookManager7;
 
 public class PhoneBookManager7 {
-	private static int arrLeng = 0;
 	static final int MAX_CNT = 100;
 
 	// 선언o, 초기화x
@@ -31,10 +30,6 @@ public class PhoneBookManager7 {
 		infoStorage = new PhoneInfo[MAX_CNT];
 	}
 
-	public final int getArrLeng() {
-		return arrLeng;
-	}
-
 	public void insertData(int selNum, Scanner scan, Set<PhoneInfo> pBook) throws MenuChoiceException {
 		if (selNum < INPUT_SELECT.DEFAULT_DATA || selNum > INPUT_SELECT.COMPANY_DATA) {
 			throw new MenuChoiceException(selNum);
@@ -42,20 +37,27 @@ public class PhoneBookManager7 {
 
 		switch (selNum) {
 		case INPUT_SELECT.DEFAULT_DATA:
-			pBook.add(PhoneBookManager7.dftInsData(scan));
+			if (!pBook.add(PhoneBookManager7.dftInsData(scan))) {
+				System.out.println("전화번호부에 같은 이름이 존재합니다.\n");
+				return;
+			}
 //			pBook = PhoneBookManager.dftInsData(scan, pBook);
 			break;
 		case INPUT_SELECT.UNIVERSITY_DATA:
-			pBook.add(PhoneBookManager7.univInsData(scan));
+			if (!pBook.add(PhoneBookManager7.univInsData(scan))) {
+				System.out.println("전화번호부에 같은 이름이 존재합니다.\n");
+				return;
+			}
 			break;
 		case INPUT_SELECT.COMPANY_DATA:
-			pBook.add(PhoneBookManager7.compInsData(scan));
+			if (!pBook.add(PhoneBookManager7.compInsData(scan))) {
+				System.out.println("전화번호부에 같은 이름이 존재합니다.\n");
+				return;
+			}
 			break;
 		}
 
-		arrLeng++;
-
-		System.out.println("데이터의 입력이 완료되었습니다.");
+		System.out.println("데이터의 입력이 완료되었습니다.\n");
 		System.out.println();
 	}
 
@@ -82,7 +84,7 @@ public class PhoneBookManager7 {
 		System.out.print("학년 : ");
 		int year = scan.nextInt();
 
-		return new PhoneUnivInfo(name, pNum, major, year);
+		return (PhoneInfo) new PhoneUnivInfo(name, pNum, major, year);
 	}
 
 	public static PhoneInfo compInsData(Scanner scan) {
@@ -95,7 +97,7 @@ public class PhoneBookManager7 {
 		System.out.print("회사 : ");
 		String company = scan.nextLine();
 
-		return new PhoneCompanyInfo(name, pNum, company);
+		return (PhoneInfo) new PhoneCompanyInfo(name, pNum, company);
 	}
 
 	public void selectData(Set<PhoneInfo> pBook, String selName) {
@@ -107,8 +109,6 @@ public class PhoneBookManager7 {
 				PhoneInfo.showPhoneInfo(pi);
 				return;
 			}
-
-			break;
 		}
 
 //		for (int i = 0; i < pBook.size(); i++) {
@@ -121,33 +121,32 @@ public class PhoneBookManager7 {
 //				return;
 //			}
 //		}
-		System.out.println("일치하는 데이터가 없습니다.");
+		System.out.println("일치하는 데이터가 없습니다.\n");
 	}
 
 	public void deleteData(Set<PhoneInfo> pBook, String selName) {
-		//TODO - selName과 비교 알고리즘 확인하고 쓰기
-		if (pBook.contains(selName)) {
-			pBook.remove(selName);
-			System.out.println("데이터를 삭제했습니다.");
-		} else {
-			System.out.println("일치하는 데이터가 없습니다.");
+		Iterator<PhoneInfo> it = pBook.iterator();
+		while (it.hasNext()) {
+			PhoneInfo pi = it.next();
+			if (pi.getName().equals(selName)) {
+				pBook.remove(pi);
+				System.out.println("데이터를 삭제했습니다.\n");
+				return;
+			}
 		}
-
-//		Iterator<PhoneInfo> it = pBook.iterator();
-//		while(it.hasNext()) {
-//			PhoneInfo pi = it.next();
-//			if(pi.getName().equals(selName)) {
-//				pBook.remove(it);
-//			}
-//			
-//			break;
-//		}		
+		System.out.println("일치하는 데이터가 없습니다.\n");
 	}
 
 	public void viewList(Set<PhoneInfo> pBook) {
-		//TODO - 리스트 보여주기
+		Iterator<PhoneInfo> it = pBook.iterator();
+		while (it.hasNext()) {
+			viewElement(it.next());
+		}
+
+		// foreach
+//		PhoneInfo pi = it.next();
 	}
-	
+
 	public void viewElement(PhoneInfo pBook) {
 		if (pBook != null) {
 			System.out.printf("%s\t", pBook.getName());
@@ -161,20 +160,5 @@ public class PhoneBookManager7 {
 			}
 			System.out.println();
 		}
-	}
-
-	public PhoneInfo[] sortArr(PhoneInfo[] pBook) {
-		// 배열정리를 위한 임시 공간 선언 및 생성
-		PhoneInfo[] temp = new PhoneInfo[100];
-
-		// 카운트해둔 생성된 목록만큼 검색
-		for (int i = 0, k = 0; i < arrLeng + 1; i++) {
-			// 삭제된 곳을 만나면 증가해서 사용
-			if (pBook[k] == null) {
-				k++;
-			}
-			temp[i] = pBook[k++];
-		}
-		return temp;
 	}
 }
