@@ -7,7 +7,10 @@ import java.io.Serializable;
 
 //NotSerializableException : Serializable 구현하지 않을 시, 오류
 public class Person implements Serializable{
-	private static final long serialVersionUID = 1L;
+	/*
+	 * UID는 직렬화를 할 시에 같은 클래스인가 구분하는 기준이 된다.
+	 */
+	private static final long serialVersionUID = -8053310089278169646L;
 	
 	private String name;
 	private int age;

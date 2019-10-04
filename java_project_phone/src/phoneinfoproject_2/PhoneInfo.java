@@ -1,5 +1,7 @@
 ﻿package phoneinfoproject_2;
 
+import java.io.Serializable;
+
 class PhoneUnivInfo extends PhoneInfo{
 	private String major;
 	private int year;
@@ -63,7 +65,9 @@ class PhoneCompanyInfo extends PhoneInfo{
 
 
 
-public class PhoneInfo {
+public class PhoneInfo implements Serializable{
+	private static final long serialVersionUID = 2781738383141296420L;
+	
 	private String name;
 	private String phoneNumber;
 
