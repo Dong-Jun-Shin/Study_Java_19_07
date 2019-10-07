@@ -76,10 +76,6 @@ public class FileExample {
 			}
 		}
 		
-		
-		
 		System.out.println("정렬 완료");
-		
-		
 	}
 }
