@@ -1,4 +1,4 @@
-package phoneinfoproject_2;
+package exam_object_stream;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
