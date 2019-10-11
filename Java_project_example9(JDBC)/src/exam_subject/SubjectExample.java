@@ -40,7 +40,7 @@ public class SubjectExample {
 				delete(dao);
 				break;
 			case 5:
-//				search(dao);
+				search(dao);
 				break;
 			case 6:
 				System.out.println("프로그램을 종료합니다.");
@@ -119,6 +119,31 @@ public class SubjectExample {
 			svo.setS_name(scan.nextLine());
 			
 			dao.subjectUpdate(svo);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	private static void search(SubjectDAO dao) {
+		//TODO getSubjectSearch 활용
+		ArrayList<SubjectVO> list = null;
+		try {
+			System.out.println("조회할 학과명을 입력해주세요.");
+			String s_name = scan.nextLine();
+			list = dao.subjectSelect(s_name);
+			
+			if(list.size() > 0) {
+				System.out.println("\n**** subject 테이블 데이터 출력 ****");
+				System.out.println("번호\t학과번호\t학과명");
+				for (SubjectVO subjectVO : list) {
+					System.out.print(subjectVO.getNo() + "\t");
+					System.out.print(subjectVO.getS_num() + "\t");
+					System.out.println(subjectVO.getS_name());
+				}
+				System.out.println();
+			}else {
+				System.out.println("일치하는 결과가 없습니다.\n");
+			}
 		}catch(Exception e) {
 			e.printStackTrace();
 		}

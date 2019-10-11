@@ -30,7 +30,6 @@ public class SubjectDAO {
 		return instance;
 	}
 
-	
 	private SubjectDAO() {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -48,7 +47,6 @@ public class SubjectDAO {
 		return con;
 	}
 
-	
 	// 학과 테이블에 데이터 입력 메소드
 	public boolean subjectInsert(SubjectVO svo) throws Exception {
 		StringBuffer sql = new StringBuffer();
@@ -117,7 +115,7 @@ public class SubjectDAO {
 			System.out.println("DB 연동 해제 error = [" + e + " ]");
 			e.printStackTrace();
 		}
-		
+
 		return success;
 	}
 
@@ -157,7 +155,9 @@ public class SubjectDAO {
 	// 학과 테이블에서 학과명으로 특정 데이터 조회 메소드
 	public ArrayList<SubjectVO> subjectSelect(String s_name) throws Exception {
 		StringBuffer sql = new StringBuffer();
-		sql.append("SELECT no, s_num, s_name FROM subject WHERE s_name = ?");
+//		sql.append("SELECT no, s_num, s_name FROM subject WHERE s_name = ?");
+//		sql.append("SELECT no, s_num, s_name FROM subject WHERE s_name LIKE '%" + s_name + "%'");
+		sql.append("SELECT no, s_num, s_name FROM subject WHERE s_name LIKE ?");
 
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -168,11 +168,13 @@ public class SubjectDAO {
 		con = getConnection();
 		pstmt = con.prepareStatement(sql.toString());
 
-		pstmt.setString(1, s_name);
+//		pstmt.setString(1, s_name);
+		pstmt.setString(1, "%" + s_name + "%");
 
 		rs = pstmt.executeQuery();
 
 		while (rs.next()) {
+			svo = new SubjectVO();
 			svo.setNo(rs.getInt("no"));
 			svo.setS_num(rs.getString("s_num"));
 			svo.setS_name(rs.getString("s_name"));
@@ -181,12 +183,12 @@ public class SubjectDAO {
 		}
 
 		try {
-			if (con != null)
-				con.close();
-			if (pstmt != null)
-				pstmt.close();
 			if (rs != null)
 				rs.close();
+			if (pstmt != null)
+				pstmt.close();
+			if (con != null)
+				con.close();
 		} catch (Exception e) {
 			System.out.println("DB 연동 해제 error = [" + e + " ]");
 			e.printStackTrace();
