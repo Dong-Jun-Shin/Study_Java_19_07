@@ -1,4 +1,6 @@
-package javafx_layout.fxml_layout;
+package javafx_container.exam05_tilepane;
+
+import java.io.IOException;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -7,14 +9,13 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /*
- * FXML은 XML 기반의 마크업 언어로 JavaFX 애플리케이션의 UI 레이아웃을
- * 자바 코드에서 분리해서 태그로 선언하는 방법이다.
+ * TilePane은 Tile크기를 정해줘서 고정된 크기로 행에 순서대로 할당한다.
+ * 윈도우 창에 공간이 부족하면 새로운 행에 할당한다.
  */
-
 public class AppMain extends Application {
+
 	@Override
-	public void start(Stage primaryStage) throws Exception{
-		//HBox, VBox 등등 레이아웃들(컨테이너)의 상위 클래스인 Parent에 담아준다. -업캐스팅
+	public void start(Stage primaryStage) throws IOException {
 		Parent root = FXMLLoader.load(getClass().getResource("root.fxml"));
 		Scene scene = new Scene(root);
 		

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1" prefWidth="220.0"
+	hgap="10.0" vgap="10.0">
+	<padding>
+		<Insets topRightBottomLeft="10.0" />
+	</padding>
+	<children>
+		<!-- id -->
+		<!-- promptText : 회색글씨로 정보전달하는 TextArea -->
+		<Label text="아이디" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+		<TextField promptText="사용자 아이디" GridPane.rowIndex="0"
+			GridPane.columnIndex="1" />
+
+		<!-- pw -->
+		<Label text="패스워드" GridPane.rowIndex="1"
+			GridPane.columnIndex="0" />
+		<PasswordField promptText="사용자 패스워드"
+			GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+		<!-- columnSpan으로 지정 기준 좌표의 열 기준 2개를 묶겠다. -->
+		<HBox GridPane.rowIndex="2" GridPane.columnIndex="0"
+			GridPane.columnSpan="2" alignment="CENTER" spacing="20.0">
+			<children>
+				<Button text="로그인" />
+				<Button text="취소" />
+			</children>
+		</HBox>
+	</children>
+</GridPane>
+

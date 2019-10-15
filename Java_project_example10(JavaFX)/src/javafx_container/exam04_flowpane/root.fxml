@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+
+<FlowPane xmlns:fx="http://javafx.com/fxml/1" prefWidth="300.0"
+	prefHeight="70.0" hgap="10.0" vgap="10.0">
+	<!-- hgap 컨트롤의 수평 간격을 설정 / vgap 컨트롤의 수직 간격을 설정 -->
+	<padding>
+		<Insets  topRightBottomLeft="10.0" />
+	</padding>
+
+	<children>
+		<Button  text="Button" />
+		<Button text="Button" />
+		<Button text="Button" />
+		<Button text="Button" />
+		<Button text="Button" />
+		<Button text="Button" />
+		<Button text="Button" />
+		<Button text="Button" />
+	</children>
+
+
+</FlowPane>
+

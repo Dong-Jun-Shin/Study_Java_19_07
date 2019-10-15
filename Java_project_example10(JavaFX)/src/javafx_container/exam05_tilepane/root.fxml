@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<TilePane xmlns:fx="http://javafx.com/fxml/1" prefTileHeight="200" prefTileWidth="200">
+	<children>
+		<!-- '@':해당 소스가 있는 폴더, '../':상위폴더로 이동 -->
+		<ImageView  fitWidth="180" fitHeight="180">
+			<image><Image  url="@images/1.jpg" /></image>
+		</ImageView>
+		<ImageView fitWidth="180" fitHeight="180">
+			<image><Image url="@images/2.jpg" /></image>
+		</ImageView>
+		<ImageView fitWidth="180" fitHeight="180">
+			<image><Image url="@images/3.jpg" /></image>
+		</ImageView>
+		<ImageView fitWidth="180" fitHeight="180">
+			<image><Image url="@images/4.jpg" /></image>
+		</ImageView>
+		<ImageView fitWidth="180" fitHeight="180">
+			<image><Image url="@images/5.jpg" /></image>
+		</ImageView>
+	</children>
+</TilePane>
+
