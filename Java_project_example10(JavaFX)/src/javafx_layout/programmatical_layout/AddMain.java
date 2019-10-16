@@ -83,6 +83,8 @@ public class AddMain extends Application {
 		});
 
 		Button ce = new Button("초기화");
+		//무명 클래스 - new 부모클래스 or 인터페이스() { }
+		//				: implements목적, 추상클래스 재정의로 구현
 		ce.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {

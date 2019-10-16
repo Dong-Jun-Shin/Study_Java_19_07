@@ -6,17 +6,18 @@
 <?import javafx.scene.control.Button?>
 
 <BorderPane xmlns:fx="http://javafx.com/fxml/1"
-	prefHeight="200.0" prefWidth="300.0">
+	prefHeight="200.0" prefWidth="300.0"
+	fx:controller="javafx_container.exam03_borderpane.RootController">
 	<center>
-		<TextArea  />
+		<TextArea fx:id="tArea" editable="false"/>
 	</center>
 	<bottom>
 		<BorderPane>
 			<center>
-				<TextField />
+				<TextField fx:id="tField"/>
 			</center>
 			<right>
-				<Button text="Button" />
+				<Button text="전송" onAction="#send" onKeyPressed="#keyValue"/>
 			</right>
 		</BorderPane>
 	</bottom>

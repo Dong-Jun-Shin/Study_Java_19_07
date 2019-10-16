@@ -9,7 +9,8 @@
 <?import javafx.scene.layout.HBox?>
 
 <GridPane xmlns:fx="http://javafx.com/fxml/1" prefWidth="220.0"
-	hgap="10.0" vgap="10.0">
+	hgap="10.0" vgap="10.0"
+	fx:controller="javafx_container.exam06_gridpane.RootController">
 	<padding>
 		<Insets topRightBottomLeft="10.0" />
 	</padding>
@@ -17,23 +18,31 @@
 		<!-- id -->
 		<!-- promptText : 회색글씨로 정보전달하는 TextArea -->
 		<Label text="아이디" GridPane.rowIndex="0" GridPane.columnIndex="0" />
-		<TextField promptText="사용자 아이디" GridPane.rowIndex="0"
-			GridPane.columnIndex="1" />
+		<TextField fx:id="userId" promptText="사용자 아이디"
+			GridPane.rowIndex="0" GridPane.columnIndex="1" />
 
 		<!-- pw -->
 		<Label text="패스워드" GridPane.rowIndex="1"
 			GridPane.columnIndex="0" />
-		<PasswordField promptText="사용자 패스워드"
+		<PasswordField fx:id="userPw" promptText="사용자 패스워드"
 			GridPane.rowIndex="1" GridPane.columnIndex="1" />
 
 		<!-- columnSpan으로 지정 기준 좌표의 열 기준 2개를 묶겠다. -->
 		<HBox GridPane.rowIndex="2" GridPane.columnIndex="0"
 			GridPane.columnSpan="2" alignment="CENTER" spacing="20.0">
 			<children>
-				<Button text="로그인" />
-				<Button text="취소" />
+				<Button text="로그인" onAction="#login" />
+				<Button text="취소" onAction="#cancel" />
 			</children>
 		</HBox>
+		<HBox GridPane.rowIndex="3" GridPane.columnIndex="0"
+			GridPane.columnSpan="2" alignment="CENTER">
+			<children>
+				<Label fx:id="result" GridPane.rowIndex="3"
+					GridPane.columnIndex="0" GridPane.columnSpan="2" alignment="CENTER"/>
+			</children>
+		</HBox>
+
 	</children>
 </GridPane>
 
