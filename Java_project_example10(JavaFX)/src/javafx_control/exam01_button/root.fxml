@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.paint.Color?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1"
+	prefHeight="150.0" prefWidth="680.0" stylesheets="@application.css"
+	fx:controller="javafx_control.exam01_button.RootController">
+	<padding>
+		<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+	</padding>
+
+	<fx:define>
+		<ToggleGroup fx:id="group" />
+		<ToggleGroup fx:id="groupBtn" />
+	</fx:define>
+
+	<center>
+		<HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0"
+			spacing="10">
+			<children>
+				<!-- CheckBox 예제 -->
+				<VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0"
+					alignment="CENTER">
+					<children>
+						<CheckBox fx:id="glasses" text="안경"
+							onAction="#handleChkAction" />
+						<CheckBox fx:id="hat" text="모자"
+							onAction="#handleChkAction" />
+					</children>
+				</VBox>
+
+				<ImageView fx:id="checkImageView" fitWidth="100.0"
+					preserveRatio="true">
+					<image>
+						<Image url="@images/geek.gif" />
+					</image>
+				</ImageView>
+
+				<Separator orientation="VERTICAL" prefHeight="200.0" />
+
+				<!-- RadioButton 예제 -->
+				<VBox prefHeight="100.0" prefWidth="150.0" spacing="20.0"
+					alignment="CENTER_LEFT">
+					<children>
+						<RadioButton text="BubbleChart" userData="BubbleChart"
+							toggleGroup="$group" />
+						<RadioButton text="BarChart" userData="BarChart"
+							toggleGroup="$group" selected="true" />
+						<RadioButton text="AreaChart" userData="AreaChart"
+							toggleGroup="$group" />
+					</children>
+				</VBox>
+
+				<ImageView fx:id="radioImageView" fitWidth="100.0"
+					preserveRatio="true">
+					<image>
+						<Image url="@images/BarChart.png" />
+					</image>
+				</ImageView>
+
+				<Separator orientation="VERTICAL" prefHeight="200.0" />
+
+				<!-- ToggleButton 예제 -->
+				<VBox>
+					<padding>
+						<Insets top="10" />
+					</padding>
+					<children>
+						<HBox prefWidth="280">
+							<children>
+								<ToggleButton text="Lightgreen"
+									toggleGroup="$groupBtn">
+									<userData>
+										<Color fx:constant="LIGHTGREEN" />
+									</userData>
+								</ToggleButton>
+								<ToggleButton text="Lightblue"
+									toggleGroup="$groupBtn">
+									<userData>
+										<Color fx:constant="LIGHTBLUE" />
+									</userData>
+								</ToggleButton>
+								<ToggleButton text="Salmon" toggleGroup="$groupBtn">
+									<userData>
+										<Color fx:constant="SALMON" />
+									</userData>
+								</ToggleButton>
+							</children>
+						</HBox>
+						<Rectangle fx:id="shape" width="210" height="80.0"
+							fill="WHITE" stroke="DARKGRAY" strokeWidth="2" arcHeight="10"
+							arcWidth="10" />
+					</children>
+				</VBox>
+			</children>
+		</HBox>
+	</center>
+
+	<bottom>
+		<Button text="close" fx:id="btnExit"
+			BorderPane.alignment="CENTER" onAction="#btnAction"
+			onMouseEntered="#btnMouseEnter" onMouseExited="#btnMouseExit">
+			<graphic>
+				<ImageView>
+					<Image url="@images/icon.jpg" />
+				</ImageView>
+			</graphic>
+			<BorderPane.margin>
+				<Insets top="20.0" />
+			</BorderPane.margin>
+		</Button>
+	</bottom>
+</BorderPane>
+

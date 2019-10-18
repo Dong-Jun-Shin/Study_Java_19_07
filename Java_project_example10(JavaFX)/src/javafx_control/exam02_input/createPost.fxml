@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0"
+	prefWidth="842.0" stylesheets="@app.css"
+	xmlns="http://javafx.com/javafx/8.0.171"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="javafx_control.exam02_input.RootController">
+	<children>
+		<Label layoutX="31.0" layoutY="27.0" text="제목" />
+		<Label layoutX="31.0" layoutY="59.0" text="비밀번호" />
+		<Label layoutX="31.0" layoutY="92.0" text="공개" />
+		<Label layoutX="31.0" layoutY="126.0" text="게시시작" />
+		<Label layoutX="31.0" layoutY="150.0" text="내용" />
+		<TextField fx:id="txtTitle" layoutX="97.0" layoutY="23.0"
+			prefHeight="23.0" prefWidth="387.0" />
+		<PasswordField fx:id="txtPassword" layoutX="97.0"
+			layoutY="55.0" />
+		<Label fx:id="result" layoutX="506.0" layoutY="27.0"
+			text="결과 출력" />
+		<ComboBox fx:id="comboPublic" layoutX="97.0" layoutY="88.0"
+			prefHeight="23.0" prefWidth="138.0" promptText="선택하세요">
+			<!-- 콤보박스에 항목을 추가 -->
+			<items>
+				<FXCollections fx:factory="observableArrayList">
+					<String fx:value="공개" />
+					<String fx:value="비공개" />
+				</FXCollections>
+			</items>
+		</ComboBox>
+		<DatePicker fx:id="dateStart" layoutX="97.0"
+			layoutY="122.0" prefHeight="23.0" prefWidth="138.0"
+			promptText="날짜를 선택하세요" />
+		<Label layoutX="278.0" layoutY="126.0" text="게시시작" />
+		<DatePicker fx:id="dateExit" layoutX="344.0"
+			layoutY="122.0" prefHeight="23.0" prefWidth="138.0"
+			promptText="날짜를 선택하세요" />
+		<TextArea fx:id="txtContent" layoutX="31.0" layoutY="172.0"
+			prefHeight="272.0" prefWidth="465.0" />
+		<Separator layoutX="22.0" layoutY="461.0" prefHeight="3.0"
+			prefWidth="483.0" />
+		<Button layoutX="215.0" layoutY="474.0" mnemonicParsing="false"
+			onAction="#btnRegAction" text="등록" />
+		<Button layoutX="271.0" layoutY="474.0" mnemonicParsing="false"
+			onAction="#btnCancelAction" text="취소" />
+	</children>
+</AnchorPane>

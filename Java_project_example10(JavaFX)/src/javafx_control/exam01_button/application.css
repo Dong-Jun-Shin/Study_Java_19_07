@@ -1,0 +1,8 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+/*#fx:id명{ } */
+#btnExit{
+	/* fx에 쓰이는 css여서 -fx로 시작. */
+	-fx-font: 22 arial;
+	-fx-base: #b6e7c9;
+}

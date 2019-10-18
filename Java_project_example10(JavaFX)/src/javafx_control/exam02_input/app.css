@@ -1,0 +1,15 @@
+/* 상태별 선택자 - 입력 가능한 상태 */
+TextField:focused {
+	-fx-border-color: skyblue;
+	-fx-background-color: yellow;
+}
+/* 상태별 선택자 - 마우스를 컨트롤 영역 위에 올려 놓았을 경우 */
+Button:hover {
+	-fx-border-color: skyblue;
+	-fx-background-color: yellow;
+}
+/* 상태별 선택자 - 마우스를 컨트롤에 눌렀을 경우 */
+Button:pressed {
+	-fx-border-color: skyblue;
+	-fx-background-color: red;
+}
