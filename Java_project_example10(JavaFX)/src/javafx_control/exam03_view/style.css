@@ -1,0 +1,9 @@
+#title{
+	-fx-text-fill:red;
+	-fx-font-size:18;
+	-fx-font-weight:bold;
+}
+
+#fName, #lName, email{
+	-fx-alignment : CENTER;	
+}

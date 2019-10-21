@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+	xmlns="http://javafx.com/javafx/8.0.171" prefHeight="200.0"
+	prefWidth="200.0" spacing="7.0" fx:controller="javafx_control.exam03_view.ListController">
+	<padding>
+		<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+	</padding>
+	<children>
+		<ListView fx:id="list" prefHeight="160.0" prefWidth="100.0" onMouseClicked="#listMouse"/>
+		<Label fx:id="result" text="ListView">
+			<font>
+				<Font size="20.0" />
+			</font>
+		</Label>
+	</children>
+</VBox>
