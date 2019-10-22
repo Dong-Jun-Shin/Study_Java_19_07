@@ -1,0 +1,10 @@
+
+
+#root{
+	-fx-background-color: black;
+	-fx-background-radius: 20;
+}
+
+#lblMessage{
+	-fx-text-fill: white;
+}

@@ -1,4 +1,4 @@
-package javafx_control.exam03_view;
+package javafx_control.exam04_table;
 
 import java.io.IOException;
 
