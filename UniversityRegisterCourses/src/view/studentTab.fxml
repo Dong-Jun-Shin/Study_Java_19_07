@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.ToggleGroup?>
+
+<HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="controller.StudentTabController">
+	<padding>
+		<Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+	</padding>
+	<fx:define>
+		<ToggleGroup fx:id="group" />
+	</fx:define>
+	<children>
+		<VBox prefHeight="436.0" prefWidth="456.0" spacing="5.0">
+			<children>
+				<HBox alignment="CENTER_LEFT" prefHeight="26.0"
+					prefWidth="224.0">
+					<children>
+						<Label text="학생 관리" />
+					</children>
+				</HBox>
+				<HBox alignment="CENTER_LEFT" prefHeight="26.0"
+					prefWidth="224.0" spacing="5.0">
+					<children>
+						<Label prefWidth="50.0" text="학과명 :" />
+						<TextField />
+						<Button mnemonicParsing="false" text="과검색" />
+					</children>
+				</HBox>
+				<HBox alignment="CENTER_LEFT" prefHeight="26.0"
+					prefWidth="224.0" spacing="5.0">
+					<children>
+						<Label prefWidth="50.0" text="학 번 :" />
+						<TextField />
+					</children>
+				</HBox>
+				<HBox alignment="CENTER_LEFT" prefHeight="26.0"
+					prefWidth="224.0" spacing="5.0">
+					<children>
+						<Label prefHeight="15.0" prefWidth="50.0" text="이 름 :" />
+						<TextField />
+					</children>
+				</HBox>
+				<HBox alignment="CENTER_LEFT" prefHeight="26.0"
+					prefWidth="224.0" spacing="5.0">
+					<children>
+						<Label prefWidth="50.0" text="아이디 :">
+							<HBox.margin>
+								<Insets />
+							</HBox.margin>
+						</Label>
+						<TextField />
+						<Button mnemonicParsing="false" text="ID체크" />
+					</children>
+				</HBox>
+				<HBox alignment="CENTER_LEFT" prefHeight="26.0"
+					prefWidth="224.0" spacing="5.0">
+					<children>
+						<Label prefHeight="15.0" prefWidth="50.0" text="비밀번호" />
+						<TextField />
+					</children>
+				</HBox>
+				<HBox alignment="CENTER_LEFT" prefHeight="26.0"
+					prefWidth="224.0" spacing="5.0">
+					<children>
+						<Label prefWidth="50.0" text="생년월일" />
+						<TextField promptText="20010101" />
+					</children>
+				</HBox>
+				<HBox alignment="CENTER_LEFT" prefHeight="26.0"
+					prefWidth="224.0" spacing="5.0">
+					<children>
+						<Label prefWidth="50.0" text="연락처 :" />
+						<TextField promptText="01012341234" />
+					</children>
+				</HBox>
+				<HBox alignment="CENTER_LEFT" prefHeight="26.0"
+					prefWidth="224.0" spacing="5.0">
+					<children>
+						<Label prefWidth="50.0" text="주 소 :" />
+						<TextField />
+					</children>
+				</HBox>
+				<HBox alignment="CENTER_LEFT" prefHeight="26.0"
+					prefWidth="224.0" spacing="5.0">
+					<children>
+						<Label prefWidth="50.0" text="이메일 :" />
+						<TextField />
+						<Button disable="true" mnemonicParsing="false" text="전송" />
+					</children>
+				</HBox>
+				<HBox alignment="CENTER" prefHeight="49.0" prefWidth="258.0"
+					spacing="10.0">
+					<children>
+						<Button disable="true" mnemonicParsing="false" text="학생등록" />
+						<Button disable="true" mnemonicParsing="false" text="학생수정" />
+						<Button disable="true" mnemonicParsing="false" text="학생삭제" />
+					</children>
+				</HBox>
+				<HBox alignment="CENTER" prefHeight="49.0" prefWidth="258.0">
+					<children>
+						<Button mnemonicParsing="false" prefHeight="30.0"
+							prefWidth="200.0" text="초기화" />
+					</children>
+				</HBox>
+			</children>
+			<padding>
+				<Insets left="20.0" right="20.0" />
+			</padding>
+		</VBox>
+		<VBox prefHeight="436.0" prefWidth="745.0" spacing="10.0">
+			<children>
+				<HBox prefHeight="30.0" prefWidth="472.0" spacing="10.0">
+					<children>
+						<RadioButton mnemonicParsing="false" text="이름" toggleGroup="$group"/>
+						<RadioButton mnemonicParsing="false" text="등록일" toggleGroup="$group"/>
+						<TextField promptText="이름" />
+						<Button mnemonicParsing="false" text="검색" />
+						<Button mnemonicParsing="false" text="전체" />
+						<Button mnemonicParsing="false" text="파이 차트" />
+						<Button mnemonicParsing="false" text="바차트" />
+					</children>
+				</HBox>
+				<TableView prefHeight="200.0" prefWidth="610.0">
+					<columns>
+						<TableColumn prefWidth="40.0" text="No." />
+						<TableColumn prefWidth="90.0" text="학번" />
+						<TableColumn prefWidth="60.0" text="이름" />
+						<TableColumn prefWidth="110.0" text="아이디" />
+						<TableColumn prefWidth="110.0" text="비밀번호" />
+						<TableColumn prefWidth="100.0" text="학과명" />
+						<TableColumn prefWidth="100.0" text="생년월일" />
+					</columns>
+				</TableView>
+				<TableView prefHeight="200.0" prefWidth="200.0">
+					<columns>
+						<TableColumn prefWidth="40.0" text="No." />
+						<TableColumn prefWidth="150.0" text="연락처" />
+						<TableColumn minWidth="0.0" prefWidth="250.0"
+							text="주소" />
+						<TableColumn minWidth="0.0" prefWidth="170.0"
+							text="이메일" />
+					</columns>
+				</TableView>
+			</children>
+		</VBox>
+	</children>
+</HBox>
+

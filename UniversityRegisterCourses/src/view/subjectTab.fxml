@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+
+<HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="controller.SubjectTabController">
+	<padding>
+		<Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+	</padding>
+	<children>
+		<VBox prefHeight="436.0" prefWidth="276.0" spacing="10.0">
+			<children>
+				<HBox alignment="CENTER_LEFT" prefHeight="22.0"
+					prefWidth="237.0">
+					<children>
+						<Label text="[학과 등록 및 수정, 삭제]" id="subjectTitle">
+							<padding>
+								<Insets left="10.0" />
+							</padding>
+						</Label>
+					</children>
+				</HBox>
+				<HBox alignment="CENTER_LEFT" prefHeight="27.0"
+					prefWidth="232.0" spacing="5.0">
+					<children>
+						<Label text="학과 번호" />
+						<TextField fx:id="txtSubjectNum" />
+					</children>
+					<padding>
+						<Insets left="10.0" />
+					</padding>
+				</HBox>
+				<HBox alignment="CENTER_LEFT" prefHeight="27.0"
+					prefWidth="232.0" spacing="5.0">
+					<children>
+						<Label text="학 과 명 :" />
+						<TextField fx:id="txtSubjectName" />
+					</children>
+					<padding>
+						<Insets left="10.0" />
+					</padding>
+				</HBox>
+				<HBox alignment="CENTER" prefHeight="36.0" prefWidth="232.0"
+					spacing="5.0">
+					<children>
+						<Button mnemonicParsing="false" text="등록" fx:id="btnInsert"
+							onAction="#btnInsert" />
+						<Button disable="true" mnemonicParsing="false" text="수정"
+							fx:id="btnUpdate" onAction="#btnUpdate" />
+						<Button disable="true" mnemonicParsing="false" text="삭제"
+							fx:id="btnDelete" onAction="#deleteConfirm" />
+						<Button mnemonicParsing="false" text="초기화"
+							onAction="#btnReset" />
+					</children>
+				</HBox>
+				<HBox alignment="CENTER" prefHeight="230.0" prefWidth="266.0">
+					<children>
+						<ImageView fitHeight="200.0" fitWidth="150.0"
+							pickOnBounds="true" preserveRatio="true" fx:id="imageView">
+							<image><Image url="/image/default.png"/></image>
+						</ImageView>
+					</children>
+				</HBox>
+				<HBox alignment="TOP_CENTER" prefHeight="100.0"
+					prefWidth="200.0" spacing="5.0">
+					<children>
+						<Button mnemonicParsing="false" text="이미지 선택" fx:id="btnImageChoice" onAction="#btnImageFileAction"/>
+						<Button mnemonicParsing="false" text="이미지 삭제" fx:id="btnImageDelete" onAction="#deleteConfirm"/>
+					</children>
+				</HBox>
+			</children>
+			<padding>
+				<Insets left="10.0" />
+			</padding>
+		</VBox>
+		<VBox prefHeight="486.0" prefWidth="650.0">
+			<children>
+				<HBox alignment="CENTER_LEFT" prefHeight="36.0"
+					prefWidth="493.0" spacing="10.0">
+					<children>
+						<Label text="학과명" fx:id="txtSearch"/>
+						<TextField promptText="학과명" />
+						<!--
+						<Button mnemonicParsing="false" fx:id="btnSearch" onAction="#btnSearchAction">검색</Button>
+						-->
+						<Button mnemonicParsing="false" text="검색" fx:id="btnSearch" onAction="#btnSearchAction"/>
+						<Button mnemonicParsing="false" text="전체" fx:id="btnTotalList" onAction="#btnSearchAction"/>
+					</children>
+				</HBox>
+				<TableView fx:id="subjectTableView" onMouseClicked="#subjectTableView">
+					<columns>
+						<TableColumn prefWidth="60.0" text="NO." />
+						<TableColumn prefWidth="120.0" text="학과번호" />
+						<TableColumn prefWidth="220.0" text="학과명" />
+						<TableColumn prefWidth="260.0" text="학과이미지" />
+					</columns>
+				</TableView>
+			</children>
+		</VBox>
+	</children>
+</HBox>
+

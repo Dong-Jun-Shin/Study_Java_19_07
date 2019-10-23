@@ -1,5 +1,6 @@
 package application;
 	
+import controller.MainController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,11 +13,12 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/main.fxml"));
+			//연결된 소스 속의 모든 객체를 생성하는 load()
 			Parent root = loader.load();
 			
-//			MainController controller = loader.getController();
-//			controller.setPrimaryStage(primaryStage);
-			
+			MainController controller = loader.getController();
+			controller.setPrimaryStage(primaryStage);
+
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("/view/application.css").toExternalForm());
 			
