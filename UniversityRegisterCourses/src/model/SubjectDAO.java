@@ -63,7 +63,7 @@ public class SubjectDAO {
 				System.out.println("레코드 추가 실패");
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
+			e.printStackTrace();		
 		} finally {
 			try {
 				if (pstmt != null)
@@ -88,7 +88,7 @@ public class SubjectDAO {
 	 */
 	public boolean subjectUpdate(SubjectVO svo) throws Exception {
 		StringBuffer sql = new StringBuffer();
-		sql.append("UPDATE subject SET s_num = ?, s_name = ? filename = ? WHERE no = ?");
+		sql.append("UPDATE subject SET s_name = ?, filename = ? WHERE no = ?");
 
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -98,10 +98,9 @@ public class SubjectDAO {
 			con = getConnection();
 
 			pstmt = con.prepareStatement(sql.toString());
-			pstmt.setString(1, svo.getS_num());
-			pstmt.setString(2, svo.getS_name());
-			pstmt.setString(3, svo.getFilename());
-			pstmt.setInt(4, svo.getNo());
+			pstmt.setString(1, svo.getS_name());
+			pstmt.setString(2, svo.getFilename());
+			pstmt.setInt(3, svo.getNo());
 
 			int cnt = pstmt.executeUpdate();
 			if (cnt == 1) {

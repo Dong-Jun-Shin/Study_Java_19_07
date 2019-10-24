@@ -51,9 +51,9 @@
 					<children>
 						<Button mnemonicParsing="false" text="등록" fx:id="btnInsert"
 							onAction="#btnInsert" />
-						<Button disable="true" mnemonicParsing="false" text="수정"
+						<Button mnemonicParsing="false" text="수정"
 							fx:id="btnUpdate" onAction="#btnUpdate" />
-						<Button disable="true" mnemonicParsing="false" text="삭제"
+						<Button mnemonicParsing="false" text="삭제"
 							fx:id="btnDelete" onAction="#deleteConfirm" />
 						<Button mnemonicParsing="false" text="초기화"
 							onAction="#btnReset" />
@@ -84,8 +84,8 @@
 				<HBox alignment="CENTER_LEFT" prefHeight="36.0"
 					prefWidth="493.0" spacing="10.0">
 					<children>
-						<Label text="학과명" fx:id="txtSearch"/>
-						<TextField promptText="학과명" />
+						<Label text="학과명" />
+						<TextField promptText="학과명" fx:id="txtSearch"/>
 						<!--
 						<Button mnemonicParsing="false" fx:id="btnSearch" onAction="#btnSearchAction">검색</Button>
 						-->
