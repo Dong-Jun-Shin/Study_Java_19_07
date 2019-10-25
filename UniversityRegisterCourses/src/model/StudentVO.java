@@ -1,6 +1,7 @@
 package model;
 
 public class StudentVO {
+	//
 	private int no;
 	private String sd_num;
 	private String sd_name;
@@ -8,6 +9,8 @@ public class StudentVO {
 	private String sd_passwd;
 	private String s_num;
 	private String sd_birth;
+	
+	//DownList
 	private String sd_phone;
 	private String sd_address;
 	private String sd_email;

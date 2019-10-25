@@ -45,26 +45,28 @@ public class MainController implements Initializable{
 			public void changed(ObservableValue<? extends Tab> observable, Tab oldValue, Tab newValue) {
 				// TODO Auto-generated method stub
 				if(newValue == subject) {
-					System.out.println("학과");
-					/*
+//					System.out.println("학과");
+					
+					//해당 탭의 내용을 새로고침
 					try {
 						subjectTabController.subjectTotalList(null);
 					} catch (Exception e) {
 						// TODO: handle exception
 						e.printStackTrace();
 					}
-					*/
+					
 				}else if(newValue == student) {
-					System.out.println("학생");
-					/*
+//					System.out.println("학생");
+					
+					//해당 탭의 내용을 새로고침					
 					try {
-						//studentTabController.addSubjectName();
+						studentTabController.addSubjectName();
 						studentTabController.studentTotalList(null);
 					} catch (Exception e) {
 						// TODO: handle exception
 						e.printStackTrace();
 					}
-					*/
+					
 				}
 			}
 			

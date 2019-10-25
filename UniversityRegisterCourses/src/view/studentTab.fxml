@@ -7,6 +7,7 @@
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
 
 <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0"
 	xmlns:fx="http://javafx.com/fxml/1"
@@ -15,7 +16,7 @@
 		<Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
 	</padding>
 	<fx:define>
-		<ToggleGroup fx:id="group" />
+		<ToggleGroup fx:id="groupSearch" />
 	</fx:define>
 	<children>
 		<VBox prefHeight="436.0" prefWidth="456.0" spacing="5.0">
@@ -30,85 +31,88 @@
 					prefWidth="224.0" spacing="5.0">
 					<children>
 						<Label prefWidth="50.0" text="학과명 :" />
-						<!-- <ComboBox /> -->
-						<TextField />
-						<Button mnemonicParsing="false" text="과검색" />
+						<ComboBox fx:id="cbxSubjectName"
+							onAction="#cbxSubjectNameAction" promptText="선택" />
+						<!-- <TextField fx:id="txtSubjectName"/> <Button mnemonicParsing="false" 
+							text="과검색" fx:id="btnNameSearch"/> -->
 					</children>
 				</HBox>
 				<HBox alignment="CENTER_LEFT" prefHeight="26.0"
 					prefWidth="224.0" spacing="5.0">
 					<children>
 						<Label prefWidth="50.0" text="학 번 :" />
-						<TextField />
+						<TextField fx:id="txtStudentNum" />
 					</children>
 				</HBox>
 				<HBox alignment="CENTER_LEFT" prefHeight="26.0"
 					prefWidth="224.0" spacing="5.0">
 					<children>
 						<Label prefHeight="15.0" prefWidth="50.0" text="이 름 :" />
-						<TextField />
+						<TextField fx:id="txtStudentName" />
 					</children>
 				</HBox>
 				<HBox alignment="CENTER_LEFT" prefHeight="26.0"
 					prefWidth="224.0" spacing="5.0">
 					<children>
-						<Label prefWidth="50.0" text="아이디 :">
-							<HBox.margin>
-								<Insets />
-							</HBox.margin>
-						</Label>
-						<TextField />
-						<Button mnemonicParsing="false" text="ID체크" />
+						<Label prefWidth="50.0" text="아이디 :" />
+						<TextField fx:id="txtStudentId" />
+						<Button fx:id="btnIdCheck" mnemonicParsing="false"
+							text="ID체크" onAction="#btnIdCheck" />
 					</children>
 				</HBox>
 				<HBox alignment="CENTER_LEFT" prefHeight="26.0"
 					prefWidth="224.0" spacing="5.0">
 					<children>
 						<Label prefHeight="15.0" prefWidth="50.0" text="비밀번호" />
-						<TextField />
+						<PasswordField fx:id="pwStudentPasswd" />
 					</children>
 				</HBox>
 				<HBox alignment="CENTER_LEFT" prefHeight="26.0"
 					prefWidth="224.0" spacing="5.0">
 					<children>
 						<Label prefWidth="50.0" text="생년월일" />
-						<TextField promptText="20010101" />
+						<TextField fx:id="txtStudentBirth" promptText="20010101" />
 					</children>
 				</HBox>
 				<HBox alignment="CENTER_LEFT" prefHeight="26.0"
 					prefWidth="224.0" spacing="5.0">
 					<children>
 						<Label prefWidth="50.0" text="연락처 :" />
-						<TextField promptText="01012341234" />
+						<TextField fx:id="txtStudentPhone"
+							promptText="01012341234" />
 					</children>
 				</HBox>
 				<HBox alignment="CENTER_LEFT" prefHeight="26.0"
 					prefWidth="224.0" spacing="5.0">
 					<children>
 						<Label prefWidth="50.0" text="주 소 :" />
-						<TextField />
+						<TextField fx:id="txtStudentAddress" />
 					</children>
 				</HBox>
 				<HBox alignment="CENTER_LEFT" prefHeight="26.0"
 					prefWidth="224.0" spacing="5.0">
 					<children>
 						<Label prefWidth="50.0" text="이메일 :" />
-						<TextField />
-						<Button disable="true" mnemonicParsing="false" text="전송" />
+						<TextField fx:id="txtStudentEmail" />
+						<Button fx:id="btnEmail" mnemonicParsing="false" text="전송"
+							onAction="#btnSendAction" />
 					</children>
 				</HBox>
 				<HBox alignment="CENTER" prefHeight="49.0" prefWidth="258.0"
 					spacing="10.0">
 					<children>
-						<Button disable="true" mnemonicParsing="false" text="학생등록" />
-						<Button disable="true" mnemonicParsing="false" text="학생수정" />
-						<Button disable="true" mnemonicParsing="false" text="학생삭제" />
+						<Button fx:id="btnStudentInsert" mnemonicParsing="false"
+							text="학생등록" onAction="#btnStudentInsert" />
+						<Button fx:id="btnStudentUpdate" mnemonicParsing="false"
+							text="학생수정" onAction="#btnStudentUpdate" />
+						<Button fx:id="btnStudentDelete" mnemonicParsing="false"
+							text="학생삭제" onAction="#deleteConfirm" />
 					</children>
 				</HBox>
 				<HBox alignment="CENTER" prefHeight="49.0" prefWidth="258.0">
 					<children>
 						<Button mnemonicParsing="false" prefHeight="30.0"
-							prefWidth="200.0" text="초기화" />
+							prefWidth="200.0" text="초기화" onAction="#btnStudentInit" />
 					</children>
 				</HBox>
 			</children>
@@ -120,16 +124,33 @@
 			<children>
 				<HBox prefHeight="30.0" prefWidth="472.0" spacing="10.0">
 					<children>
-						<RadioButton mnemonicParsing="false" text="이름" toggleGroup="$group"/>
-						<RadioButton mnemonicParsing="false" text="등록일" toggleGroup="$group"/>
-						<TextField promptText="이름" />
-						<Button mnemonicParsing="false" text="검색" />
-						<Button mnemonicParsing="false" text="전체" />
-						<Button mnemonicParsing="false" text="파이 차트" />
-						<Button mnemonicParsing="false" text="바차트" />
+						<!-- userData: 버튼선택이 되었을때 전달될 값 -->
+						<RadioButton mnemonicParsing="false" selected="true"
+							text="이름" onAction="#searchView" userData="sd_name"
+							toggleGroup="$groupSearch" />
+						<RadioButton mnemonicParsing="false" text="등록일"
+							toggleGroup="$groupSearch" onAction="#searchView"
+							userData="sd_date" />
+						<!-- 겹쳐서 만들어놓고 상황에 따라 선택되어 나타나도록 설정 -->
+						<AnchorPane>
+							<children>
+								<TextField fx:id="txtSearch" layoutX="0" layoutY="0"
+									promptText="이름" />
+								<DatePicker fx:id="dpDate" layoutX="0" layoutY="0" />
+							</children>
+						</AnchorPane>
+						<Button fx:id="btnSearch" onAction="#btnSearchAction"
+							mnemonicParsing="false" text="검색" />
+						<Button fx:id="btnTotalList" onAction="#btnSearchAction"
+							mnemonicParsing="false" text="전체" />
+						<Button onAction="#btnPieChartAction"
+							mnemonicParsing="false" text="파이 차트" />
+						<Button onAction="#btnBarChartAction"
+							mnemonicParsing="false" text="바차트" />
 					</children>
 				</HBox>
-				<TableView prefHeight="200.0" prefWidth="610.0">
+				<TableView fx:id="studentTableViewUp" onMouseClicked="#studentTableView"
+					prefHeight="200.0" prefWidth="610.0">
 					<columns>
 						<TableColumn prefWidth="40.0" text="No." />
 						<TableColumn prefWidth="90.0" text="학번" />
@@ -140,14 +161,16 @@
 						<TableColumn prefWidth="100.0" text="생년월일" />
 					</columns>
 				</TableView>
-				<TableView prefHeight="200.0" prefWidth="200.0">
+				<TableView fx:id="studentTableViewDown" onMouseClicked="#studentTableView" prefHeight="200.0" prefWidth="200.0">
 					<columns>
 						<TableColumn prefWidth="40.0" text="No." />
-						<TableColumn prefWidth="150.0" text="연락처" />
-						<TableColumn minWidth="0.0" prefWidth="250.0"
+						<TableColumn prefWidth="120.0" text="연락처" />
+						<TableColumn minWidth="0.0" prefWidth="200.0"
 							text="주소" />
-						<TableColumn minWidth="0.0" prefWidth="170.0"
+						<TableColumn minWidth="0.0" prefWidth="140.0"
 							text="이메일" />
+						<TableColumn  minWidth="0.0" prefWidth="110.0"
+							text="날짜" />	
 					</columns>
 				</TableView>
 			</children>

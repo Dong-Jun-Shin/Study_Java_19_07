@@ -47,40 +47,40 @@ import model.SubjectVO;
 public class SubjectTabController implements Initializable {
 	// 학과 관리 탭
 	@FXML
-	TextField txtSubjectNum;
+	private TextField txtSubjectNum;
 	@FXML
-	TextField txtSubjectName;
+	private TextField txtSubjectName;
 	@FXML
-	TableView<SubjectVO> subjectTableView;
+	private TableView<SubjectVO> subjectTableView;
 
 	// 학과 등록
 	@FXML
-	Button btnInsert;
+	private Button btnInsert;
 	// 학과 수정
 	@FXML
-	Button btnUpdate;
+	private Button btnUpdate;
 	// 학과 삭제
 	@FXML
-	Button btnDelete;
+	private Button btnDelete;
 
 	@FXML
-	ImageView imageView;
+	private ImageView imageView;
 	// 이미지파일 선택
 	@FXML
-	Button btnImageChoice;
+	private Button btnImageChoice;
 	// 이미지 파일 삭제
 	@FXML
-	Button btnImageDelete;
+	private Button btnImageDelete;
 
 	// 검색 단어
 	@FXML
-	TextField txtSearch;
+	private TextField txtSearch;
 	// 검색
 	@FXML
-	Button btnSearch;
+	private Button btnSearch;
 	// 전체
 	@FXML
-	Button btnTotalList;
+	private Button btnTotalList;
 
 	// 내가 선택한 행을 담는 필드
 	private static ObservableList<SubjectVO> subjectDataList = FXCollections.observableArrayList();
@@ -116,24 +116,30 @@ public class SubjectTabController implements Initializable {
 
 		// 테이블뷰 컬럼이름 설정 및 매칭(각각 설정한 부분) - TableColumn를 fxml에서 생성.
 		// <S, T> S:테이블에 들어올 자료형, T:컬럼에 들어올 행의 자료형
-		TableColumn<SubjectVO, ?> colNo = subjectTableView.getColumns().get(0);
-		colNo.setCellValueFactory(new PropertyValueFactory<>("no"));
 
-		TableColumn<SubjectVO, ?> colSNum = subjectTableView.getColumns().get(1);
-		colSNum.setCellValueFactory(new PropertyValueFactory<>("s_num"));
+//		// 첫번째 방법 - 하나씩 컬럼 추가
+//		TableColumn<SubjectVO, ?> colNo = subjectTableView.getColumns().get(0);
+//		colNo.setCellValueFactory(new PropertyValueFactory<>("no"));
+//
+//		TableColumn<SubjectVO, ?> colSNum = subjectTableView.getColumns().get(1);
+//		colSNum.setCellValueFactory(new PropertyValueFactory<>("s_num"));
+//
+//		TableColumn<SubjectVO, ?> colSName = subjectTableView.getColumns().get(2);
+//		colSName.setCellValueFactory(new PropertyValueFactory<>("s_name"));
+//
+//		TableColumn<SubjectVO, ?> colSFile = subjectTableView.getColumns().get(3);
+//		colSFile.setCellValueFactory(new PropertyValueFactory<>("filename"));
 
-		TableColumn<SubjectVO, ?> colSName = subjectTableView.getColumns().get(2);
-		colSName.setCellValueFactory(new PropertyValueFactory<>("s_name"));
-
-		TableColumn<SubjectVO, ?> colSFile = subjectTableView.getColumns().get(3);
-		colSFile.setCellValueFactory(new PropertyValueFactory<>("filename"));
-
-		// 테이블뷰 컬럼이름 설정 (SubjectVO의 필드명을 얻고자 설정)
-//		List<String> title = DataUtil.fieldName(new SubjectVO());
-//		for (int i = 0; i < title.size(); i++) {
-//			TableColumn<SubjectVO, ?> columnName = subjectTableView.getColumns().get(i);
-//			columnName.setCellValueFactory(new PropertyValueFactory<>(title.));
-//		}
+		//// 테이블뷰 컬럼이름 설정 (SubjectVO의 필드명을 얻고자 설정)
+		// vo에서 가져온 필드명들
+		List<String> title = DataUtil.fieldName(new SubjectVO());
+		// 설정을 받을 Table의 열
+		for (int i = 0; i < title.size(); i++) {
+			TableColumn<SubjectVO, ?> columnName = subjectTableView.getColumns().get(i);
+			//setCellValueFactory(obj) : objdp 있는 열로 테이블의 열을 설정해준다.
+			//new PropertyValueFactory<>() : 값을 가질 수 있는 열로 만든다. 
+			columnName.setCellValueFactory(new PropertyValueFactory<>(title.get(i)));
+		}
 
 		// 테이블에 항목 설정
 		subjectTableView.setItems(subjectDataList);
@@ -155,14 +161,14 @@ public class SubjectTabController implements Initializable {
 
 			@Override
 			public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-				if(selectedIndex==0) {
+				if (selectedIndex == 0) {
 					String subjectNumber = "";
 					try {
 						subjectNumber = sbdao.getSubjectNum();
 					} catch (Exception e) {
 						System.out.println("ChangeListener<> = [" + e.getMessage() + "]");
 					}
-					txtSubjectNum.setText(subjectNumber);					
+					txtSubjectNum.setText(subjectNumber);
 				}
 			}
 		});
@@ -281,7 +287,7 @@ public class SubjectTabController implements Initializable {
 		boolean success = false;
 
 		if (!DataUtil.validityCheck(txtSubjectName.getText(), "학과 이름을 ")) {
-			return; 
+			return;
 		} else {
 			SubjectVO svo = new SubjectVO();
 			svo.setNo(selectedIndex);
@@ -561,15 +567,15 @@ public class SubjectTabController implements Initializable {
 				alert.showAndWait();
 				return;
 			}
-			
-			//이미지 삭제
+
+			// 이미지 삭제
 			result = imageDelete(selectFileName);
-			
+
 			if (!result) {
 				throw new Exception();
 			}
-			
-			//쿼리문 실행을 위한 svo를 생성
+
+			// 쿼리문 실행을 위한 svo를 생성
 			svo.setS_num(txtSubjectNum.getText());
 			svo.setS_name(txtSubjectName.getText());
 			// 빈문자열("")로 null을 설정
@@ -631,17 +637,17 @@ public class SubjectTabController implements Initializable {
 	 */
 	public void btnSearchAction(ActionEvent event) {
 		// 검색버튼 클릭시
-		if(event.getSource()==btnSearch) {
-			if(!DataUtil.validityCheck(txtSearch.getText(), "검색할 대상의 학과명을 ")) {
+		if (event.getSource() == btnSearch) {
+			if (!DataUtil.validityCheck(txtSearch.getText(), "검색할 대상의 학과명을 ")) {
 				return;
-			}else {
+			} else {
 				subjectTotalList(txtSearch.getText());
 			}
-		// 전체버튼 클릭시
-		}else if(event.getSource()==btnTotalList) {
+			// 전체버튼 클릭시
+		} else if (event.getSource() == btnTotalList) {
 			txtSearch.clear();
 			subjectTotalList(null);
-			
+
 		}
 	}
 }

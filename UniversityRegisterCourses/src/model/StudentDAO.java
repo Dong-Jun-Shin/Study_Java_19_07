@@ -1,6 +1,7 @@
 package model;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -34,8 +35,10 @@ public class StudentDAO {
 	 */
 	public ArrayList<StudentVO> getStudentTotalList() throws Exception {
 		StringBuffer sql = new StringBuffer();
-		sql.append("SELECT no, sd_num, sd_name, sd_id, sd_passwd, s_num, ");
-		sql.append("sd_birth, sd_phone, address, sd_email, sd_date FROM student ");
+		sql.append("SELECT st.no as no, sd_num, sd_name, sd_id, sd_passwd, su.s_name as s_num, ");
+		sql.append(
+				"TO_CHAR(sd_birth, 'YYYY-MM-DD') AS sd_birth, sd_phone, sd_address, sd_email, TO_CHAR(sd_date, 'YYYY-MM-DD') AS sd_date ");
+		sql.append("FROM student st INNER JOIN subject su ON st.s_num = su.s_num ");
 		sql.append("ORDER BY no");
 
 		Connection con = null;
@@ -99,8 +102,15 @@ public class StudentDAO {
 	public ArrayList<StudentVO> getStudentSearch(String searchObject, String searchWord) throws Exception {
 		StringBuffer sql = new StringBuffer();
 		sql.append("SELECT no, sd_num, sd_name, sd_id, sd_passwd, s_num, ");
-		sql.append("sd_birth, sd_phone, address, sd_email, sd_date FROM student ");
-		sql.append("WHERE ? LIKE ? ");
+		sql.append("sd_birth, sd_phone, address, sd_email, sd_date ");
+		sql.append("FROM student st INNER JOIN subject su ON st.s_num = su.s_num");
+
+		if (searchObject.equalsIgnoreCase("sd_name")) {
+			sql.append("WHERE sd_name LIKE ? ");
+		} else if (searchObject.equalsIgnoreCase("sd_date")) {
+			sql.append("WHERE TO_CHAR(sd_date, 'YYYY-MM-DD') LIKE ? ");
+		}
+
 		sql.append("ORDER BY no");
 
 		Connection con = null;
@@ -112,8 +122,8 @@ public class StudentDAO {
 		try {
 			con = getConnection();
 			pstmt = con.prepareStatement(sql.toString());
-			pstmt.setString(1, searchObject);
-			pstmt.setString(2, "%" + searchWord + "%");
+			pstmt.setString(1, "%" + searchWord + "%");
+//			pstmt.setString(1, searchObject);
 
 			rs = pstmt.executeQuery();
 
@@ -164,14 +174,14 @@ public class StudentDAO {
 	 */
 	public String getStudentCount(String subjectNum) throws Exception {
 		StringBuffer sql = new StringBuffer();
-		sql.append("SELECT no FROM subject ");
-		sql.append("WHERE s_num = ? ");
-		sql.append("ORDER BY no");
+		sql.append("SELECT NVL(LPAD(MAX(TO_NUMBER(LTRIM(SUBSTR(sd_num, ");
+		sql.append("5, 4), '0')))+1, 4, '0'), '0001') AS studentCount ");
+		sql.append("FROM student WHERE s_num = ?");
 
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String sNum = "";
+		String serialNumber = "";
 
 		try {
 			con = getConnection();
@@ -180,8 +190,8 @@ public class StudentDAO {
 
 			rs = pstmt.executeQuery();
 
-			while (rs.next()) {
-				sNum = subjectNum;
+			if (rs.next()) {
+				serialNumber = rs.getString("studentCount");
 			}
 		} catch (SQLException e) {
 			System.out.println("쿼리 getStudentCount() error = [" + e + " ]");
@@ -203,7 +213,7 @@ public class StudentDAO {
 			}
 		}
 
-		return sNum;
+		return serialNumber;
 	}
 
 	/**
@@ -231,12 +241,17 @@ public class StudentDAO {
 
 			rs = pstmt.executeQuery();
 
-			while (rs.next()) {
-				cnt = rs.getInt(1);
+			rs.next();
+			if (rs.getInt(1) == 0) {
+				overlap = false;
 			}
 
-			if (cnt == 0)
-				overlap = false;
+//			while (rs.next()) {
+//				cnt = rs.getInt(1);
+//				if (cnt == 0)
+//					overlap = false;
+//			}
+
 		} catch (SQLException e) {
 			System.out.println("쿼리 getStudentIdOverlap() error = [" + e + " ]");
 			e.printStackTrace();
@@ -271,7 +286,7 @@ public class StudentDAO {
 		StringBuffer sql = new StringBuffer();
 		sql.append("INSERT INTO student (no, sd_num, sd_name, sd_id, sd_passwd, s_num, ");
 		sql.append("sd_birth, sd_phone, sd_address, sd_email, sd_date) ");
-		sql.append("VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+		sql.append("VALUES (student_seq.NEXTVAL, ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE)");
 
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -281,17 +296,15 @@ public class StudentDAO {
 			con = getConnection();
 
 			pstmt = con.prepareStatement(sql.toString());
-			pstmt.setInt(1, svo.getNo());
-			pstmt.setString(2, svo.getSd_num());
-			pstmt.setString(3, svo.getSd_name());
-			pstmt.setString(4, svo.getSd_id());
-			pstmt.setString(5, svo.getSd_passwd());
-			pstmt.setString(6, svo.getS_num());
-			pstmt.setString(7, svo.getSd_birth());
-			pstmt.setString(8, svo.getSd_phone());
-			pstmt.setString(9, svo.getSd_address());
-			pstmt.setString(10, svo.getSd_email());
-			pstmt.setString(11, svo.getSd_date());
+			pstmt.setString(1, svo.getSd_num());
+			pstmt.setString(2, svo.getSd_name());
+			pstmt.setString(3, svo.getSd_id());
+			pstmt.setString(4, svo.getSd_passwd());
+			pstmt.setString(5, svo.getS_num());
+			pstmt.setDate(6, Date.valueOf(svo.getSd_birth()));
+			pstmt.setString(7, svo.getSd_phone());
+			pstmt.setString(8, svo.getSd_address());
+			pstmt.setString(9, svo.getSd_email());
 
 			// 오류구문 없이 멈춰있는 경우, 데이터베이스에서 변경사항을 반영(커밋)해준 후 실행한다.
 			int cnt = pstmt.executeUpdate();
