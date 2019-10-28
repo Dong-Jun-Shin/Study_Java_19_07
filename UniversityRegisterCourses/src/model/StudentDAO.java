@@ -341,8 +341,8 @@ public class StudentDAO {
 	 */
 	public boolean studentUpdate(StudentVO svo) throws Exception {
 		StringBuffer sql = new StringBuffer();
-		sql.append("UPDATE student SET sd_num = ?,  sd_id = ?, sd_passwd = ?, sd_birth = ?, ");
-		sql.append("sd_phone = ?, sd_address = ?, sd_email = ?, sd_date = ? WHERE no = ?");
+		sql.append("UPDATE student SET sd_passwd = ?, sd_birth = ?, ");
+		sql.append("sd_phone = ?, sd_address = ?, sd_email = ?, sd_date = SYSDATE WHERE no = ?");
 
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -351,15 +351,12 @@ public class StudentDAO {
 			con = getConnection();
 
 			pstmt = con.prepareStatement(sql.toString());
-			pstmt.setString(1, svo.getSd_num());
-			pstmt.setString(2, svo.getSd_id());
-			pstmt.setString(3, svo.getSd_passwd());
-			pstmt.setString(4, svo.getSd_birth());
-			pstmt.setString(5, svo.getSd_phone());
-			pstmt.setString(6, svo.getSd_address());
-			pstmt.setString(7, svo.getSd_email());
-			pstmt.setString(8, svo.getSd_date());
-			pstmt.setInt(9, svo.getNo());
+			pstmt.setString(1, svo.getSd_passwd());
+			pstmt.setDate(2, Date.valueOf(svo.getSd_birth()));
+			pstmt.setString(3, svo.getSd_phone());
+			pstmt.setString(4, svo.getSd_address());
+			pstmt.setString(5, svo.getSd_email());
+			pstmt.setInt(6, svo.getNo());
 
 			int cnt = pstmt.executeUpdate();
 			if (cnt == 1) {

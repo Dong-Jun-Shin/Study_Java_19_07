@@ -136,8 +136,8 @@ public class SubjectTabController implements Initializable {
 		// 설정을 받을 Table의 열
 		for (int i = 0; i < title.size(); i++) {
 			TableColumn<SubjectVO, ?> columnName = subjectTableView.getColumns().get(i);
-			//setCellValueFactory(obj) : objdp 있는 열로 테이블의 열을 설정해준다.
-			//new PropertyValueFactory<>() : 값을 가질 수 있는 열로 만든다. 
+			// setCellValueFactory(obj) : objdp 있는 열로 테이블의 열을 설정해준다.
+			// new PropertyValueFactory<>() : 값을 가질 수 있는 열로 만든다.
 			columnName.setCellValueFactory(new PropertyValueFactory<>(title.get(i)));
 		}
 
@@ -166,7 +166,8 @@ public class SubjectTabController implements Initializable {
 					try {
 						subjectNumber = sbdao.getSubjectNum();
 					} catch (Exception e) {
-						System.out.println("ChangeListener<> = [" + e.getMessage() + "]");
+						e.printStackTrace();
+//						System.out.println("ChangeListener<> = [" + e.getMessage() + "]");
 					}
 					txtSubjectNum.setText(subjectNumber);
 				}

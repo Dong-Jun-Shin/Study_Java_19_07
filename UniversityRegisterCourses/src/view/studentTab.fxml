@@ -31,10 +31,13 @@
 					prefWidth="224.0" spacing="5.0">
 					<children>
 						<Label prefWidth="50.0" text="학과명 :" />
+						<!-- 
 						<ComboBox fx:id="cbxSubjectName"
 							onAction="#cbxSubjectNameAction" promptText="선택" />
-						<!-- <TextField fx:id="txtSubjectName"/> <Button mnemonicParsing="false" 
-							text="과검색" fx:id="btnNameSearch"/> -->
+						-->
+						<TextField fx:id="txtSubjectName"/> 
+						<Button mnemonicParsing="false" 
+							text="과검색" fx:id="btnNameSearch" onAction="#btnSubjectNameSearch"/>
 					</children>
 				</HBox>
 				<HBox alignment="CENTER_LEFT" prefHeight="26.0"

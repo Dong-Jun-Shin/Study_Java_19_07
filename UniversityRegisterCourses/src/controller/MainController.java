@@ -60,7 +60,8 @@ public class MainController implements Initializable{
 					
 					//해당 탭의 내용을 새로고침					
 					try {
-						studentTabController.addSubjectName();
+						//
+//						studentTabController.addSubjectName();
 						studentTabController.studentTotalList(null);
 					} catch (Exception e) {
 						// TODO: handle exception
