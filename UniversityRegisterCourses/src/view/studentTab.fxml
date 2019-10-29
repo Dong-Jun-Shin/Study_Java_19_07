@@ -137,9 +137,9 @@
 						<!-- 겹쳐서 만들어놓고 상황에 따라 선택되어 나타나도록 설정 -->
 						<AnchorPane>
 							<children>
-								<TextField fx:id="txtSearch" layoutX="0" layoutY="0"
+								<TextField fx:id="txtSearch" layoutX="0" layoutY="0" prefWidth="163"
 									promptText="이름" />
-								<DatePicker fx:id="dpDate" layoutX="0" layoutY="0" />
+								<DatePicker fx:id="dpDate" layoutX="0" layoutY="0" prefWidth="163"/>
 							</children>
 						</AnchorPane>
 						<Button fx:id="btnSearch" onAction="#btnSearchAction"

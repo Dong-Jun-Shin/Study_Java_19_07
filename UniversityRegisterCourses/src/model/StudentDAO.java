@@ -101,10 +101,9 @@ public class StudentDAO {
 	 */
 	public ArrayList<StudentVO> getStudentSearch(String searchObject, String searchWord) throws Exception {
 		StringBuffer sql = new StringBuffer();
-		sql.append("SELECT no, sd_num, sd_name, sd_id, sd_passwd, s_num, ");
-		sql.append("sd_birth, sd_phone, address, sd_email, sd_date ");
-		sql.append("FROM student st INNER JOIN subject su ON st.s_num = su.s_num");
-
+		sql.append("SELECT st.no as no, sd_num, sd_name, sd_id, sd_passwd, su.s_num, ");
+		sql.append("sd_birth, sd_phone, sd_address, sd_email, sd_date ");
+		sql.append("FROM student st INNER JOIN subject su ON st.s_num = su.s_num ");
 		if (searchObject.equalsIgnoreCase("sd_name")) {
 			sql.append("WHERE sd_name LIKE ? ");
 		} else if (searchObject.equalsIgnoreCase("sd_date")) {
@@ -124,7 +123,6 @@ public class StudentDAO {
 			pstmt = con.prepareStatement(sql.toString());
 			pstmt.setString(1, "%" + searchWord + "%");
 //			pstmt.setString(1, searchObject);
-
 			rs = pstmt.executeQuery();
 
 			while (rs.next()) {
@@ -342,7 +340,7 @@ public class StudentDAO {
 	public boolean studentUpdate(StudentVO svo) throws Exception {
 		StringBuffer sql = new StringBuffer();
 		sql.append("UPDATE student SET sd_passwd = ?, sd_birth = ?, ");
-		sql.append("sd_phone = ?, sd_address = ?, sd_email = ?, sd_date = SYSDATE WHERE no = ?");
+		sql.append("sd_phone = ?, sd_address = ?, sd_email = ? WHERE no = ?");
 
 		Connection con = null;
 		PreparedStatement pstmt = null;

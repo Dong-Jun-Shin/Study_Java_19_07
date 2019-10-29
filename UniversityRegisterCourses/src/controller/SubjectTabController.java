@@ -357,7 +357,7 @@ public class SubjectTabController implements Initializable {
 		} else {
 			alert.setAlertType(AlertType.WARNING);
 			alert.setHeaderText("학과 정보 삭제 여부");
-			alert.setContentText("학생 정보 삭제에 문제가 있어 삭제를 완료하지 못하였습니다.");
+			alert.setContentText("학과 정보 삭제에 문제가 있어 삭제를 완료하지 못하였습니다.");
 		}
 		alert.showAndWait();
 	}
@@ -383,7 +383,7 @@ public class SubjectTabController implements Initializable {
 		Label txtTitle = (Label) parent.lookup("#txtTitle");
 		if (btn == btnDelete) {
 			// 쿼리문을 이용하여 데이터 삭제
-			txtTitle.setText("학생 정보를 삭제하시겠습니까?");
+			txtTitle.setText("학과 정보를 삭제하시겠습니까?");
 		} else if (btn == btnImageDelete) {
 			txtTitle.setText("이미지 정보를 삭제하시겠습니까?");
 		}

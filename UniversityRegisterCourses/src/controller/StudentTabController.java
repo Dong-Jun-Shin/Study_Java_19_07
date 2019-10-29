@@ -1,7 +1,9 @@
 package controller;
 
+import java.io.IOException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -20,6 +22,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -121,7 +124,12 @@ public class StudentTabController implements Initializable {
 		// 테이블뷰 수정 금지
 		studentTableViewUp.setEditable(false);
 		studentTableViewDown.setEditable(false);
+		// 학번 수정 금지
 		txtStudentNum.setEditable(false);
+
+		// DatePicker에 실행된 날짜를 대입하고 숨기기
+		dpDate.setValue(LocalDate.now());
+		dpDate.setVisible(false);
 
 		try {
 			// 테이블뷰 컬럼이름 설정(StudentVO의 필드명을 얻어와서 설정한다.)
@@ -333,6 +341,11 @@ public class StudentTabController implements Initializable {
 		}
 	}
 
+	/**
+	 * 학생에게 이메일을 전송
+	 * 
+	 * @param event
+	 */
 	public void btnSendAction(ActionEvent event) {
 
 	}
@@ -403,19 +416,28 @@ public class StudentTabController implements Initializable {
 		}
 	}
 
-	
 	public void btnStudentUpdate(ActionEvent event) {
 		boolean success = false;
 
 		try {
-			if (!DataUtil.validityCheck(txtSubjectName.getText(), "학생 이름을 ")) {
+			if (!DataUtil.validityCheck(pwStudentPasswd.getText(), "비밀번호를 "))
 				return;
-			} else {
+			else if (!DataUtil.validityCheck(txtStudentBirth.getText(), "생년월일을 "))
+				return;
+			else if (!DataUtil.validityCheck(txtStudentPhone.getText(), "연락처를"))
+				return;
+			else if (txtStudentAddress.getText().equals("")) {
+				DataUtil.validityCheck("", "주소를");
+				return;
+			} else if (!DataUtil.validityCheck(txtStudentEmail.getText(), "이메일을 "))
+				return;
+			else {
 				StudentVO svo = new StudentVO();
 
 				svo.setNo(selectedStudentIndex);
 				svo.setSd_passwd(pwStudentPasswd.getText().trim());
-				
+
+				// Date형
 				String sd_b = txtStudentBirth.getText().trim();
 				StringBuffer sb = new StringBuffer();
 				sb.append(sd_b.substring(0, 4));
@@ -424,8 +446,7 @@ public class StudentTabController implements Initializable {
 				sb.append("-");
 				sb.append(sd_b.substring(6, 8));
 				svo.setSd_birth(sb.toString());
-//				svo.setSd_birth(txtStudentBirth.getText().trim());
-				
+
 				svo.setSd_phone(txtStudentPhone.getText().trim());
 				svo.setSd_address(txtStudentAddress.getText().trim());
 				svo.setSd_email(txtStudentEmail.getText().trim());
@@ -439,6 +460,8 @@ public class StudentTabController implements Initializable {
 					alert.setContentText(" [ " + txtSubjectName.getText() + " ] 학생 정보가 성공적으로 수정되었습니다.");
 					studentTotalList(null);
 					reset();
+					editable(true);
+					disable(true);
 				} else {
 					alert.setAlertType(AlertType.WARNING);
 					alert.setHeaderText("학생 정보 수정 여부");
@@ -451,8 +474,82 @@ public class StudentTabController implements Initializable {
 		}
 	}
 
-	public void deleteConfirm(ActionEvent event) {
+	public void btnStudentDelete(ActionEvent event) {
+		boolean success = false;
+		try {
+			StudentVO svo = new StudentVO();
+			svo.setNo(selectedStudentIndex);
+			success = stdao.studentDelete(svo);
+		} catch (Exception e) {
+			System.out.println("btnDelete() = [ " + e + " ]");
+			e.printStackTrace();
+		}
 
+		Alert alert = new Alert(AlertType.INFORMATION);
+		alert.setTitle("학생 정보 삭제");
+		if (success == true) {
+			alert.setHeaderText("학생 정보 삭제 여부");
+			alert.setContentText(" [ " + txtSubjectName.getText() + " ] 학생 정보가 성공적으로 삭제하였습니다..");
+			studentTotalList(null);
+			reset();
+			disable(true);
+		} else {
+			alert.setAlertType(AlertType.WARNING);
+			alert.setHeaderText("학생 정보 삭제 여부");
+			alert.setContentText("학생 정보 삭제에 문제가 있어 삭제를 완료하지 못하였습니다.");
+		}
+		alert.showAndWait();
+	}
+
+	/**
+	 * 삭제 여부 확인 창 띄우기
+	 * 
+	 * @param event
+	 * @throws IOException
+	 */
+	public void deleteConfirm(ActionEvent event) throws IOException {
+		// getSource(), event를 생성한 객체를 반환 (이벤트 객체를 생성한 객체(Button 등등)을 가져옴)
+		Object btn = event.getSource();
+		// StageStyle.UTILITY : 배경이 흰색이고, 제목줄에 타이틀, 종료버튼만 존재.
+		Stage dialog = new Stage(StageStyle.UTILITY);
+		// 모달 다이얼로그는 다이얼로그를 닫기 전까지 소유자 윈도우 사용 불가
+		dialog.initModality(Modality.WINDOW_MODAL);
+		dialog.initOwner(primaryStage);
+		dialog.setTitle("삭제 여부 확인");
+
+		Parent parent = FXMLLoader.load(getClass().getResource("/view/confirm.fxml"));
+		Label txtTitle = (Label) parent.lookup("#txtTitle");
+		txtTitle.setText("학생 정보를 삭제하시겠습니까?");
+
+		txtTitle.setStyle("-fx-font-size: 15");
+
+		// 컨트롤러 정의
+		// 확인 버튼 제어
+		Button btnOk = (Button) parent.lookup("#btnOK");
+		btnOk.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent event) {
+				// TODO Auto-generated method stub
+				dialog.close();
+				btnStudentDelete(event);
+			}
+		});
+
+		// 취소 버튼 제어
+		Button btnCancel = (Button) parent.lookup("#btnCancel");
+		btnCancel.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent event) {
+				// TODO Auto-generated method stub
+				dialog.close();
+			}
+		});
+
+		// 메소드 실행, 정의 후, 창 띄우기
+		Scene scene = new Scene(parent);
+		dialog.setScene(scene);
+		dialog.setResizable(false);
+		dialog.show();
 	}
 
 	/**
@@ -489,12 +586,46 @@ public class StudentTabController implements Initializable {
 //		dpDate.
 	}
 
+	/**
+	 * 검색 대상 제어
+	 * 
+	 * @param event
+	 */
 	public void searchView(ActionEvent event) {
-
+		if (groupSearch.getSelectedToggle().getUserData().toString().equals("sd_name")) {
+			txtSearch.setVisible(true);
+			dpDate.setVisible(false);
+		} else if (groupSearch.getSelectedToggle().getUserData().toString().equals("sd_date")) {
+			txtSearch.setVisible(false);
+			dpDate.setVisible(true);
+		}
 	}
 
 	public void btnSearchAction(ActionEvent event) {
+		String mode = "", word = null;
 
+		// 검색버튼 클릭시
+		if (event.getSource() == btnSearch) {	//검색 파트
+			mode = groupSearch.getSelectedToggle().getUserData().toString();
+			if (mode.contentEquals("sd_name")) {
+				if (!DataUtil.validityCheck(txtSearch.getText(), "검색할 대상의 이름을"))
+					return;
+				else
+					word = mode + "," + txtSearch.getText();
+			} else if (mode.contentEquals("sd_date")) {
+				if (!DataUtil.validityCheck((dpDate.getValue() == null) ? "" : dpDate.getValue().toString(),
+						"검색할 대상의 등록일을"))
+					return;
+				else
+					word = mode + "," + dpDate.getValue();
+			}
+			studentTotalList(word);
+		}else if(event.getSource()==btnTotalList) {	//전체버튼 클릭시
+			txtSearch.clear();
+//			dpDate.getEditor().clear();
+			dpDate.setValue(null);
+			studentTotalList(null);
+		}
 	}
 
 	public void btnPieChartAction(ActionEvent event) {
