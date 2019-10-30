@@ -4,8 +4,11 @@ import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class StudentDAO {
 	// 싱글톤
@@ -273,6 +276,63 @@ public class StudentDAO {
 		return overlap;
 	}
 
+	/**
+	 * 월단위 생일자 수를 구하기 위한 메서드
+	 * 
+	 */
+	public Map<String, Integer> getStudentBirthday() throws Exception {
+		Map<String, Integer> resultMap = new HashMap<>();
+		
+		StringBuffer sql = new StringBuffer();
+		sql.append("SELECT COUNT(DECODE(TO_CHAR(sd_birth, 'MM'), '01', 1)) Jan, ");
+		sql.append("COUNT(DECODE(TO_CHAR(sd_birth, 'MM'), '02', 1)) Feb, ");
+		sql.append("COUNT(DECODE(TO_CHAR(sd_birth, 'MM'), '03', 1)) Mar, ");
+		sql.append("COUNT(DECODE(TO_CHAR(sd_birth, 'MM'), '04', 1)) Apr, ");
+		sql.append("COUNT(DECODE(TO_CHAR(sd_birth, 'MM'), '05', 1)) May, ");
+		sql.append("COUNT(DECODE(TO_CHAR(sd_birth, 'MM'), '06', 1)) Jun, ");
+		sql.append("COUNT(DECODE(TO_CHAR(sd_birth, 'MM'), '07', 1)) Jul, ");
+		sql.append("COUNT(DECODE(TO_CHAR(sd_birth, 'MM'), '08', 1)) Aug, ");
+		sql.append("COUNT(DECODE(TO_CHAR(sd_birth, 'MM'), '09', 1)) Sept, ");
+		sql.append("COUNT(DECODE(TO_CHAR(sd_birth, 'MM'), '10', 1)) Oct, ");
+		sql.append("COUNT(DECODE(TO_CHAR(sd_birth, 'MM'), '11', 1)) Nov, ");
+		sql.append("COUNT(DECODE(TO_CHAR(sd_birth, 'MM'), '12', 1)) Dec ");
+		sql.append("FROM student");
+		
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		ResultSetMetaData rsmd = null;
+		
+		try {
+			con = getConnection();
+			pstmt = con.prepareStatement(sql.toString());
+			rs = pstmt.executeQuery();
+			rsmd = rs.getMetaData();
+			
+			if(rs.next()) {
+				for (int i = 1; i <= rsmd.getColumnCount(); i++) {
+					resultMap.put(rsmd.getColumnName(i), rs.getInt(i));
+				}
+			}
+		} catch (SQLException se) {
+			System.out.println("쿼리 error = [" + se + " ]");
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("error = [" + e + " ]");
+		} finally {
+			try {
+				if(rs != null) rs.close();
+				if(pstmt != null) pstmt.close();
+				if(con != null) con.close();
+			} catch (Exception e) {
+				System.out.println("디비 연동 해제 error = [ " + e + " ]");
+			}
+		}
+		
+		return resultMap;
+		
+	}
+	
 	/**
 	 * 학생 정보 등록(입력)
 	 * 

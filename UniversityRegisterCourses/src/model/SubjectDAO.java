@@ -1,9 +1,11 @@
 package model;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Types;
 import java.util.ArrayList;
 
 /*
@@ -178,6 +180,37 @@ public class SubjectDAO {
 		return success;
 	}
 
+	public String subjectDeleteCall(SubjectVO svo) throws Exception{
+		Connection con = null;
+		CallableStatement cstmt = null;
+		String result = null;
+		
+		try {
+			con = getConnection();
+			cstmt = con.prepareCall("{call subject_del(?,?,?)}");
+			cstmt.setInt(1, svo.getNo());
+			cstmt.setString(2, svo.getS_num());
+			//OUT 파라미터 처리 - 설정이 아닌 등록
+			cstmt.registerOutParameter(3, Types.VARCHAR);
+			
+			cstmt.executeQuery();
+			result = cstmt.getString(3);
+		} catch (SQLException se) {
+			System.out.println("쿼리 error = [ " + se + " ]");
+		} catch (Exception e) {
+			System.out.println("error = [ " + e + " ]");
+		} finally {
+			try {
+				if(cstmt != null) cstmt.close();
+				if(con != null) con.close();
+			} catch (SQLException e) {
+				System.out.println("디비 연동 해제 error = [ " + e + " ]");
+			}
+		}
+		
+		return result;
+	}
+	
 	/**
 	 * getSubjectTotalList() 메서드 : 학과 테이블에 모든 레코드를 반환
 	 * 

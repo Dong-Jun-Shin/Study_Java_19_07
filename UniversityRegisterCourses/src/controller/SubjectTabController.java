@@ -322,6 +322,10 @@ public class SubjectTabController implements Initializable {
 			}
 			alert.showAndWait();
 		}
+		
+		disable(true);
+		subjectTableView.setEditable(false);
+		reset();
 	}
 
 	/**
@@ -363,6 +367,48 @@ public class SubjectTabController implements Initializable {
 	}
 
 	/**
+	 * 학과 정보를 삭제하는 프로시저 호출 이벤트 핸들러
+	 * 
+	 * @param event
+	 */
+	public void btnDeleteCall(ActionEvent event) {
+		String dataResult = "";
+		boolean imgResult = false;
+
+		Alert alert = new Alert(AlertType.INFORMATION);
+		alert.setTitle("학과 정보 삭제");
+		alert.setHeaderText("학과 정보 삭제 여부");
+		try {
+			SubjectVO svo = new SubjectVO();
+			svo.setNo(selectedIndex);
+			svo.setS_name(txtSubjectNum.getText());
+			dataResult = sbdao.subjectDeleteCall(svo);
+
+			if (dataResult.indexOf("정상적") > 0) {
+				// 이미지 파일 삭제
+				if (selectFileName != null) {
+					imgResult = imageDelete(selectFileName);
+					if (!imgResult) {
+						throw new Exception();
+					}
+				}
+				alert.setContentText(dataResult);
+				subjectTotalList(null);
+				reset();
+				disable(true);
+			} else {
+				alert.setAlertType(AlertType.WARNING);
+				alert.setContentText(dataResult);
+			}
+			alert.showAndWait();
+		} catch (Exception e) {
+			alert.setAlertType(AlertType.ERROR);
+			alert.setContentText("학생 정보 삭제에 문제가 있어 삭제를 완료하지 못하였습니다.");
+			alert.showAndWait();
+		}
+	}
+
+	/**
 	 * 삭제 여부를 확인하는 modal을 띄우는 메서드
 	 * 
 	 * @param event
@@ -400,12 +446,16 @@ public class SubjectTabController implements Initializable {
 				dialog.close();
 				if (btn == btnDelete) {
 					// 쿼리문을 이용하여 데이터 삭제
-					btnDelete(event);
+//					btnDelete(event);
 					// 프로시져를 이용하여 데이터 삭제
-//						btnDeleteCall(event);
+					btnDeleteCall(event);
 				} else if (btn == btnImageDelete) {
 					btnImageFileDelete(event);
 				}
+				
+				disable(true);
+				subjectTableView.setEditable(false);
+				reset();
 			}
 		});
 

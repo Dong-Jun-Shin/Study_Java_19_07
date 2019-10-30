@@ -5,8 +5,10 @@ import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
@@ -18,6 +20,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.chart.PieChart;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
@@ -367,37 +370,36 @@ public class StudentTabController implements Initializable {
 			return;
 		} else if (!DataUtil.validityCheck(txtStudentEmail.getText(), "이메일을 "))
 			return;
-		else {
-			StudentVO svo = new StudentVO();
+		else {		
+				StudentVO svo = new StudentVO();
+			
+				svo.setSd_num(txtStudentNum.getText().trim());
+				svo.setSd_name(txtStudentName.getText().trim());
+				svo.setSd_id(txtStudentId.getText().trim());
+				svo.setSd_passwd(pwStudentPasswd.getText().trim());
+//				svo.setS_num(cbxSubjectName.getSelectionModel().getSelectedItem().getS_num());
+				svo.setS_num(txtStudentNum.getText().substring(2, 4));
+				svo.setS_num(selectSubjectNum);
 
-			svo.setNo(10);
-			svo.setSd_num(txtStudentNum.getText().trim());
-			svo.setSd_name(txtStudentName.getText().trim());
-			svo.setSd_id(txtStudentId.getText().trim());
-			svo.setSd_passwd(pwStudentPasswd.getText().trim());
-//			svo.setS_num(cbxSubjectName.getSelectionModel().getSelectedItem().getS_num());
-			svo.setS_num(txtStudentNum.getText().substring(2, 4));
-			svo.setS_num(selectSubjectNum);
+				String sd_b = txtStudentBirth.getText().trim();
+				StringBuffer sb = new StringBuffer();
+				sb.append(sd_b.substring(0, 4));
+				sb.append("-");
+				sb.append(sd_b.substring(4, 6));
+				sb.append("-");
+				sb.append(sd_b.substring(6, 8));
+				svo.setSd_birth(sb.toString());
 
-			String sd_b = txtStudentBirth.getText().trim();
-			StringBuffer sb = new StringBuffer();
-			sb.append(sd_b.substring(0, 4));
-			sb.append("-");
-			sb.append(sd_b.substring(4, 6));
-			sb.append("-");
-			sb.append(sd_b.substring(6, 8));
-			svo.setSd_birth(sb.toString());
+				svo.setSd_phone(txtStudentPhone.getText().trim());
+				svo.setSd_address(txtStudentAddress.getText().trim());
+				svo.setSd_email(txtStudentEmail.getText().trim());
 
-			svo.setSd_phone(txtStudentPhone.getText().trim());
-			svo.setSd_address(txtStudentAddress.getText().trim());
-			svo.setSd_email(txtStudentEmail.getText().trim());
-
-			try {
-				success = stdao.studentInsert(svo);
-			} catch (Exception e) {
-				e.printStackTrace();
+				try {
+					success = stdao.studentInsert(svo);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
 			}
-
 			Alert alert = new Alert(AlertType.INFORMATION);
 			alert.setTitle("학생 정보 입력");
 			if (success == true) {
@@ -411,9 +413,9 @@ public class StudentTabController implements Initializable {
 				alert.setContentText("학생 정보 등록에 문제가 있어 등록을 완료하지 못하였습니다.");
 			}
 			alert.showAndWait();
-
+			
 			btnStudentInit(event);
-		}
+//		}
 	}
 
 	public void btnStudentUpdate(ActionEvent event) {
@@ -628,10 +630,57 @@ public class StudentTabController implements Initializable {
 		}
 	}
 
+	/**
+	 * 파이 차트 버튼
+	 * @param event
+	 */
 	public void btnPieChartAction(ActionEvent event) {
+		try {
+			//새 창 띄우기 - Stage
+			Stage chartDialog = new Stage(StageStyle.UTILITY);
+			chartDialog.initModality(Modality.WINDOW_MODAL);
+			chartDialog.initOwner(primaryStage);
+			chartDialog.setTitle(Calendar.getInstance().get(Calendar.YEAR)+ "년 월단위 학생 생일 분포");
+			
+			//창을 fxml파일과 연결
+			Parent parent = FXMLLoader.load(getClass().getResource("/view/piechart.fxml"));
+			
+			//파이 차트 정의
+			PieChart pieChart = (PieChart)parent.lookup("#pieChart");
+			
+			Map<String, Integer> resultMap = stdao.getStudentBirthday();
+			
+			ObservableList<PieChart.Data>pieChartData = FXCollections.observableArrayList();
+				//entrySet - 요소값을 가져온다.
+			for (Map.Entry<String, Integer> result : resultMap.entrySet()) {
+				System.out.println(result.getKey() + " = " + result.getValue());
+				pieChartData.add(new PieChart.Data(result.getKey(), result.getValue()));
+			}
+			pieChart.setData(pieChartData);
+			
+			//닫기 버튼 정의
+			Button btnClose = (Button) parent.lookup("#btnClose");
+			btnClose.setOnAction(new EventHandler<ActionEvent>() {
 
+				@Override
+				public void handle(ActionEvent event) {
+					// TODO Auto-generated method stub
+					chartDialog.close();
+				}
+			});
+			
+			Scene scene = new Scene(parent);
+			chartDialog.setScene(scene);
+			chartDialog.show();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 	}
 
+	/**
+	 * 바차트 버튼
+	 * @param event
+	 */
 	public void btnBarChartAction(ActionEvent event) {
 
 	}
@@ -648,9 +697,11 @@ public class StudentTabController implements Initializable {
 			// TODO 아래 테이블 다루기
 			if (selectStudent != null) {
 				selectedStudentIndex = selectStudent.getNo();
+				int r = studentTableViewUp.getSelectionModel().getSelectedIndex();
 //				studentTableViewDown.requestFocus();
-//				studentTableViewDown.getFocusModel().focus(selectedStudentIndex-1);
-				studentTableViewDown.getSelectionModel().select(selectedStudentIndex - 1);
+//				studentTableViewDown.getFocusModel().focus(r);
+				studentTableViewDown.scrollTo(r);
+				studentTableViewDown.getSelectionModel().select(r);
 			}
 		}
 
