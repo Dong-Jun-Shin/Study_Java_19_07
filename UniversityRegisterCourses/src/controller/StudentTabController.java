@@ -37,6 +37,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import model.DataUtil;
+import model.EmailVO;
 import model.StudentDAO;
 import model.StudentVO;
 import model.SubjectVO;
@@ -122,7 +123,7 @@ public class StudentTabController implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
 		// 학생등록 초기화
-		// disable(true);
+		 disable(true);
 
 		// 테이블뷰 수정 금지
 		studentTableViewUp.setEditable(false);
@@ -250,7 +251,7 @@ public class StudentTabController implements Initializable {
 	 * 
 	 * @param event
 	 */
-	public void btnSubjectNameSearch(ActionEvent event) throws Exception {
+	public void btnSubjectNameSearch(ActionEvent event) {
 		try {
 			// StageStyle로 Modal의 속성을 설정
 			Stage searchDialog = new Stage(StageStyle.UTILITY);
@@ -348,9 +349,73 @@ public class StudentTabController implements Initializable {
 	 * 학생에게 이메일을 전송
 	 * 
 	 * @param event
+	 * @throws IOException 
 	 */
-	public void btnSendAction(ActionEvent event) {
+	public void btnSendAction(ActionEvent event) throws IOException {
+		try {
+			//창을 띄우기 위한 창 설정 (StageStyle로 Modal의 속성을 설정)
+			Stage emailDialog = new Stage(StageStyle.UTILITY);
+			emailDialog.initModality(Modality.WINDOW_MODAL);
+			emailDialog.initOwner(primaryStage);
+			emailDialog.setTitle("이메일 보내기");
 
+			//FXML의 연결고리, 관리자 (컨트롤러와 스테이지의 동작을 연결) 
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/email.fxml"));
+			Parent parent = loader.load();
+			
+			//Controller의 연결고리, 관리자
+			EmailController controller = loader.getController();
+			//1.Controller로 필드 설정하는 방법
+			controller.setGoogleId("tempJavaId");
+			controller.setGooglePwd("java!234");
+			controller.setEmailTo(txtStudentEmail.getText());
+			controller.setEmailToName(txtStudentName.getText());
+			//2.FXML로 필드 설정하는 방법
+				//FXML의 필드 주소를 가져와서 변수에 담아 제어한다.
+			TextField emailTo = (TextField)parent.lookup("#emailTo");
+			TextField emailToName = (TextField)parent.lookup("#emailToName");
+			
+			emailTo.setText(txtStudentEmail.getText());
+			emailToName.setText(txtStudentName.getText());
+			
+			controller.setDialog(emailDialog);
+
+			//메인 윈도우(탭)에서 이벤트 메서드를 처리하는 방법
+			Button btnSend = (Button) parent.lookup("#btnSend");
+			btnSend.setOnAction(new EventHandler<ActionEvent>() {
+
+				@Override
+				public void handle(ActionEvent event) {
+					controller.send(event);
+				}
+			});
+			
+			Button btnClear = (Button) parent.lookup("#btnClear");
+			btnClear.setOnAction(new EventHandler<ActionEvent>() {
+
+				@Override
+				public void handle(ActionEvent event) {
+					controller.clear(event);
+				}
+			});
+			
+			Button btnCancel = (Button) parent.lookup("#btnCancel");
+			btnCancel.setOnAction(new EventHandler<ActionEvent>() {
+
+				@Override
+				public void handle(ActionEvent event) {
+					controller.cancel(event);;
+				}
+
+			});
+
+			//정의가 끝난 서브윈도우 창을 보여주기
+			Scene scene = new Scene(parent);
+			emailDialog.setScene(scene);
+			emailDialog.show();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	public void btnStudentInsert(ActionEvent event) {
@@ -370,51 +435,51 @@ public class StudentTabController implements Initializable {
 			return;
 		} else if (!DataUtil.validityCheck(txtStudentEmail.getText(), "이메일을 "))
 			return;
-		else {		
-				StudentVO svo = new StudentVO();
-			
-				svo.setSd_num(txtStudentNum.getText().trim());
-				svo.setSd_name(txtStudentName.getText().trim());
-				svo.setSd_id(txtStudentId.getText().trim());
-				svo.setSd_passwd(pwStudentPasswd.getText().trim());
+		else {
+			StudentVO svo = new StudentVO();
+
+			svo.setSd_num(txtStudentNum.getText().trim());
+			svo.setSd_name(txtStudentName.getText().trim());
+			svo.setSd_id(txtStudentId.getText().trim());
+			svo.setSd_passwd(pwStudentPasswd.getText().trim());
 //				svo.setS_num(cbxSubjectName.getSelectionModel().getSelectedItem().getS_num());
-				svo.setS_num(txtStudentNum.getText().substring(2, 4));
-				svo.setS_num(selectSubjectNum);
+			svo.setS_num(txtStudentNum.getText().substring(2, 4));
+			svo.setS_num(selectSubjectNum);
 
-				String sd_b = txtStudentBirth.getText().trim();
-				StringBuffer sb = new StringBuffer();
-				sb.append(sd_b.substring(0, 4));
-				sb.append("-");
-				sb.append(sd_b.substring(4, 6));
-				sb.append("-");
-				sb.append(sd_b.substring(6, 8));
-				svo.setSd_birth(sb.toString());
+			String sd_b = txtStudentBirth.getText().trim();
+			StringBuffer sb = new StringBuffer();
+			sb.append(sd_b.substring(0, 4));
+			sb.append("-");
+			sb.append(sd_b.substring(4, 6));
+			sb.append("-");
+			sb.append(sd_b.substring(6, 8));
+			svo.setSd_birth(sb.toString());
 
-				svo.setSd_phone(txtStudentPhone.getText().trim());
-				svo.setSd_address(txtStudentAddress.getText().trim());
-				svo.setSd_email(txtStudentEmail.getText().trim());
+			svo.setSd_phone(txtStudentPhone.getText().trim());
+			svo.setSd_address(txtStudentAddress.getText().trim());
+			svo.setSd_email(txtStudentEmail.getText().trim());
 
-				try {
-					success = stdao.studentInsert(svo);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
+			try {
+				success = stdao.studentInsert(svo);
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
-			Alert alert = new Alert(AlertType.INFORMATION);
-			alert.setTitle("학생 정보 입력");
-			if (success == true) {
-				alert.setHeaderText("학생 정보 등록 여부");
-				alert.setContentText(" [ " + txtStudentName.getText() + " ] 학생 정보가 성공적으로 등록되었습니다.");
-				studentTotalList(null);
+		}
+		Alert alert = new Alert(AlertType.INFORMATION);
+		alert.setTitle("학생 정보 입력");
+		if (success == true) {
+			alert.setHeaderText("학생 정보 등록 여부");
+			alert.setContentText(" [ " + txtStudentName.getText() + " ] 학생 정보가 성공적으로 등록되었습니다.");
+			studentTotalList(null);
 //				reset();
-			} else {
-				alert.setAlertType(AlertType.WARNING);
-				alert.setHeaderText("학생 정보 등록 여부");
-				alert.setContentText("학생 정보 등록에 문제가 있어 등록을 완료하지 못하였습니다.");
-			}
-			alert.showAndWait();
-			
-			btnStudentInit(event);
+		} else {
+			alert.setAlertType(AlertType.WARNING);
+			alert.setHeaderText("학생 정보 등록 여부");
+			alert.setContentText("학생 정보 등록에 문제가 있어 등록을 완료하지 못하였습니다.");
+		}
+		alert.showAndWait();
+
+		btnStudentInit(event);
 //		}
 	}
 
@@ -607,7 +672,7 @@ public class StudentTabController implements Initializable {
 		String mode = "", word = null;
 
 		// 검색버튼 클릭시
-		if (event.getSource() == btnSearch) {	//검색 파트
+		if (event.getSource() == btnSearch) { // 검색 파트
 			mode = groupSearch.getSelectedToggle().getUserData().toString();
 			if (mode.contentEquals("sd_name")) {
 				if (!DataUtil.validityCheck(txtSearch.getText(), "검색할 대상의 이름을"))
@@ -622,7 +687,7 @@ public class StudentTabController implements Initializable {
 					word = mode + "," + dpDate.getValue();
 			}
 			studentTotalList(word);
-		}else if(event.getSource()==btnTotalList) {	//전체버튼 클릭시
+		} else if (event.getSource() == btnTotalList) { // 전체버튼 클릭시
 			txtSearch.clear();
 //			dpDate.getEditor().clear();
 			dpDate.setValue(null);
@@ -632,33 +697,34 @@ public class StudentTabController implements Initializable {
 
 	/**
 	 * 파이 차트 버튼
+	 * 
 	 * @param event
 	 */
 	public void btnPieChartAction(ActionEvent event) {
 		try {
-			//새 창 띄우기 - Stage
+			// 새 창 띄우기 - Stage
 			Stage chartDialog = new Stage(StageStyle.UTILITY);
 			chartDialog.initModality(Modality.WINDOW_MODAL);
 			chartDialog.initOwner(primaryStage);
-			chartDialog.setTitle(Calendar.getInstance().get(Calendar.YEAR)+ "년 월단위 학생 생일 분포");
-			
-			//창을 fxml파일과 연결
+			chartDialog.setTitle(Calendar.getInstance().get(Calendar.YEAR) + "년 월단위 학생 생일 분포");
+
+			// 창을 fxml파일과 연결
 			Parent parent = FXMLLoader.load(getClass().getResource("/view/piechart.fxml"));
-			
-			//파이 차트 정의
-			PieChart pieChart = (PieChart)parent.lookup("#pieChart");
-			
+
+			// 파이 차트 정의
+			PieChart pieChart = (PieChart) parent.lookup("#pieChart");
+
 			Map<String, Integer> resultMap = stdao.getStudentBirthday();
-			
-			ObservableList<PieChart.Data>pieChartData = FXCollections.observableArrayList();
-				//entrySet - 요소값을 가져온다.
+
+			ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList();
+			// entrySet - 요소값을 가져온다.
 			for (Map.Entry<String, Integer> result : resultMap.entrySet()) {
 				System.out.println(result.getKey() + " = " + result.getValue());
 				pieChartData.add(new PieChart.Data(result.getKey(), result.getValue()));
 			}
 			pieChart.setData(pieChartData);
-			
-			//닫기 버튼 정의
+
+			// 닫기 버튼 정의
 			Button btnClose = (Button) parent.lookup("#btnClose");
 			btnClose.setOnAction(new EventHandler<ActionEvent>() {
 
@@ -668,7 +734,7 @@ public class StudentTabController implements Initializable {
 					chartDialog.close();
 				}
 			});
-			
+
 			Scene scene = new Scene(parent);
 			chartDialog.setScene(scene);
 			chartDialog.show();
@@ -679,6 +745,7 @@ public class StudentTabController implements Initializable {
 
 	/**
 	 * 바차트 버튼
+	 * 
 	 * @param event
 	 */
 	public void btnBarChartAction(ActionEvent event) {

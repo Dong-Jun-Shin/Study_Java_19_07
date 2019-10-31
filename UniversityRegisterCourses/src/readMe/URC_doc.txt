@@ -1,0 +1,86 @@
+<main>
+TabPane mainPane
+Tab subject
+Tab student
+SubjectTabController subjectTabController
+StudentTabController studentTabController
+
+#menuExit(ActionEvent event)
+#menuInfo(ActionEvent event)
+
+
+<sub>
+TextField txtSubjectNum
+TextField txtSubjectName
+Button btnInsert
+Button btnUpdate
+Button btnDelete
+ImageView imageView
+Button btnImageChoice
+Button btnImageDelete
+Label txtSearch
+Button btnSearch
+Button btnTotalList
+TableView<SubjectVO> subjectTableView
+
+#btnInsert(ActionEvent event)
+#btnUpdate(ActionEvent event)
+#deleteConfirm(ActionEvent event)
+#btnReset(ActionEvent event)
+#btnImageFileAction(ActionEvent event)
+#btnSearchAction(ActionEvent event)
+#btnSearchAction(ActionEvent event)
+#subjectTableView(MouseEvent event)
+
+
+<stu>
+ToggleGroup groupSearch
+ComboBox<String> cbxSubjectName
+TextField txtSubjectName
+Button btnNameSearch
+TextField txtStudentNum
+TextField txtStudentName
+TextField txtStudentId
+Button btnIdCheck
+PasswordField pwStudentPasswd
+TextField txtStudentBirth
+TextField txtStudentPhone
+TextField txtStudentAddress
+TextField txtStudentEmail
+Button btnEmail
+Button btnStudentInsert
+Button btnStudentUpdate
+Button btnStudentDelete
+TextField txtSearch
+DatePicker dpDate
+Button btnSearch
+Button btnTotalList
+TableView studentTableViewUp
+TableView studentTableViewDown
+PieChart pieChart
+Button btnClose
+
+#cbxSubjectNameAction(ActionEvent event)
+#btnIdCheck(ActionEvent event)
+#btnSendAction(ActionEvent event)
+#btnStudentInsert(ActionEvent event)
+#btnStudentUpdate(ActionEvent event)
+#deleteConfirm(ActionEvent event)
+#btnStudentInit(ActionEvent event)
+#searchView(ActionEvent event)
+#btnSearchAction(ActionEvent event)
+#btnPieChartAction(ActionEvent event)
+#btnBarChartAction(ActionEvent event)
+#studentTableView(MouseEvent event)
+
+
+<subjectSub>
+TextField s_name
+Button btnSearch
+TableView subjectView
+Button btnChoice
+Button btnClose
+
+#btnSearchAction(ActionEvent event)
+#tableSelected(MouseEvent event)
+#btnClose(ActionEvent event)
