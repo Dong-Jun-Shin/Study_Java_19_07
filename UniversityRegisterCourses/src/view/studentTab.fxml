@@ -148,8 +148,8 @@
 							mnemonicParsing="false" text="전체" />
 						<Button onAction="#btnPieChartAction"
 							mnemonicParsing="false" text="파이 차트" />
-						<Button onAction="#btnBarChartAction"
-							mnemonicParsing="false" text="바차트" />
+						<Button onAction="#btnLineChartAction"
+							mnemonicParsing="false" text="라인 차트" />
 					</children>
 				</HBox>
 				<TableView fx:id="studentTableViewUp" onMouseClicked="#studentTableView"

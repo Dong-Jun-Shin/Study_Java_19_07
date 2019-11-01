@@ -11,8 +11,6 @@ public class EmailVO {
 	private String emailMsg;
 	
 	public EmailVO() {
-		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public EmailVO(String googleId, String googlePwd, String emailTo, String emailToName,

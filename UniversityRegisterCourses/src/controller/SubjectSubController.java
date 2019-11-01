@@ -44,7 +44,6 @@ public class SubjectSubController implements Initializable{
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		// TODO Auto-generated method stub
 		TableColumn<SubjectVO, ?> dnoColumn = subjectView.getColumns().get(0);
 		dnoColumn.setCellValueFactory(new PropertyValueFactory<>("s_num"));
 		

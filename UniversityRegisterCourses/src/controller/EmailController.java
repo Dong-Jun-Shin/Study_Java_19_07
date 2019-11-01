@@ -59,7 +59,6 @@ public class EmailController implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		// TODO Auto-generated method stub
 		emailTo.setEditable(false);
 		emailToName.setEditable(false);
 		
@@ -68,7 +67,6 @@ public class EmailController implements Initializable {
 			
 			@Override
 			public void run() {
-				// TODO Auto-generated method stub
 				emailFrom.requestFocus();
 			}
 		});

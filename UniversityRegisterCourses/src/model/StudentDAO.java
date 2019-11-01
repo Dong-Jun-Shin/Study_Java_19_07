@@ -22,7 +22,6 @@ public class StudentDAO {
 
 	private StudentDAO() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	private Connection getConnection() throws Exception {
@@ -229,7 +228,6 @@ public class StudentDAO {
 		StringBuffer sql = new StringBuffer();
 		sql.append("SELECT COUNT(*) FROM student WHERE sd_id = ?");
 		sql.append("ORDER BY no");
-		int cnt = 0;
 
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -317,7 +315,6 @@ public class StudentDAO {
 		} catch (SQLException se) {
 			System.out.println("쿼리 error = [" + se + " ]");
 		} catch (Exception e) {
-			// TODO: handle exception
 			System.out.println("error = [" + e + " ]");
 		} finally {
 			try {

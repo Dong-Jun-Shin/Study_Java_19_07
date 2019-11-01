@@ -442,7 +442,6 @@ public class SubjectTabController implements Initializable {
 		btnOk.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
-				// TODO Auto-generated method stub
 				dialog.close();
 				if (btn == btnDelete) {
 					// 쿼리문을 이용하여 데이터 삭제
@@ -464,7 +463,6 @@ public class SubjectTabController implements Initializable {
 		btnCancel.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
-				// TODO Auto-generated method stub
 				dialog.close();
 			}
 		});

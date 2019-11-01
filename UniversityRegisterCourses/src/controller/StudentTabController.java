@@ -20,7 +20,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.chart.LineChart;
 import javafx.scene.chart.PieChart;
+import javafx.scene.chart.XYChart;
+import javafx.scene.chart.XYChart.Data;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
@@ -37,7 +40,6 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import model.DataUtil;
-import model.EmailVO;
 import model.StudentDAO;
 import model.StudentVO;
 import model.SubjectVO;
@@ -121,16 +123,13 @@ public class StudentTabController implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		// TODO Auto-generated method stub
 		// 학생등록 초기화
 		 disable(true);
 
 		// 테이블뷰 수정 금지
 		studentTableViewUp.setEditable(false);
 		studentTableViewDown.setEditable(false);
-		// 학번 수정 금지
-		txtStudentNum.setEditable(false);
-
+		// 학번 수
 		// DatePicker에 실행된 날짜를 대입하고 숨기기
 		dpDate.setValue(LocalDate.now());
 		dpDate.setVisible(false);
@@ -159,7 +158,6 @@ public class StudentTabController implements Initializable {
 			studentTableViewUp.setItems(studentDataUpList);
 			studentTableViewDown.setItems(studentDataDownList);
 
-			// TODO 아래 테이블 선택 비활성화
 
 			// 학생 전체 목록
 			studentTotalList(null);
@@ -167,7 +165,6 @@ public class StudentTabController implements Initializable {
 			// 추가된 학과명 호출
 //			addSubjectName();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -272,7 +269,6 @@ public class StudentTabController implements Initializable {
 
 				@Override
 				public void handle(ActionEvent event) {
-					// TODO Auto-generated method stub
 					searchDialog.close();
 
 					@SuppressWarnings("unchecked")
@@ -575,8 +571,6 @@ public class StudentTabController implements Initializable {
 	 * @throws IOException
 	 */
 	public void deleteConfirm(ActionEvent event) throws IOException {
-		// getSource(), event를 생성한 객체를 반환 (이벤트 객체를 생성한 객체(Button 등등)을 가져옴)
-		Object btn = event.getSource();
 		// StageStyle.UTILITY : 배경이 흰색이고, 제목줄에 타이틀, 종료버튼만 존재.
 		Stage dialog = new Stage(StageStyle.UTILITY);
 		// 모달 다이얼로그는 다이얼로그를 닫기 전까지 소유자 윈도우 사용 불가
@@ -596,7 +590,6 @@ public class StudentTabController implements Initializable {
 		btnOk.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
-				// TODO Auto-generated method stub
 				dialog.close();
 				btnStudentDelete(event);
 			}
@@ -607,7 +600,6 @@ public class StudentTabController implements Initializable {
 		btnCancel.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
-				// TODO Auto-generated method stub
 				dialog.close();
 			}
 		});
@@ -719,7 +711,6 @@ public class StudentTabController implements Initializable {
 			ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList();
 			// entrySet - 요소값을 가져온다.
 			for (Map.Entry<String, Integer> result : resultMap.entrySet()) {
-				System.out.println(result.getKey() + " = " + result.getValue());
 				pieChartData.add(new PieChart.Data(result.getKey(), result.getValue()));
 			}
 			pieChart.setData(pieChartData);
@@ -730,7 +721,6 @@ public class StudentTabController implements Initializable {
 
 				@Override
 				public void handle(ActionEvent event) {
-					// TODO Auto-generated method stub
 					chartDialog.close();
 				}
 			});
@@ -739,7 +729,7 @@ public class StudentTabController implements Initializable {
 			chartDialog.setScene(scene);
 			chartDialog.show();
 		} catch (Exception e) {
-			// TODO: handle exception
+			System.out.println("error btnPieChartAction [" + e + "]");
 		}
 	}
 
@@ -748,8 +738,49 @@ public class StudentTabController implements Initializable {
 	 * 
 	 * @param event
 	 */
-	public void btnBarChartAction(ActionEvent event) {
+	public void btnLineChartAction(ActionEvent event) {
+		try {
+			// 새 창 띄우기 - Stage
+			Stage chartDialog = new Stage(StageStyle.UTILITY);
+			chartDialog.initModality(Modality.WINDOW_MODAL);
+			chartDialog.initOwner(primaryStage);
+			chartDialog.setTitle(Calendar.getInstance().get(Calendar.YEAR) + "년 월단위 학생 생일 분포");
 
+			// 창을 fxml파일과 연결
+			Parent parent = FXMLLoader.load(getClass().getResource("/view/linechart.fxml"));
+
+			// 파이 차트 정의
+			@SuppressWarnings("unchecked")
+			LineChart<String, Integer> lineChart = (LineChart<String, Integer>) parent.lookup("#lineChart");
+
+			XYChart.Series<String, Integer> dataSeries = new XYChart.Series<String, Integer>();
+			dataSeries.setName(Calendar.getInstance().get(Calendar.YEAR) + "년 월단위 학생 생일 분포");
+			//lineChart.getData().clear();
+			
+			Map<String, Integer> resultMap = stdao.getStudentBirthday();
+
+//			// entrySet - 요소값을 가져온다.
+			for (Map.Entry<String, Integer> result : resultMap.entrySet()) {
+				dataSeries.getData().add(new Data<String, Integer>(result.getKey(), result.getValue()));
+			}
+			lineChart.getData().add(dataSeries);
+
+			// 닫기 버튼 정의
+			Button btnClose = (Button) parent.lookup("#btnClose");
+			btnClose.setOnAction(new EventHandler<ActionEvent>() {
+
+				@Override
+				public void handle(ActionEvent event) {
+					chartDialog.close();
+				}
+			});
+
+			Scene scene = new Scene(parent);
+			chartDialog.setScene(scene);
+			chartDialog.show();
+		} catch (Exception e) {
+			System.out.println("error btnLineChartAction [" + e + "]");
+		}
 	}
 
 	/**
@@ -761,7 +792,6 @@ public class StudentTabController implements Initializable {
 		// 한 번 클릭시 아래 테이블의 커서도 같은 위치를 표시
 		if (event.getClickCount() == 1) {
 			StudentVO selectStudent = studentTableViewUp.getSelectionModel().getSelectedItem();
-			// TODO 아래 테이블 다루기
 			if (selectStudent != null) {
 				selectedStudentIndex = selectStudent.getNo();
 				int r = studentTableViewUp.getSelectionModel().getSelectedIndex();
@@ -774,7 +804,6 @@ public class StudentTabController implements Initializable {
 
 		if (event.getClickCount() == 2) {
 			StudentVO selectStudent = studentTableViewUp.getSelectionModel().getSelectedItem();
-			// TODO 아래 테이블 다루기
 			if (selectStudent != null) {
 				selectedStudentIndex = selectStudent.getNo();
 

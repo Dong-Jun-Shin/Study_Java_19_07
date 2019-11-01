@@ -313,7 +313,6 @@ public class SubjectDAO {
 				if (con != null)
 					con.close();
 			} catch (SQLException se) {
-				// TODO: handle exception
 				System.out.println("디비 연동 해제 error = [" + se + "]");
 			}
 		}

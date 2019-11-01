@@ -17,8 +17,6 @@ public class StudentVO {
 	private String sd_date;
 	
 	public StudentVO() {
-		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public StudentVO(int no, String sd_num, String sd_name, String sd_id, String sd_passwd, String s_num,

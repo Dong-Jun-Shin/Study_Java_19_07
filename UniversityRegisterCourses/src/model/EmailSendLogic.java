@@ -19,7 +19,7 @@ public class EmailSendLogic {
 			email.setSmtpPort(587);
 			email.setAuthentication(evo.getGoogleId(), evo.getGooglePwd());
 
-			//Smtp SSL, TLS 설정
+			//Smtp SSL, TLS 설정 (암호화 단계)
 			email.setSSL(true);
 			email.setTLS(true);
 			
