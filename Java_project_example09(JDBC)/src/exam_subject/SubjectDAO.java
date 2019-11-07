@@ -172,10 +172,9 @@ public class SubjectDAO {
 		pstmt.setString(1, "%" + s_name + "%");
 
 		rs = pstmt.executeQuery();
-
 		while (rs.next()) {
 			svo = new SubjectVO();
-			svo.setNo(rs.getInt("no"));
+			svo.setNo(rs.getInt("no")); //
 			svo.setS_num(rs.getString("s_num"));
 			svo.setS_name(rs.getString("s_name"));
 
