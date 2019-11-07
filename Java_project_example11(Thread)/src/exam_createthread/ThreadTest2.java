@@ -21,8 +21,15 @@ public class ThreadTest2 {
 	//	Thread t = new Thread(r);
 		
 		Thread t = new Thread(new MyRunnable1());
-		
+		System.out.println("시작");
 		t.start();
+		
+		try {
+			t.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		System.out.println("종료");
 	}
 	
 }
