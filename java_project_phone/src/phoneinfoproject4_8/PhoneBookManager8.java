@@ -3,6 +3,7 @@ package phoneinfoproject4_8;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.EOFException;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -14,6 +15,8 @@ import java.util.Set;
 
 public class PhoneBookManager8 {
 	private static PhoneBookManager8 instance = null;
+	
+	private final File dataFile = new File("phonebook.dat");
 
 	public static final PhoneBookManager8 getInstance() {
 		if (instance == null) {
@@ -148,7 +151,7 @@ public class PhoneBookManager8 {
 	
 	public void saveFile(Set<PhoneInfo> pBook) {
 		try(ObjectOutputStream oos = new ObjectOutputStream(
-				new BufferedOutputStream(new FileOutputStream("PhoneBook.dat")))){
+				new BufferedOutputStream(new FileOutputStream(dataFile)))){
 			Iterator<PhoneInfo> it = pBook.iterator();
 			while(it.hasNext()) {
 				oos.writeObject(it.next());
@@ -163,8 +166,11 @@ public class PhoneBookManager8 {
 	}
 	
 	public void readFile(Set<PhoneInfo> pBook) {
+		//파일이 존재하는지 여부 확인
+		if(dataFile.exists() == false)
+			return;
 		try(ObjectInputStream ois = new ObjectInputStream(
-				new BufferedInputStream(new FileInputStream("PhoneBook.dat")))){
+				new BufferedInputStream(new FileInputStream(dataFile)))){
 			
 			while(true){
 				pBook.add((PhoneInfo)ois.readObject());				

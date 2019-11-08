@@ -3,6 +3,8 @@
 import java.io.Serializable;
 
 class PhoneUnivInfo extends PhoneInfo{
+	private static final long serialVersionUID = 6472935772531422447L;
+	
 	private String major;
 	private int year;
 	
@@ -36,6 +38,8 @@ class PhoneUnivInfo extends PhoneInfo{
 }
 
 class PhoneCompanyInfo extends PhoneInfo{
+	private static final long serialVersionUID = 7488262496685545950L;
+	
 	private String company;
 	
 	public PhoneCompanyInfo() {
