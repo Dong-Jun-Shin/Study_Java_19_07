@@ -17,7 +17,6 @@ public class ChungnamMain extends Application{
 			
 			ChungnamController controller = loader.getController();
 			controller.setPrimaryStage(primaryStage);
-
 			Scene scene = new Scene(root);
 			
 			primaryStage.setTitle("충남문화관광");

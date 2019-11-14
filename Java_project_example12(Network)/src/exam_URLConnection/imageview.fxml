@@ -9,12 +9,12 @@
 
 <VBox alignment="CENTER" prefHeight="500.0" prefWidth="400.0" spacing="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
    <children>
-      <Label text="[이미지 지명]">
+      <Label id="title" text="[이미지 지명]">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <ImageView fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" />
-      <Button mnemonicParsing="false" prefHeight="23.0" prefWidth="109.0" text="닫기" />
+      <ImageView id="imageView" fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" />
+      <Button id="btnClose" mnemonicParsing="false" prefHeight="23.0" prefWidth="109.0" text="닫기" onAction="#closeAction"/>
    </children>
 </VBox>
