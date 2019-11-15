@@ -6,6 +6,7 @@ public class PhoneBookManager4 implements MENU_SELECT{
 	private static int arrLeng = 0;
 
 	private PhoneBookManager4() {
+		
 	}
 	
 	public static final PhoneBookManager4 getInstance() {

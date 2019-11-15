@@ -15,6 +15,6 @@
          </font>
       </Label>
       <ImageView id="imageView" fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" />
-      <Button id="btnClose" mnemonicParsing="false" prefHeight="23.0" prefWidth="109.0" text="닫기" onAction="#closeAction"/>
+      <Button id="btnClose" mnemonicParsing="false" prefHeight="23.0" prefWidth="109.0" text="닫기"/>
    </children>
 </VBox>

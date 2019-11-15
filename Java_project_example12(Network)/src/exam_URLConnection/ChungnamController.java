@@ -19,13 +19,23 @@ import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class ChungnamController implements Initializable {
 
@@ -63,7 +73,44 @@ public class ChungnamController implements Initializable {
 	 * @throws Exception
 	 */
 	public void cultureTourTableView(MouseEvent event) throws Exception {
-
+		URL url = null;
+		Image image = null;
+		
+		ChungnamVO cVO = cultureTourTableView.getSelectionModel().getSelectedItem();
+		//정확하게 레코드가 선택되었는지 확인 
+		if(cVO != null) {
+			//값이 있는지 여부 확인
+			if(cVO.getList_img() != null) {
+				url = new URL(cVO.getList_img());
+				image = new Image(url.toString());
+				
+				final Stage dialog = new Stage(StageStyle.UTILITY);
+				dialog.initModality(Modality.WINDOW_MODAL);
+				dialog.initOwner(primaryStage);;
+				dialog.setTitle("이미지 뷰");
+				
+				Parent parent = FXMLLoader.load(getClass().getResource("imageview.fxml"));
+				
+				ImageView imageView = (ImageView) parent.lookup("#imageView");
+				imageView.setImage(image);
+				
+				Label title = (Label) parent.lookup("#title");
+				title.setText(cVO.getNm());
+				
+				Button btnClose = (Button) parent.lookup("#btnClose");
+				btnClose.setOnAction(new EventHandler<ActionEvent>() {
+					@Override
+					public void handle(ActionEvent event) {
+						dialog.close();
+					}
+					
+				});
+				
+				Scene scene = new Scene(parent);
+				dialog.setScene(scene);
+				dialog.show();
+			}
+		}
 	}
 
 	/**
@@ -137,7 +184,7 @@ public class ChungnamController implements Initializable {
 		// https://www.data.go.kr/dataset/15005124/openapi.do - 충청남도 맛집 현황
 		// http://tour.chungnam.net/_prog/openapi/?func=tour&mode=getCnt
 		try {
-			URL url = new URL("http://tour.chungnam.net/_prog/openapi/?func=tour&start=1&end=10");
+			URL url = new URL("http://tour.chungnam.net/_prog/openapi/?func=tour&start=1&end=50");
 			URLConnection con = url.openConnection();
 			
 			//URL의 소스를 읽어들여서 Document객체에 저장한다.
@@ -146,11 +193,11 @@ public class ChungnamController implements Initializable {
 			
 			//root element 취득 (하위노드로 접근하는데 이용)
 			Element element = xml.getDocumentElement();
-			System.out.println(element.getNodeName());	//item_info (xml이 가지고 있는 최상위 노드)
+//			System.out.println(element.getNodeName());	//item_info (xml이 가지고 있는 최상위 노드)
 			
 			//child node 취득 (하위노드가 여러개이므로 NodeList로 모두 받는다.
 			NodeList list = element.getChildNodes();
-			System.out.println(list.getLength());	//item 개수
+//			System.out.println(list.getLength());	//item 개수
 			
 			Object obj = null;
 			Field[] fields = null;
@@ -165,9 +212,9 @@ public class ChungnamController implements Initializable {
 							//데이터가 있는 애들만 출력되게 한다.
 							if (!childList.item(j).getNodeName().equals("#text")) {
 								//노드이름(nm)과 내용(값)을 보여준다. (이미지-경로... 등)
-								System.out.println("\t xml tag name : " + 
-									childList.item(j).getNodeName() + ",\t\t xml값 : " + 
-									childList.item(j).getTextContent());
+//								System.out.println("\t xml tag name : " + 
+//									childList.item(j).getNodeName() + ",\t\t xml값 : " + 
+//									childList.item(j).getTextContent());
 								
 								if(fields[f].getName().equals(childList.item(j).getNodeName())) {
 									//method명을 만들기 위한 구문, 예시) "set + F + ields"
@@ -184,7 +231,7 @@ public class ChungnamController implements Initializable {
 								}
 							}
 						}
-						System.out.println(((ChungnamVO)obj).toString());
+//						System.out.println(((ChungnamVO)obj).toString());
 						dataList.add((ChungnamVO)obj);
 					}
 				}
