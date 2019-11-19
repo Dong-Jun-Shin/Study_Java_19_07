@@ -1,40 +1,48 @@
 package exam_network;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.net.Socket;
+import java.net.UnknownHostException;
 
 public class QuizClient {
 	public static void main(String[] args) throws IOException{
-		Socket client = null;
-		DataInputStream dis = null;
-		DataOutputStream dos = null;
+		Socket quizSocket = null;
+		PrintWriter out = null;
+		BufferedReader in = null;
 		try {
-			//접속할 IP
-			client = new Socket("192.168.0.109", 8888);
-//			client = new Socket("192.168.0.110", 8888);
-//			client = new Socket("192.168.0.117", 8888);
-			if(client.isConnected()) {
-				System.out.println("서버와 연결됨");
-			}
+//			quizSocket = new Socket("localhost", 5555);
+			quizSocket = new Socket("192.168.0.109", 5555);
 			
-			System.out.println("서버 주소 " + client.getInetAddress());
-			System.out.println("서버 포트 " + client.getPort());
-			System.out.println("나의 포트 " + client.getLocalPort());
-			System.out.println("나의 주소 " + client.getLocalAddress());
-			
-			dis = new DataInputStream(client.getInputStream());
-			System.out.println("[서버로부터 전달받은 문자열]");
-			System.out.println(dis.readUTF());
-
-			dos = new DataOutputStream(client.getOutputStream());
-			dos.writeUTF("실패했습니다. \n클래스를 새로 만들어서 다시 작성해주십시오.");
-			
-			dis.close();
-			dos.close();
-		} catch (Exception e) {
-			e.printStackTrace();
+			out = new PrintWriter(quizSocket.getOutputStream(), true);
+			in = new BufferedReader(new InputStreamReader(quizSocket.getInputStream()));
+		} catch (UnknownHostException e) {
+			System.err.println("192.168.0.109에 접근할 수 없습니다.");
+			System.exit(1);
+		} catch (IOException e) {
+			System.err.println("입출력 오류");
+			System.exit(1);
 		}
+		
+		BufferedReader user = new BufferedReader(new InputStreamReader(System.in));
+		String fromServer;
+		String fromUser;
+		
+		while((fromServer = in.readLine())!=null) {
+			System.out.println("서버: " + fromServer);
+			if(fromServer.equals("quit"))
+				break;
+			
+			fromUser = user.readLine();
+			if(fromUser != null) {
+				System.out.println("클라이언트: " + fromUser);
+				out.println(fromUser);
+			}
+		}
+		out.close();
+		in.close();
+		quizSocket.close();
 	}
 }

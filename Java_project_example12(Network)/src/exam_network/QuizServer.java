@@ -1,48 +1,53 @@
 package exam_network;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
 public class QuizServer {
-	public static void main(String[] args) throws IOException{
-		ServerSocket server = null;
-		DataInputStream dis = null;
-		DataOutputStream dos = null;
-		
-		String quiz = "";
-		String sol = "";
-		
-		String cSol = null;
+	public static void main(String[] args) throws IOException {
+		ServerSocket serverSocket = null;
 		try {
-			// 설정할 포트번호
-			server = new ServerSocket(8888);
-			System.out.println("정답을 기다린다.");
-
-			// 클라이언트의 Socket 클래스를 통해 연결을 승인
-			Socket st = server.accept();
-			System.out.println("클라이언트와 연결 여부 : " + st.isConnected());
-
-			System.out.println("로컬 소켓 주소 : " + st.getLocalSocketAddress());
-			
-			dis = new DataInputStream(st.getInputStream());
-			System.out.println("[클라이언트로부터 전달받은 문자열]");
-			System.out.println((cSol = dis.readUTF()));
-			
-			dos = new DataOutputStream(st.getOutputStream());
-			if (sol == cSol) {
-				dos.writeUTF("정답입니다. \n클래스를 새로 만들어서 다시 작성해주십시오.");
-			}else {
-				dos.writeUTF("실패했습니다. \n클래스를 새로 만들어서 다시 작성해주십시오.");				
-			}
-			
-
-			dos.close();
-			dis.close();
+			serverSocket = new ServerSocket(5555);
 		} catch (Exception e) {
-			System.out.println(e);
+			System.err.println("다음의 포트 번호에 연결할 수 없습니다.: 5555");
+			System.exit(1);
 		}
+
+		// 클라이언트가 서버에 대하여 연결을 요청할 때까지 기다린다
+		// 연결이 되면 새로운 포트와 연결된 Socket 객체를 반환한다.
+		Socket clientSocket = null;
+		try {
+			clientSocket = serverSocket.accept();
+		} catch (Exception e) {
+			System.err.println("accept() 실패");
+			System.exit(1);
+		}
+
+		// 서버는 클라이언트와 스트림을 이용하여 통신한다. (true는 자동으로 flush 하는 여부)
+		PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
+
+		BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+
+		String inputLine, outputLine;
+		QuizProtocol qp = new QuizProtocol();
+		outputLine = qp.process(null);
+		out.println(outputLine);
+		
+		while((inputLine = in.readLine()) != null) {
+			outputLine = qp.process(inputLine);
+			out.println(outputLine);
+			if(outputLine.equals("quit"))
+				break;
+		}
+		
+		out.close();
+		in.close();
+		
+		clientSocket.close();
+		serverSocket.close();
 	}
 }
