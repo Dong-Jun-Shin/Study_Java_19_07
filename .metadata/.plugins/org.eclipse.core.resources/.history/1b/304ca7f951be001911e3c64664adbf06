@@ -1,8 +1,0 @@
-package exam_lab;
-
-/*컴퓨터와 하는 가위바위보 만들기
- * 승부 판별, 게임은 반복(4 입력시 종료)
- */
-public class RockScissorsPaper {
-
-}

@@ -1,4 +1,4 @@
-package exam_network;
+package exam_TCP;
 
 public class QuizProtocol {
 	private static final int WAITING = 0;

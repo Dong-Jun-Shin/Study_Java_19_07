@@ -9,6 +9,8 @@ import javafx.scene.control.Alert.AlertType;
 
 public class DataUtil {
 
+	
+	
 	/**
 	 * 유효성 체크를 위한 메서드.
 	 * 

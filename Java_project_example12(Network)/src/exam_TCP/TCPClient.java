@@ -1,4 +1,4 @@
-package exam_network;
+package exam_TCP;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
