@@ -3,10 +3,10 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/JavaCoding/Study_Java_19_07/external/ojdbc6.jar"/>
-	<classpathentry kind="lib" path="C:/JavaCoding/Study_Java_19_07/external/activation.jar"/>
-	<classpathentry kind="lib" path="C:/JavaCoding/Study_Java_19_07/external/commons-email-1.5.jar"/>
-	<classpathentry kind="lib" path="C:/JavaCoding/Study_Java_19_07/external/log4j-1.2.17.jar"/>
-	<classpathentry kind="lib" path="C:/JavaCoding/Study_Java_19_07/external/mail.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/GitHub/Study_Java_19_07/external/activation.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/GitHub/Study_Java_19_07/external/commons-email-1.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/GitHub/Study_Java_19_07/external/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/GitHub/Study_Java_19_07/external/mail.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/GitHub/Study_Java_19_07/external/ojdbc6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
